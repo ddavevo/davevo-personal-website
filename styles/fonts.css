@@ -1,0 +1,14 @@
+@font-face {
+    font-family: abril;
+    src: url(../fonts/abril-fatface-italic.ttf);
+}
+
+@font-face {
+    font-family: gravity;
+    src: url(../fonts/Gravity-Regular.otf);
+}
+
+@font-face {
+    font-family: gravity-bold;
+    src: url(../fonts/Gravity-Bold.otf);
+}

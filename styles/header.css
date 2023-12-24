@@ -1,0 +1,40 @@
+.header {
+    height: 84px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    background-color: #fef6f0;
+}
+
+.wordmark {
+    display: inline-block; white-space: nowrap;
+    font-family: abril;
+    font-size: 48px;
+    color: #009bba;
+    padding: 24px;
+    padding-left: 84px;
+}
+
+.header-text {
+    display: inline-block;
+    font-family: gravity-bold;
+    font-size: 16px;
+    color: #062f3f;
+    padding: 24px;
+    padding-top: 38px;
+    
+}
+
+.right-section {
+    display: flex; flex-direction: row; 
+    flex-wrap: nowrap;
+    padding-right: 40px;
+}
+  

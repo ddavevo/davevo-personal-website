@@ -1,0 +1,27 @@
+.landing-page {
+    padding: 80px;
+    padding-top: 156px;
+}
+
+.logo-visual {
+    align-items: center;
+    width: 400px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+}
+
+p {
+    font-family: gravity-bold;
+    color: #062f3f;
+    width: 430px;
+}
+
+.landing-text {
+    font-family: abril;
+    font-size: 64px;
+    color: #009bba;
+    margin-left: -4px;
+}
