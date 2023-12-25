@@ -1,3 +1,9 @@
+:root {
+    --bg: #fef6f0;
+    --teal: #009bba;
+    --navy: #062f3f;
+}
+
 body {
-    background-color: #fef6f0;
+    background-color: var(--bg);
 }

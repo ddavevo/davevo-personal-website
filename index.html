@@ -8,7 +8,6 @@
     <!--CSS-->
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/landing-page.css">
 
 </head>
@@ -17,7 +16,7 @@
         <div class="left-section">
             <div class="wordmark">dave vo</div>
         </div>
-        <div class="right-section">
+        <div class="menu-options">
             <div class="header-text">Home</div>
             <div class="header-text">About</div>
             <div class="header-text">Work</div>
@@ -28,22 +27,32 @@
 
     <!--I am a designer, researcher, creative-->
     <main class="landing-page">
-        <section>
-            <div> 
-                <p>I am a...</p>
-                <div class="landing-text">designer,</div>
-                <div class="landing-text">researcher,</div>
-                <div class="landing-text">creative.</div>
-                <p>
-                    Hello, I'm an upcoming UI/UX designer studying at UC San Diego.
-                    Currently, I'm prototyping support tools to foster idea
-                    exploration and to raise creative ceilings.
-                </p>
+        <div class="blurb-section"> 
+            <p>I am a...</p>
+
+            <div class="landing-text">
+                designer,
             </div>
-            <div>
-                <img class="logo-visual" src="/images/circular-logo.png" alt="Logo Visual">
+            <div class="landing-text" style="color: #056174">
+                researcher,
             </div>
-        </section>
+            <div class="landing-text" style="color: var(--navy)">
+                creative.
+            </div>
+
+            <p>
+                Hello, I'm an upcoming UI/UX designer studying at UC San Diego.
+                Currently, I'm prototyping support tools to foster idea
+                exploration and to raise creative ceilings.
+            </p>
+            <div class="view-projects">
+                View projects
+            </div>
+        </div>
+
+        <div class="logo-visual-section">
+            <img class="logo-visual" src="/images/circular-logo.png" alt="Logo Visual">
+        </div>
     </main>
 </body>
 </html>
