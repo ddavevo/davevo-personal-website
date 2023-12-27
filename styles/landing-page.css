@@ -1,19 +1,9 @@
-body {
-    margin: 0px;
-}
-
-a:link, a:visited, a:hover, a:active { 
-    text-decoration: none; 
-}
-
-/*___________________________________________*/
-
 .landing-page {
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(394px, 1fr));
     place-content: center;
     padding: 80px;
-    padding-top: 156px;
+    padding-top: 124px;
 }
 
 p { /* landing-body: I am a... I'm an upcoming UI/UX... */
@@ -33,7 +23,7 @@ p { /* landing-body: I am a... I'm an upcoming UI/UX... */
 
 .logo-visual-section {
     margin-right: -64px;
-    margin-top: -48px;
+    margin-top: -56px;
 }
 
 .logo-visual {
@@ -41,6 +31,11 @@ p { /* landing-body: I am a... I'm an upcoming UI/UX... */
     height: auto;
     justify-content: center;
     mix-blend-mode: multiply;
+    transform: scale(.9,.9);
+    transition: transform 0.65s;
+}
+
+.logo-visual:hover, .logo-visual:active {
     transform: scale(1,1);
 }
 
@@ -68,7 +63,7 @@ p { /* landing-body: I am a... I'm an upcoming UI/UX... */
     background-color: var(--navy);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
     p.landing-body, .landing-text {
         text-align: center;
     }
@@ -78,35 +73,4 @@ p { /* landing-body: I am a... I'm an upcoming UI/UX... */
     .logo-visual-section {
         margin-left: -64px;
     }
-}
-
-/*___________________________________________*/
-
-.footer {
-    display: grid;
-    grid-template-columns: 60vw 40vw;
-    height: 88px;
-    width: 100%;
-    bottom: 0px;
-    background-color: var(--teal);
-    place-items: center;
-}
-
-p.footer-text {
-    color: var(--bg);
-    margin-left: -72px;
-    margin-bottom: 8px;
-}
-
-.social-media-icons {
-    display: flex; flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 8px;
-}
-
-.media-links {
-    width: 36px;
-    padding-right: 48px;
 }

@@ -28,8 +28,7 @@
     font-family: abril;
     font-size: 48px;
     color: var(--teal);
-    padding: 24px;
-    padding-left: 82px;
+    padding: 28px 24px 24px 82px;
 }
 
 .header-text { 
@@ -37,27 +36,26 @@
     font-family: gravity-bold;
     font-size: 16px;
     color: var(--navy);
+
     padding: 24px;
     padding-top: 38px;
+    cursor: pointer;
     
 }
 
 .current-page-indicator {
-    position: fixed;
+    position: fixed; float: left;
     width: 46px;
     height: 2px;
     background-color: var(--navy);
     z-index: 101;
-
-    margin-top: 64px;
-    margin-left: 24px;
 }
 
 .hamburger-icon {
-    position: relative;
+    position: relative; float: left;
     width: 25px;
-    margin-left: -36px;
-    margin-top: 14px;
+    margin-left: -52px;
+    margin-top: 8px;
     opacity: 0;
 }
 
@@ -67,7 +65,7 @@
     padding-right: 40px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
     .wordmark, .header-text, .current-page-indicator {
         opacity: 0;
     }
