@@ -8,29 +8,39 @@
     <!--CSS-->
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/landing-page.css">
 
 </head>
 <body>
     <header class="header">
         <div class="left-section">
+            <img class="small-shrink-logo" src="images/circular-logo.png" alt="Logo Visual">
             <div class="wordmark">dave vo</div>
         </div>
         <div class="menu-options">
             <div class="header-text">Home</div>
             <div class="current-page-indicator"></div>
             <div class="header-text">About</div>
-            <div class="header-text">Work</div>
+            <div class="header-text">
+                <a href="https://organic-governor-2e2.notion.site/Dave-Vo-9c3f19fe269c49818985a2fbf60881e3?pvs=4">
+                    Work (WIP)
+                </a>
+            </div>
             <img class="hamburger-icon" src="images/hamburger-icon.svg">
-            <div class="header-text" style="margin-left: 12px">Resumé</div>
+            <div class="header-text" style="margin-left: 12px">
+                <a href="https://drive.google.com/file/d/1sr62Cb0AkumVn77TsAiP-aJzO8lrOGZc/view?usp=share_link">
+                    Resumé
+                </a>
             </div>
         </div>
     </header>
 
-    <!--I am a designer, researcher, creative-->
     <main class="landing-page">
+
+         <!--I am a designer, researcher, creative-->
         <div class="blurb-section"> 
-            <p>I am a...</p>
+            <p class="landing-body">I am a...</p>
 
             <div class="landing-text">
                 designer,
@@ -42,19 +52,38 @@
                 creative.
             </div>
 
-            <p>
+            <!--Upcoming UI/UX designer...-->
+            <p class="landing-body">
                 Hello, I'm an upcoming UI/UX designer studying at UC San Diego.
                 Currently, I'm prototyping support tools to foster idea
                 exploration and to raise creative ceilings.
             </p>
-            <div class="view-projects">
-                View projects
-            </div>
+            <a href="https://organic-governor-2e2.notion.site/Dave-Vo-9c3f19fe269c49818985a2fbf60881e3?pvs=4">
+                <div class="view-projects">View projects</div>
+            </a>
         </div>
 
         <div class="logo-visual-section">
             <img class="logo-visual" src="images/circular-logo.png" alt="Logo Visual">
         </div>
     </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer">
+            <p class="footer-text">@2024 developed by Dave Vo</p>
+            <div class="social-media-icons">
+                <a href="mailto: dtvo@ucsd.edu">
+                    <img class="media-links" style="width: 48px;" src="images/email-icon.svg">
+                </a>
+                <a href="https://www.linkedin.com/in/dave-vo">
+                    <img class="media-links" src="images/linkedin-logo.svg">
+                </a>
+                <a href="https://github.com/ddavevo">
+                    <img class="media-links" src="images/github-logo.svg">
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

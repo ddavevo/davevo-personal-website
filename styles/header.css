@@ -1,0 +1,77 @@
+.header {
+    height: 84px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    background-color: var(--bg);
+}
+
+.small-shrink-logo {
+    position: absolute;
+    mix-blend-mode: multiply;
+    width: 56px;
+    padding-left: 64px;
+    padding-top: 22px;
+    opacity: 0;
+    
+}
+
+.wordmark {
+    display: inline-block; white-space: nowrap;
+    font-family: abril;
+    font-size: 48px;
+    color: var(--teal);
+    padding: 24px;
+    padding-left: 82px;
+}
+
+.header-text { 
+    display: inline-block;
+    font-family: gravity-bold;
+    font-size: 16px;
+    color: var(--navy);
+    padding: 24px;
+    padding-top: 38px;
+    
+}
+
+.current-page-indicator {
+    position: fixed;
+    width: 46px;
+    height: 2px;
+    background-color: var(--navy);
+    z-index: 101;
+
+    margin-top: 64px;
+    margin-left: 24px;
+}
+
+.hamburger-icon {
+    position: relative;
+    width: 25px;
+    margin-left: -36px;
+    margin-top: 14px;
+    opacity: 0;
+}
+
+.menu-options {
+    display: flex; flex-direction: row; 
+    flex-wrap: nowrap;
+    padding-right: 40px;
+}
+
+@media screen and (max-width: 600px) {
+    .wordmark, .header-text, .current-page-indicator {
+        opacity: 0;
+    }
+    .hamburger-icon, .small-shrink-logo {
+        opacity: 1;
+    }
+}
