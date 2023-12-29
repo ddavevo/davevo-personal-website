@@ -1,76 +1,95 @@
 .landing-page {
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(394px, 1fr));
+    display: grid;
+    grid-template-columns: 45% 55%;
+    gap: 1.5rem;
     place-content: center;
-    padding: 80px;
-    padding-top: 124px;
+    padding: 5rem; padding-top: 8rem;
+
+    /*
+    grid-template-columns: repeat(auto-fit, minmax(394px, 1fr));
+    */
 }
 
 p { /* landing-body: I am a... I'm an upcoming UI/UX... */
     font-family: gravity-bold;
     color: var(--navy);
+    
+    /*
     width: clamp(400px, 450px, 1fr);
     padding-bottom: 4px;
+    */
 }
 
-.landing-text { /* designer, researcher, creative. */
+.landing-text {
+    padding-top: 1.25rem;
+}
+
+h1 { /* designer, researcher, creative. */
     font-family: abril;
-    font-size: clamp(60px, 66px, 72px);
     color: var(--teal);
+    font-size: max(4rem, 5.6vw);
+    line-height: 90%;
+
+    /*
+    font-size: clamp(60px, 66px, 72px);
     margin-left: -4px;
     margin-top: -6px;
+    border: 1px solid #000;
+    */
 }
 
 .logo-visual-section {
-    margin-right: -64px;
-    margin-top: -56px;
+    width: 1fr;
 }
 
 .logo-visual {
     max-width: 100%;
     height: auto;
-    justify-content: center;
     mix-blend-mode: multiply;
     transform: scale(.9,.9);
-    transition: transform 0.65s;
+
+    position: relative;
+    margin-top: -8vh;
 }
 
-.logo-visual:hover, .logo-visual:active {
-    transform: scale(1,1);
-}
+.view-projects-button { 
+    height: 2rem;
+    width: 12rem;
+    background-color: var(--teal);
+    padding-top: .6rem;
+    border-radius: .6rem;
 
-.view-projects { 
     font-family: gravity-bold;
     color: var(--bg);
+    text-align: center;
 
-    height: 24px;
-    width: 110px;
-    background-color: var(--teal);
-    border-radius: 8px;
-    margin-top: 44px;
-    margin-bottom: 72px;
-
-    padding-top: 12px;
-    padding-bottom: 8px;
-    padding-left: 16px;
-    padding-right: 12px;
-
+    margin-top: 2.8rem;
     cursor: pointer;
-    transition: background-color 0.35s;
+    transition: background-color 0.15s;
 }
 
-.view-projects:hover, .view-projects:active  {
+.view-projects-button:hover, .view-projects-button:active  {
     background-color: var(--navy);
 }
 
+@media screen and (max-width: 960px) {
+    .landing-page {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media screen and (max-width: 620px) {
-    p.landing-body, .landing-text {
+    .landing-page {
+        padding: 3rem; padding-top: 8rem;
+        grid-template-columns: 1fr;
+    }
+    .landing-body, .landing-text{
         text-align: center;
     }
     .view-projects {
-        margin-left: 33%;
-    }
-    .logo-visual-section {
-        margin-left: -64px;
+        margin: 0;
+        position: relative;
+        left: 28.6%;
+        margin-bottom: 1.4rem;
     }
 }

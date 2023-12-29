@@ -66,7 +66,7 @@
     margin-right: 2.3rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
     .wordmark, .header-text, .current-page-indicator {
         opacity: 0;
     }

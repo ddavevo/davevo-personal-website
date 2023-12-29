@@ -1,28 +1,18 @@
 .footer {
     background-color: var(--teal);
-    height: 88px;
+    height: 82px;
     width: 100%;
     
     position: fixed;
     bottom: 0;
-    gap: 1.5rem;
+    gap: 1rem;
 
     display: flex; flex-direction: row;
     align-items: center;
-    
-    
-    /*
-    position: fixed;
-    display: grid;
-    grid-template-columns: 70vw 10vw 10vw 10vw;
-    bottom: 0px;
-    background-color: var(--teal);
-    place-items: left;
-    */
 }
 
 .footer-text {
-    width: 50%;
+    width: 118%;
     padding-left: 4.75rem;
 }
 
@@ -40,8 +30,17 @@
 .media-links {
     float: right;
     width: 2.25rem;
-    padding-right: 3rem;
+    padding-right: 2.6rem;
     white-space: nowrap;
+}
+
+@media screen and (max-width: 654px) {
+    .social-media-icons {
+        margin-right: 2.25rem;
+    }
+    .media-links {
+        padding-right: 1.2rem;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -55,6 +54,7 @@
     }
     .media-links {
         padding-right: 1.5rem;
+        padding-top: .5rem;
         width: 1.5rem;
     }
     
