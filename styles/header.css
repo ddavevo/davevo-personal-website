@@ -1,26 +1,23 @@
 .header {
-    height: 84px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    width: 100%;
+    background-color: var(--bg);
+    max-height: 5.125rem;
+    overflow: hidden;
 
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    display: flex; flex-direction: row;
     z-index: 100;
-
-    background-color: var(--bg);
 }
 
-.small-shrink-logo {
-    position: absolute;
-    mix-blend-mode: multiply;
-    width: 56px;
-    padding-left: 64px;
-    padding-top: 22px;
-    opacity: 0;
-    
+#header {
+    width: 32.5%;
+    z-index: 1;
+}
+
+.menu-options {
+    width: 70%;
+    justify-content: right;
+    white-space: nowrap;
 }
 
 .wordmark {
@@ -28,44 +25,48 @@
     font-family: abril;
     font-size: 48px;
     color: var(--teal);
-    padding: 28px 24px 24px 82px;
+    background-color: var(--bg);
+
+    padding-top: 1.75rem;
+    padding-right: 1.5rem;
+    padding-left: 5.125rem;
 }
 
 .header-text { 
-    display: inline-block;
     font-family: gravity-bold;
-    font-size: 16px;
     color: var(--navy);
-
-    padding: 24px;
-    padding-top: 38px;
     cursor: pointer;
+    float: right;
+
+    margin-top: 3rem;
+    margin-right: 4rem;
+
+    transform: color 1s;
+}
+
+.header-text:hover {
+    color: var(--teal);
+}
+
+.small-shrink-logo {
+    position: absolute;
+    width: 56px; height: 56px;
+    margin-top: .88rem;
+    margin-left: 2rem;
+
+    mix-blend-mode: multiply;
+    opacity: 0;
     
 }
 
-.current-page-indicator {
-    position: fixed; float: left;
-    width: 46px;
-    height: 2px;
-    background-color: var(--navy);
-    z-index: 101;
-}
-
 .hamburger-icon {
-    position: relative; float: left;
+    position: relative;
     width: 25px;
-    margin-left: -52px;
-    margin-top: 8px;
     opacity: 0;
+    margin-right: 2.3rem;
 }
 
-.menu-options {
-    display: flex; flex-direction: row; 
-    flex-wrap: nowrap;
-    padding-right: 40px;
-}
-
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
     .wordmark, .header-text, .current-page-indicator {
         opacity: 0;
     }
