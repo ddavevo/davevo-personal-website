@@ -1,3 +1,19 @@
+.about-page {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 1.5rem;
+    place-content: center;
+    padding: 5rem; padding-top: 7.4rem;
+}
+
+.blurb-header {
+    font-family: abril;
+    color: var(--teal);
+    font-size: max(3.8rem, 4.8vw);
+    line-height: 90%;
+    margin-bottom: 1rem;
+}
+
 p {
     font-family: gravity-bold;
     color: var(--navy);

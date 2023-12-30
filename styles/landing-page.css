@@ -24,7 +24,7 @@ p { /* landing-body: I am a... I'm an upcoming UI/UX... */
     padding-top: 1.25rem;
 }
 
-h1 { /* designer, researcher, creative. */
+#landing-text {
     font-family: abril;
     color: var(--teal);
     font-size: max(4rem, 5.6vw);

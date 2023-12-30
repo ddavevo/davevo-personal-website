@@ -44,33 +44,88 @@
     transform: color 1s;
 }
 
-.header-text:hover {
+.header-text:hover, #hamburger-menu-options:hover {
     color: var(--teal);
 }
 
 .small-shrink-logo {
     position: absolute;
     width: 56px; height: 56px;
+    mix-blend-mode: multiply;
+
     margin-top: .88rem;
     margin-left: 2rem;
-
-    mix-blend-mode: multiply;
     opacity: 0;
+    transition: 0.4s ease-in-out;
     
 }
 
-.hamburger-icon {
-    position: relative;
-    width: 25px;
+.ham-bars {
+    width: 35px;
+    height: 5px;
+    background-color: var(--navy);
+    border-radius: 5px;
     opacity: 0;
+
+    margin: .3rem;
     margin-right: 2.3rem;
+    transition: 0.4s ease-in-out;
+}
+
+.active #bar1 {
+    transform: translate(0, 10px) rotate(45deg);
+}
+.active #bar2 {
+    opacity: 0;
+}
+.active #bar3 {
+    transform: translate(0, -10px) rotate(-45deg);
+}
+
+.menu {
+    position: fixed;
+    left: 0%;
+    width: 100%;
+    background-image: var(--navgradient);
+    z-index: -1;
+    opacity: 0;
+    
+    height: 14rem;
+    margin-top: -3.2rem;
+    
+    transform: translateY(-100%);
+    transition: 0.4s ease-in-out;
+    cursor: auto;
+}
+
+
+.active .menu {
+    transform: translateY(0);
+}
+
+
+.hamburger-menu-options {
+    font-family: gravity-bold;
+    color: var(--navy);
+
+    position: fixed;
+    left: calc(50% - 10ch);
+    text-align: center;
+    margin: 1rem;
+    opacity: 0;
+    pointer-events: none;
 }
 
 @media screen and (max-width: 620px) {
     .wordmark, .header-text, .current-page-indicator {
         opacity: 0;
+        pointer-events: none;
     }
-    .hamburger-icon, .small-shrink-logo {
+    .ham-bars, .menu, .hamburger-menu-options, .small-shrink-logo {
         opacity: 1;
+        pointer-events: auto;
+    }
+    .menu-options {
+        height: 0;
     }
 }

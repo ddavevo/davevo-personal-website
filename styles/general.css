@@ -2,6 +2,7 @@
     --bg: #fef6f0;
     --teal: #009bba;
     --navy: #062f3f;
+    --navgradient: linear-gradient(var(--bg), var(--bg) 11rem, rgb(254,246,240, .8) 12.5rem, rgba(0,0,0,0));
 }
 
 * {
@@ -26,4 +27,9 @@ button {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+}
+
+ul {
+    list-style-type: none;
+    line-height: 2.4rem;
 }

@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/about-page.css">
 
+    <script src="javascript/test.js"></script>
+
 </head>
 <body>
     <header class="header">
@@ -39,25 +41,58 @@
         </div>
 
         <img class="small-shrink-logo" src="images/circular-logo.png" alt="Logo Visual">
-        <img class="hamburger-icon" src="images/hamburger-icon.svg">
-        
+        <button type="button"> <!--onclick="myFunction(this)"-->
+            <div class="hamburger" onclick="myFunction(this)">
+                <div class="ham-bars" id="bar1"></div>
+                <div class="ham-bars" id="bar2"></div>
+                <div class="ham-bars" id="bar3"></div>
+
+                <div class="menu">
+                    <ul class="hamburger-menu-options">
+                        <li id="hamburger-menu-options">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li id="hamburger-menu-options">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li id="hamburger-menu-options">
+                            <a href="https://organic-governor-2e2.notion.site/Dave-Vo-9c3f19fe269c49818985a2fbf60881e3?pvs=4">
+                                Work (WIP)
+                            </a>
+                        </li>
+                        <li id="hamburger-menu-options">
+                            <a href="https://drive.google.com/file/d/1sr62Cb0AkumVn77TsAiP-aJzO8lrOGZc/view?usp=share_link">
+                                Résumé
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </button>   
     </header>
 
-    <p class="blurbussy" style="padding-top: 80px;">
-        a creative at heart 
-    </p>
-    <p>
-    Throughout high school, I was heavily interested in graphic design and the 
-    industry. Over that span of time, I honed my design skills and my understanding 
-    of visual communication. Wanting to explore what design meant in a more 
-    holistic scope, I expanded my learning to the UI/UX field. My interests have 
-    pivoted toward HCI and user-centered design, particuarly in direct manipulation 
-    interfaces and novel data representations to foster creative exploration and 
-    synthesis. Currently, I’m volunteering as a research assistant at The Design 
-    Lab at UC San Diego where I run user studies and carry out rapid prototyping. 
-    On the side, I work on illustration/graphic design projects (back to my roots), 
-    as well as scouting opportunities for free food on campus.
-    </p>
+    <main class="about-page">
+        <div class="blurb">
+            <div class="blurb-header">a creative at heart </div>
+            <p>
+                Throughout high school, I was heavily interested in graphic design 
+                and the industry. Over that span of time, I honed my design skills 
+                and my understanding of visual communication. Wanting to explore what 
+                design could do in a more holistic scope, I expanded my learning to 
+                the UI/UX field. <br><br>
+    
+                My interests have pivoted toward HCI and user-centered design, 
+                particuarly in direct manipulation interfaces and novel data 
+                representations to foster creative exploration and synthesis. <br><br> 
+    
+                Currently, I’m volunteering as a research assistant at The Design 
+                Lab at UC San Diego where I will be running user studies and carrying 
+                out rapid prototyping. On the side, I work on illustration/graphic 
+                design projects (back to my roots), as well as scouting 
+                opportunities for free food on campus.
+                </p>
+        </div>
+    </main>
 
     <footer class="footer">
         <div class="footer-text">

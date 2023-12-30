@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/landing-page.css">
 
+    <script src="javascript/test.js"></script>
 </head>
 <body>
     <header class="header">
@@ -39,10 +40,34 @@
         </div>
 
         <img class="small-shrink-logo" src="images/circular-logo.png" alt="Logo Visual">
-        <button type="button"> <!--this needs js-->
-            <img class="hamburger-icon" src="images/hamburger-icon.svg">
-        </button>
-        
+        <button type="button"> <!--onclick="myFunction(this)"-->
+            <div class="hamburger" onclick="myFunction(this)">
+                <div class="ham-bars" id="bar1"></div>
+                <div class="ham-bars" id="bar2"></div>
+                <div class="ham-bars" id="bar3"></div>
+
+                <div class="menu">
+                    <ul class="hamburger-menu-options">
+                        <li id="hamburger-menu-options">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li id="hamburger-menu-options">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li id="hamburger-menu-options">
+                            <a href="https://organic-governor-2e2.notion.site/Dave-Vo-9c3f19fe269c49818985a2fbf60881e3?pvs=4">
+                                Work (WIP)
+                            </a>
+                        </li>
+                        <li id="hamburger-menu-options">
+                            <a href="https://drive.google.com/file/d/1sr62Cb0AkumVn77TsAiP-aJzO8lrOGZc/view?usp=share_link">
+                                Résumé
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </button>   
     </header>
 
     <main class="landing-page">
@@ -51,10 +76,10 @@
                 <div class="landing-body">
                     <p>I am a...</p>
                 </div>
-                <div class="landing-text">
-                    <h1>designer,</h1>
-                    <h1 style="color: #056174">researcher,</h1>
-                    <h1 style="color: var(--navy)">creative.</h1>
+                <div class="landing-text" >
+                    <div id="landing-text">designer,</div>
+                    <div id="landing-text" style="color: #056174">researcher,</div>
+                    <div id="landing-text" style="color: var(--navy)">creative.</div>
                 </div>
                 <div class="landing-body" style="margin-top: 1rem">
                     <p>
