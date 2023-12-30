@@ -1,9 +1,9 @@
 .about-page {
     display: grid;
-    grid-template-columns: 55% 45%;
+    /*grid-template-columns: 55% 45%;*/
     gap: 1.5rem;
     place-content: center;
-    padding: 5rem; padding-top: 7.4rem;
+    padding: 7.4rem 5rem;
 }
 
 .blurb-header {

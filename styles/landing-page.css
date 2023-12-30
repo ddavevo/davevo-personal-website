@@ -54,7 +54,7 @@ p { /* landing-body: I am a... I'm an upcoming UI/UX... */
 
 .view-projects-button { 
     height: 2rem;
-    width: 12rem;
+    width: 192px;
     background-color: var(--teal);
     padding-top: .6rem;
     border-radius: .6rem;
@@ -79,17 +79,28 @@ p { /* landing-body: I am a... I'm an upcoming UI/UX... */
 }
 
 @media screen and (max-width: 620px) {
-    .landing-page {
-        padding: 3rem; padding-top: 8rem;
-        grid-template-columns: 1fr;
-    }
-    .landing-body, .landing-text{
+    .landing-body, .landing-text {
         text-align: center;
     }
-    .view-projects {
-        margin: 0;
-        position: relative;
-        left: 28.6%;
-        margin-bottom: 1.4rem;
+    #landing-text {
+        font-size: min(3.2rem, 4rem);
     }
+    .landing-body {
+        font-size: 0.85rem;
+    }
+    .view-projects-button {
+        position: relative;
+        left: calc(50% - 88px);
+
+        font-size: 0.85rem;
+        height: 1.8rem;
+        width: 176px;
+        padding-top: .6rem;
+    }
+    .view-projects {
+        position: relative;
+        margin-bottom: 2.4rem;
+    }
+
+    
 }
