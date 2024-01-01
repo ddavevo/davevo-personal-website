@@ -98,11 +98,9 @@
     cursor: auto;
 }
 
-
 .active .menu {
     transform: translateY(0);
 }
-
 
 .hamburger-menu-options {
     font-family: gravity-bold;

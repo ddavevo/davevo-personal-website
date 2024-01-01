@@ -17,6 +17,22 @@
 p {
     font-family: gravity-bold;
     color: var(--navy);
+}
+
+.about-page p {
+    font-family: gravity;
     width: clamp(400px, 450px, 1fr);
     padding-bottom: 4px;
+}
+
+@media screen and (max-width: 620px) {
+    .blurb-header, .about-page p {
+        text-align: center;
+    }
+    .blurb-header {
+        font-size: min(3.2rem, 4rem);
+    }
+    .about-page p {
+        font-size: 0.85rem;
+    }
 }
