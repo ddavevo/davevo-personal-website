@@ -1,9 +1,21 @@
+:root {
+    --image-width: 400px;
+}
+
 .about-page {
     display: grid;
-    /*grid-template-columns: 55% 45%;*/
-    gap: 1.5rem;
+    grid-template-columns: 24rem 1fr;
+    gap: 2rem;
     place-content: center;
-    padding: 7.4rem 5rem;
+
+    padding: 5rem; 
+    padding-top: 8rem; padding-bottom: 8rem;
+    
+}
+
+p {
+    font-family: gravity-bold;
+    color: var(--navy);
 }
 
 .blurb-header {
@@ -12,11 +24,7 @@
     font-size: max(3.8rem, 4.8vw);
     line-height: 90%;
     margin-bottom: 1rem;
-}
-
-p {
-    font-family: gravity-bold;
-    color: var(--navy);
+    white-space: nowrap;
 }
 
 .about-page p {
@@ -25,14 +33,46 @@ p {
     padding-bottom: 4px;
 }
 
-@media screen and (max-width: 620px) {
-    .blurb-header, .about-page p {
-        text-align: center;
+.blurb:after {
+    display: block;
+    content:"";
+    clear: both;
+}
+
+.profile-pic {
+    max-width: 21rem;
+    border-radius: 1rem;
+}
+
+@media screen and (max-width: 940px) {
+    .about-page {
+        gap: .5rem;
+    }
+    .pictures-col {
+        margin-left: auto; margin-right: auto;
     }
     .blurb-header {
-        font-size: min(3.2rem, 4rem);
+        white-space: normal;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .about-page {
+        grid-template-columns: 1fr;
+    }
+    .blurb-header {
+        text-align: center;
+        font-size: min(22vw, 3.6rem);
     }
     .about-page p {
+        /*font-size: 3.2vw;*/
         font-size: 0.85rem;
+    }
+    .pictures-col {
+        margin: auto;
+        padding-bottom: 1rem;
+    }
+    .profile-pic {
+        width: 80vw;
     }
 }

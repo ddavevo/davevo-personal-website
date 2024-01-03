@@ -83,7 +83,7 @@ p { /* landing-body: I am a... I'm an upcoming UI/UX... */
         text-align: center;
     }
     #landing-text {
-        font-size: min(3.2rem, 4rem);
+        font-size: min(3.4rem, 4rem);
     }
     .landing-body {
         font-size: 0.85rem;
