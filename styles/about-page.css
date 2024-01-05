@@ -2,15 +2,38 @@
     --image-width: 400px;
 }
 
+a:hover, a:active {
+    color: var(--teal);
+}
+
 .about-page {
+    padding-bottom: 8rem;
+}
+
+.nonwork-info {
+    display: flex;
+    flex-direction: row; flex-wrap: wrap;
+    gap: 1.5rem;
+    place-content: center;
+
+    padding: 5rem; 
+    padding-top: 1rem; padding-bottom: 0rem;
+}
+
+.intro {
     display: grid;
-    grid-template-columns: 24rem 1fr;
+    grid-template-columns: 16rem 1fr;
     gap: 2rem;
     place-content: center;
 
     padding: 5rem; 
-    padding-top: 8rem; padding-bottom: 8rem;
-    
+    padding-top: 8rem; padding-bottom: 0rem;
+}
+
+.intro:after {
+    display: block;
+    content: "";
+    clear: both;
 }
 
 p {
@@ -40,13 +63,20 @@ p {
 }
 
 .profile-pic {
-    max-width: 21rem;
-    border-radius: 1rem;
+    max-width: 16rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.secondary-pic {
+    max-width: 16rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 940px) {
-    .about-page {
-        gap: .5rem;
+    .intro {
+        gap: 1.5rem;
     }
     .pictures-col {
         margin-left: auto; margin-right: auto;
@@ -56,17 +86,17 @@ p {
     }
 }
 
-@media screen and (max-width: 620px) {
-    .about-page {
+@media screen and (max-width: 748px) {
+    .intro {
         grid-template-columns: 1fr;
     }
     .blurb-header {
         text-align: center;
-        font-size: min(22vw, 3.6rem);
+        font-size: min(22vw, 3.rem);
     }
     .about-page p {
         /*font-size: 3.2vw;*/
-        font-size: 0.85rem;
+        font-size: 0.92rem;
     }
     .pictures-col {
         margin: auto;
@@ -74,5 +104,12 @@ p {
     }
     .profile-pic {
         width: 80vw;
+        margin-bottom: -1rem;
+    }
+    .secondary-pic {
+        width: 0;
+    }
+    .nonwork-info {
+        max-width: 80vw;
     }
 }
