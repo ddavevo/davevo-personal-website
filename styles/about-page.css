@@ -1,13 +1,63 @@
-:root {
-    --image-width: 400px;
-}
-
 a:hover, a:active {
     color: var(--teal);
 }
 
+p {
+    font-family: gravity-bold;
+    color: var(--navy);
+}
+
 .about-page {
-    padding-bottom: 8rem;
+    padding-bottom: 2rem;
+}
+
+.about-page p {
+    font-family: gravity;
+    width: clamp(400px, 450px, 1fr);
+    padding-bottom: 4px;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+    gap: 2rem;
+    place-content: center;
+
+    padding: 5rem; 
+    padding-top: 8rem; padding-bottom: 0rem;
+}
+
+.intro:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.blurb-header {
+    font-family: abril;
+    color: var(--teal);
+    font-size: max(3.8rem, 4.8vw);
+    line-height: 90%;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+}
+
+.profile-pic {
+    max-width: 16rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.secondary-pic {
+    max-width: 16rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.blurb:after {
+    display: block;
+    content:"";
+    clear: both;
 }
 
 .container {
@@ -36,60 +86,6 @@ a:hover, a:active {
     height: 100%;
     object-fit: cover;
     border-radius: 1.5rem;
-}
-
-.intro {
-    display: grid;
-    grid-template-columns: 16rem 1fr;
-    gap: 2rem;
-    place-content: center;
-
-    padding: 5rem; 
-    padding-top: 8rem; padding-bottom: 0rem;
-}
-
-.intro:after {
-    display: block;
-    content: "";
-    clear: both;
-}
-
-p {
-    font-family: gravity-bold;
-    color: var(--navy);
-}
-
-.blurb-header {
-    font-family: abril;
-    color: var(--teal);
-    font-size: max(3.8rem, 4.8vw);
-    line-height: 90%;
-    margin-bottom: 1rem;
-    white-space: nowrap;
-}
-
-.about-page p {
-    font-family: gravity;
-    width: clamp(400px, 450px, 1fr);
-    padding-bottom: 4px;
-}
-
-.blurb:after {
-    display: block;
-    content:"";
-    clear: both;
-}
-
-.profile-pic {
-    max-width: 16rem;
-    border-radius: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.secondary-pic {
-    max-width: 16rem;
-    border-radius: 1.5rem;
-    margin-bottom: 1rem;
 }
 
 

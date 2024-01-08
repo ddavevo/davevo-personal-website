@@ -4,8 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dave Vo</title>
+
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/work-page.css">
+
+    <script src="javascript/test.js"></script>
 </head>
 <body>
-    
+    <header class="header">
+        <div id="header">
+            <div class="wordmark"><a href="index.html">dave vo</a></div>
+        </div>
+        
+        <div class="menu-options">
+            <div class="header-text">
+                <a href="https://drive.google.com/file/d/1OCZUXgrLguEa5f5sjY4AUzZDR1TiWaqZ/view?usp=sharing">
+                    Résumé
+                </a>
+            </div>
+            <div class="header-text">
+                <a href="work.html">
+                    Work
+                </a>
+            </div>
+            <div class="header-text">
+                <a href="about.html">About</a>
+            </div>
+        </div>
+
+        <a href="index.html">
+            <img class="small-shrink-logo" src="images/circular-logo.png" alt="Logo Visual">
+        </a>
+        <button type="button">
+            <div class="hamburger" onclick="myFunction(this)">
+                <div class="ham-bars" id="bar1"></div>
+                <div class="ham-bars" id="bar2"></div>
+                <div class="ham-bars" id="bar3"></div>
+
+                <div class="menu">
+                    <ul class="hamburger-menu-options">
+                        <li id="hamburger-menu-options">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li id="hamburger-menu-options">
+                            <a href="work.html">
+                                Work
+                            </a>
+                        </li>
+                        <li id="hamburger-menu-options">
+                            <a href="https://drive.google.com/file/d/1OCZUXgrLguEa5f5sjY4AUzZDR1TiWaqZ/view?usp=sharing">
+                                Résumé
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </button>   
+    </header>
+
+    <main class="work-page">
+        <h2 style="margin: auto;">
+            This page is still under construction. For now, view my projects
+            <a style="font-family: gravity-bold" href="https://organic-governor-2e2.notion.site/Dave-Vo-9c3f19fe269c49818985a2fbf60881e3">
+            <ins>here</ins></a>.
+        </h2>
+
+        <div class="project-card">
+            <img class="project-image" src="images/Retro_Diver.png">
+            <div class="project-text">
+                <h2>Aromacovery</h2>
+                <P id="tool-labels">Figma, FigJam</P>
+                <p>Lorem ipsum however this sentence works. Words Words words.
+                    Words all the words more words.
+                </p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img class="project-image" src="images/fah-pano.png">
+            <div class="project-text">
+                <h2>Circle K Website</h2>
+                <P id="tool-labels">Figma, FigJam</P>
+                <p>Lorem ipsum however this sentence works. Words Words words.
+                    Words all the words more words.
+                </p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img class="project-image" src="images/saudade.png">
+            <div class="project-text">
+                <h2>Project #3</h2>
+                <P id="tool-labels">Figma, FigJam</P>
+                <p>Lorem ipsum however this sentence works. Words Words words.
+                    Words all the words more words.
+                </p>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p id="footer-text" style="font-family: gravity-bold; font-size: 1rem;">
+                @2024 &#183; designing upwards</p>
+        </div>
+        <div class="social-media-icons">
+            <a href="https://github.com/ddavevo">
+                <img class="media-links" style="padding-right: 0rem;" src="images/github-logo.svg">
+            </a>
+            <a href="https://www.linkedin.com/in/dave-vo">
+                <img class="media-links" src="images/linkedin-logo.svg">
+            </a>
+            <a href="mailto: dtvo@ucsd.edu">
+                <img class="media-links" src="images/email-icon.svg">
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
