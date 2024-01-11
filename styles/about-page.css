@@ -23,7 +23,6 @@ p {
     gap: 2rem;
     place-content: center;
 
-    padding: 5rem; 
     padding-top: 8rem; padding-bottom: 0rem;
 }
 
@@ -70,7 +69,7 @@ p {
     display: flex;
     gap: 1.5rem;
 
-    padding: 5rem; 
+    padding: 1.8rem; 
     padding-top: 1rem; padding-bottom: 0rem;
 }
 
@@ -88,11 +87,18 @@ p {
     border-radius: 1.5rem;
 }
 
-
+@media screen and (min-width: 941px) {
+    .intro {
+        max-width: 90%;
+        width: 85vw;
+        padding-left: 5rem; padding-right: 0rem;
+    }
+}
 
 @media screen and (max-width: 940px) {
     .intro {
         gap: 1.5rem;
+        padding-left: 5rem; padding-right: 5rem;
     }
     .pictures-col {
         margin-left: auto; margin-right: auto;
@@ -135,6 +141,7 @@ p {
     }
     .column {
         align-items: center;
+        gap: 1rem;
     }
     .column img {
         max-width: 80vw;
