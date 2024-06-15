@@ -28,8 +28,7 @@
     background-color: var(--bg);
 
     padding-top: 1.75rem;
-    padding-right: 1.5rem;
-    padding-left: 5.125rem;
+    padding-left: 4rem;
 }
 
 .header-text {
@@ -81,14 +80,13 @@
 
     margin: .3rem;
     margin-right: 2.3rem;
-    transition: 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, width 0.4s ease-in-out;
 }
 
 .active #bar1 {
     transform: translate(0, 10px) rotate(45deg);
 }
 .active #bar2 {
-    opacity: 0;
     width: 0;
 }
 .active #bar3 {
@@ -102,11 +100,9 @@
     background-image: var(--navgradient);
     z-index: -1;
     opacity: 0;
-
     height: 11.8rem;
-
-    transform: translateY(-100%);
-    transition: 0.4s ease-in-out;
+    transform: translateY(-100%); 
+    transition: transform 0.4s ease-in-out;
     cursor: auto;
 }
 
