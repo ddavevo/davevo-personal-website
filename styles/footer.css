@@ -6,14 +6,12 @@
     background-color: var(--teal);
     height: 82px;
     width: 100%;
-    bottom: 0%;
-    gap: 1rem;
-    
+    margin-bottom: 0;
 }
 
 .footer-text {
     width: 118%;
-    padding-left: 4.75rem;
+    padding-left: 4.1rem;
 }
 
 #footer-text {
@@ -23,7 +21,7 @@
 .social-media-icons {
     width: 100%;
     min-height: 2.25rem;
-    margin-right: 8.45rem;
+    margin-right: 4rem;
     
 }
 
