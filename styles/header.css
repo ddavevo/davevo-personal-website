@@ -37,7 +37,8 @@
     color: var(--navy);
     cursor: pointer;
     float: right;
-
+    line-height: unset;
+    padding: 1rem;
     margin-top: 3rem;
     margin-right: 4rem;
 
@@ -45,7 +46,10 @@
 }
 
 .header-text:hover, #hamburger-menu-options:hover {
-    color: var(--teal);
+    padding: .4rem 1rem .4rem 1rem;
+    margin: -.4rem -1rem -.4rem -1rem;
+    background-color: #00afcd32; 
+    border-radius: 0.6rem;
 }
 
 .small-shrink-logo {
@@ -113,13 +117,12 @@
 .hamburger-menu-options {
     font-family: gravity-bold;
     color: var(--navy);
-
     position: fixed;
+
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     margin: 0;
-    margin-top: 1rem;
     padding: 0;
     opacity: 0;
     pointer-events: none;
@@ -136,6 +139,15 @@
     }
     .menu-options {
         height: 0;
+    }
+    .hamburger-menu-options {
+        margin-top: 1.4rem;
+    }
+    .header-text:hover, #hamburger-menu-options:hover {
+        padding: 0rem 1rem .2rem 1rem;
+        margin: 0rem -1rem -.2rem -1rem;
+        background-color: #00afcd32; 
+        border-radius: 0.6rem;
     }
 }
 
