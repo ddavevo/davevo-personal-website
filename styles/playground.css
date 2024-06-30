@@ -14,11 +14,6 @@ h2 {
     color: var(--navy);
 }
 
-#tool-labels {
-    color: #062f3f80;
-    padding-bottom: 0.6rem;
-}
-
 .work-page {
     display: flex;
     flex-direction: column;
@@ -28,35 +23,5 @@ h2 {
     gap: 1.5rem;
 
     padding-top: 8rem;
-    padding-bottom: 2rem;
-}
-
-.project-card {
-    display: flex;
-    flex-direction: column;
-    width: 60vw;
-    height : auto;
-    box-shadow: 0px 6px 16px #062f3f36;
-    
-    margin: auto;
-    border-radius: 1.5rem;
-}
-
-.project-image, .project-text {
-    width: 54vw;
-    justify-content: center;
-    align-self: center;
-    object-fit: cover;
-    background-repeat: no-repeat;
-    
-    border-radius: 1rem;
-    margin: auto;
-    margin-top: 1rem;
-    
-}
-
-.project-text {
-    margin-top: .5rem;
-    padding-left: .5rem;
     padding-bottom: 2rem;
 }
