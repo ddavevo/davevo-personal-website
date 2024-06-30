@@ -2,11 +2,6 @@ a:hover, a:active {
     color: var(--teal);
 }
 
-p {
-    font-family: gravity-bold;
-    color: var(--navy);
-}
-
 .about-page {
     padding-bottom: 2rem;
 }
