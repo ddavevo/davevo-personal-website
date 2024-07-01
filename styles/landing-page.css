@@ -91,9 +91,10 @@
 }
 
 .project img {
-    align-self: stretch;
-    object-fit: contain;
     position: relative;
+    align-self: stretch;
+    object-fit: cover;
+    max-height: 320px;
     border-radius: 12px 12px 0px 0px;
     transition: transform 0.2s ease-in;
 }
