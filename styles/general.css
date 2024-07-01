@@ -1,6 +1,7 @@
 :root {
     --bg: #fef6f0;
     --teal: #00afcd;
+    --midtone: #005b6d;
     --navy: #062f3f;
     --navgradient: linear-gradient(var(--bg), var(--bg) 9.4rem, rgb(254,246,240, 0.8) 10.2rem, transparent);
 }
@@ -14,9 +15,22 @@ body {
     
 }
 
-h1 {
+h1, h2, h3 {
     font-weight: normal;
     font-family: gravity-bold;
+    color: var(--navy);
+}
+
+h1 {
+    font-size: clamp(2rem, 3vw, 2.4rem);
+}
+
+h2 {
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+}
+
+h3 {
+    font-size: clamp(1.4rem, 2vw, 2rem);
 }
 
 p, li { /* landing-body: I am a... I'm an upcoming UI/UX... */
@@ -29,7 +43,7 @@ p, li { /* landing-body: I am a... I'm an upcoming UI/UX... */
     */
 }
 
-p {
+p, li {
     font-family: gravity;
     line-height: 150%;
 }
@@ -42,6 +56,12 @@ ul {
 a:link, a:visited, a:hover, a:active { 
     text-decoration: none;
     color: inherit; 
+}
+
+hr {
+    margin: 3rem 0;
+    padding: 0 4rem;
+    border: 1px solid var(--navy)
 }
 
 button {

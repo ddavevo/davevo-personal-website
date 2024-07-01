@@ -6,7 +6,9 @@
 }
 
 .hero {
+    margin-top: -1rem;
     padding-bottom: 3rem;
+    background-color: var(--navy);
 }
 
 .hero:after {
@@ -15,9 +17,13 @@
     clear: both;
 }
 
-h1 {
-    font-size: clamp(1.5rem, 3vw , 2rem);
+.hero h1 {
+    color: var(--bg);
     text-align: center;
+}
+
+.hero p {
+    color: var(--bg);
 }
 
 .logistics {
@@ -38,6 +44,46 @@ h1 {
 .logistics-header {
     font-family: gravity-bold;
     margin-bottom: 0.5rem;
+}
+
+/* ============================================================== */
+
+.wip {
+    margin: 1.6rem 0;
+}
+
+.wip:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ============================================================== */
+
+main {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    gap: 2.4rem;
+    padding-right: 2.4rem;
+   
+}
+
+.table-of-contents li {
+    font-family: gravity-bold;
+    font-size: 0.9rem;
+    line-height: 240%;
+    color: #062f3fb0;
+}
+
+.toc-section {
+    display: inline-block;
+    font-family: gravity;
+    color: var(--navy);
+    background-color: #00afcd32;
+    border-radius: 0.6rem;
+
+    padding: 0.4rem 0.75rem;   
+    margin-bottom: 0.75rem; 
 }
 
 /* ============================================================== */
@@ -90,5 +136,14 @@ h1 {
     .column {
         display: flex;
         flex-direction: column;
+    }
+    main {
+        grid-template-columns: 1fr;
+        padding: 0 2.4rem;
+    }
+    .table-of-contents {
+        visibility: hidden;
+        width: 0;
+        height: 0;
     }
 }
