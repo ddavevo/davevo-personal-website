@@ -161,6 +161,9 @@
 }
 
 @media screen and (max-width: 620px) {
+    .landing-page {
+        padding-bottom: 0;
+    }
     .landing-body, .landing-text {
         text-align: center;
     }
@@ -169,6 +172,9 @@
     }
     .landing-body {
         font-size: 0.92rem;
+    }
+    .logo-visual {
+        padding-top: 1.6rem;
     }
 
     /* ================================*/
