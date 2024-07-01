@@ -14,6 +14,11 @@ body {
     
 }
 
+h1 {
+    font-weight: normal;
+    font-family: gravity-bold;
+}
+
 p, li { /* landing-body: I am a... I'm an upcoming UI/UX... */
     color: var(--navy);
     font-size: clamp(16px, 2vw, 16.8px);
@@ -23,6 +28,7 @@ p, li { /* landing-body: I am a... I'm an upcoming UI/UX... */
     padding-bottom: 4px;
     */
 }
+
 p {
     font-family: gravity;
     line-height: 150%;

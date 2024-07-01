@@ -54,11 +54,11 @@
 .small-shrink-logo {
     position: absolute;
     left: 0;
-    width: 56px; height: 56px;
+    width: 46px; height: 46px;
     z-index: 2;
     mix-blend-mode: multiply;
 
-    margin-top: .88rem;
+    margin-top: 1.2rem;
     margin-left: 2rem;
 
     pointer-events: none;

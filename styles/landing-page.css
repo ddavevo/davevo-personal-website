@@ -21,13 +21,6 @@
     color: var(--teal);
     font-size: max(4rem, 5.6vw);
     line-height: 90%;
-
-    /*
-    font-size: clamp(60px, 66px, 72px);
-    margin-left: -4px;
-    margin-top: -6px;
-    border: 1px solid #000;
-    */
 }
 
 .logo-visual-section {
