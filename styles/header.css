@@ -44,7 +44,7 @@
     transform: color 1s;
 }
 
-.header-text:hover, #hamburger-menu-options:hover {
+.header-text:hover, .hamburger-menu-options li:hover {
     padding: .4rem 1rem .4rem 1rem;
     margin: -.4rem -1rem -.4rem -1rem;
     background-color: #00afcd32; 
@@ -124,6 +124,11 @@
     pointer-events: none;
 }
 
+.hamburger-menu-options li {
+    font-family: gravity-bold;
+    line-height: unset;
+}
+
 @media screen and (max-width: 620px) {
     .wordmark, .header-text, .current-page-indicator {
         opacity: 0;
@@ -139,11 +144,14 @@
     .hamburger-menu-options {
         margin-top: 1.4rem;
     }
-    .header-text:hover, #hamburger-menu-options:hover {
-        padding: 0rem 1rem .2rem 1rem;
-        margin: 0rem -1rem -.2rem -1rem;
+    .header-text:hover, .hamburger-menu-options li:hover {
+        padding: 0rem .8rem .2rem .8rem;
+        margin: 0rem -.8rem -.2rem -.8rem;
         background-color: #00afcd32; 
         border-radius: 0.6rem;
+    }
+    .hamburger-menu-options li {
+        line-height: 240%;
     }
 }
 

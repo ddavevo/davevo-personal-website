@@ -32,8 +32,8 @@
     height: auto;
     mix-blend-mode: multiply;
     transform: scale(.9,.9);
-
     position: relative;
+    left: 8%; top: 8%;
     margin-top: -8vh;
 }
 
@@ -60,9 +60,6 @@
 /* ========================================================================= */
 
 #projects-header {
-    font-family: gravity-bold;
-    color: var(--navy);
-    font-size: 2rem;
     padding: 0 0 1.4rem 4.4rem;
 }
 
@@ -155,6 +152,10 @@
 @media screen and (max-width: 960px) {
     .landing-page {
         grid-template-columns: 1fr;
+    }
+    .logo-visual {
+        left: 0%; top: 8%;
+        transform: scale(0.9,0.9); /* Change to lower scale later */
     }
     .featured-case-studies {
         grid-template-columns: 1fr;
