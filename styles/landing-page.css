@@ -147,13 +147,6 @@
     margin-bottom: 1rem;
 }
 
-#project-cta {
-    position: absolute;
-    bottom: 1rem;
-    right: 1.4rem;
-
-}
-
 /* ========================================================================= */
 
 @media screen and (min-width: 1000px) {
@@ -206,5 +199,8 @@
     }
     .featured-case-studies {
         padding: 0rem 2.4rem;
+    }
+    .keywords li {
+        margin-right: 0.2rem;
     }
 }
