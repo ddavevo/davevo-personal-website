@@ -58,6 +58,11 @@ a:link, a:visited, a:hover, a:active {
     color: inherit; 
 }
 
+b {
+    font-weight: normal;
+    font-family: gravity-bold;
+}
+
 hr {
     margin: 3rem 0;
     padding: 0 4rem;

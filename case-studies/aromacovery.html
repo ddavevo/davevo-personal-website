@@ -70,15 +70,15 @@
                     <p>Project manager <br> User research <br> Product design </p>
                 </div>
                 <div class="logistic-unit">
-                    <p class="logistics-header">Tools</p>
-                    <p>Figma <br> Dovetail <br> Makerspace</p>
+                    <p class="logistics-header">Team</p>
+                    <p>1 Project manager <br> 1 UX Researcher <br> 2 UI/UX Designers </p>
                 </div>
             </div>
 
             <div class="column">
                 <div class="logistic-unit">
-                    <p class="logistics-header">Team</p>
-                    <p>1 Project manager <br> 1 UX Researcher <br> 2 UI/UX Designers </p>
+                    <p class="logistics-header">Tools</p>
+                    <p>Figma <br> Dovetail <br> Makerspace</p>
                 </div>
                 <div class="logistic-unit">
                     <p class="logistics-header">Timeline</p>
@@ -91,28 +91,34 @@
 
     <section class="wip">
         <p style="text-align: center; padding: 0 2.4rem; font-family: gravity-bold;">This page is currently under construction. 
-            Until this page is completed, read the case study 
+            Until this page is completed, read the full case study 
             <u><a href="https://organic-governor-2e2.notion.site/Aromacovery-Tailoring-the-sleeping-pod-experience-for-academic-performance-c0e1acafa20d480fbc95394b32e4d0e3" target="_blank">here.</a></u>
         </p>
     </section>
 
     <main>
-        <section class="table-of-contents">
-            <div style="padding: 0 2.4rem 0.8rem 2.4rem; font-family: gravity-bold; color: var(--navy)" >
-                Table of Contents
+        <!--Table of Contents-->
+        <section>
+            <div class="table-of-contents">
+                <div>
+                    Table of Contents
+                </div>
+                <ul>
+                    <a href="#background"><li>Background</li></a>
+                    <a href="#research"><li>Research</li></a>
+                    <li>UI Design</li>
+                    <li>Kiosk Design</li>
+                    <li>Usability Testing</li>
+                    <li>Reflection</li>
+                </ul>
             </div>
-            <ul>
-                <li>Background</li>
-                <li>Research</li>
-                <li>UI Design</li>
-                <li>Kiosk Design</li>
-                <li>Usability Testing</li>
-                <li>Reflection</li>
-            </ul>
         </section>
 
-        <section>
-            <div class="toc-section">01 - Background</div>
+        <!--Main Content-->
+        <section class="main-content">
+            <div class="toc-section" id="background">
+                01 - Background
+            </div>
             <h2>College students are booked and busy</h2><br>
             <p>
                 Despite burnout and sleep deprivation, students work harder than 
@@ -120,13 +126,16 @@
                 demands of a fast-paced quarter system, high coursework loads, 
                 job hunting, and life obligations, pose significant challenges on 
                 learning and personal development.
-            </p><br><br><br>
+            </p>
+            <br><br><br>
 
             <h3>Need a recharge?</h3><br>
             <p>
                 UCSD had invested in MetroNaps™ sleeping pods since 2019 for 
                 students to use at RIMAC, the most popular campus gym.
-            </p><br><br><br>
+            </p>
+            <img src="https://file.notion.so/f/f/af5777cf-777c-4797-9ad2-f6ae49085b22/39cc37ff-948a-4418-bd41-9918609d8b4b/92435414-041c-43e6-be54-9b3d6b114729.png?id=91caaf73-c7f0-4434-8614-e1eebe6b6447&table=block&spaceId=af5777cf-777c-4797-9ad2-f6ae49085b22&expirationTimestamp=1719993600000&signature=Ez_plxWi8qENF5px0Sk_wqgcx_s3XHMTz4M17gO4msk&downloadName=Screenshot+2024-06-16+at+5.55.36+PM.png">
+            <br><br><br>
 
             <h3>Getting out of the building, in more ways than one.</h3><br>
             <p>
@@ -135,11 +144,56 @@
                 exploratory field research at RIMAC found that they are not effectively helping 
                 students rest because: 
             </p><br>
-            <ul style="list-style-type: circle;">
-                <li>Poor sleeping environment: noisy due to the nearby gym equipment and heavy foot traffic.</li>
-                <li>Lack of cleanliness: the seats inside were visibly sweaty, odorous, and partially broken.</li>
-                <li>Limited usage: most students who sat inside used them briefly, either out of unfamiliarity or due to the environment making it hard to rest.</li>
-            </ul>
+
+            <div class="insight" id="pain-point">
+                <div>❌</div>
+                <div>
+                    <p><b>Poor sleeping environment</b></p>
+                    <p>Noisy due to the nearby gym equipment and heavy foot traffic.</p>
+                </div>
+            </div>
+            <div class="insight" id="pain-point">
+                <div>❌</div>
+                <div>
+                    <p><b>Lack of cleanliness</b></p>
+                    <p>The seats inside were visibly sweaty, odorous, and partially broken.</p>
+                </div>
+            </div>
+            <div class="insight" id="pain-point">
+                <div>❌</div>
+                <div>
+                    <p><b>Limited usage</b></p>
+                    <p>Most students who sat inside used them briefly, either out of unfamiliarity or due to the environment making it hard to rest.</p>
+                </div>
+            </div>
+            <br><br><br>
+
+            <div class="toc-section" id="research">
+                02 - Research
+            </div>
+            <h2>Expanding the sleeping pods' audience to students</h2><br>
+            <p>
+                After gaining some initial insights about the sleeping pods, I 
+                decided to conduct online research to deepen my understanding of 
+                self-sufficient public spaces, workout recovery, and academic burnout. 
+            </p><br>
+
+            <div class="insight">
+                <div></div>
+                <div>
+                    <p><b>Diffusion of responsibility</b></p>
+                    <p>When people wait for someone else to act instead (in this case, a cleaning staff member), the experience becomes less satisfactory for everyone if nobody steps up.</p>
+                </div>
+            </div>
+
+            <div class="insight">
+                <div></div>
+                <div>
+                    <p><b>Aromatherapy</b></p>
+                    <p>Intersection between repairing muscles, relieving stress, and improving memory & attention with particular scents. Plus, scents are a way we can tackle cleanliness.</p>
+                </div>
+            </div>
+            <br><br><br>
             
         </section>
     </main>

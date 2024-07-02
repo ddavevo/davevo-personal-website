@@ -7,7 +7,6 @@
 
 .hero {
     margin-top: -1rem;
-    padding-bottom: 3rem;
     background-color: var(--navy);
 }
 
@@ -38,7 +37,7 @@
 }
 
 .logistic-unit {
-    margin-bottom: 1rem;
+    margin-bottom: 3.5rem;
 }
 
 .logistics-header {
@@ -68,11 +67,25 @@ main {
    
 }
 
+.table-of-contents {
+    position: sticky;
+    top: 8rem;
+}
+
+.table-of-contents div {
+    padding: 0 2.4rem 0.8rem 2.4rem; 
+    font-family: gravity-bold; 
+    color: var(--navy)
+}
+
 .table-of-contents li {
     font-family: gravity-bold;
     font-size: 0.9rem;
     line-height: 240%;
     color: #062f3fb0;
+}
+.table-of-contents li:hover {
+    color: var(--teal);
 }
 
 .toc-section {
@@ -84,6 +97,27 @@ main {
 
     padding: 0.4rem 0.75rem;   
     margin-bottom: 0.75rem; 
+}
+
+.main-content img {
+    width: 100%;
+    margin: 1rem 0;
+    border: 1px solid var(--navy);
+    object-fit: contain;
+}
+
+.insight {
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    border-radius: 0.6rem;
+    background-color: #00afcd32;
+}
+
+#pain-point {
+    display: grid;
+    grid-template-columns: 1ch 1fr;
+    gap: 1.5rem;
+    background-color: rgb(245, 205, 201);
 }
 
 /* ============================================================== */
