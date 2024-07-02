@@ -41,7 +41,6 @@
 }
 
 .logistics-header {
-    font-family: gravity-bold;
     margin-bottom: 0.5rem;
 }
 
@@ -63,8 +62,15 @@ main {
     display: grid;
     grid-template-columns: 20% 1fr;
     gap: 2.4rem;
-    padding-right: 2.4rem;
+    padding: 0 4rem;
    
+}
+
+main img {
+    width: 100%;
+    margin: 1rem 0;
+    border: 1px solid var(--navy);
+    object-fit: contain;
 }
 
 .table-of-contents {
@@ -73,7 +79,7 @@ main {
 }
 
 .table-of-contents div {
-    padding: 0 2.4rem 0.8rem 2.4rem; 
+    padding-bottom: 0.8rem; 
     font-family: gravity-bold; 
     color: var(--navy)
 }
@@ -83,6 +89,7 @@ main {
     font-size: 0.9rem;
     line-height: 240%;
     color: #062f3fb0;
+    margin-left: -2.4rem;
 }
 .table-of-contents li:hover {
     color: var(--teal);
@@ -99,11 +106,21 @@ main {
     margin-bottom: 0.75rem; 
 }
 
-.main-content img {
-    width: 100%;
-    margin: 1rem 0;
-    border: 1px solid var(--navy);
-    object-fit: contain;
+.main-content {
+    padding-right: 4rem;
+    padding-bottom: 5rem;
+}
+
+.interview-data {
+    display: grid;
+    grid-template-columns: 0.30fr 0.70fr;
+    gap: 2rem;
+}
+
+.quote {
+    box-sizing: border-box;
+    padding-left: 1.25rem;
+    border-left: 0.3rem solid var(--teal);
 }
 
 .insight {
@@ -111,6 +128,7 @@ main {
     margin-bottom: 1.2rem;
     border-radius: 0.6rem;
     background-color: #00afcd32;
+    max-width: 680px;
 }
 
 #pain-point {
@@ -118,6 +136,13 @@ main {
     grid-template-columns: 1ch 1fr;
     gap: 1.5rem;
     background-color: rgb(245, 205, 201);
+}
+
+#gain-point {
+    display: grid;
+    grid-template-columns: 1ch 1fr;
+    gap: 1.5rem;
+    background-color: rgb(216, 234, 198);
 }
 
 /* ============================================================== */
@@ -166,14 +191,15 @@ main {
 
 /* =========================================================== */
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 623px) {
     .column {
         display: flex;
         flex-direction: column;
     }
     main {
         grid-template-columns: 1fr;
-        padding: 0 2.4rem;
+        padding-left: 4rem;
+        padding-right: 0rem;
     }
     .table-of-contents {
         visibility: hidden;
