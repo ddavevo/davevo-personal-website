@@ -16,6 +16,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="javascript/test.js"></script>
     <script src="javascript/case-study-links.js"></script>
+    <script src="javascript/draggables.js"></script>
     
 </head>
 
@@ -68,10 +69,10 @@
                 <div class="landing-body">
                     <p>I am a...</p>
                 </div>
-                <div class="landing-text" >
-                    <h1 id="landing-text">designer,</h1>
-                    <h1 id="landing-text" style="color: var(--midtone)">researcher,</h1>
-                    <h1 id="landing-text" style="color: var(--navy)">creative.</h1>
+                <div style="padding-top: 1.25rem;">
+                    <h1 class="landing-text">designer,</h1>
+                    <h1 class="landing-text" style="color: var(--navy)">researcher,</h1>
+                    <h1 class="landing-text" style="color: var(--navy)">creative.</h1>
                 </div>
                 <div class="landing-body" style="margin-top: 1rem">
                     <p>
@@ -90,10 +91,20 @@
                 </div>
             </section>
         </div>
-
-        <div class="logo-visual-section">
-            <img class="logo-visual" src="images/circular-logo.png" alt="Logo Visual">
+        <div class="landing-visual" style="position: relative;">
+            <img style="position: absolute;" id="flying-arrow" src="https://file.notion.so/f/f/af5777cf-777c-4797-9ad2-f6ae49085b22/0555d4ee-d1b3-42f3-9c70-b5d272eee62a/flying-arrow.svg?id=8306865a-ed17-4838-b604-11df1f99995e&table=block&spaceId=af5777cf-777c-4797-9ad2-f6ae49085b22&expirationTimestamp=1720137600000&signature=Hi82NH95iJdCmDDWC7dPW-j7IrZPqZ4XNIq-kGBfaKw&downloadName=flying-arrow.svg">
+            
+            <div id="designer-svg" class="draggable">
+                <img class="designer-svg" src="https://file.notion.so/f/f/af5777cf-777c-4797-9ad2-f6ae49085b22/b59c56bc-8868-4cd1-b541-1ecf9a7ed943/designer-movable.svg?id=5d855c28-7358-4c33-a9c4-39311bdac40a&table=block&spaceId=af5777cf-777c-4797-9ad2-f6ae49085b22&expirationTimestamp=1720137600000&signature=1b3RKoN4ujJ0S_PDbIFSCnBc2L269jUubeEKdpGvyFU&downloadName=designer-movable.svg">
+                <img id="move-me" src="https://file.notion.so/f/f/af5777cf-777c-4797-9ad2-f6ae49085b22/05c296a0-d198-470e-8fc2-d3696e0b7fe6/move-me.svg?id=a1cdfeb7-6838-4940-b679-b149032afa72&table=block&spaceId=af5777cf-777c-4797-9ad2-f6ae49085b22&expirationTimestamp=1720137600000&signature=PHPfSiKmdq3xMBh2p45dMFprutwIjvmUd0OR-WLycjg&downloadName=move-me.svg">
+            </div>
+            
+            <img id="researcher-svg" class="draggable" src="https://file.notion.so/f/f/af5777cf-777c-4797-9ad2-f6ae49085b22/480a3604-f14d-431c-ae64-f688a4e4bafd/researcher-movable.svg?id=3174aab1-4fb8-43dd-8237-9df6ae3d9274&table=block&spaceId=af5777cf-777c-4797-9ad2-f6ae49085b22&expirationTimestamp=1720137600000&signature=C5kwgmR9nOSToKDi85KB-rb_62MdPnu8-IhEF7OaDUc&downloadName=researcher-movable.svg">
+            <img id="creative-svg" class="draggable" src="https://file.notion.so/f/f/af5777cf-777c-4797-9ad2-f6ae49085b22/3ef677bb-a1a0-40e0-a6cc-d75aec405db3/creative-movable.svg?id=95f48354-96fe-4a88-8f48-09ed0bde9ec8&table=block&spaceId=af5777cf-777c-4797-9ad2-f6ae49085b22&expirationTimestamp=1720137600000&signature=jjZ1XNjxKkOTH_u04n4VmOfbAUCmPeTzez0B3cizJS4&downloadName=creative-movable.svg">
+            
+            <img src="https://file.notion.so/f/f/af5777cf-777c-4797-9ad2-f6ae49085b22/626e40d3-64b5-4967-95a8-3521848849eb/portfolio-sky.png?id=5eb0a775-ac79-41ee-8d3e-b07efa9d6bbf&table=block&spaceId=af5777cf-777c-4797-9ad2-f6ae49085b22&expirationTimestamp=1720137600000&signature=j66e07sj8FtmvknyaMVgg4lE7vlSknpr49sUXPu6H5Q&downloadName=portfolio-sky.png">
         </div>
+        
     </main>
 
     <h2 id="projects-header">Featured Projects</h2>
