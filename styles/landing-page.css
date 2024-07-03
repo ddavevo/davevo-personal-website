@@ -3,7 +3,6 @@
     grid-template-columns: 45% 55%;
     gap: 1.5rem;
     place-content: center;
-
     position: relative;
 }
 
@@ -71,8 +70,8 @@
 }
 
 #researcher-svg {
-    top: 74%;
-    left: 36%;
+    top: 72%;
+    left: 22%;
     rotate: 8deg;
 }
 
@@ -80,28 +79,6 @@
     top: 48%;
     right: 10%;
     rotate: 40deg;
-}
-
-/* ========================================================================= */
-
-.notion-cta-button { 
-    height: 2rem;
-    width: 192px;
-    background-color: var(--teal);
-    padding-top: .6rem;
-    border-radius: .6rem;
-
-    font-family: gravity-bold;
-    color: var(--bg);
-    text-align: center;
-
-    margin-top: 2.8rem;
-    cursor: pointer;
-    transition: background-color 0.15s;
-}
-
-.notion-cta-button:hover, .notion-cta-button:active  {
-    background-color: var(--navy);
 }
 
 /* ========================================================================= */
@@ -132,6 +109,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    cursor: pointer;
 }
 
 .project img {
@@ -141,13 +119,8 @@
     border-radius: 12px 12px 0px 0px;
     transition: transform 0.2s ease-in;
 }
-
 .project img:hover {
     transform: scale(105%);
-}
-
-#aromacovery, #sevenatenine {
-    cursor: pointer;
 }
 
 .project-overview {
@@ -208,6 +181,11 @@
         order: 2;
         padding: 0 5rem;
     }
+    #flying-arrow {
+        max-width: 70%;
+        width: clamp(50%, .5vw, 65%);
+        bottom: clamp(-2rem, 2vw, -2rem);
+    }
     .featured-case-studies {
         grid-template-columns: 1fr;
     }
@@ -225,25 +203,6 @@
     }
     .landing-body {
         font-size: 0.92rem;
-    }
-    .logo-visual {
-        padding-top: 1.6rem;
-    }
-
-    /* ================================*/
-
-    .notion-cta-button {
-        position: relative;
-        left: calc(50% - 88px);
-
-        font-size: 0.91rem;
-        height: 1.8rem;
-        width: 176px;
-        padding-top: .6rem;
-    }
-    .notion-cta {
-        position: relative;
-        margin-bottom: 2.4rem;
     }
 
     /* =================================*/
