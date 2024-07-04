@@ -22,7 +22,7 @@
 /* =================================================================== */
 
 .landing-page img {
-    width: 100%;
+    object-fit: cover;
     height: auto;
 }
 
@@ -72,6 +72,7 @@
 }
 
 .designer-svg {
+    width: 100%;
     top: 10%;
     left: 12%;
     rotate: -16deg;
@@ -93,7 +94,7 @@
 #creative-svg {
     top: 48%;
     right: 10%;
-    rotate: 40deg;
+    rotate: -12deg;
 }
 
 /* ========================================================================= */
