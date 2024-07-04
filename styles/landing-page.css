@@ -40,6 +40,7 @@
 }
 .landing-ctas img:hover {
     transform: scale(1.1, 1.1);
+    filter: brightness(0) invert(60%) sepia(84%) saturate(3643%) hue-rotate(153deg) brightness(95%) contrast(101%);
 }
 .landing-ctas img:active {
     transform: scale(0.9, 0.9);
