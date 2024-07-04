@@ -25,6 +25,10 @@
     color: var(--bg);
 }
 
+.hero b {
+    -webkit-text-stroke: .3px var(--bg);
+}
+
 .logistics {
     padding: 0 2.4rem;
     display: grid;
