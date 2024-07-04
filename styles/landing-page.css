@@ -15,7 +15,7 @@
 .landing-text {
     font-family: abril;
     color: var(--teal);
-    font-size: max(4rem, 5.6vw);
+    font-size: clamp(4rem, 4vw, 8rem);
     line-height: 90%;
 }
 
@@ -162,14 +162,14 @@
 
 /* ========================================================================= */
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 901px) {
     .landing-page {
         padding-bottom: 0rem;
         padding: 5rem; padding-top: 8rem; padding-bottom: 3rem;
     }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
     .landing-page {
         grid-template-columns: 1fr;
     }
@@ -179,7 +179,7 @@
     }
     .blurb-section {
         order: 2;
-        padding: 0 5rem;
+        padding: 0 4rem;
     }
     #flying-arrow {
         max-width: 70%;
@@ -193,16 +193,16 @@
 
 @media screen and (max-width: 620px) {
     .landing-page {
-        padding-bottom: 0;
+        padding-bottom: 4rem;
+    }
+    .blurb-section {
+        padding: 0 2.4rem;
     }
     .landing-body, .landing-text {
         text-align: center;
     }
-    #landing-text {
-        font-size: min(3.6rem, 4rem);
-    }
-    .landing-body {
-        font-size: 0.92rem;
+    .landing-text {
+        font-size: clamp(3rem, 15vw, 4rem);
     }
 
     /* =================================*/
