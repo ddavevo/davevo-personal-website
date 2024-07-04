@@ -57,6 +57,7 @@ a:link, a:visited, a:hover, a:active {
 
 b {
     font-weight: normal;
+    -webkit-text-stroke: 0.3px var(--navy);
     font-family: gravity-bold;
 }
 

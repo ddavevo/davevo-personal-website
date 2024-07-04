@@ -16,6 +16,10 @@
     color: var(--bg);
 }
 
+.footer b {
+    -webkit-text-stroke: 0px var(--bg);
+}
+
 .social-media-icons {
     display: flex;
     justify-content: flex-end;
