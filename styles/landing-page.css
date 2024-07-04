@@ -1,7 +1,7 @@
 .landing-page {
     display: grid;
     grid-template-columns: 45% 55%;
-    gap: 1.5rem;
+    gap: 2.5rem;
     place-content: center;
     position: relative;
 }
@@ -84,7 +84,7 @@
 /* ========================================================================= */
 
 #projects-header {
-    padding: 6rem 0 1.4rem 4.4rem;
+    padding: 0 0 1.4rem 4.4rem;
 }
 
 .featured-case-studies {
@@ -164,14 +164,14 @@
 
 @media screen and (min-width: 901px) {
     .landing-page {
-        padding-bottom: 0rem;
-        padding: 5rem; padding-top: 8rem; padding-bottom: 3rem;
+        padding: 8rem 5rem 1rem 5rem;
     }
 }
 
 @media screen and (max-width: 900px) {
     .landing-page {
         grid-template-columns: 1fr;
+        padding-bottom: 4rem;
     }
     .landing-visual {
         order: 1;
@@ -183,8 +183,11 @@
     }
     #flying-arrow {
         max-width: 70%;
-        width: clamp(50%, .5vw, 65%);
+        width: clamp(55%, .5vw, 65%);
         bottom: clamp(-2rem, 2vw, -2rem);
+    }
+    .draggable {
+        max-width: clamp(70px, 15vw, 90px);
     }
     .featured-case-studies {
         grid-template-columns: 1fr;
@@ -204,6 +207,7 @@
     .landing-text {
         font-size: clamp(3rem, 15vw, 4rem);
     }
+    
 
     /* =================================*/
 
