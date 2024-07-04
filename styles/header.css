@@ -129,28 +129,6 @@
     line-height: unset;
 }
 
-@media screen and (min-width: 621px) {
-    .menu {
-        position: static;
-        height: auto;
-        opacity: 1;
-        transform: none;
-    }
-    .hamburger-menu-options {
-        position: static;
-        margin: 0;
-        transform: none;
-        opacity: 1;
-        pointer-events: unset;
-        display: flex;
-        justify-content: flex-end;
-        padding-top: 3rem;
-        gap: 4rem;
-        padding-right: 4rem;
-        line-height: unset;
-    }
-}
-
 @media screen and (max-width: 620px) {
     .wordmark, .header-text, .current-page-indicator {
         opacity: 0;
@@ -174,5 +152,27 @@
     }
     .hamburger-menu-options li {
         line-height: 240%;
+    }
+}
+
+@media screen and (min-width: 621px) {
+    .menu {
+        position: static;
+        height: auto;
+        opacity: 1;
+        transform: none;
+    }
+    .hamburger-menu-options {
+        position: static;
+        margin: 0;
+        transform: none;
+        opacity: 1;
+        pointer-events: unset;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 3rem;
+        gap: 4rem;
+        padding-right: 4rem;
+        line-height: unset;
     }
 }
