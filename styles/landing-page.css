@@ -35,7 +35,7 @@
 .landing-ctas img {
     width: 40px;
     height: auto;
-    filter: brightness(0) invert(14%) sepia(29%) saturate(1998%) hue-rotate(159deg) brightness(93%) contrast(96%);
+    filter: brightness(0) invert(64%) sepia(32%) saturate(182%) hue-rotate(131deg) brightness(96%) contrast(88%);
     transform: scale 1s ease-in-out;
 }
 .landing-ctas img:hover {
