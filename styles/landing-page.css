@@ -21,13 +21,28 @@
 
 /* =================================================================== */
 
-.landing-visual {
-    overflow: hidden;
-}
-
 .landing-page img {
     width: 100%;
     height: auto;
+}
+
+.landing-ctas {
+    display: flex;
+    padding-top: 1rem;
+    gap: 1.5rem;
+}
+
+.landing-ctas img {
+    width: 40px;
+    height: auto;
+    filter: brightness(0) invert(14%) sepia(29%) saturate(1998%) hue-rotate(159deg) brightness(93%) contrast(96%);
+    transform: scale 1s ease-in-out;
+}
+.landing-ctas img:hover {
+    transform: scale(1.1, 1.1);
+}
+.landing-ctas img:active {
+    transform: scale(0.9, 0.9);
 }
 
 #flying-arrow {
@@ -206,6 +221,9 @@
     }
     .landing-text {
         font-size: clamp(3rem, 15vw, 4rem);
+    }
+    .landing-ctas {
+        justify-content: center;
     }
     
 
