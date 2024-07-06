@@ -63,7 +63,7 @@
     
     <section class="hero">
         <h1 style="padding: 3rem 4rem 2.4rem 4rem;">Tailoring the MetroNaps™ sleeping pod experience to enhance productivity for college students</h1>
-        <div class="logistics" id="background">
+        <div class="logistics">
             <div class="column">
                 <div class="logistic-unit">
                     <p class="logistics-header"><b>My Role</b></p>
@@ -87,7 +87,7 @@
             </div>
         </div>
     </section>
-    <div style="width: 100%; height: 0.8rem; background: var(--teal);"></div>
+    <div style="width: 100%; height: 0.8rem; background-image: linear-gradient(to left, var(--teal), var(--navy));"></div>
 
     <section class="wip">
         <p style="text-align: center; padding: 0 2.4rem; font-family: gravity-bold;">
@@ -108,6 +108,7 @@
                     <a href="#research"><li>Research</li></a>
                     <a href="#ui-design"><li>UI Design</li></a>
                     <a href="#kiosk-design"><li>Kiosk Design</li></a>
+                    <a href="#final-deliverables"><li>Final Deliverables</li></a>
                     <a href="#usability-testing"><li>Usability Testing</li></a>
                     <a href="#reflection"><li>Reflection</li></a>
                 </ul>
@@ -118,6 +119,7 @@
         <section>
             
             <section class="main-content"> <!--Background-->
+                <div class="toc-spacer" id="background"></div>
                 <div class="toc-section">
                     01 - Background
                 </div>
@@ -146,34 +148,35 @@
                     exploratory field research at RIMAC found that they are not effectively helping 
                     students rest because: 
                 </p>
-                
-                <img href="../images/aromacovery/background-field-pic.png" alt="field-photo">
-
-                <div class="insight" id="pain-point">
-                    <div>❌</div>
+                <div class="two-column-div" id="field-findings">
                     <div>
-                        <p><b>Poor sleeping environment</b></p>
-                        <p>Noisy due to the nearby gym equipment and heavy foot traffic.</p>
+                        <div class="insight" id="pain-point">
+                            <div>❌</div>
+                            <div>
+                                <p><b>Poor sleeping environment</b></p>
+                                <p>Noisy due to the nearby gym equipment and heavy foot traffic.</p>
+                            </div>
+                        </div>
+                        <div class="insight" id="pain-point">
+                            <div>❌</div>
+                            <div>
+                                <p><b>Lack of cleanliness</b></p>
+                                <p>The seats inside were visibly sweaty, odorous, and partially broken.</p>
+                            </div>
+                        </div>
+                        <div class="insight" id="pain-point">
+                            <div>❌</div>
+                            <div>
+                                <p><b>Limited usage</b></p>
+                                <p>Most students who sat inside used them briefly, either out of unfamiliarity or due to the environment making it hard to rest.</p>
+                            </div>
+                        </div>
                     </div>
+                    <img src="../images/aromacovery/background-field-pic 2.37.41 PM.jpg">
                 </div>
-                <div class="insight" id="pain-point">
-                    <div>❌</div>
-                    <div>
-                        <p><b>Lack of cleanliness</b></p>
-                        <p>The seats inside were visibly sweaty, odorous, and partially broken.</p>
-                    </div>
-                </div>
-                <div class="insight" id="pain-point">
-                    <div>❌</div>
-                    <div>
-                        <p><b>Limited usage</b></p>
-                        <p>Most students who sat inside used them briefly, either out of unfamiliarity or due to the environment making it hard to rest.</p>
-                    </div>
-                </div>
-                <div class="white-space-block"></div>
 
                 <h3>Solution Overview</h3>
-                <p id="research">
+                <p>
                     We redesigned the sleeping pods to enhance rest quality by 
                     making the space easier to maintain and the sleeping 
                     experience more pleasant, improving workout recovery for gym-goers and 
@@ -189,6 +192,7 @@
             </section>
             
             <section class="main-content"> <!--Research-->
+                <div class="toc-spacer" id="research"></div>
                 <div class="toc-section">
                     02 - Research
                 </div>
@@ -206,7 +210,7 @@
                         <p>When people wait for someone else to act instead (in this case, a cleaning staff member), the experience becomes less satisfactory for everyone if nobody steps up.</p>
                     </div>
                 </div>
-                <img src="../images/aromacovery/research-diffusion.png">
+                <img style="margin: -1.5rem 0" src="../images/aromacovery/research-diffusion.png">
     
                 <div class="insight">
                     <div>
@@ -301,12 +305,13 @@
                 <p>
                     2. How might the sleeping pods facilitate better rest quality and boost productivity for students after using them?
                 </p><br>
-                <p id="ui-design">
+                <p>
                     3. How might we make the sleeping pods more accessible for students across campus?
                 </p>
             </section>
 
             <section class="main-content"> <!--UI Design-->
+                <div class="toc-spacer" id="ui-design"></div>
                 <div class="toc-section">
                     03 - UI Design
                 </div>
@@ -320,12 +325,10 @@
                 <div class="white-space-block"></div>
 
                 <h3>Paper Prototyping</h3>
-                <p><b>[todo: high-contrast paper screen scans go here]</b></p><br>
                 <p>
                     To test the user flows, I quickly drafted rough screens from paper. Then, we conducted preliminary user testing by having participants walk through the features. Here’s what we discovered:
                 </p>
-                <br>
-
+                <img src="../images/aromacovery/paper-prototyping.png">
                 <div class="insight" id="pain-point">
                     <div>❌</div>
                     <div>
@@ -352,7 +355,6 @@
                 <div class="white-space-block"></div>
 
                 <h3>How We Iterated</h3>
-                <p><b>[todo: add before states (high-contrast screens)]</b></p><br>
 
                 <p>We first prioritized reducing the total number of actions required to get to the rest stage, resulting in half as many.</p>
                 <img src="../images/aromacovery/reducing-steps.png"><br><br>
@@ -365,6 +367,7 @@
             </section>
 
             <section class="main-content"> <!--Kiosk Design-->
+                <div class="toc-spacer" id="kiosk-design"></div>
                 <div class="toc-section">
                     04 - Kiosk Design
                 </div>
@@ -393,24 +396,29 @@
                         <img src="../images/aromacovery/build-letters.JPG">
                     </div>
                 </div>
-                <div class="white-space-block"></div>
+            </section>
 
-                <h3>Final Deliverables</h3>
+            <section class="main-content"> <!--Final Deliverables-->
+                <div class="toc-spacer" id="final-deliverables"></div>
+                <div class="toc-section">
+                    05 - Final Deliverables
+                </div>
+
+                <h2>Final Deliverables</h2>
                 <img src="../images/aromacovery/final-kiosk.png" alt="final-kiosk">
                 <img src="../images/aromacovery/aromacovery.gif">
-                <div id="usability-testing"></div>
             </section>
 
             <section class="main-content"> <!--Usability Testing-->
+                <div class="toc-spacer" id="usability-testing"></div>
                 <div class="toc-section">
-                    05 - Usability Testing
+                    06 - Usability Testing
                 </div>
                 <h2>Testing the Aromacovery Experience</h2><br>
 
                 <p>
                     Pictured above is the kiosk showcase, where passersby visited and tried out Aromacovery. With a higher fidelity, we conducted usability testing on several eager participants. This is how people reacted:
-                </p>
-                <br><p><b>[todo: collage of showcase snapshots go here, stylize interview quotes like speech bubbles?]</b></p><br>
+                </p><br>
                 
                 <div class="insight" id="gain-point">
                     <div>✅</div>
@@ -427,7 +435,8 @@
                         <p>“I like that you actually have a diffuser. It’s so cool that I’m actually smelling the scents and experiencing it for real.”</p>
                     </div>
                 </div>
-                <div class="white-space-block"></div>
+
+                <br><p><b>[todo: collage of showcase snapshots]</b></p><br><br>
 
                 <h3>Future Iterations</h3><br>
                 <div class="insight">
@@ -454,8 +463,9 @@
             </section>
             
             <section class="main-content"> <!--Reflection-->
-                <div class="toc-section" id="reflection">
-                    06 - Reflection
+                <div class="toc-spacer" id="reflection"></div>
+                <div class="toc-section">
+                    07 - Reflection
                 </div>
                 <h2>The Scent of Opportunity</h2><br>
                 <p>
