@@ -207,7 +207,7 @@ main h2, main h3 {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-174vw);
+        transform: translateX(-201vw);
     }
 }
 
@@ -217,11 +217,15 @@ main h2, main h3 {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-174vw);
+        transform: translateX(-201vw);
     }
 }
 
-/* 0 -2440 = 2440 */
+/*
+0 -2440 = 2440 -174vw
+oh i get it know, when the vw increases/decreased the total distance 
+travelled changes, affecting the speed, while the delay is constant
+*/
 
 
 /* =========================================================== */
