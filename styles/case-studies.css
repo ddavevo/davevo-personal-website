@@ -169,8 +169,9 @@ main h2, main h3 {
 }
 
 /* ============================================================== */
-/*
+
 .scroll-track {
+    position: relative;
     height: 300px;
     width: 90ch;
     overflow: hidden;
@@ -179,6 +180,7 @@ main h2, main h3 {
 }
 
 .carousel {
+    position: absolute;
     display: inline-block;
     margin-left: 90ch;
 }
@@ -205,26 +207,30 @@ main h2, main h3 {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-2440px);
+        transform: translateX(-174vw);
     }
 }
+
 
 @keyframes slide-2 {
     from {
-        transform: translateX(-1938px);
+        transform: translateX(0);
     }
     to {
-        transform: translateX(-4380px);
+        transform: translateX(-174vw);
     }
 }
 
-/* 0 -2000 = 2000
-/* -1938 -3938 = 2000
-
-*/
+/* 0 -2440 = 2440 */
 
 
 /* =========================================================== */
+
+@media screen and (min-width: 624px) and (max-width: 1100px) {
+    main p, main img, main h1, main h2, main h3, main div {
+        max-width: calc(60vw);
+    }
+}
 
 @media screen and (max-width: 700px) {
     .interview-data {
@@ -242,6 +248,10 @@ main h2, main h3 {
         padding-left: 3.5rem;
         padding-right: 0rem;
     }
+    main p, main img, main h1, main h2, main h3, main div {
+        max-width: calc(100vw - 7rem);
+    }
+    
     .table-of-contents {
         visibility: hidden;
         width: 0;
