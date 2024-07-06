@@ -73,12 +73,12 @@ main {
 main p {
     max-width: 70ch;
 }
-
+main img, main div {
+    max-width: 90ch;
+}
 main img {
     width: 100%;
-    max-width: 90ch;
     margin: 1rem 0;
-    border: 1px solid var(--navy);
     object-fit: cover;
     min-height: 300px;
     object-position: 0 0;
@@ -225,6 +225,7 @@ main h2, main h3 {
 0 -2440 = 2440 -174vw
 oh i get it know, when the vw increases/decreased the total distance 
 travelled changes, affecting the speed, while the delay is constant
+variables: max-width, viewport-width, width of carousel elements
 */
 
 
