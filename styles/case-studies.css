@@ -79,7 +79,7 @@ main img, main div {
 main img {
     width: 100%;
     margin: 1rem 0;
-    object-fit: cover;
+    object-fit: contain;
     min-height: 300px;
     object-position: 0 0;
 }
