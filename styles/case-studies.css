@@ -213,11 +213,11 @@ main h2, main h3 {
 }
 
 #first-carousel {
-    animation: 10s slide-1 linear infinite;
+    animation: 20s slide-1 linear infinite;
 }
 #second-carousel {
-    animation: 10s slide-2 linear infinite;
-    animation-delay: 5s;
+    animation: 20s slide-2 linear infinite;
+    animation-delay: 10s;
 }
 
 .carousel img {
@@ -234,7 +234,7 @@ main h2, main h3 {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-201vw);
+        transform: translateX(-168vw);
     }
 }
 
@@ -244,7 +244,7 @@ main h2, main h3 {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-201vw);
+        transform: translateX(-168vw);
     }
 }
 
