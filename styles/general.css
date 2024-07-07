@@ -3,11 +3,16 @@
     --teal: #00afcd;
     --midtone: #005b6d;
     --navy: #062f3f;
+
+    --light-teal: #00afcd32;
+    --pain-point: rgb(245, 205, 201);
+    --gain-point: rgb(216, 234, 198);
+    
     --navgradient: linear-gradient(var(--bg), var(--bg) 9.4rem, rgb(254,246,240, 0.8) 10.2rem, transparent);
 }
 
 * {
-    margin: 0px; 
+    margin: 0px;
 }
 
 body {

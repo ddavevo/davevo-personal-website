@@ -139,7 +139,7 @@
     border-radius: 12px 12px 0px 0px;
     transition: transform 0.2s ease-in;
 }
-.project img:hover {
+.project:hover img {
     transform: scale(105%);
 }
 
@@ -177,7 +177,7 @@
     margin-right: 0.6rem;
     border-radius: .4rem;
     line-height: 3.2rem;
-    background-color: #00afcd32; 
+    background-color: var(--light-teal); 
 }
 
 /* ========================================================================= */
