@@ -286,8 +286,9 @@ variables: max-width, viewport-width, width of carousel elements
 @media screen and (max-width: 623px) {
     #case-study-title {
         padding: 3rem 2.4rem 2.4rem 2.4rem;
+        font-size: clamp(1.75rem, 2vw, 2rem);
+        text-align: left;
     }
-
     .table-of-contents {
         visibility: hidden;
         width: 0;
