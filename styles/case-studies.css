@@ -262,6 +262,9 @@ variables: max-width, viewport-width, width of carousel elements
     main p, main img, main h1, main h2, main h3, main div {
         max-width: calc(60vw);
     }
+}
+
+@media screen and (max-width: 1100px) {
     .two-column-div {
         grid-template-columns: 1fr;
     }
