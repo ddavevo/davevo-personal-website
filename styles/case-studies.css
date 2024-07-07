@@ -290,7 +290,7 @@ variables: max-width, viewport-width, width of carousel elements
         padding-left: 3.5rem;
         padding-right: 0rem;
     }
-    main p, main img, main h1, main h2, main h3, main div {
+    main p, main img, main h1, main h2, main h3, main div, .two-column-div {
         max-width: calc(100vw - 7rem);
     }
     
