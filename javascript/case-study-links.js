@@ -9,3 +9,15 @@ $(document).ready(function() {
         window.location.href = 'case-studies/7ate9.html';
     });
 });
+
+$(document).ready(function() {
+    $("#designlab").click(function() {
+        window.location.href = 'case-studies/designlab.html';
+    });
+});
+
+$(document).ready(function() {
+    $("#sns").click(function() {
+        window.location.href = 'case-studies/sns.html';
+    });
+});
