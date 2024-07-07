@@ -70,7 +70,7 @@ main {
     display: grid;
     grid-template-columns: 20% 1fr;
     gap: 2.4rem;
-    padding: 0 4rem;
+    padding: 0 4rem; padding-top: 4rem;
    
 }
 
@@ -287,8 +287,7 @@ variables: max-width, viewport-width, width of carousel elements
     }
     main {
         grid-template-columns: 1fr;
-        padding-left: 3.5rem;
-        padding-right: 0rem;
+        padding-top: 1rem; padding-left: 3.5rem; padding-right: 0rem;
     }
     main p, main img, main h1, main h2, main h3, main div, .two-column-div {
         max-width: calc(100vw - 7rem);
