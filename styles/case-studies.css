@@ -26,7 +26,7 @@ html {
 }
 
 #case-study-title {
-    padding: 3rem 4rem 2.4rem 4rem;
+    padding: 3rem 2.4rem 2.4rem 2.4rem;
 }
 
 .hero p {
@@ -34,23 +34,15 @@ html {
 }
 
 .hero b {
-    -webkit-text-stroke: .3px var(--bg);
+    -webkit-text-stroke: 0.02rem var(--bg);
 }
 
 .logistics {
-    padding: 0 2.4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.column {
     display: flex;
     justify-content: space-around;
     gap: 2rem;
-}
-
-.logistic-unit {
-    margin-bottom: 3.5rem;
+    padding: 0 2.4rem;
+    padding-bottom: 3.5rem;
 }
 
 .logistics-header {
@@ -290,14 +282,15 @@ variables: max-width, viewport-width, width of carousel elements
         font-size: clamp(1.75rem, 2vw, 2rem);
         text-align: left;
     }
+    .logistics {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
     .table-of-contents {
         visibility: hidden;
         width: 0;
         height: 0;
-    }
-    .column {
-        display: flex;
-        flex-direction: column;
     }
     main {
         grid-template-columns: 1fr;
