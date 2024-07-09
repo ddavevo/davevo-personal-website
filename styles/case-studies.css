@@ -222,7 +222,7 @@ main h3 {
 .hmw-wrapper {
     width: auto;
     height: auto;
-    background-image: linear-gradient(to left, var(--teal), var(--navy));
+    background: var(--case-study);
     padding: .5rem; 
     border-radius: 1rem;
 }

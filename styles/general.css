@@ -10,6 +10,7 @@
     --gain-point: rgb(216, 234, 198);
     
     --navgradient: linear-gradient(var(--bg), var(--bg) 9.4rem, rgb(254,246,240, 0.8) 10.2rem, transparent);
+    --case-study: linear-gradient(to left, var(--teal), var(--navy));
 }
 
 * {
