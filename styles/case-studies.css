@@ -164,21 +164,6 @@ main h3 {
     margin: 0;
 }
 
-#field-findings {
-    max-width: 90ch;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    margin: 2rem 0;
-    gap: 2rem;
-}
-
-#field-findings img {
-    width: auto;
-    height: 480px;
-    margin: 0;
-}
-
 .interview-data {
     display: grid;
     grid-template-columns: 0.45fr 0.55fr;
@@ -248,21 +233,6 @@ main h3 {
 
 /* =============================================================== */
 
-.two-column-img {
-    max-width: 90ch; 
-    display: grid; 
-    grid-template-columns: 1fr 1fr;
-    gap: .25rem;
-    margin: 2rem 0;
-}
-
-.two-column-img img {
-    width: 1fr;
-    height: 400px;
-    object-fit: cover;
-    object-position: 0 0;
-}
-
 /* ============================================================== */
 
 .scroll-track {
@@ -322,6 +292,45 @@ travelled changes, affecting the speed, while the delay is constant
 variables: max-width, viewport-width, width of carousel elements
 */
 
+#field-findings {
+    max-width: 90ch;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin: 2rem 0;
+    gap: 2rem;
+}
+
+#field-findings img {
+    width: auto;
+    height: 480px;
+    margin: 0;
+}
+
+#sevenatenine-takeaways {
+    gap: 0;
+}
+
+.epep {
+    background-color: var(--pain-point); 
+    border-radius: .6rem 0 0 .6rem;
+}
+
+.two-column-img {
+    max-width: 90ch; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: .25rem;
+    margin: 2rem 0;
+}
+
+.two-column-img img {
+    width: 1fr;
+    height: 400px;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
 
 /* =========================================================== */
 
@@ -375,5 +384,10 @@ variables: max-width, viewport-width, width of carousel elements
     }
     .white-space-block {
         height: 4ch;
+    }
+    .epep {
+        background-color: var(--pain-point); 
+        border-radius: .6rem;
+        margin-bottom: 1.5rem;
     }
 }
