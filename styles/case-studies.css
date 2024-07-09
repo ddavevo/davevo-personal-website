@@ -205,6 +205,12 @@ main h3 {
     max-width: 680px;
 }
 
+#with-emoji {
+    display: grid;
+    grid-template-columns: 1ch 1fr;
+    gap: 1.5rem;
+}
+
 #pain-point {
     display: grid;
     grid-template-columns: 1ch 1fr;
