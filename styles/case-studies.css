@@ -369,8 +369,7 @@ variables: max-width, viewport-width, width of carousel elements
     }
     .table-of-contents {
         visibility: hidden;
-        width: 0;
-        height: 0;
+        display: none;
     }
     main {
         grid-template-columns: 1fr;
