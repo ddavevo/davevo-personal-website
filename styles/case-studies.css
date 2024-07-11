@@ -233,64 +233,20 @@ main h4 {
     -webkit-text-stroke: none;
 }
 
-/* ============================================================== */
+.back-up-arrow {
+    display: flex; 
+    height: 20px;
+    box-sizing: border-box;
+}
 
-.scroll-track {
-    position: relative;
-    height: 300px;
-    width: 90ch;
+.back-up-arrow img {
+    width: 1.75rem; 
+    height: 1.75rem; 
+    min-height: 0;
     overflow: hidden;
-    white-space: nowrap;
-    border: 1px solid;
+    object-position: 0 0; 
+    margin: 0; margin-right: .5rem;
 }
-
-.carousel {
-    position: absolute;
-    display: inline-block;
-    margin-left: 90ch;
-}
-
-#first-carousel {
-    animation: 20s slide-1 linear infinite;
-}
-#second-carousel {
-    animation: 20s slide-2 linear infinite;
-    animation-delay: 10s;
-}
-
-.carousel img {
-    width: 400px;
-    height: 300px;
-    object-fit: cover;
-    margin: 0;
-    border-radius: 0.2rem;
-}
-
-@keyframes slide-1 {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-237%) translateX(-90ch);
-    }
-}
-
-
-@keyframes slide-2 {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-237%) translateX(-90ch);
-    }
-}
-
-/*
-0 -2440 = 2440 -174vw
-oh i get it know, when the vw increases/decreased the total distance 
-travelled changes, affecting the speed, while the delay is constant
-variables: max-width, viewport-width, width of carousel elements
-*/
 
 /* =============================================================== */
 

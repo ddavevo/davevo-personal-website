@@ -3,7 +3,6 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     position: relative;
-
     background-color: var(--teal);
     height: 82px;
     margin-bottom: 0;
