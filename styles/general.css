@@ -4,8 +4,11 @@
     --midtone: #005b6d;
     --navy: #062f3f;
 
+    --mid-teal: #5ed0e3;
     --light-teal: #00afcd32;
+    --light-blue: #abdfe5;
     --faded: #062f3fb0;
+    
     --pain-point: rgb(245, 205, 201);
     --gain-point: rgb(216, 234, 198);
     
@@ -22,7 +25,7 @@ body {
     
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-weight: normal;
     font-family: gravity-bold;
     color: var(--navy);
@@ -38,6 +41,10 @@ h2 {
 
 h3 {
     font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+h4 {
+    font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
 p, li, span { /* landing-body: I am a... I'm an upcoming UI/UX... */
