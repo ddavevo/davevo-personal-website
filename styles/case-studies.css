@@ -358,6 +358,18 @@ variables: max-width, viewport-width, width of carousel elements
     margin-top: 1rem;
 }
 
+.numbered {
+    margin: 1rem 0; margin-top: 2rem;
+}
+
+.numbered span {
+    font-family: gravity-bold;
+    color: var(--bg);
+    background-color: #14ae5c;
+    border-radius: 3rem;
+    padding: .4rem .75rem;
+}
+
 .two-column-img {
     max-width: 90ch; 
     display: grid; 
