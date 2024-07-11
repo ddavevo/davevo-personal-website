@@ -233,8 +233,6 @@ main h4 {
     -webkit-text-stroke: none;
 }
 
-/* =============================================================== */
-
 /* ============================================================== */
 
 .scroll-track {
@@ -273,7 +271,7 @@ main h4 {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-168vw);
+        transform: translateX(-237%) translateX(-90ch);
     }
 }
 
@@ -283,7 +281,7 @@ main h4 {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-168vw);
+        transform: translateX(-237%) translateX(-90ch);
     }
 }
 
@@ -293,6 +291,8 @@ oh i get it know, when the vw increases/decreased the total distance
 travelled changes, affecting the speed, while the delay is constant
 variables: max-width, viewport-width, width of carousel elements
 */
+
+/* =============================================================== */
 
 #field-findings {
     max-width: 90ch;
