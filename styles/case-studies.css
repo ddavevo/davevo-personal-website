@@ -243,7 +243,7 @@ main h4 {
     width: 1.75rem; 
     height: 1.75rem; 
     min-height: 0;
-    overflow: hidden;
+    object-fit: contain;
     object-position: 0 0; 
     margin: 0; margin-right: .5rem;
 }
@@ -425,5 +425,9 @@ main h4 {
     .mvp-quote {
         padding: 0; padding-bottom: 1rem;
         border-radius: 0;
+    }
+
+    .back-up-arrow {
+        justify-content: center;
     }
 }
