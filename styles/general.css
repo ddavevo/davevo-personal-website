@@ -10,7 +10,9 @@
     --faded: #062f3fb0;
     
     --pain-point: rgb(245, 205, 201);
+    --quote-pain: #ed695c;
     --gain-point: rgb(216, 234, 198);
+    --quote-gain: #76b849;
     
     --navgradient: linear-gradient(var(--bg), var(--bg) 9.4rem, rgb(254,246,240, 0.8) 10.2rem, transparent);
     --case-study: linear-gradient(to left, var(--teal), var(--navy));

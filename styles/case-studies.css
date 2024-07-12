@@ -268,6 +268,13 @@ main h4 {
 .epep {
     background-color: var(--pain-point); 
     border-radius: .6rem 0 0 .6rem;
+    display: flex;
+    align-items: center;
+}
+
+.epep #pain-point, .epep #gain-point {
+    max-width: none;
+    width: 100%;
 }
 
 .mvp-quote {
@@ -389,12 +396,17 @@ main h4 {
     .mvp-quote {
         grid-template-columns: 1fr;
     }
-}
-
-
-@media screen and (max-width: 700px) {
     .interview-data {
         grid-template-columns: 1fr;
+    }
+    .epep {
+        background-color: var(--pain-point); 
+        border-radius: .6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .epep #pain-point, .epep #gain-point {
+        max-width: none;
     }
 }
 
@@ -431,12 +443,6 @@ main h4 {
 
     .white-space-block {
         height: 4ch;
-    }
-
-    .epep {
-        background-color: var(--pain-point); 
-        border-radius: .6rem;
-        margin-bottom: 1.5rem;
     }
 
     .mvp-quote-wrapper {
