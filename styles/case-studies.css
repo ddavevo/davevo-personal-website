@@ -322,6 +322,29 @@ main h4 {
     padding: .4rem .75rem;
 }
 
+.div-phone-mockups {
+    display: flex; 
+    justify-content: space-evenly; 
+    gap: 2rem;
+}
+
+.div-phone-mockups div:nth-child(1) {
+    max-width: 300px;
+}
+
+.mockups {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    justify-content: flex-end; 
+    gap: 1rem;
+}
+
+.mockups div img {
+    height: auto; 
+    margin-top: 0; 
+    object-position: 0 0;
+}
+
 .two-column-img {
     max-width: 90ch; 
     display: grid; 
@@ -353,6 +376,12 @@ main h4 {
     }
     #field-findings {
         flex-direction: column;
+    }
+    .div-phone-mockups {
+        flex-direction: column; 
+    }
+    .div-phone-mockups div:nth-child(1) {
+        max-width: none;
     }
 }
 
