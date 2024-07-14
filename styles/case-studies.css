@@ -162,6 +162,21 @@ main h4 {
     margin: 0;
 }
 
+.two-column-img {
+    max-width: 90ch; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: .25rem;
+    margin-bottom: 1.5rem;
+}
+
+.two-column-img img {
+    width: 1fr;
+    height: 400px;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
 .interview-data {
     display: grid;
     grid-template-columns: 0.45fr 0.55fr;
@@ -261,6 +276,8 @@ main h4 {
     margin: 0;
 }
 
+/* ================================= */
+
 #sevenatenine-takeaways {
     gap: 0;
 }
@@ -276,6 +293,8 @@ main h4 {
     max-width: none;
     width: 100%;
 }
+
+/* ================================= */
 
 .mvp-quote {
     display: grid;
@@ -317,6 +336,8 @@ main h4 {
     margin-top: 1rem;
 }
 
+/* ================================= */
+
 .numbered {
     margin: 1rem 0; margin-top: 2rem;
 }
@@ -328,6 +349,8 @@ main h4 {
     border-radius: 3rem;
     padding: .4rem .75rem;
 }
+
+/* ================================= */
 
 .div-phone-mockups {
     display: flex; 
@@ -352,19 +375,23 @@ main h4 {
     object-position: 0 0;
 }
 
-.two-column-img {
-    max-width: 90ch; 
-    display: grid; 
-    grid-template-columns: 1fr 1fr;
-    gap: .25rem;
-    margin-bottom: 1.5rem;
+/* ================================= */
+
+.walkthrough {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
 }
 
-.two-column-img img {
-    width: 1fr;
-    height: 400px;
-    object-fit: cover;
+.walkthrough img {
+    min-height: 0;
     object-position: 0 0;
+}
+
+.walkthrough p {
+    padding: 0 1rem;
+}
+
+#two-div-walkthrough {
+    grid-template-columns: 1fr 1fr;
 }
 
 
@@ -404,9 +431,11 @@ main h4 {
         border-radius: .6rem;
         margin-bottom: 1.5rem;
     }
-
     .epep #pain-point, .epep #gain-point {
         max-width: none;
+    }
+    .walkthrough, #two-div-walkthrough {
+       grid-template-columns: 1fr;
     }
 }
 
