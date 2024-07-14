@@ -205,8 +205,13 @@ main h4 {
 
 #with-emoji {
     display: grid;
-    grid-template-columns: 1ch 1fr;
+    grid-template-columns: 2ch 1fr;
     gap: 1.5rem;
+    padding: 1rem 1.5rem 1rem 1rem;
+}
+
+#with-emoji div:nth-child(1) {
+    font-size: 1.6rem;
 }
 
 #pain-point {
