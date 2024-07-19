@@ -402,6 +402,7 @@ main h4 {
 
 #two-div-walkthrough {
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 
