@@ -320,6 +320,10 @@ main h4 {
     border-radius: 1rem;
 }
 
+.quote-text {
+    font-size: 1.2rem;
+}
+
 .mvp-quote img {
     width: 100px;
     height: 100px;
@@ -428,6 +432,16 @@ main h4 {
 @media screen and (max-width: 800px) {
     .mvp-quote {
         grid-template-columns: 1fr;
+        padding: 0; padding-bottom: 1rem;
+        border-radius: 0;
+    }
+    .mvp-quote-wrapper {
+        position: relative;
+        width: auto;
+        height: auto;
+        background: var(--case-study);
+        padding: 0rem; padding-bottom: .5rem;
+        border-radius: 0;
     }
     .interview-data {
         grid-template-columns: 1fr;
@@ -482,20 +496,6 @@ main h4 {
         height: 4ch;
     }
 
-    .mvp-quote-wrapper {
-        position: relative;
-        width: auto;
-        height: auto;
-        background: var(--case-study);
-        padding: 0rem; padding-bottom: .5rem;
-        border-radius: 0;
-    }
-
-    .mvp-quote {
-        padding: 0; padding-bottom: 1rem;
-        border-radius: 0;
-    }
-
     .back-up-arrow {
         justify-content: center;
     }
@@ -505,5 +505,9 @@ main h4 {
     }
     .two-column-img img {
         margin-top: 0;
+    }
+
+    .quote-text {
+        font-size: 1.1rem;
     }
 }
