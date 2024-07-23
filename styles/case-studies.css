@@ -302,47 +302,24 @@ main h4 {
 /* ================================= */
 
 .mvp-quote {
-    display: grid;
-    grid-template-columns: 1fr 150px;
+    display: flex;
+    flex-direction: column;
     min-height: 0;
-    padding: 2rem;
-    gap: 2rem;
-    border-radius: .5rem;
-    background-color: var(--bg);
-}
-
-.mvp-quote-wrapper {
-    position: relative;
-    width: auto;
-    height: auto;
-    background: var(--case-study);
-    padding: .4rem .45rem; 
-    border-radius: 1rem;
-}
-
-.quote-text {
-    font-size: 1.2rem;
-}
-
-.mvp-quote img {
-    width: 100px;
-    height: 100px;
-    min-height: 0;
-    margin: 0;
-    object-position: 0 0;
+    gap: 1rem;
 }
 
 #christiana-russell {
     display: flex; 
-    flex-direction: column; 
     align-items: center;
+    gap: 1rem;
 }
 
-#quotation-visual {
-    max-width: 64px; 
-    max-height: 64px; 
-    object-fit: contain; 
-    margin-top: 1rem;
+#christiana-russell img {
+    width: 3.5rem;
+    height: 3.5rem;
+    min-height: 0;
+    margin: 0;
+    object-position: 0 0;
 }
 
 /* ================================= */
