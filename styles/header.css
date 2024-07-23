@@ -22,13 +22,35 @@
 
 .wordmark {
     display: inline-block; white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+
     font-family: abril;
     font-size: 48px;
     color: var(--teal);
-    background-color: var(--bg);
-
+    
     padding-top: 1.75rem;
     padding-left: 4rem;
+    transition: .5s ease-in-out;
+}
+
+.wordmark:hover {
+    opacity: .8;
+}
+
+.wordmark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #ffffff90, transparent);
+    transition: .5s ease-in-out;
+}
+
+.wordmark:hover::before {
+    left: 100%;
 }
 
 .header-text {
@@ -40,8 +62,6 @@
     padding: 1rem;
     margin-top: 3rem;
     margin-right: 4rem;
-
-    transform: color 1s;
 }
 
 .header-text:hover, .hamburger-menu-options li:hover {
