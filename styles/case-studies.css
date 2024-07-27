@@ -308,13 +308,13 @@ main h4 {
     gap: 1rem;
 }
 
-#christiana-russell {
+#quote-profile {
     display: flex; 
     align-items: center;
     gap: 1rem;
 }
 
-#christiana-russell img {
+#quote-profile img {
     width: 3.5rem;
     height: 3.5rem;
     min-height: 0;
