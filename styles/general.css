@@ -52,7 +52,7 @@ h4 {
     font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
-p, li, span { /* landing-body: I am a... I'm an upcoming UI/UX... */
+p, li, span, figcaption { /* landing-body: I am a... I'm an upcoming UI/UX... */
     font-family: gravity;
     line-height: 150%;
     color: var(--navy);

@@ -29,6 +29,12 @@ main h4 {
     margin-bottom: .75ch;
 }
 
+main figcaption {
+    color: var(--faded);
+    margin-top: .5rem; margin-bottom: 0.75ch;
+    text-align: center;
+}
+
 .subtitle {
     color: var(--faded);
     margin-bottom: 0.75ch;
