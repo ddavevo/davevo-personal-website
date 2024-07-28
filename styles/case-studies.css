@@ -8,7 +8,7 @@ main {
 main p {
     max-width: 70ch;
 }
-main img, main div {
+main img, main div, main aside, main blockquote {
     max-width: 90ch;
 }
 main img {
