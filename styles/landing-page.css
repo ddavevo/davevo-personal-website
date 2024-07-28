@@ -28,12 +28,12 @@
 
 .landing-ctas {
     display: flex;
-    margin-top: 0.75rem;
+    margin-top: 1.5rem;
     gap: 1.5rem;
     align-items: center;
 }
 
-.landing-ctas div {
+.landing-ctas {
     position: relative;
     background-color: var(--teal);
     padding: .3rem 1.2rem;
@@ -42,7 +42,7 @@
     transition: opacity .5s ease-in-out;
 }
 
-.landing-ctas div:hover {
+.landing-ctas:hover {
     opacity: .8;
 }
 
@@ -139,7 +139,7 @@
     cursor: pointer;
 }
 
-.project::before, .landing-ctas div::before {
+.project::before, .landing-ctas::before {
     content: '';
     position: absolute;
     top: 0;
@@ -152,7 +152,7 @@
     transition: .5s ease-in-out;
 }
 
-.project:hover::before, .landing-ctas div:hover::before {
+.project:hover::before, .landing-ctas:hover::before {
     left: 100%;
     opacity: 1;
 }
@@ -255,7 +255,7 @@
         font-size: clamp(3rem, 15vw, 4rem);
     }
     .landing-ctas {
-        justify-content: center;
+        margin: 1rem auto 0 auto;
     }
     
 
