@@ -8,7 +8,7 @@ main {
 main p {
     max-width: 70ch;
 }
-main img, main div, main aside, main blockquote {
+main img, main div, main aside, main blockquote, main figure, main figcaption {
     max-width: 90ch;
 }
 main img {
@@ -31,7 +31,7 @@ main h4 {
 
 main figcaption {
     color: var(--faded);
-    margin-top: .5rem; margin-bottom: 0.75ch;
+    margin-top: .5rem; margin: 0.75ch;
     text-align: center;
 }
 
@@ -386,7 +386,7 @@ main figcaption {
     gap: 1rem;
 }
 
-.mockups div img {
+.mockups figure img {
     height: auto; 
     margin-top: 0; 
     object-position: 0 0;
