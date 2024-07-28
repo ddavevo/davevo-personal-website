@@ -202,7 +202,9 @@
     margin-right: 0.6rem;
     border-radius: .4rem;
     line-height: 3.2rem;
+    
     background-color: var(--light-teal); 
+    border: 1.25px solid var(--teal);
 }
 
 /* ========================================================================= */
