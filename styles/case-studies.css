@@ -342,6 +342,7 @@ main figcaption {
 #quote-profile {
     display: flex; 
     align-items: center;
+    justify-content: flex-start;
     gap: 1rem;
 }
 
@@ -518,5 +519,13 @@ main figcaption {
 
     .quote-text {
         font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #quote-profile {
+        flex-direction: column;
+        align-items: normal;
+        gap: .5rem;
     }
 }
