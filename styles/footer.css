@@ -1,3 +1,18 @@
+.made-with {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.made-with span {
+    margin-left: .5rem;
+    padding: .1rem .5em;
+    border-radius: .4rem;
+    background-color: var(--light-teal); 
+    border: 1.25px solid var(--teal);
+}
+
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -6,7 +21,7 @@
     background-color: var(--teal);
     height: 82px;
     margin-bottom: 0;
-    margin-top: 4rem;
+    margin-top: 1.5rem;
     padding: 0 4rem;
     
 }
