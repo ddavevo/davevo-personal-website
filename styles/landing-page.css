@@ -53,29 +53,29 @@
     filter: brightness(0) invert(14%) sepia(13%) saturate(5448%) hue-rotate(163deg) brightness(92%) contrast(95%);
 }
 
-.draggable {
+.movable {
     position: absolute;
     max-width: 90px;
     transition: transform .5s ease-out;
     z-index: 1;
 }
 
-.draggable:hover {
+.movable:hover {
     cursor: move;
     transform: rotate(10deg);
 }
-.draggable:active {
+.movable:active {
     cursor: pointer;
 }
 
-#designer-svg {
+#d-png {
     top: 10%;
     left: 12%;
     width: 120px; height: 120px;
     position: absolute;
 }
 
-.designer-svg {
+.d-png {
     width: 100%;
     top: 10%;
     left: 12%;
@@ -89,13 +89,13 @@
     width: 100px;
 }
 
-#researcher-svg {
+#r-png {
     top: 72%;
     left: 22%;
     rotate: 8deg;
 }
 
-#creative-svg {
+#c-png {
     top: 48%;
     right: 10%;
     rotate: -12deg;

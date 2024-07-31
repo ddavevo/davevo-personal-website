@@ -18,6 +18,12 @@
     <script src="javascript/test.js"></script>
     <script src="javascript/case-study-links.js"></script>
     <script src="javascript/draggables.js"></script>
+
+    <script>
+        function dragging(event) {
+            document.getElementById("demo").innerHTML = "The p element is being dragged";
+        }
+    </script>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -70,17 +76,17 @@
                     <p>I'm a...</p>
                 </div>
                 <div style="padding-top: 1.25rem;">
-                    <h1 class="landing-text">designer,</h1>
-                    <h1 class="landing-text" style="color: var(--midtone)">researcher,</h1>
-                    <h1 class="landing-text" style="color: var(--navy)">creative.</h1>
+                    <h1 id="designer" class="landing-text">designer,</h1>
+                    <h1 id="researcher" class="landing-text" style="color: var(--midtone)">researcher,</h1>
+                    <h1 id="creative" class="landing-text" style="color: var(--navy)">creative.</h1>
                 </div>
                 <div class="landing-body" style="margin-top: 1rem">
-                    <p style="max-width: 50ch;">
+                    <p id="demo" style="max-width: 50ch;">
                         I seek to enhance experiences, raise creative ceilings,
                         and most of all: <b>engage people</b>.
                     </p><br>
                     <p>
-                        Currentlly a research assistant @ <a href="https://designlab.ucsd.edu">
+                        Currently a research assistant @ <a href="https://designlab.ucsd.edu">
                             <b><u>UCSD Design Lab</u></b>
                         </a>
                     </p><br>
@@ -102,17 +108,16 @@
         <div class="landing-visual" style="position: relative; overflow: hidden;">
             <img style="position: absolute;" id="flying-arrow" src="images/landing-page/flying-arrow.svg">
             
-            <div id="designer-svg" class="draggable">
-                <img class="designer-svg" src="https://media.dave-vo.com/file/dvfolio/landing-page/designer-movable.png">
+            <div id="d-png" class="movable" draggable="true">
+                <img class="d-png" src="https://media.dave-vo.com/file/dvfolio/landing-page/designer-movable.png">
                 <img id="move-me" src="images/landing-page/move-me.svg">
             </div>
-            
-            <img id="researcher-svg" class="draggable" src="https://media.dave-vo.com/file/dvfolio/landing-page/researcher-movable.png">
-            <img id="creative-svg" class="draggable" src="https://media.dave-vo.com/file/dvfolio/landing-page/creative-movable.png">
+
+            <img id="r-png" class="movable" draggable="true" ongdrag="dragging(event)" src="https://media.dave-vo.com/file/dvfolio/landing-page/researcher-movable.png">
+            <img id="c-png" class="movable" draggable="true" src="https://media.dave-vo.com/file/dvfolio/landing-page/creative-movable.png">
             
             <img src="https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.png" style="width: 100%; height: 100%;">
         </div>
-        
     </main>
 
     <div>

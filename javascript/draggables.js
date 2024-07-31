@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const draggableElements = document.querySelectorAll(".draggable");
+    const draggableElements = document.querySelectorAll(".movable");
     draggableElements.forEach(element => { dragElement(element); });
 });
 
