@@ -1,7 +1,7 @@
 main {
     display: grid;
-    grid-template-columns: 20% 1fr;
-    gap: 2.4rem;
+    grid-template-columns: 9rem 1fr;
+    gap: 4rem;
     padding: 0 4rem; padding-top: 4rem;
 }
 
@@ -33,6 +33,10 @@ main figcaption {
     color: var(--faded);
     margin-top: .5rem; margin: 0.75ch;
     text-align: center;
+}
+
+.two-column-div, .two-column-img, .insight, .end-of-case-study-ctas, #field-findings {
+    max-width: 90ch;
 }
 
 .subtitle {
@@ -152,12 +156,10 @@ main figcaption {
 /* ================================================================= */
 
 .main-content {
-    padding-right: 4rem;
     padding-bottom: 5rem;
 }
 
 .two-column-div {
-    max-width: 90ch;
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     margin: 2rem 0;
@@ -170,7 +172,6 @@ main figcaption {
 }
 
 .two-column-img {
-    max-width: 90ch; 
     display: grid; 
     grid-template-columns: 1fr 1fr;
     gap: .25rem;
@@ -182,6 +183,24 @@ main figcaption {
     height: 400px;
     object-fit: cover;
     object-position: 0 0;
+}
+
+.walkthrough {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+}
+
+.walkthrough img {
+    min-height: 0;
+    object-position: 0 0;
+}
+
+.walkthrough p {
+    padding: 0 1rem;
+}
+
+#two-div-walkthrough {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 .interview-data {
@@ -208,7 +227,6 @@ main figcaption {
     border-radius: 0.6rem;
     background-color: var(--light-teal);
     border: 1.25px solid var(--teal);
-    max-width: 680px;
 }
 
 #with-emoji {
@@ -241,50 +259,55 @@ main figcaption {
 .hmw-wrap {
     position: relative;
 }
-.hmw-wrap .arrows {
-    width: 2rem;
+
+.hmw-wrap h2::after {
+    position: absolute; 
+    content: url("https://media.dave-vo.com/file/dvfolio/general/logo-stroked.png");
+    width: 2rem; height: 2.25rem;
+    left: -1.75rem; 
+    transform: scale(.2) scaleX(-1) rotate(300deg); 
 }
 
-.hmw-wrapper {
-    width: auto;
-    height: auto;
-    background: var(--case-study);
-    padding: .4rem; 
-    border-radius: 1rem;
-}
-
-.hmw-wrapper div {
-    background-color: var(--navy);
-    padding: 1.5rem 2rem;
-    border-radius: .75rem;
-}
-.hmw-wrapper div h2, .hmw-wrapper div h3 {
-    color: var(--bg);
-}
-.hmw-wrapper div h3 {
-    font-family: gravity;
-    -webkit-text-stroke: none;
-}
-
-.back-up-arrow-container {
-    display: flex; 
-    height: 20px;
-    box-sizing: border-box;
+.end-of-case-study-ctas {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
 }
 
 .back-up-arrow {
-    width: 1.75rem; 
-    height: 1.75rem; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+
+    bottom: 1rem; right: 2rem;
+    padding: .5rem .35rem;
+    border-radius: .5rem;
+}
+
+.next-case-study {
+    display: flex; 
+    align-items: center;
+    margin-bottom: .25rem;
+    padding: .5rem .35rem;
+    border-radius: .5rem;
+}
+
+.back-up-arrow img, .next-case-study img {
+    width: 2rem; 
+    height: 2rem; 
     min-height: 0;
     object-fit: contain;
     object-position: 0 0; 
     margin: 0; margin-right: .5rem;
 }
 
+.next-case-study img {
+    transform: scaleX(-1) rotate(300deg) translateX(.4rem);
+}
+
 /* =============================================================== */
 
 #field-findings {
-    max-width: 90ch;
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
@@ -401,27 +424,6 @@ main figcaption {
     
 }
 
-/* ================================= */
-
-.walkthrough {
-    display: grid; grid-template-columns: 1fr 1fr 1fr;
-}
-
-.walkthrough img {
-    min-height: 0;
-    object-position: 0 0;
-}
-
-.walkthrough p {
-    padding: 0 1rem;
-}
-
-#two-div-walkthrough {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-
 /* =========================================================== */
 
 @media screen and (min-width: 1281px) {
@@ -431,7 +433,7 @@ main figcaption {
     main img, main div, main ul, main aside, main blockquote, main figure, main figcaption {
         max-width: clamp(90ch, 60vw, 180ch);
     }
-    .two-column-div, .two-column-img, .insight, #field-findings {
+    .two-column-div, .two-column-img, .insight, .end-of-case-study-ctas, #field-findings {
         max-width: clamp(90ch, 60vw, 180ch);
     }
 }
@@ -486,6 +488,9 @@ main figcaption {
     .walkthrough, #two-div-walkthrough {
        grid-template-columns: 1fr;
     }
+    .walkthrough figure {
+        margin-top: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 623px) {
@@ -502,6 +507,9 @@ main figcaption {
     .table-of-contents {
         visibility: hidden;
         display: none;
+    }
+    .back-up-arrow-container {
+        right: 1.5rem;
     }
 
     main {
@@ -524,6 +532,9 @@ main figcaption {
     .white-space-block {
         height: 4ch;
     }
+    .hmw-wrap h2::after {
+        visibility: collapse;
+    }
 
     .back-up-arrow {
         justify-content: center;
@@ -539,6 +550,10 @@ main figcaption {
     .quote-text {
         font-size: 1.1rem;
     }
+
+    .breakdown-visuals, .breakdown-visuals #two-div-walkthrough {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media screen and (max-width: 414px) {
@@ -546,5 +561,8 @@ main figcaption {
         flex-direction: column;
         align-items: normal;
         gap: .5rem;
+    }
+    .breakdown-visuals, .breakdown-visuals #two-div-walkthrough {
+        grid-template-columns: 1fr;
     }
 }
