@@ -238,6 +238,13 @@ main figcaption {
     border: 1.25px solid var(--quote-gain);
 }
 
+.hmw-wrap {
+    position: relative;
+}
+.hmw-wrap .arrows {
+    width: 2rem;
+}
+
 .hmw-wrapper {
     width: auto;
     height: auto;
@@ -259,13 +266,13 @@ main figcaption {
     -webkit-text-stroke: none;
 }
 
-.back-up-arrow {
+.back-up-arrow-container {
     display: flex; 
     height: 20px;
     box-sizing: border-box;
 }
 
-.back-up-arrow img {
+.back-up-arrow {
     width: 1.75rem; 
     height: 1.75rem; 
     min-height: 0;
