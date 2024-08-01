@@ -426,13 +426,28 @@ main figcaption {
 
 /* =========================================================== */
 
+.aromacovery-team {
+    display: flex;
+    justify-content: center;
+}
+
+.aromacovery-team img {
+    max-width: 320px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    transform: rotate(8deg);
+}
+
+/* =========================================================== */
+
 @media screen and (min-width: 1281px) {
     main p {
         max-width: clamp(70ch, 60vw, 160ch);
     }
+
     main img, main div, main ul, main aside, main blockquote, main figure, main figcaption {
         max-width: clamp(90ch, 60vw, 180ch);
     }
+
     .two-column-div, .two-column-img, .insight, .end-of-case-study-ctas, #field-findings {
         max-width: clamp(90ch, 60vw, 180ch);
     }
@@ -449,12 +464,15 @@ main figcaption {
         grid-template-columns: 1fr;
         gap: 0;
     }
+
     #field-findings {
         flex-direction: column;
     }
+
     .div-phone-mockups {
         flex-direction: column; 
     }
+
     .div-phone-mockups div:nth-child(1) {
         max-width: none;
     }
@@ -466,6 +484,7 @@ main figcaption {
         padding: 0; padding-bottom: 1rem;
         border-radius: 0;
     }
+
     .mvp-quote-wrapper {
         position: relative;
         width: auto;
@@ -474,20 +493,25 @@ main figcaption {
         padding: 0rem; padding-bottom: .5rem;
         border-radius: 0;
     }
+
     .interview-data {
         grid-template-columns: 1fr;
     }
+
     .epep {
         background-color: var(--pain-point); 
         border-radius: .6rem;
         margin-bottom: 1.5rem;
     }
+
     .epep #pain-point, .epep #gain-point {
         max-width: none;
     }
+
     .walkthrough, #two-div-walkthrough {
        grid-template-columns: 1fr;
     }
+
     .walkthrough figure {
         margin-top: 1.5rem;
     }
@@ -499,15 +523,18 @@ main figcaption {
         font-size: clamp(1.75rem, 2vw, 2rem);
         text-align: left;
     }
+
     .logistics {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
     }
+
     .table-of-contents {
         visibility: hidden;
         display: none;
     }
+
     .back-up-arrow-container {
         right: 1.5rem;
     }
@@ -526,12 +553,15 @@ main figcaption {
         margin: 0; margin-top: 1.5rem;
         object-fit: cover;
     }
+
     .main-content {
         padding-right: 2.4rem;
     }
+
     .white-space-block {
         height: 4ch;
     }
+
     .hmw-wrap h2::after {
         visibility: collapse;
     }
@@ -539,6 +569,7 @@ main figcaption {
     .back-up-arrow {
         justify-content: center;
     }
+
     .two-column-img {
         grid-template-columns: 1fr;
         margin-top: 2rem;
@@ -554,6 +585,10 @@ main figcaption {
     .breakdown-visuals, .breakdown-visuals #two-div-walkthrough {
         grid-template-columns: 1fr 1fr;
     }
+
+    .aromacovery-team img {
+        margin-top: 2rem;
+    }
 }
 
 @media screen and (max-width: 414px) {
@@ -562,6 +597,7 @@ main figcaption {
         align-items: normal;
         gap: .5rem;
     }
+
     .breakdown-visuals, .breakdown-visuals #two-div-walkthrough {
         grid-template-columns: 1fr;
     }
