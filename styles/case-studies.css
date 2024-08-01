@@ -35,7 +35,7 @@ main figcaption {
     text-align: center;
 }
 
-.two-column-div, .two-column-img, .insight, .end-of-case-study-ctas, #field-findings {
+.two-column-div, .two-column-img, .insight, #field-findings {
     max-width: 90ch;
 }
 
@@ -258,6 +258,7 @@ main figcaption {
 
 .hmw-wrap {
     position: relative;
+    transition: .5s ease-in-out;
 }
 
 .hmw-wrap h2::after {
@@ -268,42 +269,31 @@ main figcaption {
     transform: scale(.2) scaleX(-1) rotate(300deg); 
 }
 
-.end-of-case-study-ctas {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
+#next-case-study {
+    position: relative;
+    cursor: pointer;
 }
 
-.back-up-arrow {
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-
-    bottom: 1rem; right: 2rem;
-    padding: .5rem .35rem;
-    border-radius: .5rem;
+#next-case-study:hover {
+    opacity: .8;
+    transform: translateX(.5rem);
 }
 
-.next-case-study {
-    display: flex; 
-    align-items: center;
-    margin-bottom: .25rem;
-    padding: .5rem .35rem;
-    border-radius: .5rem;
+#next-case-study::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #fef6f090, transparent);
+    transition: .5s ease-in-out;
 }
 
-.back-up-arrow img, .next-case-study img {
-    width: 2rem; 
-    height: 2rem; 
-    min-height: 0;
-    object-fit: contain;
-    object-position: 0 0; 
-    margin: 0; margin-right: .5rem;
+#next-case-study:hover::before {
+    left: 100%;
 }
 
-.next-case-study img {
-    transform: scaleX(-1) rotate(300deg) translateX(.4rem);
-}
 
 /* =============================================================== */
 
@@ -448,7 +438,7 @@ main figcaption {
         max-width: clamp(90ch, 60vw, 180ch);
     }
 
-    .two-column-div, .two-column-img, .insight, .end-of-case-study-ctas, #field-findings {
+    .two-column-div, .two-column-img, .insight, #field-findings {
         max-width: clamp(90ch, 60vw, 180ch);
     }
 }
@@ -535,10 +525,6 @@ main figcaption {
         display: none;
     }
 
-    .back-up-arrow-container {
-        right: 1.5rem;
-    }
-
     main {
         grid-template-columns: 1fr;
         padding-top: 1rem;  padding-left: 2.4rem; padding-right: 0rem;
@@ -564,10 +550,6 @@ main figcaption {
 
     .hmw-wrap h2::after {
         visibility: collapse;
-    }
-
-    .back-up-arrow {
-        justify-content: center;
     }
 
     .two-column-img {
