@@ -81,17 +81,16 @@
                     <h1 id="creative" class="landing-text" style="color: var(--navy)">creative.</h1>
                 </div>
                 <div class="landing-body" style="margin-top: 1rem">
-                    <p id="demo" style="max-width: 50ch;">
-                        I seek to enhance experiences, raise creative ceilings,
-                        and most of all: <b>engage people</b>.
-                    </p><br>
                     <p>
                         Currently a research assistant @ <a href="https://designlab.ucsd.edu">
                             <b><u>UCSD Design Lab</u></b>
                         </a>
                     </p><br>
 
-                    <p>Let's chat and make something happen!</p>
+                    <p id="demo" style="max-width: 50ch;">
+                        I seek to enhance experiences, raise creative ceilings,
+                        and most of all: <b>engage people</b>.
+                    </p>
 
                     <a href="#featured">
                         <button class="landing-ctas">
@@ -118,6 +117,29 @@
             
             <img src="https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.png" style="width: 100%; height: 100%;">
         </div>
+
+        <script>
+            // Get the paragraph element by its ID
+            const paragraph = document.getElementById('demo');
+    
+            // Function to update paragraph text
+            function updateParagraphText(text) {
+                paragraph.textContent = text;
+            }
+    
+            // Add click event listeners to each image
+            document.getElementById('d-png').addEventListener('click', () => {
+                updateParagraphText('Designer image clicked!');
+            });
+    
+            document.getElementById('r-png').addEventListener('click', () => {
+                updateParagraphText('Researcher image clicked!');
+            });
+    
+            document.getElementById('c-png').addEventListener('click', () => {
+                updateParagraphText('Creative image clicked!');
+            });
+        </script>
     </main>
 
     <div>
