@@ -39,11 +39,6 @@ main figcaption {
     max-width: 90ch;
 }
 
-.subtitle {
-    color: var(--faded);
-    margin-bottom: 0.75ch;
-}
-
 .white-space-block {
     height: 6ch;
 }

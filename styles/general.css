@@ -57,11 +57,11 @@ p, li, span, figcaption { /* landing-body: I am a... I'm an upcoming UI/UX... */
     line-height: 150%;
     color: var(--navy);
     font-size: clamp(16px, 2vw, 16.8px);
-    
-    /*
-    width: clamp(400px, 450px, 1fr);
-    padding-bottom: 4px;
-    */
+}
+
+.subtitle {
+    color: var(--faded);
+    margin-bottom: 0.75ch;
 }
 
 ul {
