@@ -1,3 +1,11 @@
+.about-page {
+    padding: 8rem 4rem 1rem 4rem;
+}
+
+.white-space-block {
+    height: 6ch;
+}
+
 .landing-text {
     font-family: abril;
     color: var(--teal);
@@ -6,12 +14,8 @@
     margin-bottom: 1rem;
 }
 
-.about-page {
-    padding: 8rem 5rem 1rem 5rem;
-}
-
 .functional, .design-values, .fun-stuff {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .functional {
@@ -20,14 +24,23 @@
     gap: 4rem;
 }
 
-.profile-pic {
+.profile-pic-container {
     display: flex;
     flex-direction: column;
 }
 
-.profile-pic img {
-   max-width: 300px;
-   margin-top: 1rem;
+.profile-pic, .playlist {
+    position: relative;
+}
+
+.profile {
+    width: clamp(150px, 20vw, 300px);
+    margin-top: .75rem;
+    border-radius: 1rem;
+}
+
+.wildcard {
+    position: absolute; top: -.5rem; right: -1rem; width: 4rem;
 }
 
 .my-stats {
@@ -43,8 +56,9 @@
 .my-stats span {
     position: relative;
     width: 100%; 
-    height: 1rem; 
+    height: clamp(.6rem, 1vw, 1rem); 
     background-color: var(--midtone);
+    border-radius: clamp(.3rem, 1vw, .5rem); 
 }
 
 .stats-bar {
@@ -52,20 +66,26 @@
     width: 0%;
     height: 100%;
     background-color: var(--teal);
+    border-radius: .5rem;
 }
 
-.current-roles {
+.current-role-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 1rem;
 }
 
-.current-roles div {
-    width: calc(50% - .5rem);
-    height: 8.5rem;
-    background-color: var(--teal);
+.current-role-container figure {
+    flex: 1;
 }
+
+.current-role {
+    position: relative;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+} 
 
 .subliminal {
     position: relative;
@@ -73,4 +93,13 @@
     max-width: 250px;
     float: right;
     transform: rotate(4deg);
+}
+
+.listening-pic {
+    position: absolute; 
+    right: -2rem; 
+    width: 7rem; 
+    border-radius: 50%; 
+    transform: rotate(4deg); 
+    z-index: 2;
 }

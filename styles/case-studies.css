@@ -29,12 +29,6 @@ main h4 {
     margin-bottom: .75ch;
 }
 
-main figcaption {
-    color: var(--faded);
-    margin-top: .5rem; margin: 0.75ch;
-    text-align: center;
-}
-
 .two-column-div, .two-column-img, .insight, #field-findings {
     max-width: 90ch;
 }
