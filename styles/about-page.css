@@ -1,3 +1,47 @@
+p {
+    max-width: 70ch;
+}
+
+.landing-text {
+    font-family: abril;
+    color: var(--teal);
+    font-size: clamp(3rem, 4vw, 6rem);
+    line-height: 100%;
+}
+
 .about-page {
     padding: 8rem 5rem 1rem 5rem;
+}
+
+.functional {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.profile-pic {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-pic img {
+    width: 100px;
+    border: 1px solid var(--teal);
+    border-radius: 50%;
+}
+
+.current-roles {
+    border: 1px solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.subliminal {
+    position: relative;
+    margin: 0 0 2rem 2rem;
+    max-width: 250px;
+    float: right;
+    transform: rotate(4deg);
 }
