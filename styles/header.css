@@ -2,6 +2,7 @@
     width: 100%;
     background-color: var(--bg);
     max-height: 5.125rem;
+    padding-bottom: .25rem;
     overflow: hidden;
 
     position: fixed;
@@ -14,7 +15,6 @@
 }
 
 .menu-options {
-
     justify-content: right;
     white-space: nowrap;
 }
@@ -28,9 +28,16 @@
     font-size: 48px;
     color: var(--teal);
     
-    padding-top: 1.75rem;
+    padding-top: 1rem;
     padding-left: 4rem;
     transition: .5s ease-in-out;
+}
+
+.stylized-o {
+    position: relative;
+    top: .5rem; left: -.5rem;
+    width: 3.25rem; 
+    height: 3.25rem;
 }
 
 .wordmark:hover {
@@ -149,9 +156,10 @@
 }
 
 @media screen and (max-width: 620px) {
-    .wordmark, .header-text, .current-page-indicator {
-        opacity: 0;
+    .wordmark, .stylized-o {
         pointer-events: none;
+        width: 0;
+        visibility: collapse;
     }
     .ham-bars, .menu, .hamburger-menu-options, .small-shrink-logo {
         opacity: 1;
