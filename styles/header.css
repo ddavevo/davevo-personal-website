@@ -10,18 +10,17 @@
 }
 
 #header {
-    width: 32.5%;
     z-index: 1;
 }
 
 .menu-options {
-    width: 70%;
+
     justify-content: right;
     white-space: nowrap;
 }
 
 .wordmark {
-    display: inline-block; white-space: nowrap;
+    display: flex; white-space: nowrap;
     position: relative;
     overflow: hidden;
 
@@ -176,6 +175,9 @@
 }
 
 @media screen and (min-width: 621px) {
+    .hamburger {
+        visibility: collapse;
+    }
     .menu {
         position: static;
         height: auto;
@@ -191,8 +193,14 @@
         display: flex;
         justify-content: flex-end;
         padding-top: 3rem;
-        gap: 4rem;
+        gap: 2rem;
         padding-right: 4rem;
         line-height: unset;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .hamburger-menu-options {
+        gap: 4rem;
     }
 }

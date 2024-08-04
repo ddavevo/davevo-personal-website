@@ -160,7 +160,7 @@
 .project img {
     width: 100%;
     object-fit: cover;
-    max-height: 320px;
+    height: 275px;
     border-radius: 12px 12px 0px 0px;
     transition: transform 0.2s ease-in;
 }
