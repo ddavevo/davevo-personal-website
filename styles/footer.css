@@ -1,16 +1,15 @@
 .made-with {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 2rem;
+    text-align: center;
 }
 
 .made-with span {
-    margin-left: .5rem;
+    margin-left: .15rem;
     padding: .1rem .5em;
     border-radius: .4rem;
     background-color: var(--light-teal); 
     border: 1.25px solid var(--teal);
+    white-space: nowrap;
 }
 
 .footer {
