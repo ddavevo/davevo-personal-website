@@ -1,3 +1,23 @@
 .playground-page {
-    padding: 8rem 5rem 1rem 5rem;
+    padding: 10rem 5rem 1rem 5rem;
+}
+
+.fun-stuff {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.fun-guardian, .fun-zelly, .fun-maxmag {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.fun-guardian img, .fun-zelly img, .fun-maxmag img {
+    position: relative;
+    max-width: 100%;
+}
+
+.fun-maxmag img {
+    max-width: calc(50% - .5rem);
+    flex: 1;
 }
