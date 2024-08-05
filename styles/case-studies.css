@@ -5,7 +5,7 @@ main {
     padding: 0 4rem; padding-top: 4rem;
 }
 
-main p {
+main p, {
     max-width: 70ch;
 }
 main img, main div, main ul, main aside, main blockquote, main figure, main figcaption {
@@ -29,7 +29,8 @@ main h4 {
     margin-bottom: .75ch;
 }
 
-.two-column-div, .two-column-img, .insight, #field-findings {
+.two-column-div, .two-column-img, .insight, #field-findings, .walkthrough,
+#two-div-walkthrough, .interview-data {
     max-width: 90ch;
 }
 
@@ -426,7 +427,7 @@ main h4 {
         max-width: clamp(90ch, 60vw, 180ch);
     }
 
-    .two-column-div, .two-column-img, .insight, #field-findings {
+    .two-column-div, .two-column-img, .insight, #field-findings, .walkthrough, #two-div-walkthrough, .interview-data {
         max-width: clamp(90ch, 60vw, 180ch);
     }
 }
