@@ -1,23 +1,31 @@
+main p {
+    max-width: 80ch;
+}
+
 .playground-page {
-    padding: 10rem 5rem 1rem 5rem;
+    padding: 10rem 4rem 1rem 4rem;
 }
 
-.fun-stuff {
-    display: grid;
-    grid-template-columns: 1fr;
+.guardian, .maxmag, .linear-algebra {
+    margin-bottom: 4rem;
 }
 
-.fun-guardian, .fun-zelly, .fun-maxmag {
+.white-space-block {
+    height: 6ch;
+}
+
+.landing-text {
+    font-family: abril;
+    color: var(--teal);
+    font-size: clamp(3rem, 4.25vw, 6rem);
+    line-height: 100%;
+    margin-bottom: 1rem;
+}
+
+.subliminal {
     position: relative;
-    margin-bottom: 3rem;
-}
-
-.fun-guardian img, .fun-zelly img, .fun-maxmag img {
-    position: relative;
-    max-width: 100%;
-}
-
-.fun-maxmag img {
-    max-width: calc(50% - .5rem);
-    flex: 1;
+    margin: 0 0 2rem 2rem;
+    max-width: 250px;
+    float: right;
+    transform: rotate(4deg);
 }
