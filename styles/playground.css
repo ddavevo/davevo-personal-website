@@ -46,6 +46,7 @@ main p {
     float: right;
     margin-left: 2rem;
     width: clamp(400px, 2vw, 450px);
+    transition: .5s ease-in-out;
     /* 757 px */
 }
 
@@ -87,10 +88,6 @@ main p {
     transition: .5s ease-in-out;
 }
 
-#tripanel:hover {
-    transform: rotate(-2deg);
-}
-
 .physical-prints img {
     max-width: calc(50% - .5rem);
 }
@@ -112,6 +109,7 @@ main p {
     max-width: 250px;
     float: right;
     transform: rotate(4deg);
+    transition: .5s ease-in-out;
 }
 
 .zelly-body::after {
@@ -133,8 +131,38 @@ main p {
     transition: .5s ease-in-out;
 }
 
+.encampment-feature img:hover {
+    transform: rotate(4deg);
+    opacity: .8;
+}
+
+.subliminal:hover {
+    transform: rotate(8deg);
+    opacity: .8;
+}
+
+/*
+
+#tripanel:hover {
+    transform: rotate(-2deg);
+}
+
 .newspapers img:hover, .maxmag-work img:hover, .physical-prints img:hover, .stickers img:hover {
     transform: rotate(4deg);
+}
+
+*/
+
+@media screen and (max-width: 760px) {
+    .encampment-feature {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .encampment-feature img {
+        margin: auto;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 620px) {
@@ -149,17 +177,6 @@ main p {
 
     .emote {
         float: none;
-    }
-
-    .encampment-feature {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .encampment-feature img {
-        float: none;
-        margin: auto;
-        width: 100%;
     }
 
     .newspapers {

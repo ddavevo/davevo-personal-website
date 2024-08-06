@@ -81,17 +81,26 @@ main p {
 }
 
 .current-role-container figure {
+    position: relative;
     flex: 1;
     max-width: 200px;
-    
 }
 
 .current-role {
-    position: relative;
     width: 100%;
     height: auto;
     cursor: pointer;
+    transition: .5s ease-in-out;
 } 
+
+.current-role:hover {
+    transform: rotate(4deg);
+    opacity: .8;
+}
+
+.current-role-container figure:hover::before {
+    left: 100%;
+}
 
 .senbazuru {
     display: flex; 
@@ -105,6 +114,12 @@ main p {
     max-width: 250px;
     float: right;
     transform: rotate(4deg);
+    transition: .5s ease-in-out;
+}
+
+.subliminal:hover {
+    transform: rotate(8deg);
+    opacity: .8;
 }
 
 .listening-pic {
