@@ -120,20 +120,20 @@
     
             // Function to update paragraph text
             function updateParagraphText(text) {
-                paragraph.textContent = text;
+                paragraph.innerHTML = text;
             }
     
             // Add click event listeners to each image
             document.getElementById('d-png').addEventListener('click', () => {
-                updateParagraphText('Designer image clicked!');
+                updateParagraphText('오감이 일렁여 나만이 느낀 exclusive <br> 넌 나의 감성, <b>I love it, my designer</b>');
             });
     
             document.getElementById('r-png').addEventListener('click', () => {
-                updateParagraphText('Researcher image clicked!');
+                updateParagraphText('Taking inspiration from my humanities professor, researching is <b>(re)searching again</b>.');
             });
     
             document.getElementById('c-png').addEventListener('click', () => {
-                updateParagraphText('Creative image clicked!');
+                updateParagraphText('What makes creative work fun? <br> <b>Yes.</b>');
             });
         </script>
     </main>

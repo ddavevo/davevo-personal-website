@@ -32,10 +32,15 @@
 .stylized-o {
     width: 3.25rem; 
     height: 3.25rem;
+    transition: .5s ease-in-out;
 }
 
 .wordmark:hover {
     opacity: .8;
+}
+
+.wordmark:hover > .stylized-o {
+    transform: rotate(20deg);
 }
 
 .wordmark::before {
@@ -83,8 +88,13 @@
 
     pointer-events: none;
     opacity: 0;
-    transition: 0.4s ease-in-out;
+    transition: 0.5s ease-in-out;
 
+}
+
+.small-shrink-logo:hover {
+    opacity: .8;
+    transform: rotate(20deg);
 }
 
 .hamburger {
@@ -100,14 +110,19 @@
 
     margin: .3rem;
     margin-right: 2.3rem;
-    transition: transform 0.4s ease-in-out, width 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+
+.hamburger:hover > #bar2 {
+    transform: translate(-8px, 0);
 }
 
 .active #bar1 {
+    width: 35px;
     transform: translate(0, 10px) rotate(45deg);
 }
 .active #bar2 {
-    width: 0;
+    width: 0px;
 }
 .active #bar3 {
     transform: translate(0, -10px) rotate(-45deg);
