@@ -46,7 +46,7 @@ main img {
 .hero-ribbon img {
     position: absolute;
     width: 5rem;
-    right: 5.25rem;
+    right: 8%;
     transform: translateY(-50%);
 }
 
@@ -456,6 +456,10 @@ main img {
     main p {
         max-width: clamp(70ch, 60vw, 160ch);
     }
+
+    .table-of-contents li {
+        font-size: clamp(0.9rem, 1vw, 1.05rem);
+        }
 
     main img, main div, main ul, main aside, main blockquote, main figure, main figcaption {
         max-width: clamp(90ch, 60vw, 180ch);

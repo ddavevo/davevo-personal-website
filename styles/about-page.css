@@ -50,7 +50,7 @@ main p {
 .my-stats {
     display: flex; 
     align-items: center; 
-    gap: .5rem
+    gap: .5rem;
 }
 
 .my-stats p {
@@ -167,5 +167,23 @@ main p {
         right: 10rem; 
         top: 6rem;
         transform: rotate(-12deg); 
+    }
+}
+
+@media screen and (max-width: 514px) {
+    .playlist-text-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .subliminal {
+        float: none;
+        margin: 0 auto 2rem auto;
+        left: 50%;
+        transform: translateX(-50%) rotate(4deg);
+    }
+
+    .subliminal:hover {
+        transform: translateX(-50%) rotate(8deg);
     }
 }

@@ -215,6 +215,24 @@ main p {
     }
 }
 
+@media screen and (max-width: 514px) {
+    .zelly-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .subliminal {
+        float: none;
+        margin: 0 auto 2rem auto;
+        left: 50%;
+        transform: translateX(-50%) rotate(4deg);
+    }
+
+    .subliminal:hover {
+        transform: translateX(-50%) rotate(8deg);
+    }
+}
+
 @media screen and (max-width: 375px) {
     .maxmag span {
         display: block;
