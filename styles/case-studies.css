@@ -20,16 +20,6 @@ main img {
     margin-top: 1.5rem;
 }
 
-main h2 {
-    margin-bottom: 2ch;
-}
-main h3 {
-    margin-bottom: .75ch;
-}
-main h4 {
-    margin-bottom: .75ch;
-}
-
 .two-column-div, .two-column-img, .insight, #field-findings, .walkthrough,
 #two-div-walkthrough, .interview-data {
     max-width: 90ch;
