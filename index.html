@@ -117,6 +117,9 @@
         <script>
             // Get the paragraph element by its ID
             const paragraph = document.getElementById('demo');
+            const designer = document.getElementById('designer');
+            const researcher = document.getElementById('researcher');
+            const creative = document.getElementById('creative');
     
             // Function to update paragraph text
             function updateParagraphText(text) {
@@ -126,14 +129,24 @@
             // Add click event listeners to each image
             document.getElementById('d-png').addEventListener('click', () => {
                 updateParagraphText('오감이 일렁여 나만이 느낀 exclusive <br> 넌 나의 감성, <b>I love it, my designer</b>');
+                designer.style.color = 'var(--teal)';
+                researcher.style.color = 'var(--midtone)';
+                creative.style.color = 'var(--navy)';
+                
             });
     
             document.getElementById('r-png').addEventListener('click', () => {
                 updateParagraphText('Taking inspiration from my humanities professor, researching is <b>(re)searching again</b>.');
+                designer.style.color = 'var(--midtone)';
+                researcher.style.color = 'var(--teal)';
+                creative.style.color = 'var(--midtone)';
             });
     
             document.getElementById('c-png').addEventListener('click', () => {
                 updateParagraphText('What makes creative work fun? <br> <b>Yes.</b>');
+                designer.style.color = 'var(--navy)';
+                researcher.style.color = 'var(--midtone)';
+                creative.style.color = 'var(--teal)';
             });
         </script>
     </main>
