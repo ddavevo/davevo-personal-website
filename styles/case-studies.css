@@ -36,6 +36,20 @@ main img {
     margin-top: -8rem;
 }
 
+.hero-ribbon {
+    position: relative;
+    width: 100%; 
+    height: 0.8rem; 
+    background-image: var(--case-study);
+}
+
+.hero-ribbon img {
+    position: absolute;
+    width: 5rem;
+    right: 2rem;
+    transform: translateY(-50%);
+}
+
 /* ====================================================================== */
 
 #hero-img {
