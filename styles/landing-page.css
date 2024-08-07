@@ -158,7 +158,8 @@
     transition: .5s ease-in-out;
 }
 
-.project:hover::before, .landing-ctas:hover::before {
+.project:hover::before, .landing-ctas:hover::before,
+.project:active::before, .landing-ctas:active::before {
     left: 100%;
     opacity: 1;
 }
