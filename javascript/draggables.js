@@ -21,9 +21,11 @@ function dragElement(elmnt) {
     document.onmouseup = closeDragElement;
     document.onmousemove = elementDrag;
 
-    const message = document.getElementById('move-me');
-    if (message) {
-      message.style.display = 'none';
+    const messageMove = document.getElementById('move-me');
+    const messageTap = document.getElementById('tap-me');
+    if (messageMove || messageTap) {
+      messageMove.style.display = 'none';
+      messageTap.style.display = 'none';
     }
   }
 

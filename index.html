@@ -83,7 +83,7 @@
                         </a>
                     </p><br>
 
-                    <p id="demo" style="max-width: 50ch;">
+                    <p id="demo">
                         I seek to enhance experiences, raise creative ceilings,
                         and most of all: <b>engage people</b>.
                     </p>
@@ -105,6 +105,7 @@
             
             <div id="d-png" class="movable" draggable="true">
                 <img class="d-png" src="https://media.dave-vo.com/file/dvfolio/landing-page/designer-movable.png">
+                <img id="tap-me" src="images/landing-page/tap-me.svg">
                 <img id="move-me" src="images/landing-page/move-me.svg">
             </div>
 
@@ -143,7 +144,7 @@
             });
     
             document.getElementById('c-png').addEventListener('click', () => {
-                updateParagraphText('What makes creative work fun? <br> <b>Yes.</b>');
+                updateParagraphText('What makes creative work fun? <br> <b>Yes</b>.');
                 designer.style.color = 'var(--navy)';
                 researcher.style.color = 'var(--midtone)';
                 creative.style.color = 'var(--teal)';
