@@ -257,16 +257,17 @@
         padding: 0 2.4rem;
     }
     .landing-body, .landing-text {
-        text-align: center;
+        text-align: left;
     }
     .landing-text {
         font-size: clamp(3rem, 15vw, 4rem);
     }
     #demo {
         max-width: none;
+        text-align: left;
     }
     .landing-ctas {
-        margin: 1rem auto 0 auto;
+        margin: 2rem 0 0 0;
     }
     #move-me {
         visibility: collapse;
