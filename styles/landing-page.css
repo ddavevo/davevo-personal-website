@@ -19,6 +19,11 @@
     line-height: 90%;
 }
 
+.landing-visual {
+    position: relative; 
+    overflow: hidden;
+}
+
 #demo {
     max-width: 50ch;
 }
@@ -53,7 +58,7 @@
 #flying-arrow {
     position: absolute;
     width: 95%;
-    left: -15%;
+    left: calc(-15% + 8px);
     bottom: 30%;
     transform: rotate(-45deg);
     z-index: 1;
@@ -107,6 +112,10 @@
     rotate: 8deg;
 }
 
+#sky {
+    border-radius: 1rem;
+}
+
 /* ========================================================================= */
 
 .toc-spacer {
@@ -135,7 +144,7 @@
     
     background-color: #fff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
+    border-radius: 1rem;
     overflow: hidden;
 
     display: flex;
@@ -168,7 +177,7 @@
     width: 100%;
     object-fit: cover;
     height: 275px;
-    border-radius: 12px 12px 0px 0px;
+    border-radius: 1rem 1rem 0px 0px;
     transition: transform 0.2s ease-in;
 }
 .project:hover img {
@@ -185,7 +194,7 @@
     background-color: #fff;
     z-index: 1;
 
-    border-radius: 0px 0px 12px 12px;    
+    border-radius: 0px 0px 1rem 1rem;    
     padding: 16px 24px 24px;
     gap: 4px;
 }
@@ -230,6 +239,9 @@
     .landing-visual {
         order: 1;
         max-height: 400px;
+    }
+    #sky {
+        border-radius: 0;
     }
     .blurb-section {
         order: 2;
