@@ -153,12 +153,13 @@ main p {
     .profile-pic-container {
         margin: auto;
         width: 70%;
+        max-width: 280px;
     }
     .profile {
         width: 100%;
     }
     .wildcard {
-        width: clamp(4rem, 20vw, 6rem);
+        width: clamp(4rem, 20vw, 5rem);
     }
 }
 

@@ -26,13 +26,13 @@
     
     padding-top: 1.8rem;
     padding-left: 4rem;
-    transition: .5s ease-in-out;
+    transition: transform .5s ease-in-out;
 }
 
 .stylized-o {
     width: 3.25rem; 
     height: 3.25rem;
-    transition: .5s ease-in-out;
+    transition: transform .5s ease-in-out;
 }
 
 .wordmark:hover {
@@ -99,6 +99,7 @@
 .hamburger {
     /* Align menu button to the right by putting flexible space to the left */
     margin-left: auto;
+    width: 2rem;
 }
 .ham-bars {
     width: 35px;
@@ -179,6 +180,9 @@
     .menu-options {
         height: 0;
     }
+    .hamburger {
+        width: 4.8rem;
+    }
     .hamburger-menu-options {
         margin-top: 1.4rem;
     }
@@ -212,7 +216,7 @@
         display: flex;
         justify-content: flex-end;
         padding-top: 3rem;
-        gap: 2rem;
+        gap: 3rem;
         padding-right: 4rem;
         line-height: unset;
     }
