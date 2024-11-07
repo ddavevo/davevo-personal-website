@@ -8,6 +8,7 @@
     --light-teal: #00afcd32;
     --light-blue: #abdfe5;
     --faded: #062f3fb0;
+    --faded-border: #062f3f30;
     
     --pain-point: rgb(244, 208, 205);
     --quote-pain: #ed695c;
@@ -55,7 +56,7 @@ h4 {
     margin-bottom: .75ch;
 }
 
-p, li, span, figcaption { /* landing-body: I am a... I'm an upcoming UI/UX... */
+p, li, span, figcaption, form, input, button { /* landing-body: I am a... I'm an upcoming UI/UX... */
     font-family: gravity;
     line-height: 150%;
     color: var(--navy);

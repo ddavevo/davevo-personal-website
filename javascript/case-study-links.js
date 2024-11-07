@@ -10,13 +10,13 @@ $(document).ready(function() {
     });
 });
 
-/*
+
 $(document).ready(function() {
     $("#designlab").click(function() {
-        window.location.href = 'case-studies/designlab.html';
+        window.location.href = 'case-studies/locked.html';
     });
 });
-*/ 
+
 
 $(document).ready(function() {
     $("#sns").click(function() {
