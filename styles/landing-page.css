@@ -248,7 +248,7 @@
     }
 
     .project img {
-        height: clamp(275px, 100rem, 450px);
+        height: clamp(275px, 100rem, 400px);
     }
 }
 
