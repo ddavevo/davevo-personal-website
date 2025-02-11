@@ -177,7 +177,7 @@
 .project img {
     width: 100%;
     object-fit: cover;
-    height: 275px;
+    height: clamp(275px, 100rem, 550px);
     border-radius: 1rem 1rem 0px 0px;
     transition: transform 0.2s ease-in;
 }
@@ -201,7 +201,7 @@
 }
 
 .title {
-    font-size: 24px;
+    font-size: clamp(1.5rem, 2vw, 1.8rem);
     font-family: gravity-bold;
 }
 

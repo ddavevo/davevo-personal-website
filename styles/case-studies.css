@@ -3,6 +3,11 @@ main {
     grid-template-columns: 9rem 1fr;
     gap: 4rem;
     padding: 0 4rem; padding-top: 4rem;
+
+    position: relative;
+    max-width: 1312px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 main p {
@@ -60,6 +65,10 @@ main img {
 }
 
 #case-study-title {
+    position: relative;
+    max-width: 1312px;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 3rem 2.4rem 2.4rem 2.4rem;
 }
 
@@ -93,6 +102,11 @@ main img {
     gap: 2rem;
     padding: 0 2.4rem;
     padding-bottom: 3.5rem;
+    
+    position: relative;
+    max-width: 1312px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .logistics-header {
