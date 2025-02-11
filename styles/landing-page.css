@@ -205,7 +205,7 @@
 }
 
 .title {
-    font-size: clamp(1.5rem, 2vw, 1.8rem);
+    font-size: 24px;
     font-family: gravity-bold;
 }
 
