@@ -1,5 +1,4 @@
 main section {
-    max-width: 120ch;
     margin: auto;
 }
 
@@ -9,12 +8,17 @@ main p {
 
 .playground-page {
     padding: 10rem 4rem 1rem 4rem;
+
+    position: relative;
+    max-width: 1312px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .landing-text {
     font-family: abril;
     color: var(--teal);
-    font-size: clamp(3rem, 4.25vw, 6rem);
+    font-size: clamp(3rem, 4.25vw, 4.5rem);
     line-height: 100%;
     margin-bottom: .75ch;
 }
