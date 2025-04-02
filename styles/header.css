@@ -2,7 +2,6 @@
     width: 100%;
     background-color: var(--bg);
     max-height: 5rem;
-    overflow: hidden;
     border-bottom: 1rem solid var(--bg);
 
     position: fixed;
