@@ -222,7 +222,7 @@
     padding: .25rem .75em;
     margin-right: 0.6rem;
     border-radius: .4rem;
-    line-height: 3.2rem;
+    line-height: 2.5rem;
     
     background-color: var(--light-teal); 
     border: 1.25px solid var(--teal);
@@ -235,6 +235,25 @@
     border-radius: 0.4rem;
     background-color: var(--light-teal);
     border: 1.25px solid var(--teal);
+}
+
+.keywords-125 {
+    margin-bottom: 1.2rem;
+}
+
+.keywords-125 li {
+    font-family: gravity;
+    display: inline;
+    list-style-type: none;
+    white-space: nowrap;
+    color: #948f8b;
+
+    padding: .25rem .75em;
+    margin-right: 0.6rem;
+    border-radius: .4rem;
+    line-height: 2.5rem;
+    
+    background-color: #f6f2ee;
 }
 /* ========================================================================= */
 

@@ -24,6 +24,12 @@ $(document).ready(function() {
     });
 });
 
+$(document).ready(function() {
+    $("#inchdesign").click(function() {
+        window.location.href = 'case-studies/inch-design.html';
+    });
+});
+
 const hamburgerL = document.querySelector(".hamburger");
 const menuL = document.querySelector(".menu");
 
