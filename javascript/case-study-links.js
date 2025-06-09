@@ -24,9 +24,24 @@ $(document).ready(function() {
     });
 });
 
+
+
+
 $(document).ready(function() {
     $("#inchdesign").click(function() {
         window.location.href = 'case-studies/inch-design.html';
+    });
+});
+
+$(document).ready(function() {
+    $("#sns-dupe").click(function() {
+        window.location.href = 'case-studies/sns-dupe.html';
+    });
+});
+
+$(document).ready(function() {
+    $("#aromacovery-dupe").click(function() {
+        window.location.href = 'case-studies/aromacovery-dupe.html';
     });
 });
 

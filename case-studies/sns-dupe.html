@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNS Salon & Beauty Supply - Dave Vo</title>
+    <link rel="icon" type="image/x-icon" href="https://media.dave-vo.com/file/dvfolio/general/davevo_favicon.png">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/case-studies.css">
+
+    <script src="../javascript/case-study-links.js"></script>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D3KQT24T12"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D3KQT24T12');
+</script>
+
+<body>
+    <header class="header">
+        <a href="../cogs125.html">
+            <div class="wordmark">
+                dave v
+                <img class="stylized-o" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-2.png">
+            </div> 
+        </a>
+
+        <a href="../cogs125.html">
+            <img class="small-shrink-logo" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-2.png" alt="Logo Visual">
+        </a>
+        <button type="button"  class="hamburger" onclick="myFunction(this)">
+            <div class="ham-bars" id="bar1"></div>
+            <div class="ham-bars" id="bar2"></div>
+            <div class="ham-bars" id="bar3"></div>
+        </button>
+
+        <div class="menu">
+            <ul class="hamburger-menu-options">
+                <li>
+                    <a href="../cogs125.html">About</a>
+                </li>
+                <li>
+                    <a href="../cogs125.html">
+                        Playground
+                    </a>
+                </li>
+                <li>
+                    <a href="https://drive.google.com/file/d/1OCZUXgrLguEa5f5sjY4AUzZDR1TiWaqZ/view?usp=sharing" target="_blank">
+                        Résumé
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="header-container"></div>
+
+    <img id="hero-img" src="https://media.dave-vo.com/file/dvfolio/sns/sns-hero.png">
+
+    <section class="hero">
+        <h1 id="case-study-title">Rehauling SNS Salon & Beauty Supply's service discovery for salon patrons & streamlining the booking flow by 55.6%</h1>
+        <div class="logistics">
+            <div>
+                <p class="logistics-header"><b>My Role</b></p>
+                <p>UI/UX Designer </p>
+            </div>
+            <div>
+                <p class="logistics-header"><b>Team</b></p>
+                <p>4 UI/UX Designers </p>
+            </div>
+
+            <div>
+                <p class="logistics-header"><b>Skills</b></p>
+                <p>Market Research <br> UI/UX Design <br> Design Systems <br> User Testing</p>
+            </div>
+            <div>
+                <p class="logistics-header"><b>Timeline</b></p>
+                <p>7 weeks <br> Jan. 2024 - Mar. 2024 </p>
+            </div>
+        </div>
+    </section>
+    <div class="hero-ribbon">
+        <img style="transform: translateY(-43%);" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-6.png">
+    </div>
+
+    <main>
+        <!--Table of Contents-->
+        <section>
+            <div class="table-of-contents">
+                <div>
+                    <b>Table of Contents</b>
+                </div>
+                <ul>
+                    <a href="#background"><li>Background</li></a>
+                    <a href="#solution"><li>Solution</li></a>      
+                    <a href="#research"><li>Research</li></a>
+                    <a href="#lofi-design"><li>Lo-Fi Design</li></a>
+                    <a href="#hifi-design"><li>Hi-Fi Design</li></a>
+                    <a href="#reflection"><li>Reflection</li></a>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <section class="main-content"> <!--Background-->
+                <div class="toc-spacer" id="background"></div>
+                <div class="toc-section">
+                    01 - Background
+                </div>
+                <h2>Introducing SNS Salon & Beauty Supply</h2>
+                <p>
+                    Since 2000, SNS Salon & Beauty Supply has specialized in providing nail and hair services for the local community in Huntington Beach from expert stylists who have been in their industry for decades, up to 40 years.
+                </p>
+                <div class="white-space-block"></div>
+                
+                <p class="subtitle">Problem</p>
+                <h3>What our client wants to achieve through a redesign</h3>
+                <p>
+                    Speaking with the owner, we aimed to understand SNS Salon's mission, audience, and goals. From this, we focused on the core problems that our client wanted to address:
+                </p><br>
+
+                <div id="quote-profile">
+                    <img src="https://media.dave-vo.com/file/dvfolio/sns/beatrice-heim-pic.png">
+                    <p>
+                        <b>Beatrice Heim</b> <span class="subtitle" style="margin-left: .5rem;">Owner</span>
+                    </p><br>
+                </div><br>
+                
+                <div class="insight" id="with-emoji" style="background-color: var(--pain-point); border-color: var(--quote-pain);">
+                    <div>🤔</div>
+                    <div>
+                        <p>
+                            “Most of our customers find out through word of mouth, but we currently <b>don’t have a strong online presence to promote</b> the salon.”
+                        </p>
+                    </div>
+                </div>
+                <div class="insight" id="with-emoji" style="background-color: var(--pain-point); border-color: var(--quote-pain);">
+                    <div>🤔</div>
+                    <div>
+                        <p>
+                            “We want to <b>appeal to young people</b>, they want to pay for beauty and love to spend.”
+                        </p>
+                    </div>
+                </div>
+                <div class="insight" id="with-emoji" style="background-color: var(--pain-point); border-color: var(--quote-pain);">
+                    <div>🤔</div>
+                    <div>
+                        <p>
+                            “High-quality experience is what keeps the customers coming back, and we want a <b>better way to promote the deals</b> so hopefully we reach 200 5&#9733; reviews on Yelp.”
+                        </p>
+                    </div>
+                </div>
+                <div class="white-space-block"></div>
+                
+                <p class="subtitle">Website Audit</p>
+                <h3>Current website audit</h3>
+                <p>
+                    After taking a closer look at their current website, we found that <b>visual clutter</b> and <b>usability issues</b> hindered the website's ability to communicate the salon brand and core specialties.
+                </p>
+                <div class="white-space-block"></div>
+
+                <h3>The need for visual storytelling</h3>
+                <div class="walkthrough" id="two-div-walkthrough" style="gap: 0 1rem;">
+                    <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-landing.png">
+                    <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-bottom.png">
+                </div>
+                <div class="white-space-block"></div>
+
+                <h3>Usability issues make navigation hard</h3>
+                <div class="walkthrough" id="two-div-walkthrough" style="gap: 0 1rem;">
+                    <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-services.png">
+                    <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-dropdowns.png">
+                </div>
+            </section>
+
+            <section class="main-content"> <!--Final Deliverables-->
+                <div class="toc-spacer" id="solution"></div>
+                <div class="toc-section">
+                    02 - Solution
+                </div>
+                <h2>The revamped SNS Salon & Beauty Supply website</h2>
+                <p>
+                    A complete redesign of SNS Salon's website that better speaks to their expertise with compelling storytelling and fixes major usability issues by restructuring information architecture and page layouts.
+                </p><br>
+                <div class="insight" id="with-emoji">
+                    <div>🤝</div>
+                    <div>
+                        <p>
+                            After delivering the redesign, we offered guidance on the hand-off process when the client is ready to launch it. This page will be updated accordingly when it happens. 
+                        </p>
+                    </div>
+                </div>
+                <div class="white-space-block"></div>
+
+                <div class="walkthrough" id="two-div-walkthrough">
+                    <div>
+                        <h3>Web-responsive</h3>
+                        <p style="padding-left: 0;">
+                            The redesigned SNS Salon & Beauty Supply website is built for both desktop and mobile screens.
+                        </p>
+                    </div>
+                    <img style="margin-top: 0;" src="https://media.dave-vo.com/file/dvfolio/sns/deliverables-web-mobile.png">
+                </div>
+                <div class="white-space-block"></div>
+
+                <div class="walkthrough" id="two-div-walkthrough">
+                <div>
+                    <h3>Everything you need to know for your SNS Salon visit</h3>
+                    <p style="padding-left: 0;">
+                        With a fresh look and feel, users can better resonate with the salon's story and easily find key information about the offered services.
+                    </p>
+                </div>
+                <img style="margin-top: 0;" src="https://media.dave-vo.com/file/dvfolio/sns/deliverables-landing.gif">
+                </div>
+                <div class="white-space-block"></div>
+
+                <div class="walkthrough" id="two-div-walkthrough">
+                    <div>
+                        <h3>Enjoy a streamlined booking experience</h3>
+                        <p style="padding-left: 0;">
+                            Say goodbye to a cluttered booking page, and say hello to smooth booking and exciting experiences to come.
+                        </p>
+                    </div>
+                    <img style="margin-top: 0;" src="https://media.dave-vo.com/file/dvfolio/sns/deliverables-booking.gif">
+                </div>
+
+                <div class="white-space-block"></div>
+
+                <p class="subtitle">Outcomes</p>
+                <h3>Major project wins</h3><br>
+                <div class="insight" id="gain-point">
+                    <div>✅</div>
+                    <div>
+                        <p><b>Cleaned up catalog entries by 55.6% on booking pages</b></p>
+                        <p>The Vagaro booking page was heavily populated with excessive duplicate and variant entries, making for a confusing booking experience. By taking advantage of the add-ons Vagaro component, I trimmed down 184 entries to 84 base services.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-content"> <!--Research-->
+                <div class="toc-spacer" id="research"></div>
+                <div class="toc-section">
+                    03 - Research
+                </div>
+                <h2>Driving salon visits with user-centered design</h2>
+
+                <p class="subtitle">Primary Research</p>
+                <h3>Learning what motivates people to get salon services</h3>
+                <p>
+                    To better fit the site to its audience, we interviewed 12 salon patrons, including 3 from SNS Salon, about their motivations, booking habits, then did a think-aloud website walkthrough.
+                </p><br>
+                <p>
+                    Due to the variety in the responses, it was hard to find immediate trends. So, I proposed we used an <b>affinity diagram</b> to organically categorize our data.
+                </p>
+
+                <div class="insight" id="with-emoji" style="margin-top: 1rem;">
+                    <div>💡</div>
+                    <div>
+                        <p>
+                            At first, we thought customer habits would vary by age, but we found patterns in how people form <b>relationships with their salon</b> and what they <b>value most</b> in the experience.
+                        </p>
+                    </div>
+                </div>
+                <img src="https://media.dave-vo.com/file/dvfolio/sns/affinity-mapping.png">
+                <div class="white-space-block"></div>
+
+                <p class="subtitle">User Personas</p>
+                <h3>Solidifying our target user groups</h3>
+                <p>
+                    After we identified the themes, we went back and compared them with individual responses to characterize the patterns. Here is how we defined our customer stakeholders:
+                </p>
+                <img src="https://media.dave-vo.com/file/dvfolio/sns/persona-socializer.png">
+                <img src="https://media.dave-vo.com/file/dvfolio/sns/persona-maintainer.png">
+                <img src="https://media.dave-vo.com/file/dvfolio/sns/persona-friendoftheshop.png">
+                <div class="white-space-block"></div>
+
+                <p class="subtitle">Competitive Analysis</p>
+                <h3>Applying best practices in web design</h3>
+                <p>
+                    Once we had a better understanding of the customer base, we needed to know how to blend user needs and design conventions in order to suit our client's business goals.
+                </p><br>
+                <p>
+                    And so we ran a <b>competitive analysis</b> on 10+ websites, catering in and outside of the nail tech field to gather a diverse pool of examples to reference from.
+                </p>
+                <img src="https://media.dave-vo.com/file/dvfolio/sns/competitive-analysis.png">
+                <div class="white-space-block"></div>
+
+                <p class="subtitle">Information Architecture</p>
+                <h3>How site structure affects the user experience</h3>
+                <p>
+                    Just looking at nail salon websites, we broke down how they structured their navbars. 
+                </p>
+                <div class="insight" id="with-emoji" style="margin-top: 1rem;">
+                    <div>💡</div>
+                    <div>
+                        <p>
+                            Few salons highlight their <b>AVEDA affiliation</b> or <b>staff expertise</b>. SNS Salon could take advantage of their niche, and it could look something like this:
+                        </p>
+                    </div>
+                </div><br>
+                <img style="margin-top: 0" src="https://media.dave-vo.com/file/dvfolio/sns/competitive-analysis-primarylabels.png">
+
+                <img src="https://media.dave-vo.com/file/dvfolio/sns/competitive-analysis-architecture.png">
+                <div class="white-space-block"></div>
+
+                <p class="subtitle">Landing Page</p>
+                <h3>Delivering value quickly for a bigger impact on users</h3>
+                <p>
+                    Landing pages with defining traits have a strong message that validates user needs. The examples below use storytelling to balance user impact and the business side.
+                </p>
+                <div class="walkthrough" id="two-div-walkthrough">
+                    <figure>
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/competitive-analysis-staff.gif">
+                        <figcaption>
+                            Highlighting the stylists encourages visitors to connect with them
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/competitive-analysis-testimonials.gif">
+                        <figcaption>
+                            Testimonials to establish customer loyalty and brand credibility
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="walkthrough" id="two-div-walkthrough">
+                    <figure>
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/competitive-analysis-deals.gif">
+                        <figcaption>
+                            Deals shown with pop-ups/banners to not use valuable screen space
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/competitive-analysis-hiresimages.gif">
+                        <figcaption>
+                            High-quality images with various angles creates more visual interest
+                        </figcaption>
+                    </figure>
+                </div>
+            
+                <div class="white-space-block"></div>
+
+                <p class="subtitle">Booking</p>
+                <h3>Cleaning up visual clutter and confusion</h3>
+                <p>
+                    Content-heavy pages on other websites felt less overwhelming and easier to search through due to how the information was spread out and prioritized on a page.
+                </p>
+                <div class="walkthrough" id="two-div-walkthrough">
+                    <figure>
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/competitive-analysis-tabs.gif">
+                        <figcaption>
+                            Tabs make for easy navigation between categories
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/competitive-analysis-storepolicy.gif">
+                        <figcaption>
+                            Displaying store policies during booking reduces scheduling frustration
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="white-space-block"></div>
+
+                <div class="hmw-wrap">
+                    <h2>How might we...</h2>
+                    <div class="walkthrough breakdown-visuals" id="two-div-walkthrough">
+                        <figure>
+                            <img style="margin: 0" src="https://media.dave-vo.com/file/dvfolio/sns/hmw-question1.png">
+                            <figcaption>Streamline the user journey and guide users through the salons' sellings points?</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img style="margin: 0" src="https://media.dave-vo.com/file/dvfolio/sns/hmw-question2.png">
+                            <figcaption>Cater toward different customers while helping SNS Salon grow as a business?</figcaption>
+                        </figure>
+                    </div>
+                    <div class="white-space-block"></div>
+
+                    <h2>Our proposed solution</h2>
+                    <div class="walkthrough breakdown-visuals" id="two-div-walkthrough">
+                        <figure>
+                            <img style="margin: 0" src="https://media.dave-vo.com/file/dvfolio/sns/hmw-solution1.png">
+                            <figcaption>Rework the content structure and apply best usability practices to appeal to user's needs</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img style="margin: 0" src="https://media.dave-vo.com/file/dvfolio/sns/hmw-solution2.png">
+                            <figcaption>Use meaningful CTAs to drive micro-interactions and conversions</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-content"> <!--Lo-Fi Design-->
+                <div class="toc-spacer" id="lofi-design"></div>
+                <div class="toc-section">
+                    04 - Lo-Fi Design
+                </div>
+                <h2>Prototyping with the user journey in mind</h2>
+
+                <p class="subtitle">Ideation</p>
+                <h3>Low-fidelity wireframing</h3>
+                <p>
+                    Our high-priority goals at this stage were to improve user navigation and reformat their content. Planning ahead, we decided to slightly increase the fidelity to include B/W images and basic descriptions so participants become more immersed in user testing activities.
+                </p>
+
+                <figure>
+                    <img src="https://media.dave-vo.com/file/dvfolio/sns/lofis-landing-page.png">
+                    <figcaption>
+                        In addition to communicating the brand, the landing page contains more meaningful CTAs to foster engagement and trust.
+                    </figcaption>
+                </figure>
+                <div class="white-space-block"></div>
+
+                <figure>
+                    <img src="https://media.dave-vo.com/file/dvfolio/sns/lofis-service-pages.png">
+                    <figcaption>
+                        We decided to split up the services into their own pages and made the elements inline to make it more suitable for the web.
+                    </figcaption>
+                </figure>
+                <div class="white-space-block"></div>
+
+                <figure>
+                    <img src="https://media.dave-vo.com/file/dvfolio/sns/lofis-booking-page.png">
+                    <figcaption>
+                        Booking goes through 3rd-party service <b>Vagaro</b>. We kept layout changes to a minimum since our client isn't as experienced with web design and hand-off.
+                    </figcaption>
+                </figure>
+                <div class="white-space-block"></div>
+
+                <p class="subtitle">User Testing</p>
+                <h3>Testing the initial layouts</h3>
+                <p>
+                    To determine if the screens were clear and easy to navigate, we did user testing with 3 participants and ran through various user scenarios for both desktop and mobile.
+                </p>
+                <div class="white-space-block"></div>
+
+                <h4>You're planning a friends' day out to get your hair and nails done...</h4>
+
+                <div class="walkthrough breakdown-visuals">
+                    <figure>
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/lofi-usertesting-task1.png">
+                        <figcaption>Find 3 fun services and search for their past work</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/lofi-usertesting-task2.png">
+                        <figcaption>Read up on salon logistics and policies</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/lofi-usertesting-task3.png">
+                        <figcaption>Schedule an appointment for the services</figcaption>
+                    </figure>
+                </div>
+                <div class="white-space-block"></div>
+
+                <p class="subtitle">Testing Insights</p>
+                <h3>Assessing successes and needed revisions in our designs</h3>
+                <p>
+                    The user feedback revealed that we fixed most major usability issues and onboarded them to SNS Salon's strengths, but we also got insights on what still hinders users from completing their goals.
+                </p><br>
+
+                <h4>Validated</h4>
+                <div class="insight" id="gain-point">
+                    <div>✅</div>
+                    <div>
+                        <p><b>Easy to glean information</b></p>
+                        <p>Easily figured out what the salon specializes in and were able to look through the services without being overwhelmed.</p>
+                    </div>
+                </div>
+                <div class="insight" id="gain-point">
+                    <div>✅</div>
+                    <div>
+                        <p><b>Displayed deals without sacrificing customer value</b></p>
+                        <p>Successfully recalled the promotional ribbon on the top after walking through the website and tasks.</p>
+                    </div>
+                </div><br>
+
+                <h4>Invalidated</h4>
+                <div class="two-column-div" style="margin-bottom: 0; margin-top: 0rem;">
+                    <div class="insight" id="pain-point">
+                        <div>❌</div>
+                        <div>
+                            <p><b>Usable, but not useful</b></p>
+                            <p>
+                                Service pages' minimal layout felt wordy and bland, which didn't help decision-making.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="insight" id="with-emoji">
+                        <div>🤔</div>
+                        <div>
+                            <p>
+                                &#8594; Revise the pages from a user goal perspective, play with visual elements, and rework service descriptions if applicable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="two-column-div" style="margin: 0;">
+                    <div class="insight" id="pain-point">
+                        <div>❌</div>
+                        <div>
+                            <p><b>Hard to get logistical answers</b></p>
+                            <p>
+                                Found it unintuitive to find store policies and had follow-up questions even after reading.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="insight" id="with-emoji">
+                        <div>🤔</div>
+                        <div>
+                            <p>
+                                &#8594; Add a dedicated section in the main website for store policies and include FAQs for clarity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="two-column-div" style="margin: 0;">
+                    <div class="insight" id="pain-point">
+                        <div>❌</div>
+                        <div>
+                            <p><b>Booking lacks user freedom</b></p>
+                            <p>
+                                Users could only see the total cost at checkout and couldn't easily change appointment details if they wanted to.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="insight" id="with-emoji">
+                        <div>🤔</div>
+                        <div>
+                            <p>
+                                &#8594; Do more research on Vagaro to see if the platform has features that support a seamless end-to-end booking experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-content"> <!--Hi-Fi Design-->
+                <div class="toc-spacer" id="hifi-design"></div>
+                <div class="toc-section">
+                    05 - Hi-Fi Design
+                </div>
+                <h2>Revising and prototyping high-fidelity screens</h2>
+                <p>
+                    At this stage, my team and I begin to replace placeholder content, apply our design systems, and continually test and iterate our designs.
+                </p>
+                <div class="white-space-block"></div>
+
+                <p class="subtitle">Design Justification</p>
+                <h3>Why we continued using stock images instead of the salon's photos</h3>
+                <p>
+                    First impressions are everything. On one hand, the photos we got from the client were poorly edited or cropped, which <b>could reduce potential conversions</b>. On the other hand, it's important for her to easily envision the design as a part of the brand.
+                </p><br>
+                
+                <p class="subtitle">So how did we rationalize this issue?</p>
+                <div class="insight" id="with-emoji" style="margin-top: 1rem;">
+                    <div>💡</div>
+                    <div>
+                        <p>
+                            Since our end product is a prototype, some of the photos can be too. We provided tips for the client to take brand-friendly photos with emotional appeal when they’re ready to have the site implemented.
+                        </p>
+                    </div>
+                </div>
+                <div class="white-space-block"></div>
+
+                <p class="subtitle">Visual Design</p>
+                <h3>Working with two separate design systems</h3>
+                <p>
+                    In addition to making one for the main website, we also needed to replicate the Vagaro design system. So, we used a font identifier extension that retrieved font sizes and weights.
+                </p>
+                <img src="https://media.dave-vo.com/file/dvfolio/sns/design-system-fonts.png">
+                <img src="https://media.dave-vo.com/file/dvfolio/sns/design-system-colors.png">
+                <div class="white-space-block"></div>
+
+                <p class="subtitle">Iteration</p>
+                <h3>What we improved</h3>
+                <ul class="tags">
+                    <li>Actionable hero banners</li>
+                    <li>Clarifying image CTAs</li>
+                    <li>Service recommendations</li>
+                    <li>Updated content writing</li>
+                    <li>Creating visual interest</li>
+                </ul>
+
+                <div class="walkthrough" id="two-div-walkthrough">
+                    <figure>
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/iteration-hifi-landing.png">
+                        <figcaption>Final landing page</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/iteration-hifi-mission.png">
+                        <figcaption>Final about page</figcaption>
+                    </figure>
+                </div>
+
+                <div class="walkthrough" id="two-div-walkthrough">
+                    <figure>
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/iteration-hifi-service.png">
+                        <figcaption>Final service page</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/iteration-hifi-booking.png">
+                        <figcaption>Final booking page</figcaption>
+                    </figure>
+                </div>
+                <div class="white-space-block"></div>
+
+                <h3>What we added</h3>
+                <ul class="tags">
+                    <li>Dedicated policy page</li>
+                    <li>Image loading skeletons</li>
+                    <li>Add-on popups</li>
+                    <li>Add to cart</li>
+                </ul>
+
+                <div class="walkthrough" id="two-div-walkthrough">
+                    <img src="https://media.dave-vo.com/file/dvfolio/sns/iteration-new-policies.png">
+                    <img src="https://media.dave-vo.com/file/dvfolio/sns/iteration-new-loadingskeleton.png">
+                </div>
+
+                <div class="walkthrough" id="two-div-walkthrough">
+                    <img src="https://media.dave-vo.com/file/dvfolio/sns/iteration-new-addons.png">
+                    <img src="https://media.dave-vo.com/file/dvfolio/sns/iteration-new-cart.png">
+                </div>
+                <div class="white-space-block"></div>
+
+                <p class="subtitle">Future Iterations</p>
+                <h3>Possible next steps with SNS Salon</h3>
+                <div class="insight" id="with-emoji">
+                    <div>📈</div>
+                    <div>
+                        <p><b>Website metrics</b></p>
+                        <p>
+                            If I had access to the analytics, I would track the number of appointments booked and Yelp reviews made, and bounce rates post-launch, to see if any further iterations could be made.
+                        </p>
+                    </div>
+                </div>
+                <div class="insight" id="with-emoji">
+                    <div>📈</div>
+                    <div>
+                        <p><b>Revamping their social media</b></p>
+                        <p>
+                            If we were to do further work, I would revisit the salon's social media to find ways to attract more traffic to the website.
+                        </p>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="main-content" style="padding-bottom: 3rem;"> <!--Reflection-->
+                <div class="toc-spacer" id="reflection"></div>
+                <div class="toc-section">
+                    06 - Reflection
+                </div>
+                <h2>Moving forward with a fresh coat of polish</h2>
+                <p>
+                    Every new client always gives me new perspectives in terms of approaching design. I never would have thought how rigorous website design would be. By continuously iterating on hundreds of screens/assets, I feel confident and better equipped in taking up similar projects in the future.
+                </p>
+                <div class="white-space-block"></div>
+
+                <p class="subtitle">And what did I learn?</p>
+                <h3>Document, document, document</h3>
+                <p>
+                    Knowing how to know. I learned the importance of keeping track of core details. When there’s always new insights and developments, I realized that investing in concise summaries really paid off, as it saved much needed time and effort.
+                </p>
+                <div class="white-space-block"></div>
+
+                <h3>Appreciate the small details</h3>
+                <p>
+                    Website design opened up my eyes on how intention and UX principles can apply to every element, no matter how big or small. It taught me that there’s more than one approach to design and  hundreds of other fields that I can take inspiration from.
+                </p>
+
+            </section>
+
+            <div class="hmw-wrap" id="next-case-study">
+                <a href="designlab.html">
+                    <p class="subtitle">Check out another case study!</p>
+                    <h2><u>UCSD Design Lab</u></h2>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <span class="footer-text"><b>@<script>document.write(new Date().getFullYear())</script> • Reach out and let's make it happen!</b></span>
+            <div class="social-media-icons">
+                <a href="mailto: dtvo@ucsd.edu">
+                    <img class="media-links" src="../images/general/email-icon.svg" style="padding-right: .25rem;">
+                </a>
+                <a href="https://www.linkedin.com/in/dave-vo" target="_blank">
+                    <img class="media-links" src="../images/general/linkedin-logo.svg">
+                </a>
+                <a href="https://github.com/ddavevo" target="_blank">
+                    <img class="media-links" id="rightmost-icon" src="../images/general/github-logo.svg">
+                </a>
+            </div>
+        </div>    
+    </footer>
+</body>
+</html>
