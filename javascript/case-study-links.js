@@ -34,8 +34,8 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $("#sns-dupe").click(function() {
-        window.location.href = 'case-studies/sns-dupe.html';
+    $("#resume-redesign").click(function() {
+        window.location.href = 'case-studies/resume-redesign.html';
     });
 });
 

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Redesign - Dave Vo</title>
+    <link rel="icon" type="image/x-icon" href="https://media.dave-vo.com/file/dvfolio/general/davevo_favicon.png">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/case-studies.css">
+
+    <script src="../javascript/case-study-links.js"></script>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D3KQT24T12"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D3KQT24T12');
+</script>
+
+<body>
+    <header class="header">
+        <a href="../cogs125.html">
+            <div class="wordmark">
+                dave v
+                <img class="stylized-o" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-2.png">
+            </div> 
+        </a>
+
+        <a href="../cogs125.html">
+            <img class="small-shrink-logo" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-2.png" alt="Logo Visual">
+        </a>
+        <button type="button"  class="hamburger" onclick="myFunction(this)">
+            <div class="ham-bars" id="bar1"></div>
+            <div class="ham-bars" id="bar2"></div>
+            <div class="ham-bars" id="bar3"></div>
+        </button>
+
+        <div class="menu">
+            <ul class="hamburger-menu-options">
+                <li>
+                    <a href="../cogs125.html">About</a>
+                </li>
+                <li>
+                    <a href="../cogs125.html">
+                        Playground
+                    </a>
+                </li>
+                <li>
+                    <a href="https://drive.google.com/file/d/1OCZUXgrLguEa5f5sjY4AUzZDR1TiWaqZ/view?usp=sharing" target="_blank">
+                        Résumé
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="header-container"></div>
+
+    <img id="hero-img" src="https://media.dave-vo.com/file/dvfolio/cogs125/resume-redesign-hero.png">
+
+    <section class="hero">
+        <h1 id="case-study-title"">Revamping the visual hierarchy and info structure of my resume</h1>
+        <div class="logistics">
+            <div>
+                <p class="logistics-header"><b>My Role</b></p>
+                <p>#LookingForWork</p>
+                </div>
+            <div>
+                <p class="logistics-header"><b>Team</b></p>
+                <p>Just me! </p>
+            </div>
+
+            <div>
+                <p class="logistics-header"><b>Skills</b></p>
+                <p>Visual Design</p>
+                <p>Information Design</p>
+            </div>
+            <div>
+                <p class="logistics-header"><b>Timeline</b></p>
+                <p>2 weeks <br> Mar. 2024</p>
+            </div>
+        </div>
+    </section>
+    <div class="hero-ribbon">
+        <img style="transform: translateY(-42%);" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-4.png">
+    </div>
+
+    <main>
+        <!--Table of Contents-->
+        <section>
+            <div class="table-of-contents">
+                <div>
+                    <b>Table of Contents</b>
+                </div>
+                <ul>
+                    <a href="#background"><li>Background</li></a>
+                    <a href="#initial-idea"><li>The Initial Idea</li></a>
+                    <a href="#my-iteration"><li>My Iteration</li></a>
+                    <a href="#reflection"><li>Reflection</li></a>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <section class="main-content"> <!--Background-->
+                <div class="toc-spacer" id="background"></div>
+                <div class="toc-section">
+                    01 - Background
+                </div>
+                <h2>What makes a strong resume?</h2>
+
+                <p>
+                    Recruiters spend an average of 6 seconds skimming a resume. In that 6 seconds, they assess a candidate's skills and determine if they're qualified enough to follow up with.
+                </p>
+                <div class="white-space-block"></div>
+                
+                <p class="subtitle">Problem</p>
+                <h3>But then, why do my applications keep getting rejected?</h3><br>
+                <p>
+                    While there may be many factors that contributes to this issue, the bottom line is likely this: my resume doesn't stand out, but more importantly, the page isn't grabbing their attention.
+                </p>
+                <div class="white-space-block"></div>
+
+                <div class="hmw-wrap">
+                    <h2>How might I guide recruiters' eyes to the most memorable points on my resume?</h2>
+                </div>
+
+                <p class="subtitle">Solution Preview</p>
+                <div class="walkthrough" id="two-div-walkthrough">
+                    <div>
+                        <h3>Removing unnecessary ink</h3>
+                        <p style="padding-left: 0;">
+                            The most prominent information should use the most ink, so whenever possible, I simplified the wording, removed unnecessary information, and made headers smaller and more compact.
+                        </p>
+                        <div class="white-space-block"></div>
+
+                        <h3>Bold and bigger</h3>
+                        <p style="padding-left: 0;">
+                            Whenever I bold phrases, I'll bump the font size up a few points to make them more noticable from the rest of the resume bullets.
+                        </p>
+                    </div>
+                    
+                    <img style="margin-top: 0" src="https://media.dave-vo.com/file/dvfolio/cogs125/redesigned-resume.png">
+                </div>
+                
+            </section>
+
+            <section class="main-content"> <!--Initial Idea-->
+                <div class="toc-spacer" id="initial-idea"></div>
+                <div class="toc-section">
+                    02 - The Initial Idea
+                </div>
+                <h2>The latest version of my resume</h2>
+
+                <p>
+                    To figure out how I might improve my resume, I decided to start with my current version and asked what I liked and what I wished was better.
+                </p>
+                <div class="white-space-block"></div>
+
+                <div class="walkthrough" id="two-div-walkthrough">
+                    <div>
+                        <p class="subtitle" style="padding-left: 0;">Initial Assumption</p>
+                        <h3>Starting at rejection</h3>
+
+                        <p style="padding-left: 0;">
+                            I asked myself "Why did my resume get rejected?"
+                        </p><br>
+
+                        <p style="padding-left: 0;">
+                            My best guess has to do with the content itself. Maybe there weren't enough numbers? 
+                            Did the content not align well enough with the role?
+                        </p>
+                    </div>
+                    
+                    <img style="margin-top: 0" src="https://media.dave-vo.com/file/dvfolio/cogs125/inspo-resume-annotated.png">
+                </div>
+                <div class="white-space-block"></div>
+
+                <p class="subtitle">However...</p>
+                <h3>It's not necessarily a content issue, it's a visual one</h3>
+
+                <p>
+                    Although the Experience section is the main seller, what about everything else on the page?
+                </p><br>
+
+                <ul class="tags">
+                    <li>Top Ribbon</li>
+                </ul>
+                <p>
+                    If Experience is most important, the name shouldn't be the biggest element on the page.
+                </p><br>
+
+                <ul class="tags">
+                    <li>Education</li>
+                </ul>
+                <p>
+                    If you're applying to industry jobs, there's no reason to highlight classwork that's you're already taking in your major. 
+                    Also, people already expect Education to include degree type, expected graduation date, and GPA.
+                </p><br>
+
+                <ul class="tags">
+                    <li>Headers</li>
+                </ul>
+                <p>
+                    The headers for Skills, Experience, and Education are bigger than the content. But people are already expecting these sections anyways.
+                </p>
+
+                <!----------------------------------------------------->
+
+            </section>
+
+            <section class="main-content"> <!--My Iteration-->
+                <div class="toc-spacer" id="my-iteration"></div>
+                <div class="toc-section">
+                    03 - My Iteration
+                </div>
+                <h2>How I improved my resume</h2>
+
+                <p>
+                    With these considerations in mind, here's how I integrated these into a revised version of my resume.
+                </p><br>
+                    
+                <img style="margin-top: 0" src="https://media.dave-vo.com/file/dvfolio/cogs125/redesigned-resume-annotated.png">
+
+                <!----------------------------------------------------->
+
+            </section>
+
+            <section class="main-content" style="padding-bottom: 3rem"> <!--Reflection-->
+                <div class="toc-spacer" id="reflection"></div>
+                <div class="toc-section">
+                    03 - Reflection
+                </div>
+                <h2>And that's a wrap...</h2>
+                <p>
+                    It was interesting applying a design lens on a seemingly ordinary part of the job hunting process.
+                    Instead of treating each resume section as an essential part of the equation, we assessed each one's 
+                    importance the ground up and reimagined how it could be better optimized for its role.
+
+                </p>
+                <div class="white-space-block"></div>
+
+                <p class="subtitle">And what did I learn?</p>
+                <h3>Don't take anything for granted</h3>
+                <p>
+                    This assignment provided me a moment to look back on when I first designed my resume and why I added certain pieces of content.
+                    I realize now that visual hierarchy isn't just make some text bigger or smaller, it's whether text should even be there in the first place as well.
+                </p>
+                <div class="white-space-block"></div>
+
+                <h3>What does it mean to read a resume?</h3>
+                <p>
+                    Even though I've been conditioned to track my accomplishments for each role, I've always assumed that's all you need for the resume to work.
+                    But going back to my original question, "Why does my resume keep getting rejected?", it's clear that there's more to the story if the resume isn't doing
+                    what it's supposed to. So I'll be remembering this for my future job hunting.
+                </p>
+            </section>
+
+            <div class="hmw-wrap" id="next-case-study">
+                <a href="sns-dupe.html">
+                    <p class="subtitle">Check out another case study!</p>
+                    <h2><u>SNS Salon & Beauty Supply</u></h2>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <span class="footer-text"><b>@<script>document.write(new Date().getFullYear())</script> • Reach out and let's make it happen!</b></span>
+            <div class="social-media-icons">
+                <a href="mailto: dtvo@ucsd.edu">
+                    <img class="media-links" src="../images/general/email-icon.svg" style="padding-right: .25rem;">
+                </a>
+                <a href="https://www.linkedin.com/in/dave-vo" target="_blank">
+                    <img class="media-links" src="../images/general/linkedin-logo.svg">
+                </a>
+                <a href="https://github.com/ddavevo" target="_blank">
+                    <img class="media-links" id="rightmost-icon" src="../images/general/github-logo.svg">
+                </a>
+            </div>
+        </div>    
+    </footer>
+</body>
+</html>
