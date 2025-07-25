@@ -74,7 +74,7 @@ main img {
 
 .hero {
     margin-top: -1rem;
-    background-color: var(--navy);
+    background-color: var(--accent-800);
 }
 
 .hero:after {
@@ -135,7 +135,7 @@ main img {
 .table-of-contents div {
     padding-bottom: 0.8rem; 
     font-family: gravity-bold; 
-    color: var(--navy);
+    color: var(--accent-800);
 }
 
 .table-of-contents li {
@@ -147,15 +147,15 @@ main img {
 }
 
 .table-of-contents li:hover {
-    color: var(--teal);
+    color: var(--accent-400);
 }
 
 .toc-section {
     display: inline-block;
     font-family: gravity;
-    color: var(--navy);
+    color: var(--accent-800);
     background-color: var(--light-teal);
-    border: 1.25px solid var(--teal);
+    border: 1.25px solid var(--accent-400);
     border-radius: 0.6rem;
 
     padding: 0.4rem 0.75rem;   
@@ -221,7 +221,7 @@ main img {
 .quote {
     box-sizing: border-box;
     padding-left: 1.25rem;
-    border-left: 0.3rem solid var(--teal);
+    border-left: 0.3rem solid var(--accent-400);
     align-items: center;
     height: 100%;
 }
@@ -235,7 +235,7 @@ main img {
     margin-bottom: 1.2rem;
     border-radius: 0.6rem;
     background-color: var(--light-teal);
-    border: 1.25px solid var(--teal);
+    border: 1.25px solid var(--accent-400);
 }
 
 #with-emoji {
@@ -364,7 +364,7 @@ main img {
     line-height: 3.2rem;
 
     background-color: var(--light-teal);
-    border: 1.25px solid var(--teal);
+    border: 1.25px solid var(--accent-400);
 }
 
 /* ================================= */
@@ -406,7 +406,7 @@ main img {
 }
 
 .numbered-span {
-    background-color: var(--teal);
+    background-color: var(--accent-400);
     padding: .2rem .65rem;
 }
 
@@ -501,7 +501,7 @@ main img {
 .locked-input button {
     max-width: 22rem;
     width: 100%;
-    background-color: var(--teal);
+    background-color: var(--accent-400);
     padding: .5rem 1.2rem;
     border-radius: .4rem;
     color: white;

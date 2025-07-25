@@ -17,7 +17,7 @@ main p {
 
 .landing-text {
     font-family: abril;
-    color: var(--teal);
+    color: var(--accent-400);
     font-size: clamp(3rem, 4.25vw, 4.5rem);
     line-height: 100%;
     margin-bottom: 1rem;
@@ -74,7 +74,7 @@ main p {
     position: absolute;
     width: 0%;
     height: 100%;
-    background-color: var(--teal);
+    background-color: var(--accent-400);
     border-radius: .5rem;
 }
 

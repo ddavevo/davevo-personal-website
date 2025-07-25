@@ -18,7 +18,7 @@
 
 .landing-text {
     font-family: abril;
-    color: var(--teal);
+    color: var(--accent-400);
     font-size: clamp(4rem, 6vw, 6rem);
     line-height: 90%;
 }
@@ -48,7 +48,7 @@
 
 .landing-ctas {
     position: relative;
-    background-color: var(--teal);
+    background-color: var(--accent-400);
     padding: .3rem 1.2rem;
     border-radius: .6rem;
     overflow: hidden;
@@ -225,7 +225,7 @@
     line-height: 2.5rem;
     
     background-color: var(--light-teal); 
-    border: 1.25px solid var(--teal);
+    border: 1.25px solid var(--accent-400);
 }
 
 .insight {
@@ -234,7 +234,7 @@
     margin-bottom: 1.2rem;
     border-radius: 0.4rem;
     background-color: var(--light-teal);
-    border: 1.25px solid var(--teal);
+    border: 1.25px solid var(--accent-400);
 }
 
 .keywords-125 {

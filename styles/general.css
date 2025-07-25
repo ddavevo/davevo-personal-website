@@ -1,8 +1,6 @@
 :root {
-    --bg: #fef6f0;
-    --teal: #00afcd;
+    
     --midtone: #005b6d;
-    --navy: #062f3f;
 
     --mid-teal: #5ed0e3;
     --light-teal: #00afcd32;
@@ -16,7 +14,43 @@
     --quote-gain: #76b849;
     
     --navgradient: linear-gradient(var(--bg), var(--bg) 9.4rem, rgb(254,246,240, 0.8) 10.2rem, transparent);
-    --case-study: linear-gradient(to left, var(--teal), var(--navy));
+    --case-study: linear-gradient(to left, var(--accent-400), var(--accent-800));
+
+    /* --------------------------------------------- */
+
+    --accent-100: #e4efed;
+    --accent-200: #ace4ed;
+    --accent-300: #6cd4e5;
+    --accent-400: #00afcd;
+    --accent-500: #0497b4;
+    --accent-600: #006c8c;
+    --accent-700: #01556f;
+    --accent-800: #062f3f;
+    --accent-900: #081a1c;
+
+    --bg: #fef6f0;
+    --neutral-200: #F9EEE4;
+    --neutral-300: #E2D6CB;
+    --neutral-400: #ccbfb3;
+    --neutral-500: #b5a89c;
+    --neutral-600: #9e9186;
+    --neutral-700: #887b70;
+    --neutral-800: #71665b;
+    --neutral-900: #5a5047;
+    --neutral-1000: #423229;
+    --neutral-1100: #261e17;
+
+    --gray-100: #f7f3f2;
+    --gray-200: #e5e0df;
+    --gray-300: #cac5c4;
+    --gray-400: #ada8a8;
+    --gray-500: #8f8b8b;
+    --gray-600: #726e6e;
+    --gray-700: #565151;
+    --gray-800: #3c3838;
+    --gray-900: #272525;
+    --gray-1000: #171414;
+
 }
 
 * {
@@ -34,7 +68,7 @@ body {
 h1, h2, h3, h4 {
     font-weight: normal;
     font-family: gravity-bold;
-    color: var(--navy);
+    color: var(--accent-800);
 }
 
 h1 {
@@ -59,7 +93,7 @@ h4 {
 p, li, span, figcaption, form, input, button { /* landing-body: I am a... I'm an upcoming UI/UX... */
     font-family: gravity;
     line-height: 150%;
-    color: var(--navy);
+    color: var(--accent-800);
     font-size: clamp(16px, 2vw, 16.8px);
 }
 
@@ -86,14 +120,14 @@ a:link, a:visited, a:hover, a:active {
 
 b {
     font-weight: normal;
-    -webkit-text-stroke: 0.02rem var(--navy);
+    -webkit-text-stroke: 0.02rem var(--accent-800);
     font-family: gravity-bold;
 }
 
 hr {
     margin: 3rem 0;
     padding: 0 4rem;
-    border: 1px solid var(--navy)
+    border: 1px solid var(--accent-800)
 }
 
 button {

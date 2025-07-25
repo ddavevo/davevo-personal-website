@@ -33,7 +33,7 @@
 
     font-family: abril;
     font-size: 48px;
-    color: var(--teal);
+    color: var(--accent-400);
     
     padding-top: 1.8rem;
     padding-left: 4rem;
@@ -71,7 +71,7 @@
 
 .header-text {
     font-family: gravity-bold;
-    color: var(--navy);
+    color: var(--accent-800);
     cursor: pointer;
     float: right;
     line-height: unset;
@@ -115,7 +115,7 @@
 .ham-bars {
     width: 35px;
     height: 5px;
-    background-color: var(--navy);
+    background-color: var(--accent-800);
     border-radius: 5px;
     opacity: 0;
 
@@ -158,7 +158,7 @@
 
 .hamburger-menu-options {
     font-family: gravity-bold;
-    color: var(--navy);
+    color: var(--accent-800);
     position: fixed;
 
     left: 50%;
