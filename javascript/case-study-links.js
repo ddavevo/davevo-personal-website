@@ -51,3 +51,11 @@ const menuL = document.querySelector(".menu");
 function myFunction(x){
     x.classList.toggle("active");
 }
+
+var animation = lottie.loadAnimation({
+    container: document.getElementById('lottie-animation-container'), // the DOM element that will contain the animation
+    renderer: 'svg', // or 'canvas' or 'html'
+    loop: true,
+    autoplay: true,
+    path: 'https://media.dave-vo.com/file/dvfolio/designlab/lottie-generate-why.lottie' // the path to the animation json
+});
