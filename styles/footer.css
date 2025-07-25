@@ -7,7 +7,7 @@
     margin-left: .15rem;
     padding: .1rem .5em;
     border-radius: .4rem;
-    background-color: var(--light-teal); 
+    background-color: var(--accent-100); 
     border: 1.25px solid var(--accent-400);
     white-space: nowrap;
 }

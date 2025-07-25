@@ -1,12 +1,6 @@
 :root {
     
     --midtone: #005b6d;
-
-    --mid-teal: #5ed0e3;
-    --light-teal: #00afcd32;
-    --light-blue: #abdfe5;
-    --faded: #062f3fb0;
-    --faded-border: #062f3f30;
     
     --pain-point: rgb(244, 208, 205);
     --quote-pain: #ed695c;
@@ -98,13 +92,13 @@ p, li, span, figcaption, form, input, button { /* landing-body: I am a... I'm an
 }
 
 figcaption {
-    color: var(--faded);
+    color: var(--neutral-600);
     margin-top: .5rem; margin: 0.75ch;
     text-align: center;
 }
 
 .subtitle {
-    color: var(--faded);
+    color: var(--neutral-600);
     margin-bottom: 0.75ch;
 }
 
