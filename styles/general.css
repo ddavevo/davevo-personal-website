@@ -2,10 +2,12 @@
     
     --midtone: #005b6d;
     
-    --pain-point: rgb(244, 208, 205);
-    --quote-pain: #ed695c;
-    --gain-point: rgb(216, 234, 198);
-    --quote-gain: #76b849;
+    --pain-point: #F9E0DD;
+    --quote-pain: #ED695C;
+    --gain-point: #D9EBC8;
+    --quote-gain: #76B849;
+
+    --gain: #C7F29B;
     
     --navgradient: linear-gradient(var(--bg), var(--bg) 9.4rem, rgb(254,246,240, 0.8) 10.2rem, transparent);
     --case-study: linear-gradient(to left, var(--accent-400), var(--accent-800));
