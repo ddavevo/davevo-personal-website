@@ -43,8 +43,8 @@ main img {
 
 .hero-ribbon {
     position: relative;
-    width: 100%; 
-    height: 0.8rem; 
+    width: 100%;
+    height: 0.8rem;
     background-image: var(--case-study);
 }
 
@@ -74,6 +74,7 @@ main img {
 
 .hero {
     margin-top: -1rem;
+    padding-top: 5rem;
     background-color: var(--accent-800);
 }
 

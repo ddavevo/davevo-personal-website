@@ -52,10 +52,26 @@ function myFunction(x){
     x.classList.toggle("active");
 }
 
-var animation = lottie.loadAnimation({
-    container: document.getElementById('lottie-animation-container'), // the DOM element that will contain the animation
+var animation1 = lottie.loadAnimation({
+    container: document.getElementById('lottie-animation-container-1'), // the DOM element that will contain the animation
     renderer: 'svg', // or 'canvas' or 'html'
     loop: true,
     autoplay: true,
-    path: 'https://media.dave-vo.com/file/dvfolio/designlab/lottie-generate-why.lottie' // the path to the animation json
+    path: 'https://media.dave-vo.com/file/dvfolio/designlab/think-about-why.lottie' // the path to the animation json
+});
+
+var animation2 = lottie.loadAnimation({
+    container: document.getElementById('lottie-animation-container-2'), // the DOM element that will contain the animation
+    renderer: 'svg', // or 'canvas' or 'html'
+    loop: true,
+    autoplay: true,
+    path: 'https://media.dave-vo.com/file/dvfolio/designlab/generate-why.lottie' // the path to the animation json
+});
+
+var animation3 = lottie.loadAnimation({
+    container: document.getElementById('lottie-animation-container-3'), // the DOM element that will contain the animation
+    renderer: 'svg', // or 'canvas' or 'html'
+    loop: true,
+    autoplay: true,
+    path: 'https://media.dave-vo.com/file/dvfolio/designlab/review-why.lottie' // the path to the animation json
 });
