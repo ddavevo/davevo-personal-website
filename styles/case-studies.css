@@ -186,18 +186,19 @@ hr {
 /* ====================================================================== */
 
 .columns {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 2rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 1em;
 }
 
-.columns img {
-    flex: 1;
+
+.columns * {
     object-fit: cover;
     object-position: 0 0;
     min-height: 0;
 }
+
 
 /* ====================================================================== */
 
@@ -638,6 +639,14 @@ hr {
     .walkthrough, #two-div-walkthrough {
        grid-template-columns: 1fr;
     }
+
+    .columns {
+        grid-auto-flow: row;
+    }
+
+    .columns h4 {
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (max-width: 623px) {
@@ -705,8 +714,12 @@ hr {
         margin-top: 2rem;
     }
 
-    .columns {
-        flex-direction: column;
+    .main-container article {
+    padding-bottom: 4ch;
+}
+
+    .main-container article.extra-space {
+        padding-bottom: 8ch;
     }
 }
 
