@@ -10,7 +10,7 @@ main {
     transform: translateX(-50%);
 }
 
-main p {
+main p, hr {
     max-width: 70ch;
 }
 
@@ -23,6 +23,11 @@ main img {
     object-fit: contain;
     object-position: center;
     margin-top: 1.5rem;
+}
+
+hr {
+    margin: 1.5rem 0;
+    border-color: var(--neutral-400);
 }
 
 .two-column-div, .two-column-img, .insight, #field-findings, .walkthrough,
