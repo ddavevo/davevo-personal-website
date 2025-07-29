@@ -10,7 +10,7 @@ main {
     transform: translateX(-50%);
 }
 
-main p, hr {
+main p {
     max-width: 70ch;
     margin-bottom: 2ch;
 }
@@ -27,6 +27,7 @@ main img {
 
 hr {
     margin: 1.5rem 0;
+    margin-bottom: 2ch;
     border-color: var(--neutral-400);
 }
 
@@ -80,7 +81,6 @@ hr {
 }
 
 .hero {
-    margin-top: -1rem;
     background-color: var(--accent-800);
 }
 
@@ -243,6 +243,8 @@ hr {
     padding: .25rem 0.75rem;
     border-radius: 100px;
     color: var(--neutral-700);
+    display: inline-block;
+    margin-bottom: 0.75rem;
 }
 
 .reflection-unit {
