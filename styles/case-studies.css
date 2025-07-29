@@ -12,6 +12,7 @@ main {
 
 main p, hr {
     max-width: 70ch;
+    margin-bottom: 2ch;
 }
 
 main img, main div, main ul, main aside, main blockquote, main figure, main figcaption {
@@ -22,7 +23,6 @@ main img {
     min-height: 300px;
     object-fit: contain;
     object-position: center;
-    margin-top: 1.5rem;
 }
 
 hr {
@@ -79,7 +79,6 @@ hr {
 
 .hero {
     margin-top: -1rem;
-    padding-top: 5rem;
     background-color: var(--accent-800);
 }
 
@@ -170,8 +169,16 @@ hr {
 
 /* ================================================================= */
 
-.main-content {
+.main-container section {
     padding-bottom: 5rem;
+}
+
+.main-container article {
+    padding-bottom: 6ch;
+}
+
+.main-container article.extra-space {
+    padding-bottom: 12ch;
 }
 
 .two-column-div {
@@ -645,11 +652,11 @@ hr {
         object-fit: cover;
     }
 
-    .main-content {
+    .main-container {
         padding-right: 2.4rem;
     }
 
-    .white-space-block {
+    .white-space-block, .main-container article {
         height: 4ch;
     }
 
