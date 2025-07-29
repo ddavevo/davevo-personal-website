@@ -188,13 +188,12 @@ hr {
 .columns {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
     gap: 2rem;
 }
 
 .columns img {
-    flex-grow: 1;
-    width: 1fr;
-    max-width: calc(1312px / 3);
+    flex: 1;
     object-fit: cover;
     object-position: 0 0;
     min-height: 0;
@@ -235,6 +234,22 @@ hr {
     gap: 1.5rem;
     background-color: var(--gain-point);
     border: 1.25px solid var(--quote-gain);
+}
+
+/* ====================================================================== */
+
+.tag {
+    border: 1px solid var(--neutral-700);
+    padding: .25rem 0.75rem;
+    border-radius: 100px;
+    color: var(--neutral-700);
+}
+
+.reflection-unit {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 /* ====================================================================== */
@@ -690,9 +705,6 @@ hr {
 
     .columns {
         flex-direction: column;
-    }
-    .columns img {
-        max-width: 100%;
     }
 }
 
