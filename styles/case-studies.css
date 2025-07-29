@@ -30,6 +30,8 @@ hr {
     border-color: var(--neutral-400);
 }
 
+/* ====================================================================== */
+
 .two-column-div, .two-column-img, .insight, #field-findings, .walkthrough,
 #two-div-walkthrough, .interview-data {
     max-width: 90ch;
@@ -181,6 +183,72 @@ hr {
     padding-bottom: 12ch;
 }
 
+/* ====================================================================== */
+
+.insight {
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.2rem;
+    border-radius: 0.6rem;
+    background-color: var(--accent-100);
+    border: 1.25px solid var(--accent-400);
+}
+
+#with-emoji {
+    display: grid;
+    grid-template-columns: 2ch 1fr;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem 1rem 1rem;
+}
+
+#with-emoji div:nth-child(1) {
+    font-size: 1.6rem;
+}
+
+#pain-point {
+    display: grid;
+    grid-template-columns: 1ch 1fr;
+    gap: 1.5rem;
+    background-color: var(--pain-point);
+    border: 1.25px solid var(--quote-pain);
+}
+
+#gain-point {
+    display: grid;
+    grid-template-columns: 1ch 1fr;
+    gap: 1.5rem;
+    background-color: var(--gain-point);
+    border: 1.25px solid var(--quote-gain);
+}
+
+/* ====================================================================== */
+
+#next-case-study {
+    position: relative;
+    cursor: pointer;
+}
+
+#next-case-study:hover {
+    opacity: .8;
+    transform: translateX(.5rem);
+}
+
+#next-case-study::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #fef6f090, transparent);
+    transition: .5s ease-in-out;
+}
+
+#next-case-study:hover::before {
+    left: 100%;
+}
+
+/* ====================================================================== */
+
 .two-column-div {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
@@ -243,41 +311,6 @@ hr {
     font-size: 2rem;
 }
 
-.insight {
-    padding: 1rem 1.5rem;
-    margin-bottom: 1.2rem;
-    border-radius: 0.6rem;
-    background-color: var(--accent-100);
-    border: 1.25px solid var(--accent-400);
-}
-
-#with-emoji {
-    display: grid;
-    grid-template-columns: 2ch 1fr;
-    gap: 1.5rem;
-    padding: 1rem 1.5rem 1rem 1rem;
-}
-
-#with-emoji div:nth-child(1) {
-    font-size: 1.6rem;
-}
-
-#pain-point {
-    display: grid;
-    grid-template-columns: 1ch 1fr;
-    gap: 1.5rem;
-    background-color: var(--pain-point);
-    border: 1.25px solid var(--quote-pain);
-}
-
-#gain-point {
-    display: grid;
-    grid-template-columns: 1ch 1fr;
-    gap: 1.5rem;
-    background-color: var(--gain-point);
-    border: 1.25px solid var(--quote-gain);
-}
-
 .hmw-wrap {
     position: relative;
     transition: .5s ease-in-out;
@@ -299,33 +332,7 @@ hr {
     transform: scale(.2) scaleX(-1) rotate(300deg); 
 }
 
-#next-case-study {
-    position: relative;
-    cursor: pointer;
-}
-
-#next-case-study:hover {
-    opacity: .8;
-    transform: translateX(.5rem);
-}
-
-#next-case-study::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%; 
-    height: 100%;
-    background: linear-gradient(90deg, transparent, #fef6f090, transparent);
-    transition: .5s ease-in-out;
-}
-
-#next-case-study:hover::before {
-    left: 100%;
-}
-
-
-/* =============================================================== */
+/* ====================================================================== */
 
 #field-findings {
     display: flex;
@@ -526,22 +533,6 @@ hr {
 
 
 /* =========================================================== */
-
-/*
-@media screen and (min-width: 1281px) {
-    main p {
-        max-width: clamp(70ch, 60vw, 160ch);
-    }
-
-    main img, main div, main ul, main aside, main blockquote, main figure, main figcaption {
-        max-width: clamp(90ch, 60vw, 180ch);
-    }
-
-    .two-column-div, .two-column-img, .insight, #field-findings, .walkthrough, #two-div-walkthrough, .interview-data {
-        max-width: clamp(90ch, 60vw, 180ch);
-    }
-}
-*/
 
 @media screen and (min-width: 624px) { /* and (max-width: 1100px) */
     main p {
