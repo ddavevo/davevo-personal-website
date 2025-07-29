@@ -185,6 +185,23 @@ hr {
 
 /* ====================================================================== */
 
+.columns {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.columns img {
+    flex-grow: 1;
+    width: 1fr;
+    max-width: calc(1312px / 3);
+    object-fit: cover;
+    object-position: 0 0;
+    min-height: 0;
+}
+
+/* ====================================================================== */
+
 .insight {
     padding: 1rem 1.5rem;
     margin-bottom: 1.2rem;
@@ -604,10 +621,6 @@ hr {
     .walkthrough, #two-div-walkthrough {
        grid-template-columns: 1fr;
     }
-
-    .walkthrough figure {
-        margin-top: 1.5rem;
-    }
 }
 
 @media screen and (max-width: 623px) {
@@ -639,7 +652,7 @@ hr {
 
     main img {
         min-height: 0;
-        margin: 0; margin-top: 1.5rem;
+        margin: 0;
         object-fit: cover;
     }
 
@@ -673,6 +686,13 @@ hr {
 
     .aromacovery-team img {
         margin-top: 2rem;
+    }
+
+    .columns {
+        flex-direction: column;
+    }
+    .columns img {
+        max-width: 100%;
     }
 }
 
