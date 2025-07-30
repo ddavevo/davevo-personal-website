@@ -12,7 +12,7 @@ main {
 
 main p {
     max-width: 70ch;
-    margin-bottom: 2ch;
+    margin-bottom: 2.5ch;
 }
 
 main img, main div, main ul, main aside, main blockquote, main figure, main figcaption {
@@ -199,6 +199,19 @@ hr {
     min-height: 0;
 }
 
+.two-columns {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 2rem;
+}
+
+.two-columns * {
+    height: auto; 
+    margin-top: 0; 
+    object-position: 0 0;
+    
+}
+
 
 /* ====================================================================== */
 
@@ -208,6 +221,10 @@ hr {
     border-radius: 0.6rem;
     background-color: var(--accent-100);
     border: 1.25px solid var(--accent-400);
+}
+
+.insight p {
+    margin-bottom: 0;
 }
 
 #with-emoji {
@@ -484,28 +501,14 @@ hr {
 
 /* ================================= */
 
-.div-phone-mockups {
+.div-phone-two-columns {
     display: flex; 
     justify-content: space-evenly; 
     gap: 2rem;
 }
 
-.div-phone-mockups div:nth-child(1) {
+.div-phone-two-columns div:nth-child(1) {
     max-width: 300px;
-}
-
-.mockups {
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    justify-content: flex-end; 
-    gap: 1rem;
-}
-
-.mockups figure img {
-    height: auto; 
-    margin-top: 0; 
-    object-position: 0 0;
-    
 }
 
 /* =========================================================== */
@@ -597,11 +600,11 @@ hr {
         flex-direction: column;
     }
 
-    .div-phone-mockups {
+    .div-phone-two-columns {
         flex-direction: column; 
     }
 
-    .div-phone-mockups div:nth-child(1) {
+    .div-phone-two-columns div:nth-child(1) {
         max-width: none;
     }
 }
@@ -641,7 +644,7 @@ hr {
     }
 
     .columns {
-        grid-auto-flow: row;
+        grid-auto-flow: row;        
     }
 
     .columns h4 {
@@ -704,10 +707,6 @@ hr {
 
     .quote-text {
         font-size: 1.1rem;
-    }
-
-    .breakdown-visuals, .breakdown-visuals #two-div-walkthrough {
-        grid-template-columns: 1fr 1fr;
     }
 
     .aromacovery-team img {
