@@ -15,11 +15,6 @@ main p {
     margin-bottom: 2.5ch;
 }
 
-main img, main div, main ul, main aside, main blockquote, main figure, main figcaption {
-    max-width: 90ch;
-    margin-bottom: 2.5ch;
-}
-
 main img {
     width: 100%;
     min-height: 300px;
@@ -40,14 +35,14 @@ blockquote {
     gap: 1rem;
 }
 
-/* ====================================================================== */
-
-.two-column-div, .gallery, .insight, .field-findings, .walkthrough,
-#two-div-walkthrough, .interview-data {
+main img, main div, main ul, main aside, main blockquote, main figure, main figcaption {
     max-width: 90ch;
+    margin-bottom: 2.5ch;
 }
 
-.white-space-block {
+/* ====================================================================== */
+
+.white-space-block { /* PHASING OUT SLOWLY */
     height: 6ch;
 }
 
@@ -163,13 +158,13 @@ blockquote {
 }
 
 .table-of-contents li:hover {
-    color: var(--accent-400);
+    color: var(--neutral-900);
 }
 
 .toc-section {
     display: inline-block;
     font-family: gravity;
-    color: var(--accent-800);
+    color: var(--neutral-900);
     background-color: var(--accent-100);
     border: 1.25px solid var(--accent-400);
     border-radius: 0.6rem;
@@ -212,6 +207,21 @@ blockquote {
     margin-bottom: 0;
 }
 
+.gallery {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: .25rem;
+}
+
+.gallery img {
+    width: 1fr;
+    height: 400px;
+    object-fit: cover;
+    object-position: 0 0;
+    margin-bottom: 0;
+}
+
+/* STRICTLY TWO COLUMNS ACROSS ALL SCREEN SIZES */
 .two-columns {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
@@ -225,31 +235,17 @@ blockquote {
     
 }
 
-.field-findings {
+.two-columns-text-and-image {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
     gap: 2rem;
 }
 
-.field-findings img {
+.two-columns-text-and-image img {
     width: auto;
     max-height: 500px;
     margin: 0;
-}
-
-.gallery {
-    display: grid; 
-    grid-template-columns: 1fr 1fr;
-    gap: .25rem;
-}
-
-.gallery img {
-    width: 1fr;
-    height: 400px;
-    object-fit: cover;
-    object-position: 0 0;
-    margin-bottom: 0;
 }
 
 /* ====================================================================== */
@@ -268,8 +264,15 @@ blockquote {
     margin-bottom: 0;
 }
 
+.insight-half {
+    background-color: var(--pain-point); 
+    border-radius: .6rem 0 0 .6rem;
+    display: flex;
+    align-items: center;
+}
+
 .with-emoji {
-    grid-template-columns: auto auto;
+    grid-template-columns: 2ch 1fr;
     gap: 1.5rem;
     padding: 1rem 1.5rem 0rem 1rem;
 }
@@ -279,17 +282,54 @@ blockquote {
 }
 
 .pain-point {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1ch 1fr;
     gap: 1.5rem;
     background-color: var(--pain-point);
     border: 1.25px solid var(--quote-pain);
 }
 
 .gain-point {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1ch 1fr;
     gap: 1.5rem;
     background-color: var(--gain-point);
     border: 1.25px solid var(--quote-gain);
+}
+
+/* ====================================================================== */
+
+.interview-data {
+    display: grid;
+    grid-template-columns: 0.45fr 0.55fr;
+    gap: 2rem;
+}
+
+.quote {
+    box-sizing: border-box;
+    padding-left: 1.25rem;
+    border-left: 0.3rem solid var(--accent-400);
+    align-items: center;
+    height: 100%;
+}
+
+/* ================================= */
+
+.quote-profile {
+    display: flex; 
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.quote-profile p {
+    margin-bottom: 0;
+}
+
+.quote-profile img {
+    width: 3.5rem;
+    height: 3.5rem;
+    min-height: 0;
+    margin: 0;
+    object-position: 0 0;
 }
 
 /* ====================================================================== */
@@ -311,7 +351,28 @@ blockquote {
 
     > h3 {
     margin-bottom: 1ch;
+    }
 }
+
+/* ================================= */
+
+.tags {
+    padding-left: 0;
+}
+
+.tags li {
+    font-family: gravity;
+    display: inline;
+    list-style-type: none;
+    white-space: nowrap;
+
+    padding: .25rem .75rem;
+    margin-right: .25rem;
+    border-radius: .25rem;
+    line-height: 3.2rem;
+
+    background-color: var(--accent-100);
+    border: 1.25px solid var(--accent-400);
 }
 
 /* ====================================================================== */
@@ -343,54 +404,6 @@ blockquote {
 
 /* ====================================================================== */
 
-.two-column-div {
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    margin: 2rem 0;
-    gap: 2rem;
-}
-
-.two-column-div img {
-    width: auto;
-    margin: 0;
-}
-
-.walkthrough {
-    display: grid; grid-template-columns: 1fr 1fr 1fr;
-}
-
-.walkthrough img {
-    min-height: 0;
-    object-position: 0 0;
-}
-
-.walkthrough p {
-    padding: 0 1rem;
-}
-
-#two-div-walkthrough {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-.interview-data {
-    display: grid;
-    grid-template-columns: 0.45fr 0.55fr;
-    gap: 2rem;
-}
-
-.quote {
-    box-sizing: border-box;
-    padding-left: 1.25rem;
-    border-left: 0.3rem solid var(--accent-400);
-    align-items: center;
-    height: 100%;
-}
-
-#percentage {
-    font-size: 2rem;
-}
-
 .hmw-wrap {
     position: relative;
     transition: .5s ease-in-out;
@@ -413,66 +426,6 @@ blockquote {
 }
 
 /* ====================================================================== */
-
-#sevenatenine-takeaways {
-    gap: 0;
-}
-
-.epep {
-    background-color: var(--pain-point); 
-    border-radius: .6rem 0 0 .6rem;
-    display: flex;
-    align-items: center;
-}
-
-.epep #pain-point, .epep #gain-point {
-    max-width: none;
-    width: 100%;
-}
-
-/* ================================= */
-
-.tags {
-    padding-left: 0;
-}
-
-.tags li {
-    font-family: gravity;
-    display: inline;
-    list-style-type: none;
-    white-space: nowrap;
-
-    padding: .25rem .75rem;
-    margin-right: .25rem;
-    border-radius: .25rem;
-    line-height: 3.2rem;
-
-    background-color: var(--accent-100);
-    border: 1.25px solid var(--accent-400);
-}
-
-/* ================================= */
-
-.quote-profile {
-    display: flex; 
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
-}
-
-.quote-profile p {
-    margin-bottom: 0;
-}
-
-.quote-profile img {
-    width: 3.5rem;
-    height: 3.5rem;
-    min-height: 0;
-    margin: 0;
-    object-position: 0 0;
-}
-
-/* ================================= */
 
 .numbered {
     margin: 1rem 0; margin-top: 2rem;
@@ -506,18 +459,6 @@ blockquote {
     flex-direction: column;
     gap: 0.5rem;
     margin-bottom: clamp(2rem, 5vw, 4rem);
-}
-
-/* ================================= */
-
-.div-phone-two-columns {
-    display: flex; 
-    justify-content: space-evenly; 
-    gap: 2rem;
-}
-
-.div-phone-two-columns div:nth-child(1) {
-    max-width: 300px;
 }
 
 /* =========================================================== */
@@ -593,63 +534,23 @@ blockquote {
     main img, main div, main ul, main aside, main blockquote, main figure, main figcaption {
         max-width: clamp(90ch, 60vw, 180ch);
     }
-
-    .two-column-div, .gallery, .insight, .field-findings, .walkthrough, #two-div-walkthrough, .interview-data {
-        max-width: clamp(90ch, 60vw, 180ch);
-    }
 }
 
 @media screen and (max-width: 1100px) {
-    .two-column-div {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .field-findings {
+    .two-columns-text-and-image {
         flex-direction: column;
-    }
-
-    .div-phone-two-columns {
-        flex-direction: column; 
-    }
-
-    .div-phone-two-columns div:nth-child(1) {
-        max-width: none;
     }
 }
 
 @media screen and (max-width: 800px) {
-    .mvp-quote {
-        grid-template-columns: 1fr;
-        padding: 0; padding-bottom: 1rem;
-        border-radius: 0;
-    }
-
-    .mvp-quote-wrapper {
-        position: relative;
-        width: auto;
-        height: auto;
-        background: var(--case-study);
-        padding: 0rem; padding-bottom: .5rem;
-        border-radius: 0;
-    }
-
     .interview-data {
         grid-template-columns: 1fr;
     }
 
-    .epep {
+    .insight-half {
         background-color: var(--pain-point); 
         border-radius: .6rem;
         margin-bottom: 1.5rem;
-    }
-
-    .epep #pain-point, .epep #gain-point {
-        max-width: none;
-    }
-
-    .walkthrough, #two-div-walkthrough {
-       grid-template-columns: 1fr;
     }
 
     .columns {
@@ -684,7 +585,7 @@ blockquote {
         padding-top: 1rem;  padding-left: 2.4rem; padding-right: 0rem;
     }
 
-    main p, main img, main h1, main h2, main h3, main div, .two-column-div {
+    main p, main img, main h1, main h2, main h3, main div {
         max-width: calc(100vw - 4.5rem);
     }
 
@@ -698,12 +599,12 @@ blockquote {
         padding-right: 2.4rem;
     }
 
-    .white-space-block {
-        height: 4ch;
+    .main-container article {
+        padding-bottom: 4ch;
     }
 
-    .hmw-wrap h2::after {
-        visibility: collapse;
+    .main-container article.extra-space {
+        padding-bottom: 8ch;
     }
 
     .gallery {
@@ -722,23 +623,23 @@ blockquote {
         margin-top: 2rem;
     }
 
-    .main-container article {
-    padding-bottom: 4ch;
-}
+    .hmw-wrap h2::after {
+        visibility: collapse;
+    }
 
-    .main-container article.extra-space {
-        padding-bottom: 8ch;
+    .white-space-block {
+        height: 4ch;
     }
 }
 
 @media screen and (max-width: 414px) {
-    #quote-profile {
+    .quote-profile {
         flex-direction: column;
         align-items: normal;
         gap: .5rem;
     }
 
-    .rotate-img, .rotate-img #two-div-walkthrough {
+    .rotate-img {
         grid-template-columns: 1fr;
     }
 }
