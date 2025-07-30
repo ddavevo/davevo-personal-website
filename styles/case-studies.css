@@ -19,6 +19,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
     max-width: 90ch;
     margin-bottom: 2.5ch;
 }
+
 main img {
     width: 100%;
     min-height: 300px;
@@ -32,9 +33,16 @@ hr {
     border-color: var(--neutral-400);
 }
 
+blockquote {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    gap: 1rem;
+}
+
 /* ====================================================================== */
 
-.two-column-div, .two-column-img, .insight, #field-findings, .walkthrough,
+.two-column-div, .gallery, .insight, .field-findings, .walkthrough,
 #two-div-walkthrough, .interview-data {
     max-width: 90ch;
 }
@@ -217,11 +225,38 @@ hr {
     
 }
 
+.field-findings {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    gap: 2rem;
+}
+
+.field-findings img {
+    width: auto;
+    max-height: 500px;
+    margin: 0;
+}
+
+.gallery {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: .25rem;
+}
+
+.gallery img {
+    width: 1fr;
+    height: 400px;
+    object-fit: cover;
+    object-position: 0 0;
+    margin-bottom: 0;
+}
 
 /* ====================================================================== */
 
 .insight {
     display: grid;
+    grid-template-rows: min-content;
     padding: 1rem 1.5rem 0rem 1.5rem;
     margin-bottom: 1.75rem;
     border-radius: 0.6rem;
@@ -234,7 +269,7 @@ hr {
 }
 
 .with-emoji {
-    grid-template-columns: 2ch 1fr;
+    grid-template-columns: auto auto;
     gap: 1.5rem;
     padding: 1rem 1.5rem 0rem 1rem;
 }
@@ -244,14 +279,14 @@ hr {
 }
 
 .pain-point {
-    grid-template-columns: 1ch 1fr;
+    grid-template-columns: auto auto;
     gap: 1.5rem;
     background-color: var(--pain-point);
     border: 1.25px solid var(--quote-pain);
 }
 
 .gain-point {
-    grid-template-columns: 1ch 1fr;
+    grid-template-columns: auto auto;
     gap: 1.5rem;
     background-color: var(--gain-point);
     border: 1.25px solid var(--quote-gain);
@@ -320,20 +355,6 @@ hr {
     margin: 0;
 }
 
-.two-column-img {
-    display: grid; 
-    grid-template-columns: 1fr 1fr;
-    gap: .25rem;
-    margin-bottom: 1.5rem;
-}
-
-.two-column-img img {
-    width: 1fr;
-    height: 400px;
-    object-fit: cover;
-    object-position: 0 0;
-}
-
 .walkthrough {
     display: grid; grid-template-columns: 1fr 1fr 1fr;
 }
@@ -375,11 +396,11 @@ hr {
     transition: .5s ease-in-out;
 }
 
-.hmw-wrap img, .breakdown-visuals img {
+.hmw-wrap img, .rotate-img img {
     transition: .5s ease-in-out;
 }
 
-.hmw-wrap img:hover, .breakdown-visuals img:hover {
+.hmw-wrap img:hover, .rotate-img img:hover {
     transform: rotate(4deg);
 }
 
@@ -392,22 +413,6 @@ hr {
 }
 
 /* ====================================================================== */
-
-#field-findings {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    margin: 2rem 0;
-    gap: 2rem;
-}
-
-#field-findings img {
-    width: auto;
-    height: 480px;
-    margin: 0;
-}
-
-/* ================================= */
 
 #sevenatenine-takeaways {
     gap: 0;
@@ -448,21 +453,18 @@ hr {
 
 /* ================================= */
 
-.mvp-quote {
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-    gap: 1rem;
-}
-
-#quote-profile {
+.quote-profile {
     display: flex; 
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
 }
 
-#quote-profile img {
+.quote-profile p {
+    margin-bottom: 0;
+}
+
+.quote-profile img {
     width: 3.5rem;
     height: 3.5rem;
     min-height: 0;
@@ -592,7 +594,7 @@ hr {
         max-width: clamp(90ch, 60vw, 180ch);
     }
 
-    .two-column-div, .two-column-img, .insight, #field-findings, .walkthrough, #two-div-walkthrough, .interview-data {
+    .two-column-div, .gallery, .insight, .field-findings, .walkthrough, #two-div-walkthrough, .interview-data {
         max-width: clamp(90ch, 60vw, 180ch);
     }
 }
@@ -603,7 +605,7 @@ hr {
         gap: 0;
     }
 
-    #field-findings {
+    .field-findings {
         flex-direction: column;
     }
 
@@ -704,11 +706,11 @@ hr {
         visibility: collapse;
     }
 
-    .two-column-img {
+    .gallery {
         grid-template-columns: 1fr;
         margin-top: 2rem;
     }
-    .two-column-img img {
+    .gallery img {
         margin-top: 0;
     }
 
@@ -736,7 +738,7 @@ hr {
         gap: .5rem;
     }
 
-    .breakdown-visuals, .breakdown-visuals #two-div-walkthrough {
+    .rotate-img, .rotate-img #two-div-walkthrough {
         grid-template-columns: 1fr;
     }
 }
