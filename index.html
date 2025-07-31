@@ -33,14 +33,11 @@
     <header class="header">
         <a href="index.html">
             <div class="wordmark">
-                dave v
+                <span>dave v</span>
                 <img class="stylized-o" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-2.png">
             </div> 
         </a>
 
-        <a href="index.html">
-            <img class="small-shrink-logo" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-2.png" alt="Logo Visual">
-        </a>
         <button type="button"  class="hamburger" onclick="myFunction(this)">
             <div class="ham-bars" id="bar1"></div>
             <div class="ham-bars" id="bar2"></div>
@@ -68,56 +65,23 @@
     <div class="header-container"></div>
 
     <main class="landing-page">
-        <div class="blurb-section">
-            <section id="blurb-section">
-                <div class="landing-body">
-                    <p>I'm a...</p>
-                </div>
-                <div style="padding-top: 1.25rem;">
-                    <h1 id="designer" class="landing-text" style="color: #2b8091">designer,</h1>
-                    <h1 id="researcher" class="landing-text" style="color: var(--midtone)">researcher,</h1>
-                    <h1 id="creative" class="landing-text" style="color: var(--accent-800)">creative.</h1>
-                </div>
-                <div class="landing-body" style="margin-top: 1rem">
-
-                    <div class="insight" style="margin-top: 1rem;">
-                        <p>
-                            Prev. UX Researcher @ <a href="https://designlab.ucsd.edu" target="_blank">
-                                <b>UCSD Design Lab</b>
-                            </a>
-                        </p>
-                    </div>
-
-                    <p id="demo">
-                        I seek to enhance experiences, raise creative ceilings,
-                        and most of all: <b>engage people</b>.
-                    </p>
-
-                    <a href="#featured">
-                        <button class="landing-ctas">
-                            <p style="color: var(--bg);"><b style="-webkit-text-stroke-color: var(--bg);">
-                                View my work
-                            </b></p>
-                        </button>
-                    </a>
-
-                </div>
-            </section>
+        <div class="landing-text">
+            <h2>
+                I’m a product designer driven by visual storytelling and systems thinking. Whether I’m designing for creative tools, student journalism, or energy tech, I treat every screen as a narrative — one that helps users create, decide, or explore with clarity.
+            </h2>
+            <p>
+                Previously <a href="https://designlab.ucsd.edu" target="_blank"><span> @ UCSD Design Lab</span></a>, <a href="https://www.pittsburgh.afrc.af.mil" target="_blank"><span> @ Department of Defense</span></a>
+            </p>
         </div>
-
-        <div class="landing-visual">
-            <img style="position: absolute;" id="flying-arrow" src="images/landing-page/flying-arrow.svg">
-            
-            <div id="d-png" class="movable" draggable="true">
-                <img class="d-png" src="https://media.dave-vo.com/file/dvfolio/landing-page/designer-movable.png">
-                <img id="tap-me" src="images/landing-page/tap-me.svg">
-                <img id="move-me" src="images/landing-page/move-me.svg">
-            </div>
+        
+        <!--
+        <div id="d-png" class="movable" draggable="true">
+            <img class="d-png" src="https://media.dave-vo.com/file/dvfolio/landing-page/designer-movable.png">
+            <img id="tap-me" src="images/landing-page/tap-me.svg">  
+            <img id="move-me" src="images/landing-page/move-me.svg">
+        </div>
             <img id="r-png" class="movable" draggable="true" ongdrag="dragging(event)" src="https://media.dave-vo.com/file/dvfolio/landing-page/researcher-movable.png">
             <img id="c-png" class="movable" draggable="true" src="https://media.dave-vo.com/file/dvfolio/landing-page/creative-movable.png">
-            
-            <img id="sky" src="https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.png" style="width: 100%; height: 100%;">
-        </div>
 
         <script>
             const paragraph = document.getElementById('demo');
@@ -151,12 +115,8 @@
                 creative.style.color = 'var(--accent-400)';
             });
         </script>
+        -->
     </main>
-
-    <div>
-        <div class="toc-spacer" id="featured"></div>
-        <h2 id="projects-header">Featured Projects</h2>
-    </div>
     
     <section class="featured-case-studies">
 

@@ -12,3 +12,8 @@
     font-family: gravity-bold;
     src: url(../fonts/Gravity-Bold.otf);
 }
+
+@font-face {
+    font-family: fraunces;
+    src: url(../fonts/Fraunces-Italic[SOFT\,WONK\,opsz\,wght].ttf);
+}
