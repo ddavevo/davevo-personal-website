@@ -1,3 +1,12 @@
+:root {
+    --no-ai-border: #4F7600;
+    --no-ai: #E8F5CD;
+    --co-led-border: #8C6711;
+    --co-led: #FFF5C9;
+    --ai-led-border: #A15500;
+    --ai-led: #FFE7CC;
+}
+
 main {
     display: grid;
     grid-template-columns: 9rem 1fr;
@@ -13,6 +22,7 @@ main {
 main p {
     max-width: 70ch;
     margin-bottom: 2.5ch;
+    color: var(--neutral-900);
 }
 
 main img {
@@ -253,14 +263,14 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
 .insight {
     display: grid;
     grid-template-rows: min-content;
-    padding: 1rem 1.5rem 0rem 1.5rem;
+    padding: 1rem 1.5rem;
     margin-bottom: 1.75rem;
     border-radius: 0.6rem;
     background-color: var(--accent-100);
     border: 1.25px solid var(--accent-400);
 }
 
-.insight p {
+.insight * {
     margin-bottom: 0;
 }
 
@@ -274,7 +284,6 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
 .with-emoji {
     grid-template-columns: 2ch 1fr;
     gap: 1.5rem;
-    padding: 1rem 1.5rem 0rem 1rem;
 }
 
 .with-emoji span:nth-child(1) {
@@ -282,7 +291,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
 }
 
 .pain-point {
-    grid-template-columns: 1ch 1fr;
+    grid-template-columns: 2ch 1fr;
     gap: 1.5rem;
     background-color: var(--pain-point);
     border: 1.25px solid var(--quote-pain);
@@ -347,7 +356,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
 
     > h3 {
     margin-bottom: 1ch;
@@ -373,6 +382,24 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
 
     background-color: var(--accent-100);
     border: 1.25px solid var(--accent-400);
+}
+
+.no-ai {
+    border: 1px solid var(--no-ai-border);
+    background-color: var(--no-ai);
+    color: var(--no-ai-border);
+}
+
+.co-led {
+    border: 1px solid var(--co-led-border);
+    background-color: var(--co-led);
+    color: var(--co-led-border);
+}
+
+.ai-led {
+    border: 1px solid var(--ai-led-border);
+    background-color: var(--ai-led);
+    color: var(--ai-led-border);
 }
 
 /* ====================================================================== */
@@ -617,6 +644,12 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
 
     .quote-text {
         font-size: 1.1rem;
+    }
+
+    .reflection-unit {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
     }
 
     .aromacovery-team img {

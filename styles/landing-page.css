@@ -31,28 +31,6 @@
     font-size: clamp(1.3rem, 5vw, 2rem);
 }
 
-.landing-text span {
-    position: relative;
-    white-space: nowrap;
-}
-
-.landing-text span::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 1px;
-  bottom: -0.2rem;
-  left: 0;
-  background-color: var(--accent-800);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-.landing-text span:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
 .landing-page:after {
     content: "";
     display: block;

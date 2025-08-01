@@ -137,6 +137,29 @@ button {
 	outline: inherit;
 }
 
+.underline-button {
+    position: relative;
+    white-space: nowrap;
+}
+
+.underline-button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -0.2rem;
+  left: 0;
+  background-color: var(--accent-800);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 lottie-player {
     max-width: 1312px;
     margin: 0 auto;

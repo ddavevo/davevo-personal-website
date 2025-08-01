@@ -28,7 +28,7 @@
 
 <body>
     <header class="header">
-        <a href="index.html">
+        <a href="../index.html">
             <div class="wordmark">
                 <span>dave v</span>
                 <img class="stylized-o" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-2.png">
@@ -44,15 +44,15 @@
         <div class="menu">
             <ul class="hamburger-menu-options">
                 <li>
-                    <a href="about.html">About</a>
+                    <a class="underline-button" href="../about.html">About</a>
                 </li>
                 <li>
-                    <a href="playground.html">
+                    <a class="underline-button" href="../playground.html">
                         Playground
                     </a>
                 </li>
                 <li>
-                    <a href="https://drive.google.com/file/d/1OCZUXgrLguEa5f5sjY4AUzZDR1TiWaqZ/view?usp=sharing" target="_blank">
+                    <a class="underline-button" href="https://drive.google.com/file/d/1OCZUXgrLguEa5f5sjY4AUzZDR1TiWaqZ/view?usp=sharing" target="_blank">
                         Résumé
                     </a>
                 </li>
@@ -148,11 +148,10 @@
                 <article class="extra-space">
                     <h3>As these features are changing the game…</h3>
                     <hr>
+                    <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/questions-about-ai-tools.png">
                     <p>
                         Many big questions continue to loom in the bigger picture. 
                     </p>
-
-                    <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/questions-about-ai-tools.png">
                 </article>
 
                 <article class="extra-space">
@@ -165,7 +164,7 @@
                 
                 <!-- RESEARCH QUESTION -->
                 <article>
-                    <p class="subtitle">How we explored our research question</p>
+                    <p class="subtitle">Research Question</p>
                     <h4>
                         How does the positioning of Al within a creative workflow impact creative outcomes, the allocation of cognitive resources, and user perceptions of agency and overall value of AI?
                     </h4>
@@ -207,6 +206,7 @@
                 </article>
                 
                 <article> <!--Generate Why-->
+                    <p class="subtitle">Scoping the Problem</p>
                     <div class="columns">
                         <h4>Engage with different perspectives by generating reflective questions.</h4>
                         <div>
@@ -227,6 +227,7 @@
                 </article>
 
                 <article> <!--Populate Dim-->
+                    <p class="subtitle">Researching the Space</p>
                     <div class="columns">
                         <h4>Gather unique insights from competing solutions with a click of a button.</h4>
                         <div>
@@ -256,6 +257,9 @@
 
                 <article>
                     <h2>Research Methods</h2>
+
+                    <p class="subtitle">User Study Setup</p>
+                    <h3>What are the conditions?</h3>
                     <p>
                         We ran a between-subjects experiment that randomly assigned N=47 users to one of the following three conditions:
                     </p>
@@ -264,7 +268,7 @@
                 <article> <!--No-AI-->
                     <div class="columns">
                         <div>
-                            <span class="tag">No-AI</span>
+                            <span class="tag no-ai">No-AI</span>
                             <p>
                                 Users approach a problem/solution without LLM assistance, manually filling out the templates based only on their current knowledge.
                             </p>
@@ -279,7 +283,7 @@
                 <article> <!--Co-Led-->
                     <div class="columns">
                         <div>
-                            <span class="tag">Co-Led</span>
+                            <span class="tag co-led">Co-Led</span>
                             <p>
                                 Users gain access to LLM generation features in specific parts of the templates, assisting with reflection or proposing alternative ideas.
                             </p>
@@ -294,7 +298,7 @@
                 <article class="extra-space"> <!--AI-Led-->
                     <div class="columns">
                         <div>
-                            <span class="tag">AI-Led</span>
+                            <span class="tag ai-led">AI-Led</span>
                             <p>
                             Templates are already filled out by AI. Users don't have to initiate any writing, only reading and processing what was generated.
                         </div>
@@ -312,6 +316,7 @@
                 </article>
 
                 <article>
+                    <p class="subtitle">Metrics</p>
                     <h3>How we measured user outcomes across conditions</h3>
                     <hr>
                     <p>
@@ -319,7 +324,13 @@
                     </p>
 
                     <p>
-                        At its core, we were curious how the plugin shaped their thinking and creative outcomes, using literature-backed metrics and frameworks that assess reflective thinking, creativity, and usability.
+                        We were curious how the plugin influenced the process, using literature-backed metrics and frameworks that assess reflective thinking, creativity, and usability.
+                    </p>
+                </article>
+
+                <article>
+                    <p>
+                        For a more in-depth breakdown, please read our <a class="underline-button" href="https://doi.org/10.1145/3706598.3713649" target="_blank">Methods</a> section.
                     </p>
                 </article>
             </section>
@@ -332,73 +343,109 @@
 
                 <article>
                     <h2>Results & Takeaways</h2> <!--TODO-->
-                    <p>
-                        No-AI participants generated fewer topic categories but did the most self-revision, spending more time refining half-baked ideas. They had a strong understanding of the problem, rated their solutions as more creative, and expressed higher confidence by thinking deeply without outside help.
-                    </p>
+                    <div class="insight no-ai">
+                        <p>
+                            No-AI participants generated fewer topic categories but did the most self-revision, spending more time refining half-baked ideas. They had a strong understanding of the problem, rated their solutions as more creative, and expressed higher confidence by thinking deeply without outside help.
+                        </p>
+                    </div>
 
-                    <p>
-                        Co-Led participants rated their initial solutions as creative, drawing new perspectives through guided reflection rather than relying on AI content. While they explored more topics than No-AI, they rated their iterated solutions as less competitive in the market, focusing more on realistic constraints than novelty.
-                    </p>
+                    <div class="insight co-led">
+                        <p>
+                            Co-Led participants rated their initial solutions as creative, drawing new perspectives through guided reflection rather than relying on AI content. While they explored more topics than No-AI, they rated their iterated solutions as less competitive in the market, focusing more on realistic constraints than novelty.
+                        </p>
+                    </div>
 
-                    <p>
-                        AI-Led participants covered the most topic categories in their iterated solutions, given immediate access to AI-generated information. However, they struggled to form new perspectives, made the fewest edits, and required more time to narrow down their solution’s scope, resulting in lower creativity ratings.
-                    </p>
-                </article>
-
-                <article class="extra-space">
-                    <p class="subtitle">What does this mean?</p>
-                    <p>
-                        Problem-solving is a swinging pendulum between gathering information, revising earlier ideas, and creating new ones.
-                    </p>
+                    <div class="insight ai-led">
+                        <p>
+                            AI-Led participants covered the most topic categories in their iterated solutions, given immediate access to AI-generated information. However, they struggled to form new perspectives, made the fewest edits, and required more time to narrow down their solution’s scope, resulting in lower creativity ratings.
+                        </p>
+                    </div>
                 </article>
 
                 <article class="extra-space"> <!--No-AI-->
-                    <h3>While No-AI participants engaged deeply with the problem,</h3>
+                    <p class="subtitle">Consequently,</p>
+                    <h3>While No-AI participants expressed more confidence and ownership,</h3>
                     <hr>
+                    <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/no-ai-takeaway.png">
                     <p>
                         They were burdened with keeping track of everything as their understanding evolved or gathering more context, which can leave less time for actually synthesizing ideas together.
                     </p>
-                    <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/no-ai-takeaway.png">
                 </article>
             
                 <article class="extra-space"> <!--AI-Led-->
-                    <h3>While AI-led participants had exposure to more perspectives and ideas early on,</h3>
+                    <h3>While AI-led participants had exposure to more perspectives and topics early on,</h3>
                     <hr>
+                    <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/ai-led-takeaway.png">
                     <p>
-                        Users found it hard to explore beyond the AI’s suggestions because they seemed complete and convincing. As a result, they needed much more time to digest the templates before making a decision on their idea’s direction.
+                        Users found it hard to explore beyond the AI’s suggestions because they seemed complete and convincing. And so, they spent more time deciding on their idea’s direction, leaving less room for depth and creativity.
                     </p>
 
                     <p>
                     And due to the AI’s perceived comprehensiveness, some users even accepted surface-level ideas without fully questioning them. 
                     </p>
-                    <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/ai-led-takeaway.png">
                 </article>
 
                 <article class="extra-space"> <!--Co-Led-->
                     <h3>Co-Led participants struck more of a happy medium</h3>
                     <hr>
-                    <p>
-                    AI helped expand their thinking while staying active in shaping/challenging ideas without being overwhelmed by information.
-                    </p>
-                    <p>
-                        However, having a more complex understanding made them less confident in their idea’s success, as they grappled with unanswered “what-ifs” they weren’t sure how to resolve easily.
-                    </p>
                     <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/co-led-takeaway.png">
+                    <p>
+                    Users expanded their thinking with AI while staying active in shaping/challenging ideas without being overwhelmed by information.
+                    </p>
+                    <p>
+                        However, having a more complex understanding made them more self-critical toward their idea, as they grappled with unanswered “what-ifs” they felt weren't easy to resolve.
+                    </p>
                 </article>
                 
-                <article> <!--TODO: Recommendations-->
-                    <h4>So then, how should products provide AI support?</h4>
+                <article class="extra-space"> <!--TODO: Recommendations-->
+                     <p class="subtitle">Product Strategy</p>
+                    <h3>So then, how should products provide AI support?</h3>
+                    <hr>
                     <p>
-                        Proactively help users drill deeper and expand their perspectives
+                        The value of AI in creative tooling isn't just about exposing users to more ideas faster or rushing them to resolutions. 
+                        It's about creating intentional pauses that prompt reflection without overshadowing their imagination. Here's how we might explore that:
                     </p>
+                </article>
 
-                    <p>
-                        Match support to what users need the most
-                    </p>
+                <article>
+                    <article> <!--No-AI-->
+                        <p class="subtitle">Feed-Forward Prompting</p>
+                        <div class="columns">
+                            <h4>
+                                Proactively help users drill deeper and expand their perspectives
+                            </h4>
+                            <div>
+                                <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/co-led-takeaway.png">
+                            </div>
+                        </div>
+                        <hr>
+                    </article>
 
-                    <p>
-                        Ensure users feel confident and in control while navigating complexity
-                    </p>
+                    <article> <!--No-AI-->
+                        <p class="subtitle">Always Contextually-Aware</p>
+                        <div class="columns">
+                            <h4>
+                                Match support to what users need the most
+                            </h4>
+                            <div>
+                                <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/co-led-takeaway.png">
+                            </div>
+                        </div>
+                        <hr>
+                    </article>
+
+                    <article> <!--No-AI-->
+                        <p class="subtitle">Gentle Troubleshooting</p>
+                        <div class="columns">
+                            <h4>
+                                Ensure users feel confident and in control while navigating complexity
+                            </h4>
+                            <div>
+                                <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/co-led-takeaway.png">
+                            </div>
+                        </div>
+                        <hr>
+                    </article>
                 </article>
                 
             </section>
@@ -412,14 +459,16 @@
                 <article class="extra-space">
                     <h2>Research Process Learnings</h2>
 
+                    <p class="subtitle">Data Analysis</p>
+                    <h3>The trials of storytelling in research</h3>
+                    <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/why-does-this-matter.png">
+                    <hr>
                     <p>
                         Our research process began with coding timestamps for key task activities and running thematic analyses on user interviews responses to pinpoint patterns.
                     </p>
                     <p>
                         However, we initially struggled to build a cohesive, data-driven narrative—partly because we were treating qualitative and quantitative data as separate silos.
                     </p>
-
-                    <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/why-does-this-matter.png">
                 </article>
                 
                 <article class="extra-space">
@@ -443,6 +492,7 @@
                     <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/data-driven-storytelling.png">
                 </article>
 
+                <p class="subtitle">Explorations</p>
                 <article class="extra-space">
                     <h3>An exploration that didn’t work out</h3>
                     <hr>
@@ -457,6 +507,10 @@
 
                 <article class="extra-space">
                     <h3>Solution quality is not black and white  – what qualities define a strong solution?</h3>
+                    <figure>
+                        <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/no-solution-bw.png">
+                        <figcaption>Here are some snippets of the solutions  that our users came up with.</figcaption>
+                    </figure>
                     <hr>
                     <p>
                         When you take the users’ solutions away from where the learning took place, others can’t see why certain choices were made. 
@@ -464,11 +518,6 @@
                     <p>
                         Some may associate higher word counts with more developed ideas, but others may see wordy responses as fluff. Or some may find a solution with multiple ideas as multi-faceted while others may think it feels scattered and lacks direction.
                     </p>
-
-                    <figure>
-                        <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/no-solution-bw.png">
-                        <figcaption>Here are some snippets of the solutions  that our users came up with.</figcaption>
-                    </figure>
                     
                 </article>
                 
@@ -503,11 +552,11 @@
                     <div class="reflection-unit">
                         <span class="tag">Learning</span>
                         <h3>
-                            Humanizing our key findings
+                            Humanizing our key findings with storytelling
                         </h3>
                     </div>
                     <p>
-                        I thought research was only about pushing the envelope and finding novelty. Over these 10 months, I realized that results only matter if they reflect something about us, the people who use and get influenced by this type of technology. Data-driven storytelling is just as important as knowing how to wrangle information together.
+                        I thought research was only about pushing the envelope and finding novelty. Over these 10 months, I realized that results only matter if they reflect something about us, the people who use and get influenced by this type of technology.
                     </p>
                 </article>
 

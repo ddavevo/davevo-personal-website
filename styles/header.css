@@ -115,23 +115,6 @@
     position: relative;
 }
 
-.hamburger-menu-options li::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 1px;
-  bottom: -0.2rem;
-  left: 0;
-  background-color: var(--accent-800);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-.hamburger-menu-options li:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
 .active #bar1 {
     width: 35px;
     transform: translate(0, 10px) rotate(45deg);
