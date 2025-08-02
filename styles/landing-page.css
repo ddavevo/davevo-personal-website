@@ -165,12 +165,12 @@
     border-radius: 1rem 1rem 0px 0px;
 }
 
-.project img, .project lottie-player {
+.project img, .project dotlottie-player {
     transition: transform 0.2s ease-in;
     object-fit: cover;
 }
 
-.project:hover img, .project:hover lottie-player {
+.project:hover img, .project:hover dotlottie-player {
     transform: scale(105%);
 }
 

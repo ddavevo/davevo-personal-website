@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="../styles/case-studies.css">
 
     <!--Lottie-->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script type="module" src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"></script>
+    <link rel="preload" as="fetch" href="../lottie/dlab-hero.lottie" crossorigin>
     <script src="../javascript/case-study-links.js"></script>
 </head>
 
@@ -62,7 +63,7 @@
     <div class="header-container"></div>
 
     <section class="hero">
-        <lottie-player src="../json/generate-why.json" background="transparent" speed="1" loop autoplay></lottie-player>
+        <dotlottie-player src="../lottie/dlab-hero.lottie" autoplay loop lazyload></dotlottie-player>
         <h1 id="case-study-title">Researching proactive AI prompting and design tool frameworks to evaluate user-AI interactions and support better creative outcomes</h1>
         <div class="logistics">
             <div>
@@ -98,7 +99,7 @@
                 <ul>
                     <a href="#background"><li>Background</li></a>
                     <a href="#solution"><li>Solution</li></a>
-                    <a href="#methods"><li>Research Methods</li></a>
+                    <a href="#methods"><li>Methods</li></a>
                     <a href="#results"><li>Results</li></a>
                     <a href="#journey"><li>Our Journey</li></a>
                     <a href="#reflection"><li>Reflection</li></a>
@@ -210,7 +211,7 @@
                     <div class="columns">
                         <h4>Engage with different perspectives by generating reflective questions.</h4>
                         <div>
-                            <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/plugin-generate-why.gif">
+                           <dotlottie-player src="../lottie/plugin-generate-why.lottie" autoplay loop lazyload></dotlottie-player>
                         </div>
                     </div>
                     <hr>
@@ -220,7 +221,7 @@
                     <div class="columns">
                         <h4>Consolidate your line of reasoning by generating a root cause to the problem.</h4>
                         <div>
-                            <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/plugin-generate-root-cause.gif">    
+                            <dotlottie-player src="../lottie/plugin-generate-root-cause.lottie" autoplay loop lazyload></dotlottie-player>
                         </div>
                     </div>
                     <hr>
@@ -231,7 +232,7 @@
                     <div class="columns">
                         <h4>Gather unique insights from competing solutions with a click of a button.</h4>
                         <div>
-                            <img loading="lazy" style="margin-top: 0;" src="https://media.dave-vo.com/file/dvfolio/designlab/plugin-generate-dimension.gif">
+                            <dotlottie-player src="../lottie/plugin-populate-dimension.lottie" autoplay loop lazyload></dotlottie-player>
                         </div>
                     </div>
                     <hr>
@@ -242,8 +243,7 @@
                         <h4>Discover new aspects of your idea and compare it with existing solutions.</h4>
                     </div>
                     <div>
-                        <img loading="lazy" style="margin-top: 0;" src="https://media.dave-vo.com/file/dvfolio/designlab/plugin-add-competitor.gif">
-                        <img loading="lazy" style="margin-top: 0;" src="https://media.dave-vo.com/file/dvfolio/designlab/plugin-add-dimension.gif">
+                        <dotlottie-player src="../lottie/plugin-add-dimension.lottie" autoplay loop lazyload></dotlottie-player>
                     </div>
                 </div>
                 
@@ -252,7 +252,7 @@
             <section> <!--Research Methods-->
                 <div class="toc-spacer" id="methods"></div>
                 <span class="toc-section">
-                    03 - Research Methods
+                    03 - Methods
                 </span>
 
                 <article>
@@ -274,7 +274,7 @@
                             </p>
                         </div>
                         <div>
-                            <lottie-player src="../json/think-about-why.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                            <dotlottie-player src="../lottie/think-about-why.lottie" autoplay loop lazyload></dotlottie-player>
                         </div>
                     </div>
                     <hr>
@@ -289,7 +289,7 @@
                             </p>
                         </div>
                         <div>
-                            <lottie-player src="../json/generate-why.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                            <dotlottie-player src="../lottie/generate-why.lottie" autoplay loop lazyload></dotlottie-player>
                         </div>
                     </div>
                     <hr>
@@ -303,7 +303,7 @@
                             Templates are already filled out by AI. Users don't have to initiate any writing, only reading and processing what was generated.
                         </div>
                         <div>
-                            <lottie-player src="../json/review-why.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                            <dotlottie-player src="../lottie/review-why.lottie" autoplay loop lazyload></dotlottie-player>
                         </div>
                     </div>
                 </article>
