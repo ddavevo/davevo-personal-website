@@ -79,6 +79,7 @@ h2 {
 h3 {
     font-size: clamp(1.25rem, 2vw, 1.5rem);
     margin-bottom: 1.4ch;
+    line-height: 150%;
 }
 
 h4 {
@@ -91,7 +92,7 @@ p, li, span, figcaption, form, input, button { /* landing-body: I am a... I'm an
     font-family: gravity;
     line-height: 150%;
     color: var(--accent-800);
-    font-size: clamp(16px, 2vw, 16.8px);
+    font-size: clamp(1rem, 2vw, 1rem);
 }
 
 figcaption {
@@ -102,8 +103,8 @@ figcaption {
 
 .subtitle {
     color: var(--neutral-600);
-    font-size: clamp(0.95rem, 2vw, 1.15rem);
-    margin-bottom: 0.75ch;
+    font-size: clamp(0.9rem, 1vw, 0.95rem);
+    margin-bottom: 1.4ch;
 }
 
 ul {
