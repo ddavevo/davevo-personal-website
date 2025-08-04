@@ -2,9 +2,9 @@
     
     --midtone: #005b6d;
     
-    --pain-point: #F9E0DD;
+    --pain-point: #FFEBE9;
     --quote-pain: #ED695C;
-    --gain-point: #D9EBC8;
+    --gain-point: #E9FBD7;
     --quote-gain: #76B849;
 
     --gain: #C7F29B;
@@ -102,6 +102,7 @@ figcaption {
 
 .subtitle {
     color: var(--neutral-600);
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
     margin-bottom: 0.75ch;
 }
 

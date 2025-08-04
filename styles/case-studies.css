@@ -22,7 +22,7 @@ main {
 main p {
     max-width: 70ch;
     margin-bottom: 2.5ch;
-    color: var(--neutral-900);
+    color: var(--neutral-700);
 }
 
 main img {
