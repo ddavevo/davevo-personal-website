@@ -173,8 +173,8 @@ button {
     transition: .5s ease-in-out;
 }
 
-.gloss-hover-effect:hover::before {
-    left: 100%;
+.open-new-page-cursor:hover {
+    cursor: url("https://media.dave-vo.com/file/dvfolio/general/open-new-page-cursor.png"), pointer;
 }
 
 lottie-player {
