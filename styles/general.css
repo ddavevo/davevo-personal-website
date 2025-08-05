@@ -162,6 +162,21 @@ button {
   transform-origin: bottom left;
 }
 
+.gloss-hover-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #fef6f090, transparent);
+    transition: .5s ease-in-out;
+}
+
+.gloss-hover-effect:hover::before {
+    left: 100%;
+}
+
 lottie-player {
     max-width: 1312px;
     margin: 0 auto;
