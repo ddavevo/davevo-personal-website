@@ -139,6 +139,8 @@ button {
 	outline: inherit;
 }
 
+/* ====================================================== */
+
 .underline-button {
     position: relative;
     white-space: nowrap;
@@ -162,7 +164,14 @@ button {
   transform-origin: bottom left;
 }
 
-.gloss-hover-effect::before {
+/* ====================================================== */
+
+.open-new-page {
+    position: relative; 
+    overflow: hidden;
+}
+
+.open-new-page::before {
     content: '';
     position: absolute;
     top: 0;
@@ -173,14 +182,19 @@ button {
     transition: .5s ease-in-out;
 }
 
-.open-new-page-cursor:hover {
-    cursor: url("https://media.dave-vo.com/file/dvfolio/general/open-new-page-cursor.png"), pointer;
+.open-new-page:hover::before {
+    left: 100%;
+    opacity: 1;
 }
 
-lottie-player {
-    max-width: 1312px;
-    margin: 0 auto;
+.open-new-page:hover {
+    cursor: url("../open-new-page-hover-cursor.svg"), pointer;
 }
+.open-new-page:active {
+    cursor: url("../open-new-page-active-cursor.svg"), auto;
+}
+
+/* ====================================================== */
 
 @media screen and (min-width: 1281px) {
     h1 {
