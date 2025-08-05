@@ -40,7 +40,7 @@
 .wordmark span {
     font-family: fraunces;
     font-weight: 500;
-    letter-spacing: -2.75%;
+    letter-spacing: -0.05rem;
     font-size: 48px;
     color: var(--accent-400);
 }
