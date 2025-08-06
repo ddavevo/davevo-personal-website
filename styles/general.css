@@ -169,6 +169,7 @@ button {
 .open-new-page {
     position: relative; 
     overflow: hidden;
+    transition: 1s ease-in-out;
 }
 
 .open-new-page::before {
@@ -179,7 +180,7 @@ button {
     width: 100%; 
     height: 100%;
     background: linear-gradient(90deg, transparent, #fef6f090, transparent);
-    transition: .5s ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 .open-new-page:hover::before {
@@ -188,10 +189,10 @@ button {
 }
 
 .open-new-page:hover {
-    cursor: url("../open-new-page-hover-cursor.svg"), pointer;
+    cursor: url("https://media.dave-vo.com/file/dvfolio/general/open-new-page-hover-cursor.svg"), pointer;
 }
 .open-new-page:active {
-    cursor: url("../open-new-page-active-cursor.svg"), auto;
+    cursor: url("https://media.dave-vo.com/file/dvfolio/general/open-new-page-active-cursor.svg"), auto;
 }
 
 /* ====================================================== */
