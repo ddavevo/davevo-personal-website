@@ -65,6 +65,7 @@ h1, h2, h3, h4 {
     font-weight: normal;
     font-family: gravity-bold;
     color: var(--accent-800);
+    text-wrap: balance;
 }
 
 h1 {
