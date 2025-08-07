@@ -49,6 +49,24 @@
 
 }
 
+@font-face {
+    font-family: gravity;
+    font-display: swap;
+    src: url(../fonts/Gravity-Regular.otf);
+}
+
+@font-face {
+    font-family: gravity-bold;
+    font-display: swap;
+    src: url(../fonts/Gravity-Bold.otf);
+}
+
+@font-face {
+    font-family: fraunces;
+    font-display: swap;
+    src: url(../fonts/Fraunces-Italic[SOFT\,WONK\,opsz\,wght].ttf);
+}
+
 * {
     margin: 0px;
 }
@@ -173,22 +191,6 @@ button {
     position: relative; 
     overflow: hidden;
     transition: 1s ease-in-out;
-}
-
-.open-new-page::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%; 
-    height: 100%;
-    background: linear-gradient(90deg, transparent, #fef6f090, transparent);
-    transition: 1s ease-in-out;
-}
-
-.open-new-page:hover::before {
-    left: 100%;
-    opacity: 1;
 }
 
 .open-new-page:hover {

@@ -8,16 +8,9 @@
     <link rel="icon" type="image/x-icon" href="https://media.dave-vo.com/file/dvfolio/general/davevo_favicon.png">
 
     <!--CSS-->
-    <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/boilerplate.css">
     <link rel="stylesheet" href="styles/landing-page.css">
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="javascript/case-study-links.js"></script>
-    <script src="javascript/draggables.js"></script>
-    <script type="module" src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"></script>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -75,7 +68,6 @@
     </main>
     
     <section class="featured-case-studies">
-
         <!--Design Lab-->
         <article class="project open-new-page" id="designlab">
             <dotlottie-player src="../lottie/dlab-hero.lottie" autoplay loop lazyload></dotlottie-player>
@@ -130,6 +122,7 @@
                 </div>
             </div>
         </article>
+    </section>
 
     <aside class="made-with" style="padding: 0 2.4rem">
         <p>Made with HTML/CSS/JS and <span>d x r x c</span></p>
@@ -152,4 +145,12 @@
         </div>    
     </footer>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="javascript/case-study-links.js"></script>
+
+<!--Lottie-->
+<script type="module" src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"></script>
+<link rel="preload" as="fetch" href="../lottie/dlab-hero.lottie" crossorigin>
+
 </html>

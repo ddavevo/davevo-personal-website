@@ -21,10 +21,7 @@
     z-index: 99;
 }
 
-.menu-options {
-    justify-content: right;
-    white-space: nowrap;
-}
+/* ======================================================== */
 
 .wordmark {
     display: flex; white-space: nowrap;
@@ -73,6 +70,15 @@
 .wordmark:hover::before, .wordmark:active::before {
     left: 100%;
 }
+
+/* ======================================================== */
+
+.menu-options {
+    justify-content: right;
+    white-space: nowrap;
+}
+
+/* ======================================================== */
 
 .hamburger {
     /* Align menu button to the right by putting flexible space to the left */
@@ -143,9 +149,117 @@
     transform: translateY(0);
 }
 
+/* ======================================================== */
+
+.made-with {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.made-with span {
+    margin-left: .15rem;
+    padding: .1rem .5em;
+    border-radius: .4rem;
+    background-color: var(--accent-100); 
+    border: 1.25px solid var(--accent-400);
+    white-space: nowrap;
+}
+
+/* ======================================================== */
+
+.footer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: var(--accent-400);
+    height: 82px;
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+    padding: 0 4rem;
+}
+
+.footer-container {
+    display: flex;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+    max-width: 1312px;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer span {
+    color: var(--bg);
+}
+
+.footer b {
+    -webkit-text-stroke: 0px var(--bg);
+}
+
+.social-media-icons {
+    display: flex;
+    min-height: 2.25rem;
+    align-content: center;
+    gap: 2rem;
+}
+
+.social-media-icons img {
+    width: 2.25rem;
+    white-space: nowrap;
+}
+.social-media-icons img:hover {
+    transform: scale(1.1, 1.1);
+}
+.msocial-media-icons img:active {
+    transform: scale(0.9, 0.9);
+}
+
+/* ======================================================== */
+
 @media screen and (min-width: 1440px) {
     .wordmark {
         padding-left: 0rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .hamburger-menu-options {
+        gap: 4rem;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .footer-text, .social-media-icons {
+        
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 621px) {
+    .hamburger {
+        visibility: collapse;
+    }
+    .menu {
+        position: static;
+        height: auto;
+        opacity: 1;
+        transform: none;
+    }
+    .hamburger-menu-options {
+        position: static;
+        margin: 0;
+        transform: none;
+        opacity: 1;
+        pointer-events: unset;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 3rem;
+        gap: 3rem;
+        padding-right: 4rem;
+        line-height: unset;
     }
 }
 
@@ -184,35 +298,35 @@
     .hamburger-menu-options {
         margin-top: 1.4rem;
     }
+
+    .footer {
+        padding: 1rem 2.2rem 2.5rem 2.2rem;
+    }
+    .footer-text {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .social-media-icons img {
+        width: 2rem;
+    } 
 }
 
-@media screen and (min-width: 621px) {
-    .hamburger {
-        visibility: collapse;
-    }
-    .menu {
-        position: static;
+@media screen and (max-width: 410px) {
+    .footer {
+        grid-template-columns: 1fr;
         height: auto;
-        opacity: 1;
-        transform: none;
+        padding-top: 0.8rem;
     }
-    .hamburger-menu-options {
-        position: static;
-        margin: 0;
-        transform: none;
-        opacity: 1;
-        pointer-events: unset;
-        display: flex;
-        justify-content: flex-end;
-        padding-top: 3rem;
-        gap: 3rem;
-        padding-right: 4rem;
-        line-height: unset;
+    .footer p {
+        text-align: center;
+        margin-bottom: 1rem;
     }
-}
-
-@media screen and (min-width: 700px) {
-    .hamburger-menu-options {
-        gap: 4rem;
+    .social-media-icons {
+        justify-content: center;
+        margin-bottom: 1rem;
     }
 }
