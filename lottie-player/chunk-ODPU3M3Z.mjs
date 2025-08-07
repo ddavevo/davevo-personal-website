@@ -4,7 +4,7 @@ var N=window,R=N.ShadowRoot&&(N.ShadyCSS===void 0||N.ShadyCSS.nativeShadow)&&"ad
   @font-face {
     font-family: 'gravity';
     font-weight: regular;
-    src: url('../fonts/Gravity-Regular.otf') format('woff');
+    src: url('../fonts/Gravity-Regular.woff2') format('woff');
   }
 
   :host {

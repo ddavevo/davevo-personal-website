@@ -11,22 +11,52 @@
     <link rel="preload" href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,500&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,500&display=swap">
+    </noscript>
     
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/boilerplate.css">
     <link rel="stylesheet" href="styles/landing-page.css">
+
+    <style>
+        :root {
+            --accent-800: #062f3f;
+        }
+        h2.fraunces {
+            font-family: "Fraunces", serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: clamp(1.3rem, 5vw, 2rem);
+            letter-spacing: -0.05rem;
+            color: var(--accent-800);
+            line-height: clamp(125%, 2vw, 100%);
+            margin-bottom: 1rem;
+        }
+    </style>
+
+    <link rel="modulepreload" href="/lottie-player/lottie_light_html-SLCECTRT-SYWXEBDN.mjs">
 </head>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D3KQT24T12"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+
+  // Load GTM lazily
+  window.requestIdleCallback(() => {
+    const script = document.createElement('script');
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-D3KQT24T12";
+    script.async = true;
+    document.head.appendChild(script);
+
     gtag('js', new Date());
     gtag('config', 'G-D3KQT24T12');
+  });
 </script>
 
 <body>
@@ -78,10 +108,11 @@
         <!--Design Lab-->
         <a class="project open-new-page" href="case-studies/designlab.html">
             <dotlottie-player
+                id="hero-lottie"
                 src="/lottie/dlab-hero.lottie"
+                autoplay
                 loop
-                lazyload
-                autoplay>
+                fetchpriority="high">
             </dotlottie-player>
             <div class="project-overview">
 
@@ -157,9 +188,14 @@
         </div>    
     </footer>
 </body>
-<!--
-<script type="module" src="public/lottie-player/dotlottie-player.mjs"></script>
--->
+
+<script type="module">
+  import '/lottie-player/dotlottie-player.js';
+  await customElements.whenDefined('dotlottie-player');
+  const hero = document.getElementById('hero-lottie');
+  hero.play();
+</script>
+
 <script src="/javascript/case-study-links.js" defer></script>
 
 </html>

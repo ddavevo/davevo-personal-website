@@ -6,7 +6,7 @@ function myFunction(x) {
   x.classList.toggle("active");
 }
 
-// 🌀 Lazy-load Lottie player only when needed
+// 🌀 Lazy-load lightweight Lottie player only when needed
 document.addEventListener("DOMContentLoaded", () => {
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const MAX_PLAYING = 2;
@@ -15,130 +15,108 @@ document.addEventListener("DOMContentLoaded", () => {
   const allDotLotties = document.querySelectorAll("dotlottie-player");
   if (allDotLotties.length === 0) return;
 
-  let playerLoaded = false;
+  const heroLottie = document.querySelector("#hero-lottie");
 
-  const loadLottiePlayer = async () => {
-    if (playerLoaded) return;
+  if (heroLottie) {
+    loadAndPlayLottie(heroLottie, true);
+  }
+
+  const lazyPlayers = Array.from(allDotLotties).filter(p => p !== heroLottie);
+
+  // 👀 Lazy-load .lottie files into src
+  const loaderIO = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      const el = e.target;
+      if (el.dataset.src && !el.getAttribute("src")) {
+        if (e.isIntersecting || el.getBoundingClientRect().top < window.innerHeight) {
+          const fullSrc = "/" + el.dataset.src.replace(/^\/+/, "");
+          el.setAttribute("src", fullSrc);
+          loadAndPlayLottie(el);
+          loaderIO.unobserve(el);
+        }
+      }
+    }
+  }, { rootMargin: "200px 0px", threshold: 0.01 });
+
+  lazyPlayers.forEach(p => {
+    if (p.dataset.src) loaderIO.observe(p);
+  });
+
+  // ▶ Load and play Lottie when needed
+  async function loadAndPlayLottie(player, isHero = false) {
+    if (prefersReduced) return;
+
+    await loadLottieModule();
 
     try {
-      console.log("[Lottie] Importing player...");
-      await import("/lottie-player/dotlottie-player.js");
-      await customElements.whenDefined("dotlottie-player");
-      console.log("[Lottie] Player ready");
-      playerLoaded = true;
-
-      const allPlayers = Array.from(document.querySelectorAll("dotlottie-player"));
-      const lazyPlayers = allPlayers.filter(p => p.dataset.src);
-
-      // 💤 Lazy-load .lottie files into src
-      const loaderIO = new IntersectionObserver((entries) => {
-        for (const e of entries) {
-          const el = e.target;
-          const alreadyHasSrc = el.getAttribute("src");
-
-          if (el.dataset.src && !alreadyHasSrc) {
-            if (e.isIntersecting || el.getBoundingClientRect().top < window.innerHeight) {
-              const fullSrc = "/" + el.dataset.src.replace(/^\/+/, "");
-              console.log("[Lottie] Setting src (forced):", fullSrc);
-              el.setAttribute("src", fullSrc);
-            }
-          }
-        }
-      }, { rootMargin: "200px 0px", threshold: 0.01 });
-
-      lazyPlayers.forEach(p => {
-        loaderIO.observe(p);
-
-        if (p.dataset.src && !p.getAttribute("src")) {
-          const rect = p.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
-            const fullSrc = "/" + p.dataset.src.replace(/^\/+/, "");
-            console.log("[Lottie] Forcing immediate src:", fullSrc);
-            p.setAttribute("src", fullSrc);
-          }
-        }
-      });
-
-      // ▶ Attempt playback — ✅ waits for player to be ready
-      async function playIfPossible(p) {
-        if (prefersReduced) return;
-        if (!p.getAttribute("src")) return;
-
-        try {
-          if (!p.ready) {
-            await new Promise(resolve =>
-              p.addEventListener("ready", resolve, { once: true })
-            );
-          }
-
-          if (playing.size < MAX_PLAYING) {
-            await p.play();
-            playing.add(p);
-          }
-        } catch (_) {}
+      if (!player.ready) {
+        await new Promise(resolve =>
+          player.addEventListener("ready", resolve, { once: true })
+        );
       }
 
-      function pause(p) {
-        try {
-          if (p.ready) p.pause(); // Only pause if the player is ready
-        } catch (_) {}
-        playing.delete(p);
-      }
-
-      const playerIO = new IntersectionObserver((entries) => {
-        entries.sort((a, b) => Number(b.isIntersecting) - Number(a.isIntersecting));
-        for (const e of entries) {
-          const p = e.target;
-          if (p.hasAttribute("hover")) continue;
-          if (e.isIntersecting) {
-            playIfPossible(p);
-          } else {
-            pause(p);
-          }
-        }
-      }, { threshold: 0.25 });
-
-      allPlayers.forEach(p => playerIO.observe(p));
-
-      function enforceCap() {
-        if (playing.size <= MAX_PLAYING) return;
-        const center = window.scrollY + window.innerHeight / 2;
-        const arr = Array.from(playing);
-        arr.sort((pA, pB) => {
-          const rA = pA.getBoundingClientRect();
-          const rB = pB.getBoundingClientRect();
-          const yA = window.scrollY + rA.top + rA.height / 2;
-          const yB = window.scrollY + rB.top + rB.height / 2;
-          return Math.abs(yB - center) - Math.abs(yA - center);
-        });
-        while (arr.length && playing.size > MAX_PLAYING) pause(arr.pop());
-      }
-
-      document.addEventListener("scroll", enforceCap, { passive: true });
-      window.addEventListener("resize", enforceCap);
+      await player.play();
+      playing.add(player);
+      enforceCap();
     } catch (err) {
-      console.error("[Lottie] Failed to load player:", err);
+      console.warn("[Lottie] Could not play:", err);
     }
-  };
+  }
 
-  // 👀 Observe dotlottie-player presence in viewport
-  const observer = new IntersectionObserver((entries, obs) => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) {
-        console.log("[Lottie] Element entered view — loading player");
-        loadLottiePlayer();
-        obs.disconnect();
-        break;
+  function pause(player) {
+    try {
+      if (player.ready) player.pause();
+    } catch (_) {}
+    playing.delete(player);
+  }
+
+  function enforceCap() {
+    if (playing.size <= MAX_PLAYING) return;
+
+    const center = window.scrollY + window.innerHeight / 2;
+    const arr = Array.from(playing);
+    arr.sort((a, b) => {
+      const aY = window.scrollY + a.getBoundingClientRect().top + a.offsetHeight / 2;
+      const bY = window.scrollY + b.getBoundingClientRect().top + b.offsetHeight / 2;
+      return Math.abs(aY - center) - Math.abs(bY - center);
+    });
+
+    while (arr.length && playing.size > MAX_PLAYING) pause(arr.pop());
+  }
+
+  const playerIO = new IntersectionObserver((entries) => {
+    entries.sort((a, b) => Number(b.isIntersecting) - Number(a.isIntersecting));
+    for (const e of entries) {
+      const p = e.target;
+      if (p.hasAttribute("hover")) continue;
+
+      if (e.isIntersecting) {
+        loadAndPlayLottie(p);
+      } else {
+        pause(p);
       }
     }
-  }, { threshold: 0.01 });
+  }, { threshold: 0.25 });
 
-  allDotLotties.forEach((el) => {
-    observer.observe(el);
-
-    if (el.getBoundingClientRect().top < window.innerHeight) {
-      console.log("[Lottie] Element already in view — forcing load");
-      loadLottiePlayer();
+  allDotLotties.forEach(p => {
+    if (p !== heroLottie) {
+      playerIO.observe(p);
     }
   });
+
+  document.addEventListener("scroll", enforceCap, { passive: true });
+  window.addEventListener("resize", enforceCap);
 });
+
+// ✅ Load only the lightweight player
+let lottieLoaded = false;
+async function loadLottieModule() {
+  if (lottieLoaded) return;
+  try {
+    await import("/lottie-player/lottie_light_html-SLCECTRT-SYWXEBDN.mjs");
+    await customElements.whenDefined("dotlottie-player");
+    lottieLoaded = true;
+  } catch (err) {
+    console.error("[Lottie] Failed to load player:", err);
+  }
+}
