@@ -52,19 +52,25 @@
 @font-face {
     font-family: gravity;
     font-display: swap;
-    src: url('../fonts/Gravity-Regular.otf') format('opentype');
+    src: url('../fonts/Gravity-Regular.woff2') format('woff2');
 }
 
 @font-face {
     font-family: gravity-bold;
     font-display: swap;
-    src: url('../fonts/Gravity-Bold.otf') format('opentype');
+    src: url('../fonts/Gravity-Bold.woff2') format('woff2');
 }
 
-@font-face {
-    font-family: fraunces;
-    font-display: swap;
-    src: url('../fonts/Fraunces-Italic[SOFT\,WONK\,opsz\,wght].ttf') format('opentype');
+
+.fraunces {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-style: italic;
+  font-optical-sizing: auto;
+  letter-spacing: -0.05rem;
+  font-variation-settings:
+    "SOFT" 1,
+    "WONK" 1;
 }
 
 * {
@@ -77,6 +83,7 @@ html {
 
 body {
     background-color: var(--bg);
+    font-family: 'gravity', 'Inter', system-ui, sans-serif;
 }
 
 h1, h2, h3, h4 {
