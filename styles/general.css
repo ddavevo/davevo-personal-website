@@ -52,19 +52,19 @@
 @font-face {
     font-family: gravity;
     font-display: swap;
-    src: url(../fonts/Gravity-Regular.otf);
+    src: url('../fonts/Gravity-Regular.otf') format('opentype');
 }
 
 @font-face {
     font-family: gravity-bold;
     font-display: swap;
-    src: url(../fonts/Gravity-Bold.otf);
+    src: url('../fonts/Gravity-Bold.otf') format('opentype');
 }
 
 @font-face {
     font-family: fraunces;
     font-display: swap;
-    src: url(../fonts/Fraunces-Italic[SOFT\,WONK\,opsz\,wght].ttf);
+    src: url('../fonts/Fraunces-Italic[SOFT\,WONK\,opsz\,wght].ttf') format('opentype');
 }
 
 * {

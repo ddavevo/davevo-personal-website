@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/boilerplate.css">
     <link rel="stylesheet" href="styles/landing-page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -70,7 +71,12 @@
     <section class="featured-case-studies">
         <!--Design Lab-->
         <a class="project open-new-page" href="case-studies/designlab.html">
-            <dotlottie-player src="../lottie/dlab-hero.lottie" autoplay loop lazyload></dotlottie-player>
+            <dotlottie-player
+                src="/lottie/dlab-hero.lottie"
+                loop
+                lazyload
+                autoplay>
+            </dotlottie-player>
             <div class="project-overview">
 
                 <p class="project-metric">Published to CHI’25</p>
@@ -124,7 +130,7 @@
         </a>
     </section>
 
-    <aside class="made-with" style="padding: 0 2.4rem">
+    <aside class="made-with">
         <p>Made with HTML/CSS/JS and <span>d x r x c</span></p>
     </aside>
     
@@ -145,9 +151,9 @@
         </div>    
     </footer>
 </body>
-
-<script src="javascript/case-study-links.js"></script>
+<!--
 <script type="module" src="public/lottie-player/dotlottie-player.mjs"></script>
-<link rel="preload" as="fetch" href="../lottie/dlab-hero.lottie" crossorigin>
+-->
+<script src="/javascript/case-study-links.js" defer></script>
 
 </html>
