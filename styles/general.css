@@ -88,7 +88,7 @@ h4 {
     line-height: 150%; 
 }
 
-p, li, span, figcaption, form, input, button { /* landing-body: I am a... I'm an upcoming UI/UX... */
+p, li, span, form, input, button { /* landing-body: I am a... I'm an upcoming UI/UX... */
     font-family: gravity;
     line-height: 150%;
     color: var(--accent-800);
@@ -101,7 +101,9 @@ figcaption {
     text-align: center;
 }
 
-.subtitle {
+.subtitle, figcaption {
+    font-family: gravity;
+    line-height: 150%;
     color: var(--neutral-600);
     font-size: clamp(0.9rem, 1vw, 0.95rem);
     margin-bottom: 1.4ch;
