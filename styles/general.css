@@ -67,6 +67,7 @@
   font-weight: 500;
   font-style: italic;
   font-optical-sizing: auto;
+  font-display: swap;
   letter-spacing: -0.05rem;
   font-variation-settings:
     "SOFT" 1,

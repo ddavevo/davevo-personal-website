@@ -7,7 +7,15 @@
     <title>Dave Vo's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="https://media.dave-vo.com/file/dvfolio/general/davevo_favicon.png">
 
-    <!--CSS-->
+    <!-- ======================================= -->
+
+    <link rel="modulepreload" href="/lottie-player/dotlottie-player.mjs">
+    <script type="module">
+    import "/lottie-player/dotlottie-player.mjs";
+    </script>
+
+    <!-- ======================================= -->
+
     <link rel="preload" href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -18,10 +26,19 @@
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,500&display=swap">
     </noscript>
-    
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/boilerplate.css">
-    <link rel="stylesheet" href="styles/landing-page.css">
+
+    <!-- ======================================= -->
+
+    <link rel="preload" href="/styles/general.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/general.css"></noscript>
+
+    <link rel="preload" href="/styles/boilerplate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/boilerplate.css"></noscript>
+
+    <link rel="preload" href="styles/landing-page.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles/landing-page.css"></noscript>
+
+    <!-- ======================================= -->
 
     <style>
         :root {
@@ -39,7 +56,8 @@
         }
     </style>
 
-    <link rel="modulepreload" href="/lottie-player/lottie_light_html-SLCECTRT-SYWXEBDN.mjs">
+    <!-- ======================================= -->
+
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -108,8 +126,8 @@
         <!--Design Lab-->
         <a class="project open-new-page" href="case-studies/designlab.html">
             <dotlottie-player
-                id="hero-lottie"
-                src="/lottie/dlab-hero.lottie"
+                mode="light"
+                data-src="/lottie/dlab-hero.lottie"
                 autoplay
                 loop
                 fetchpriority="high">
@@ -188,13 +206,6 @@
         </div>    
     </footer>
 </body>
-
-<script type="module">
-  import '/lottie-player/dotlottie-player.js';
-  await customElements.whenDefined('dotlottie-player');
-  const hero = document.getElementById('hero-lottie');
-  hero.play();
-</script>
 
 <script src="/javascript/case-study-links.js" defer></script>
 

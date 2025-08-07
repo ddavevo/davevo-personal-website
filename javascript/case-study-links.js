@@ -45,8 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ▶ Load and play Lottie when needed
   async function loadAndPlayLottie(player, isHero = false) {
     if (prefersReduced) return;
-
-    await loadLottieModule();
+    if (!document.body.contains(player)) return;
 
     try {
       if (!player.ready) {
@@ -78,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     arr.sort((a, b) => {
       const aY = window.scrollY + a.getBoundingClientRect().top + a.offsetHeight / 2;
       const bY = window.scrollY + b.getBoundingClientRect().top + b.offsetHeight / 2;
-      return Math.abs(aY - center) - Math.abs(bY - center);
+      return Math.abs(bY - center) - Math.abs(aY - center); // ← sort furthest last
     });
 
     while (arr.length && playing.size > MAX_PLAYING) pause(arr.pop());
@@ -107,16 +106,3 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("scroll", enforceCap, { passive: true });
   window.addEventListener("resize", enforceCap);
 });
-
-// ✅ Load only the lightweight player
-let lottieLoaded = false;
-async function loadLottieModule() {
-  if (lottieLoaded) return;
-  try {
-    await import("/lottie-player/lottie_light_html-SLCECTRT-SYWXEBDN.mjs");
-    await customElements.whenDefined("dotlottie-player");
-    lottieLoaded = true;
-  } catch (err) {
-    console.error("[Lottie] Failed to load player:", err);
-  }
-}
