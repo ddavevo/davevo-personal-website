@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    background-image: linear-gradient(180deg, var(--accent-100, #E4EFED) 0%, var(--neutral-100, #FEF6F0) 100%), url("https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.webp"), url("https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.png");
+    background-image: linear-gradient(180deg, var(--accent-100, #E4EFED) 0%, var(--neutral-100, #FEF6F0) 100%), url("https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.png");
     background-blend-mode: soft-light, normal;
     background-size: cover;
     background-position: center;
@@ -13,6 +13,12 @@
     margin-bottom: 4rem;
     padding-top: 6rem;
 }
+
+@supports (background-image: linear-gradient(180deg, var(--accent-100, #E4EFED) 0%, var(--neutral-100, #FEF6F0) 100%), url("https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.webp")) {
+        .landing-page {
+            background-image: linear-gradient(180deg, var(--accent-100, #E4EFED) 0%, var(--neutral-100, #FEF6F0) 100%), url("https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.webp"); /* WebP version if supported */
+        }
+    }
 
 .landing-page:after {
     content: "";
