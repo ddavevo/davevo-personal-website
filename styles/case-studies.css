@@ -58,10 +58,6 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
 
 /* ====================================================================== */
 
-.white-space-block { /* PHASING OUT SLOWLY */
-    height: 6ch;
-}
-
 .toc-spacer {
     position: absolute;
     width: 50px;
@@ -69,28 +65,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
     margin-top: -8rem;
 }
 
-.hero-ribbon {
-    position: relative;
-    width: 100%;
-    height: 0.8rem;
-    background-image: var(--case-study);
-}
-
-.hero-ribbon img {
-    position: absolute;
-    width: 5rem;
-    right: 8%;
-    transform: translateY(-50%);
-}
-
 /* ====================================================================== */
-
-#hero-img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    padding-top: 5.2rem;
-}
 
 #case-study-title {
     position: relative;
@@ -104,8 +79,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
 }
 
 .hero {
-    background-color: var(--accent-800);
-    padding-top: 6rem;
+    background-color: var(--accent-900);
 }
 
 .hero:after {
@@ -114,10 +88,12 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
     clear: both;
 }
 
-.hero dotlottie-player {
+.hero dotlottie-player, .hero img {
     padding-top: 6rem;
     max-width: 1312px;
     width: 100%;
+    max-height: 500px;
+    object-fit: cover;
     margin: 0 auto;
 }
 
@@ -149,6 +125,20 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
 
 .logistics-header {
     margin-bottom: 0.5rem;
+}
+
+.hero-ribbon {
+    position: relative;
+    width: 100%;
+    height: 0.8rem;
+    background-image: var(--case-study);
+}
+
+.hero-ribbon img {
+    position: absolute;
+    width: 5rem;
+    right: 8%;
+    transform: translateY(-50%);
 }
 
 /* ============================================================== */
@@ -691,10 +681,6 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
 
     .hmw-wrap h2::after {
         visibility: collapse;
-    }
-
-    .white-space-block {
-        height: 4ch;
     }
 }
 

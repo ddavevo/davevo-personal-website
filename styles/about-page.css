@@ -11,10 +11,6 @@ main p {
     transform: translateX(-50%);
 }
 
-.white-space-block {
-    height: 6ch;
-}
-
 .landing-text {
     font-weight: 500;
     letter-spacing: -0.05rem;

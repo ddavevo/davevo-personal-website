@@ -37,10 +37,6 @@ main p {
     float: left;
 }
 
-.white-space-block {
-    height: 6ch;
-}
-
 .guardian, .maxmag, .linear-algebra {
     margin-bottom: 4rem;
 }
