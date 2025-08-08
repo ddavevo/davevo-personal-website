@@ -35,7 +35,7 @@
 }
 
 .wordmark span {
-    letter-spacing: -0.05rem;
+    letter-spacing: -0.1rem;
     font-size: 48px;
     color: var(--accent-400);
 }
