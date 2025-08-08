@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    background-image: linear-gradient(180deg, var(--accent-100, #E4EFED) 0%, var(--neutral-100, #FEF6F0) 100%), url("https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.png");
+    background-image: linear-gradient(180deg, var(--accent-100, #E4EFED) 0%, var(--neutral-100, #FEF6F0) 100%), url("https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.webp"), url("https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.png");
     background-blend-mode: soft-light, normal;
     background-size: cover;
     background-position: center;
@@ -38,7 +38,7 @@
     line-height: clamp(2.75rem, calc(2vw + 1rem), 3.3rem);
     
     border: 1.25px solid var(--accent-800);
-    color: var(accent-800);
+    color: var(--accent-800);
 
     > span {
         margin-right: 0.25rem;
@@ -95,19 +95,28 @@
     justify-content: flex-start;
 }
 
-.project img {
+.project img, .project picture, dotlottie-player  {
+    display: block;
     width: 100%;
-    height: auto;
+    aspect-ratio: 16/9;
     border-radius: 1rem 1rem 0px 0px;
 }
 
-.project img, .project dotlottie-player {
+.project img, .project picture, .project dotlottie-player  {
     transition: transform 0.2s ease-in;
     object-fit: cover;
 }
 
 .project:hover img, .project:hover dotlottie-player {
     transform: scale(105%);
+}
+
+
+.lottie-block { 
+    display:block; 
+    width:100%; 
+    max-width:1200px; 
+    aspect-ratio: 16/9; 
 }
 
 .project-overview {
