@@ -6,6 +6,39 @@ function myFunction(x) {
   x.classList.toggle("active");
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+  const tocLinks = Array.from(document.querySelectorAll('.table-of-contents li a'));
+  const targets = tocLinks
+    .map(a => document.querySelector(a.getAttribute('href'))) // e.g. #background
+    .filter(Boolean);
+
+  const setActive = (id) => {
+    tocLinks.forEach(a => {
+      a.parentElement.classList.toggle('active', a.getAttribute('href') === `#${id}`);
+    });
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute('id');
+      if (entry.isIntersecting) {
+        setActive(id);
+      }
+    });
+  }, {
+    root: null,
+    // make the highlight switch when the target hits ~middle of the viewport
+    rootMargin: '0px 0px -55% 0px',
+    threshold: [0, 0.25, 0.5, 0.75, 1]
+  });
+
+  // Track only the elements referenced by the TOC links (your .toc-spacer divs)
+  targets.forEach(el => observer.observe(el));
+});
+
+
+/* ========================================================== */
+
 // 🌀 Lazy-load Lottie player only when needed
 document.addEventListener("DOMContentLoaded", () => {
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

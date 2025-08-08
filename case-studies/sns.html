@@ -6,9 +6,10 @@
     <title>SNS Salon & Beauty Supply - Dave Vo</title>
     <link rel="icon" type="image/x-icon" href="https://media.dave-vo.com/file/dvfolio/general/davevo_favicon.png">
     
-    <!--CSS-->
-    <link rel="preload" href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- ======================================= -->
+
+    <link href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,20 +19,34 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,500&display=swap">
     </noscript>
 
-    <link rel="stylesheet" href="../styles/general.css">
-    <link rel="stylesheet" href="../styles/boilerplate.css">
-    <link rel="stylesheet" href="../styles/case-studies.css">
+    <!-- ======================================= -->
 
-    <script src="../javascript/case-study-links.js"></script>
+    <link rel="preload" href="/styles/general.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/general.css"></noscript>
+
+    <link rel="preload" href="/styles/boilerplate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/boilerplate.css"></noscript>
+
+    <link rel="preload" href="/styles/case-studies.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/case-studies.css"></noscript>
+
 </head>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D3KQT24T12"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+
+  // Load GTM lazily
+  window.requestIdleCallback(() => {
+    const script = document.createElement('script');
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-D3KQT24T12";
+    script.async = true;
+    document.head.appendChild(script);
+
     gtag('js', new Date());
     gtag('config', 'G-D3KQT24T12');
+  });
 </script>
 
 <body>
@@ -70,7 +85,6 @@
     <div class="header-container"></div>
 
     <section class="hero">
-         <img id="hero-img" src="https://media.dave-vo.com/file/dvfolio/sns/sns-hero.png">
         <h1 id="case-study-title" class="fraunces">Rehauling SNS Salon & Beauty Supply's service discovery for salon patrons & streamlining the booking flow by 55.6%</h1>
         <div class="logistics">
             <div>
@@ -104,12 +118,12 @@
                     <b>Table of Contents</b>
                 </p>
                 <ul>
-                    <a href="#background"><li>Background</li></a>
-                    <a href="#solution"><li>Solution</li></a>      
-                    <a href="#research"><li>Research</li></a>
-                    <a href="#lofi-design"><li>Lo-Fi Design</li></a>
-                    <a href="#hifi-design"><li>Hi-Fi Design</li></a>
-                    <a href="#reflection"><li>Reflection</li></a>
+                    <li><a href="#background">Background</a></li>
+                    <li><a href="#solution">Solution</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#lofi-design">Lo-Fi Design</a></li>
+                    <li><a href="#hifi-design">Hi-Fi Design</a></li>
+                    <li><a href="#reflection">Reflection</a></li>
                 </ul>
             </div>
         </div>
@@ -756,9 +770,9 @@
                 </article>
 
                 <div class="hmw-wrap" id="next-case-study">
-                <a href="designlab.html">
+                <a href="aromacovery.html">
                     <p class="subtitle">Check out another case study!</p>
-                    <h2><u>UCSD Design Lab</u></h2>
+                    <h2><u>Aromacovery</u></h2>
                 </a>
             </div>
             </section>
