@@ -33,20 +33,12 @@
 </head>
 
 <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D3KQT24T12"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-
-  // Load GTM lazily
-  window.requestIdleCallback(() => {
-    const script = document.createElement('script');
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-D3KQT24T12";
-    script.async = true;
-    document.head.appendChild(script);
-
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-D3KQT24T12');
-  });
 </script>
 
 <body>

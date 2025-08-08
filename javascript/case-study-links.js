@@ -6,6 +6,44 @@ function myFunction(x) {
   x.classList.toggle("active");
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('picture').forEach(picture => {
+    const source = picture.querySelector('source');
+    const img = picture.querySelector('img');
+
+    if (source && img) {
+      const testImg = new Image();
+      testImg.src = source.srcset;
+
+      testImg.onerror = () => {
+        // Remove the source so Safari reverts to <img> src
+        source.remove();
+        img.src = img.getAttribute('src');
+        console.warn(`Fallback triggered for: ${img.src}`);
+      };
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const webpUrl = 'https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.webp';
+  const pngUrl  = 'https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.png';
+
+  const landingImg = new Image();
+  landingImg.src = webpUrl;
+
+  landingImg.onload = () => {
+    document.querySelector('.landing-page').style.backgroundImage =
+      `linear-gradient(180deg, var(--accent-100, #E4EFED) 0%, var(--neutral-100, #FEF6F0) 100%), url("${webpUrl}")`;
+  };
+
+  landingImg.onerror = () => {
+    document.querySelector('.landing-page').style.backgroundImage =
+      `linear-gradient(180deg, var(--accent-100, #E4EFED) 0%, var(--neutral-100, #FEF6F0) 100%), url("${pngUrl}")`;
+    console.warn(`Fallback to PNG for background image: ${pngUrl}`);
+  };
+});
+
 window.addEventListener('DOMContentLoaded', () => {
   const tocLinks = Array.from(document.querySelectorAll('.table-of-contents li a'));
   const targets = tocLinks
