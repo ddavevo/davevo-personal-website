@@ -1,11 +1,13 @@
 // 🍔 Hamburger menu logic
 const hamburgerL = document.querySelector(".hamburger");
 const menuL = document.querySelector(".menu");
-
 function myFunction(x) {
   x.classList.toggle("active");
 }
 
+/* ========================================================== */
+
+// Handling webp vs. png loading
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('picture').forEach(picture => {
     const source = picture.querySelector('source');
@@ -25,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Handling landing page webp vs. png
 document.addEventListener('DOMContentLoaded', () => {
   const webpUrl = 'https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.webp';
   const pngUrl  = 'https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.png';
@@ -44,6 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 });
 
+/* ========================================================== */
+
+// Handling Table of Contents section detection
 window.addEventListener('DOMContentLoaded', () => {
   const tocLinks = Array.from(document.querySelectorAll('.table-of-contents li a'));
   const targets = tocLinks
@@ -73,7 +79,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // Track only the elements referenced by the TOC links (your .toc-spacer divs)
   targets.forEach(el => observer.observe(el));
 });
-
 
 /* ========================================================== */
 

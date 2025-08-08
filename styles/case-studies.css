@@ -187,8 +187,9 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
     font-family: gravity-bold;
     font-size: 0.9rem;
     line-height: 240%;
-    color: var(--neutral-600); 
-    text-decoration: none; 
+    color: var(--neutral-400); 
+    text-decoration: none;
+    transition: 0.25s ease; 
 }
 .table-of-contents li.active a,
 .table-of-contents li a:hover { 
