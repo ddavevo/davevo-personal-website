@@ -27,26 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Handling landing page webp vs. png
-document.addEventListener('DOMContentLoaded', () => {
-  const webpUrl = 'https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.webp';
-  const pngUrl  = 'https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.png';
-
-  const landingImg = new Image();
-  landingImg.src = webpUrl;
-
-  landingImg.onload = () => {
-    document.querySelector('.landing-page').style.backgroundImage =
-      `linear-gradient(180deg, var(--accent-100, #E4EFED) 0%, var(--neutral-100, #FEF6F0) 100%), url("${webpUrl}")`;
-  };
-
-  landingImg.onerror = () => {
-    document.querySelector('.landing-page').style.backgroundImage =
-      `linear-gradient(180deg, var(--accent-100, #E4EFED) 0%, var(--neutral-100, #FEF6F0) 100%), url("${pngUrl}")`;
-    console.warn(`Fallback to PNG for background image: ${pngUrl}`);
-  };
-});
-
 /* ========================================================== */
 
 // Handling Table of Contents section detection

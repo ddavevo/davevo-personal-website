@@ -1,12 +1,8 @@
 :root {
-    
-    --midtone: #005b6d;
-    
     --pain-point: #FFEBE9;
     --quote-pain: #ED695C;
     --gain-point: #E9FBD7;
     --quote-gain: #76B849;
-
     --gain: #C7F29B;
     
     --navgradient: linear-gradient(var(--bg), var(--bg) 9.4rem, rgb(254,246,240, 0.8) 10.2rem, transparent);
