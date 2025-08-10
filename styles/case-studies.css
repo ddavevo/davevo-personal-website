@@ -88,15 +88,22 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
     clear: both;
 }
 
-.hero dotlottie-player, .hero img {
+.hero .lottie-anim, .hero picture {
+    display: flex;
     padding-top: 6rem;
-    max-width: 1312px;
     width: 100%;
-    height: min(auto, 500px);
+    max-width: 1312px;
+    height: auto;
     object-fit: cover;
     margin: 0 auto;
     overflow: hidden;
 }
+
+.hero img {
+    width: 100%;
+}
+
+
 
 .hero h1 {
     color: var(--bg);
