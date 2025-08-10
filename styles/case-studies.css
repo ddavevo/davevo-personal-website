@@ -24,9 +24,9 @@ main {
 }
 
 main p {
-    max-width: clamp(70ch, 20vw, 160ch);
+    max-width: clamp(min(70ch, 100%), 20vw, 160ch);
     margin-bottom: 2.5ch;
-    color: var(--neutral-700);
+    color: var(--neutral-800);
 }
 
 main img {
@@ -44,7 +44,7 @@ blockquote {
 }
 
 main img, main div, main ul, main aside, main blockquote, main figure, main video {
-    max-width: clamp(100%, 20vw, 160ch);
+    max-width: clamp(min(80ch, 100%), 20vw, 160ch);
     margin-bottom: 2.5ch;
 }
 
@@ -74,7 +74,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
 }
 
 .hero p {
-    color: var(--bg);
+    color: var(--gray-300);
 }
 
 .hero:after {
@@ -111,7 +111,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
     transform: translateX(-50%);
 }
 
-.logistics-header {
+.hero .subtitle {
     margin-bottom: 0.5rem;
 }
 
@@ -285,6 +285,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
     border-radius: 0.6rem;
     background-color: var(--accent-100);
     border: 1.25px solid var(--accent-400);
+    max-width: clamp(min(70ch, 100%), 20vw, 160ch);
 }
 
 .insight * {
@@ -586,10 +587,12 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
     }
 
     .columns {
-        grid-auto-flow: row;        
+        grid-auto-flow: row;    
     }
-
-    .columns h4 {
+    .columns div {
+        margin-bottom: 1rem;
+    }
+    .columns p {
         margin-bottom: 0;
     }
 }

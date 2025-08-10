@@ -299,6 +299,7 @@
     }
     .hamburger-menu-options {
         margin-top: 1.4rem;
+        padding-right: 0;
     }
 
     .footer {
