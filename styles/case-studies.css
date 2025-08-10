@@ -32,12 +32,6 @@ main img {
     object-position: center;
 }
 
-hr {
-    margin: 1.5rem 0;
-    margin-bottom: 2.5ch;
-    border-color: var(--neutral-400);
-}
-
 blockquote {
     display: flex;
     flex-direction: column;
@@ -45,7 +39,7 @@ blockquote {
     gap: 1rem;
 }
 
-main img, main div, main ul, main aside, main blockquote, main figure, main figcaption, main video {
+main img, main div, main ul, main aside, main blockquote, main figure, main video {
     max-width: 90ch;
     margin-bottom: 2.5ch;
 }
@@ -232,7 +226,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
     min-height: 0;
 }
 
-.columns img, .columns video {
+.columns img, .columns video, .columns figure {
     margin-bottom: 0;
 }
 
@@ -579,7 +573,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
         font-size: clamp(0.9rem, 1vw, 1.05rem);
         }
 
-    main img, main div, main ul, main aside, main blockquote, main figure, main figcaption, main video {
+    main img, main div, main ul, main aside, main blockquote, main figure, main video {
         max-width: clamp(90ch, 60vw, 180ch);
     }
 }

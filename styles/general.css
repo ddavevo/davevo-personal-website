@@ -120,8 +120,12 @@ p, li, span, form, input, button { /* landing-body: I am a... I'm an upcoming UI
 
 figcaption {
     color: var(--neutral-600);
-    margin-top: .5rem; margin: 0.75ch;
+    margin-top: .5rem;
     text-align: center;
+}
+
+.subtitle {
+    margin-bottom: 1.4ch;
 }
 
 .subtitle, figcaption {
@@ -129,7 +133,6 @@ figcaption {
     line-height: 150%;
     color: var(--neutral-600);
     font-size: clamp(0.95rem, 1vw, 1rem);
-    margin-bottom: 1.4ch;
 }
 
 ul {
@@ -149,9 +152,8 @@ b {
 }
 
 hr {
-    margin: 3rem 0;
-    padding: 0 4rem;
-    border: 1px solid var(--accent-800)
+    margin-bottom: 2.5ch;
+    color: var(--neutral-200);
 }
 
 button {
