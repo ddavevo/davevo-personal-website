@@ -110,6 +110,7 @@
     text-align: center;
     margin: 0;
     padding: 0;
+    padding-right: 4rem;
     opacity: 0;
     pointer-events: none;
 }
@@ -222,6 +223,9 @@
     .wordmark {
         padding-left: 0rem;
     }
+    .hamburger-menu-options {
+        padding-right: 0rem;
+    }
 }
 
 @media screen and (min-width: 700px) {
@@ -257,7 +261,6 @@
         justify-content: flex-end;
         padding-top: 3rem;
         gap: 3rem;
-        padding-right: 4rem;
         line-height: unset;
     }
 }
