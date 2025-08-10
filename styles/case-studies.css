@@ -51,7 +51,7 @@ blockquote {
     gap: 1rem;
 }
 
-main img, main div, main ul, main aside, main blockquote, main figure, main figcaption {
+main img, main div, main ul, main aside, main blockquote, main figure, main figcaption, main video {
     max-width: 90ch;
     margin-bottom: 2.5ch;
 }
@@ -255,7 +255,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
     min-height: 0;
 }
 
-.columns img {
+.columns img, .columns video {
     margin-bottom: 0;
 }
 
@@ -602,7 +602,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
         font-size: clamp(0.9rem, 1vw, 1.05rem);
         }
 
-    main img, main div, main ul, main aside, main blockquote, main figure, main figcaption {
+    main img, main div, main ul, main aside, main blockquote, main figure, main figcaption, main video {
         max-width: clamp(90ch, 60vw, 180ch);
     }
 }
