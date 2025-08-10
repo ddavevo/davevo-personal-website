@@ -216,6 +216,8 @@ main img, main div, main ul, main aside, main blockquote, main figure, main figc
 .main-container section {
     padding-bottom: 6ch;
     animation: slideIn linear forwards; /* 'forwards' keeps the final state */
+    content-visibility: auto;
+    contain-intrinsic-size: auto 500px;
 }
 
 .main-container article {
