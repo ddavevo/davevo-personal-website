@@ -62,6 +62,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 /* ========================================================== */
 
+
+
+/* ========================================================== */
+
+/*
 // 🌀 Lazy-load Lottie player only when needed
 document.addEventListener("DOMContentLoaded", () => {
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -198,3 +203,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+*/
