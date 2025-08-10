@@ -101,19 +101,19 @@
     justify-content: flex-start;
 }
 
-.project img, .project picture, .project dotlottie-player  {
+.project img, .project picture, .project .lottie-anim  {
     display: block;
     width: 100%;
     height: auto;
     border-radius: 1rem 1rem 0px 0px;
 }
 
-.project img, .project picture, .project dotlottie-player  {
+.project img, .project picture, .project .lottie-anim  {
     transition: transform 0.2s ease-in;
     object-fit: cover;
 }
 
-.project:hover img, .project:hover dotlottie-player {
+.project:hover img, .project:hover .lottie-anim {
     transform: scale(105%);
 }
 
