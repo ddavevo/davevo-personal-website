@@ -62,7 +62,124 @@ window.addEventListener('DOMContentLoaded', () => {
 
 /* ========================================================== */
 
+document.addEventListener("DOMContentLoaded", () => {
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const MAX_PLAYING = 2;
+  const playing = new Set();
 
+  const allAnimEls = document.querySelectorAll(".lottie-anim");
+
+  // Load and unpack a .lottie file
+  async function loadLottieFile(path) {
+    const response = await fetch(path);
+    const arrayBuffer = await response.arrayBuffer();
+    const zip = await JSZip.loadAsync(arrayBuffer);
+
+    const manifestData = await zip.file("manifest.json").async("string");
+    const manifest = JSON.parse(manifestData);
+    const firstAnimId = manifest.animations[0].id;
+    const animPath = `animations/${firstAnimId}.json`;
+
+    let animData = JSON.parse(await zip.file(animPath).async("string"));
+
+    // Inline images as base64
+    if (animData.assets) {
+      for (let asset of animData.assets) {
+        if (asset.p && !asset.u.startsWith("data:")) {
+          const imgFile = zip.file(`images/${asset.p}`);
+          if (imgFile) {
+            const blob = await imgFile.async("base64");
+            asset.u = `data:image/${asset.p.split('.').pop()};base64,`;
+            asset.p = blob;
+          }
+        }
+      }
+    }
+
+    return animData;
+  }
+
+  async function initAnimation(el) {
+    if (el.dataset.loaded) return;
+    el.dataset.loaded = "true";
+
+    const path = el.dataset.src;
+    const loop = el.dataset.loop === "true";
+    const autoplay = el.dataset.autoplay === "true";
+    const renderer = el.dataset.renderer || "svg";
+
+    const animData = await loadLottieFile(path);
+
+    const animInstance = lottie.loadAnimation({
+      container: el,
+      renderer,
+      loop,
+      autoplay: autoplay && !prefersReduced,
+      animationData: animData
+    });
+
+    el.animInstance = animInstance;
+    if (autoplay && !prefersReduced) playing.add(el);
+  }
+
+  function playIfPossible(el) {
+    if (prefersReduced) return;
+    if (playing.size < MAX_PLAYING) {
+      el.animInstance.play();
+      playing.add(el);
+    }
+  }
+
+  function pause(el) {
+    el.animInstance.pause();
+    playing.delete(el);
+  }
+
+  function enforceCap() {
+    if (playing.size <= MAX_PLAYING) return;
+    const center = window.scrollY + window.innerHeight / 2;
+    const arr = Array.from(playing);
+    arr.sort((elA, elB) => {
+      const yA = window.scrollY + elA.getBoundingClientRect().top + elA.offsetHeight / 2;
+      const yB = window.scrollY + elB.getBoundingClientRect().top + elB.offsetHeight / 2;
+      return Math.abs(yB - center) - Math.abs(yA - center);
+    });
+    while (arr.length && playing.size > MAX_PLAYING) {
+      pause(arr.pop());
+    }
+  }
+
+  // Observer for lazy-loading animations
+  const loaderIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting || e.target.getBoundingClientRect().top < window.innerHeight) {
+        initAnimation(e.target);
+      }
+    });
+  }, { rootMargin: "200px 0px", threshold: 0.01 });
+
+  // Observer for play/pause control
+  const playerIO = new IntersectionObserver((entries) => {
+    entries.sort((a, b) => Number(b.isIntersecting) - Number(a.isIntersecting));
+    entries.forEach(e => {
+      const el = e.target;
+      if (!el.animInstance) return;
+      if (e.isIntersecting) {
+        playIfPossible(el);
+      } else {
+        pause(el);
+      }
+    });
+  }, { threshold: 0.25 });
+
+  allAnimEls.forEach(el => {
+    loaderIO.observe(el);
+    playerIO.observe(el);
+  });
+
+  document.addEventListener("scroll", enforceCap, { passive: true });
+  window.addEventListener("resize", enforceCap);
+});
 
 /* ========================================================== */
 
