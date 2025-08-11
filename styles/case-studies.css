@@ -203,7 +203,6 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
 .main-container section {
     padding-bottom: 6ch;
     content-visibility: auto;
-    contain-intrinsic-size: auto 300px;
 }
 
 .main-container article {
