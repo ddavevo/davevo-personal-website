@@ -8,8 +8,8 @@
     
     <!-- ======================================= -->
 
-    <link href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,18 +34,14 @@
 
     <style>
         h1.fraunces {
-            font-family: "Fraunces", serif;
-            font-style: italic;
-            font-weight: 500;
-            letter-spacing: -0.05rem;
-            position: relative;
-            max-width: 1312px;
-            margin: 0 auto;
-            padding: 2.4rem;
-            color: var(--bg);
-            text-align: center;
+            font-family: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+            font-style: italic; font-weight: 500; letter-spacing: -0.05rem;
+            position: relative; max-width: 1312px; margin: 0 auto; padding: 2.4rem;
+            color: var(--bg); text-align: center;
         }
-    </style>
+        .hero { background-image: linear-gradient(to bottom, var(--accent-700), var(--accent-900)); color: var(--bg); padding-top: 6rem;}
+        .hero .lottie-anim { width: 100%; max-width: 1312px; height: auto; aspect-ratio: 16/9; object-fit: cover; margin: 0 auto; overflow: hidden;}
+  </style>
 
 </head>
 
@@ -95,11 +91,14 @@
 
     <section class="hero">
         <div class="lottie-anim"
-                data-src="/lottie/dlab-hero.lottie"
-                data-loop="true"
-                data-autoplay="true"
-                data-renderer="svg" fetchpriority="high">
+            data-src="/lottie/dlab-hero.lottie"
+            data-loop="true"
+            data-autoplay="true"
+            data-renderer="svg"
+            hidden>
         </div>
+        </div>
+
         <h1 id="case-study-title" class="fraunces">Researching contextual AI frameworks to evaluate user-AI interactions and support better creative outcomes</h1>
         <div class="logistics">
             <div>
@@ -1021,7 +1020,9 @@
     </footer>
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.13.0/lottie.min.js" integrity="sha512-uOtp2vx2X/5+tLBEf5UoQyqwAkFZJBM5XwGa7BfXDnWR+wdpRvlSVzaIVcRe3tGNsStu6UMDCeXKEnr4IBT8gA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.13.0/lottie.min.js"
+          defer integrity="sha512-uOtp2vx2X/5+tLBEf5UoQyqwAkFZJBM5XwGa7BfXDnWR+wdpRvlSVzaIVcRe3tGNsStu6UMDCeXKEnr4IBT8gA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="/jszip/dist/jszip.min.js" defer></script>
 <script src="/javascript/case-study-links.js" defer></script>
 

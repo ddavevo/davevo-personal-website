@@ -1,11 +1,7 @@
-// 🍔 Hamburger menu logic
+// ===================== 🍔 Hamburger =====================
 const hamburgerL = document.querySelector(".hamburger");
 const menuL = document.querySelector(".menu");
-function myFunction(x) {
-  x.classList.toggle("active");
-}
-
-/* ========================================================== */
+function myFunction(x) { x.classList.toggle("active"); }
 
 // Handling webp vs. png loading
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,19 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
         // Remove the source so Safari reverts to <img> src
         source.remove();
         img.src = img.getAttribute('src');
-        console.warn(`Fallback triggered for: ${img.src}`);
       };
     }
   });
 });
 
-/* ========================================================== */
-
-// Handling Table of Contents section detection
+// ===================== TOC Section Highlight =====================
 window.addEventListener('DOMContentLoaded', () => {
   const tocLinks = Array.from(document.querySelectorAll('.table-of-contents li a'));
+  if (!tocLinks.length) return;
+
   const targets = tocLinks
-    .map(a => document.querySelector(a.getAttribute('href'))) // e.g. #background
+    .map(a => document.querySelector(a.getAttribute('href')))
     .filter(Boolean);
 
   const setActive = (id) => {
@@ -45,97 +40,85 @@ window.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       const id = entry.target.getAttribute('id');
-      if (entry.isIntersecting) {
-        setActive(id);
-      }
+      if (entry.isIntersecting) setActive(id);
     });
-  }, {
-    root: null,
-    // make the highlight switch when the target hits ~middle of the viewport
-    rootMargin: '0px 0px -55% 0px',
-    threshold: [0, 0.25, 0.5, 0.75, 1]
-  });
+  }, { rootMargin: '0px 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
 
-  // Track only the elements referenced by the TOC links (your .toc-spacer divs)
   targets.forEach(el => observer.observe(el));
 });
 
-/* ========================================================== */
+// ===================== Video Lazy Play/Pause =====================
+window.addEventListener('DOMContentLoaded', () => {
+  const vids = document.querySelectorAll('video');
+  if (!vids.length) return;
 
-document.addEventListener("DOMContentLoaded", () => {
+  vids.forEach(v => {
+    v.setAttribute('preload', 'none');
+    v.removeAttribute('autoplay'); // we'll control via IO
+    v.pause();
+  });
+
+  const vObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      const v = e.target;
+      if (e.isIntersecting) {
+        // start playing only when visible
+        v.play().catch(() => {});
+      } else {
+        v.pause();
+        v.currentTime = 0; // optional: free up decoder
+      }
+    });
+  }, { threshold: 0.25 });
+
+  vids.forEach(v => vObserver.observe(v));
+});
+
+// ===================== Lottie Loader (delayed to after 'load') =====================
+(function() {
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const MAX_PLAYING = 2; // cap for simultaneous active animations
+  const MAX_PLAYING = 2; // cap simultaneous
   const playing = new Set();
-  const queue = new Set(); // animations waiting to start
+  const queue = new Set();
+  let readyToAnimate = false;
 
-  const allAnimEls = document.querySelectorAll(".lottie-anim");
-
-  async function loadLottieFile(path) {
-    const response = await fetch(path);
+  async function loadLottieFromDotLottie(path) {
+    // NOTE: still uses JSZip, but we run only after 'load' and on intersection
+    const response = await fetch(path, { cache: 'force-cache' });
     if (!response.ok) throw new Error(`Failed to load ${path} (${response.status})`);
-
-    const arrayBuffer = await response.arrayBuffer();
-    const zip = await JSZip.loadAsync(arrayBuffer);
+    const buf = await response.arrayBuffer();
+    const zip = await JSZip.loadAsync(buf);
 
     const manifest = JSON.parse(await zip.file("manifest.json").async("string"));
     const firstAnimId = manifest.animations[0].id;
     const animPath = `animations/${firstAnimId}.json`;
 
-    let animData = JSON.parse(await zip.file(animPath).async("string"));
+    const animData = JSON.parse(await zip.file(animPath).async("string"));
 
-    // Inline images
+    // Inline images to avoid extra requests
     if (animData.assets) {
       for (let asset of animData.assets) {
-        if (asset.p && !asset.u.startsWith("data:")) {
+        if (asset.p) {
           const imgFile = zip.file(`images/${asset.p}`);
           if (imgFile) {
-            const blob = await imgFile.async("base64");
+            const b64 = await imgFile.async("base64");
             asset.u = `data:image/${asset.p.split('.').pop()};base64,`;
-            asset.p = blob;
+            asset.p = b64;
           }
         }
       }
     }
-
     return animData;
   }
 
-  async function initAnimation(el) {
-    if (el.dataset.loaded) return;
-    el.dataset.loaded = "true";
-
-    const path = el.dataset.src;
-    const loop = el.dataset.loop === "true";
-    const renderer = el.dataset.renderer || "svg";
-
-    try {
-      const animData = await loadLottieFile(path);
-      const animInstance = lottie.loadAnimation({
-        container: el,
-        renderer,
-        loop,
-        autoplay: false,
-        animationData: animData
-      });
-
-      el.animInstance = animInstance;
-      if (el.dataset.autoplay === "true" && !prefersReduced) {
-        tryStart(el);
-      }
-    } catch (err) {
-      console.error(`[Lottie] Failed to init ${path}:`, err);
-    }
-  }
-
   function tryStart(el) {
-    if (playing.has(el)) return; // already running
-    if (prefersReduced || !el.animInstance) return;
-
+    if (!readyToAnimate || prefersReduced || !el.animInstance) return;
+    if (playing.has(el)) return;
     if (playing.size < MAX_PLAYING) {
       el.animInstance.play();
       playing.add(el);
     } else {
-      queue.add(el); // wait until a slot opens
+      queue.add(el);
     }
   }
 
@@ -144,8 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
     el.animInstance.pause();
     playing.delete(el);
     queue.delete(el);
-
-    // Start next in queue
     if (queue.size > 0) {
       const next = queue.values().next().value;
       queue.delete(next);
@@ -153,29 +134,65 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  const loaderIO = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        initAnimation(e.target);
-      }
+  function initAll() {
+    const allAnimEls = document.querySelectorAll(".lottie-anim");
+    if (!allAnimEls.length) return;
+
+    const loaderIO = new IntersectionObserver((entries) => {
+      entries.forEach(async (e) => {
+        const el = e.target;
+        if (!e.isIntersecting || el.dataset.loaded) return;
+
+        el.dataset.loaded = "true";
+        const path = el.dataset.src;
+        const loop = el.dataset.loop === "true";
+        const renderer = el.dataset.renderer || "canvas"; // default to canvas
+
+        try {
+          const data = await loadLottieFromDotLottie(path);
+          const inst = lottie.loadAnimation({
+            container: el,
+            renderer,
+            loop,
+            autoplay: false,
+            animationData: data
+          });
+          el.animInstance = inst;
+          el.hidden = false; // reveal once ready
+
+          if (el.dataset.autoplay === "true") tryStart(el);
+        } catch (err) {
+          console.error("[Lottie] init failed:", err);
+        }
+      });
+    }, { rootMargin: "200px 0px", threshold: 0.01 });
+
+    const playerIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        const el = e.target;
+        if (!el.animInstance) return;
+        if (e.isIntersecting) {
+          tryStart(el);
+        } else {
+          stop(el);
+        }
+      });
+    }, { threshold: 0.25 });
+
+    allAnimEls.forEach(el => {
+      loaderIO.observe(el);
+      playerIO.observe(el);
     });
-  }, { rootMargin: "200px 0px", threshold: 0.01 });
+  }
 
-  const playerIO = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      const el = e.target;
-      if (!el.animInstance) return;
+  // Gate all animation work until the page is fully loaded (improves LCP/TBT)
+  window.addEventListener('load', () => {
+    readyToAnimate = true;
 
-      if (e.isIntersecting) {
-        tryStart(el);
-      } else {
-        stop(el);
-      }
-    });
-  }, { threshold: 0.25 });
+    // If your hero had a poster + hidden lottie, reveal container now
+    const heroLottie = document.querySelector('.hero .lottie-anim');
+    if (heroLottie) heroLottie.hidden = false;
 
-  allAnimEls.forEach(el => {
-    loaderIO.observe(el);
-    playerIO.observe(el);
+    initAll();
   });
-});
+})();

@@ -24,14 +24,14 @@ main {
 }
 
 main p {
-    max-width: clamp(min(70ch, 100%), 20vw, 160ch);
+    /* max-width: clamp(min(70ch, 100%), 20vw, 160ch); */
     margin-bottom: 2.5ch;
     color: var(--neutral-800);
 }
 
 main img {
-    width: 100%;
-    min-height: 200px;
+    /* width: 100%; */
+    /* min-height: 200px; */
     object-fit: contain;
     object-position: center;
 }
@@ -44,7 +44,7 @@ blockquote {
 }
 
 main img, main div, main ul, main aside, main blockquote, main figure, main video {
-    max-width: clamp(min(80ch, 100%), 20vw, 160ch);
+    /* max-width: clamp(min(80ch, 100%), 20vw, 160ch); */
     margin-bottom: 2.5ch;
 }
 
@@ -60,17 +60,16 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
 /* ====================================================================== */
 
 #case-study-title {
-    position: relative;
-    max-width: 1312px;
-    font-weight: 500;
-    letter-spacing: -0.05rem;
     margin: 0 auto;
     padding: 2.4rem;
+    max-width: 1312px;
+    font-size-adjust: from-font;
 }
 
 .hero {
     background-image: linear-gradient(to bottom, var(--accent-700), var(--accent-900));
     color: var(--bg);
+    padding-top: 6rem;
 }
 
 .hero p {
@@ -84,31 +83,24 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
 }
 
 .hero .lottie-anim, .hero picture {
-    display: flex;
-    padding-top: 6rem;
-    width: 100%;
+    /* width: 100%; */
     max-width: 1312px;
-    height: auto;
+    /* height: auto; */
+    aspect-ratio: 16/9;
     object-fit: cover;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .hero img {
-    width: 100%;
+    /* width: 100%; */
 }
 
 .logistics {
-    display: flex;
-    justify-content: space-around;
-    gap: 2rem;
-    padding: 0 2.4rem;
-    padding-bottom: 3.5rem;
-    
-    position: relative;
-    max-width: 1312px;
-    left: 50%;
-    transform: translateX(-50%);
+    display:flex; justify-content: space-around; gap: 2rem;
+    padding: 0 2.4rem 3.5rem;
+    max-width: 1312px; margin: 0 auto;
+    /* min-height: 7.5rem; */
 }
 
 .hero .subtitle {
@@ -117,7 +109,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
 
 .hero-ribbon {
     position: relative;
-    width: 100%;
+    /* width: 100%; */
     height: 0.8rem;
     background-image: var(--case-study);
 }
@@ -125,6 +117,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
 .hero-ribbon img {
     position: absolute;
     width: 5rem;
+    height: 5rem;
     right: 8%;
     transform: translateY(-50%);
 }
@@ -226,7 +219,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
 .columns * {
     object-fit: cover;
     object-position: 0 0;
-    min-height: 0;
+    /* min-height: 0; */
 }
 
 .columns img, .columns video, .columns figure {
@@ -240,7 +233,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
 }
 
 .gallery img {
-    width: 1fr;
+    /* width: 1fr; */
     height: 400px;
     object-fit: cover;
     object-position: 0 0;
@@ -269,8 +262,8 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
 }
 
 .two-columns-text-and-image img {
-    width: auto;
-    max-height: 500px;
+    /* width: auto; */
+    /* max-height: 500px; */
     margin: 0;
 }
 
@@ -284,7 +277,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
     border-radius: 0.6rem;
     background-color: var(--accent-100);
     border: 1.25px solid var(--accent-400);
-    max-width: clamp(min(70ch, 100%), 20vw, 160ch);
+    /* max-width: clamp(min(70ch, 100%), 20vw, 160ch); */
 }
 
 .insight * {
@@ -334,7 +327,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
     padding-left: 1.25rem;
     border-left: 0.3rem solid var(--accent-400);
     align-items: center;
-    height: 100%;
+    /* height: 100%; */
 }
 
 /* ================================= */
@@ -438,14 +431,14 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
     position: absolute;
     top: 0;
     left: -100%;
-    width: 100%; 
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
     background: linear-gradient(90deg, transparent, #fef6f090, transparent);
     transition: .5s ease-in-out;
 }
 
 #next-case-study:hover::before {
-    left: 100%;
+    /* left: 100%; */
 }
 
 /* ====================================================================== */
@@ -598,7 +591,6 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
 
 @media screen and (max-width: 623px) {
     #case-study-title {
-        padding: 3rem 2.4rem 2.4rem 2.4rem;
         font-size: clamp(1.75rem, 2vw, 2rem);
         text-align: left;
     }
@@ -607,6 +599,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
+        min-height: 240px;
     }
 
     .table-of-contents {
@@ -620,7 +613,7 @@ main img, main div, main ul, main aside, main blockquote, main figure, main vide
     }
 
     main p, main img, main h1, main h2, main h3, main div {
-        max-width: calc(100vw - 4.5rem);
+        /* max-width: calc(100vw - 4.5rem); */
     }
 
     main img {
