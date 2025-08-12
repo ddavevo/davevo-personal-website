@@ -14,7 +14,15 @@
     const response = await fetch(path, { cache: 'force-cache' });
     if (!response.ok) throw new Error(`Failed to load ${path} (${response.status})`);
     const buf = await response.arrayBuffer();
-    const zip = await JSZip.loadAsync(buf);
+        return new Promise((resolve, reject) => {
+          const worker = new Worker('/javascript/jszip-worker.js');
+          worker.postMessage({ path });
+          worker.onmessage = (e) => {
+            if (e.data.error) reject(e.data.error);
+            else resolve(e.data.animData);
+            worker.terminate();
+          };
+        });
 
     const manifest = JSON.parse(await zip.file("manifest.json").async("string"));
     const firstAnimId = manifest.animations[0].id;
