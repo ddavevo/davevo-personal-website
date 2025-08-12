@@ -84,6 +84,8 @@
     const allAnimEls = document.querySelectorAll(".lottie-anim");
     if (!allAnimEls.length) return;
 
+    let lottieScriptLoaded = false;
+
     const loaderIO = new IntersectionObserver((entries) => {
       entries.forEach(async (e) => {
         const el = e.target;
@@ -96,7 +98,23 @@
 
         try {
           const animData = await loadLottieFromDotLottie(path);
-          loadLottieScript(() => {
+          // Only load Lottie script the first time an animation is visible
+          if (!lottieScriptLoaded) {
+            lottieScriptLoaded = true;
+            loadLottieScript(() => {
+              const inst = window.lottie.loadAnimation({
+                container: el,
+                renderer,
+                loop,
+                autoplay: false,
+                animationData: animData
+              });
+              el.animInstance = inst;
+              el.hidden = false; // reveal once ready
+
+              if (el.dataset.autoplay === "true") tryStart(el);
+            });
+          } else {
             const inst = window.lottie.loadAnimation({
               container: el,
               renderer,
@@ -108,7 +126,7 @@
             el.hidden = false; // reveal once ready
 
             if (el.dataset.autoplay === "true") tryStart(el);
-          });
+          }
         } catch (err) {
           console.error("[Lottie] init failed:", err);
         }
