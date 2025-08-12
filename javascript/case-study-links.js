@@ -147,6 +147,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const path = el.dataset.src;
         const loop = el.dataset.loop === "true";
         const renderer = el.dataset.renderer || "svg";
+        const renderer = el.dataset.renderer || "canvas"; // default to canvas
 
         try {
           const data = await loadLottieFromDotLottie(path);
@@ -159,6 +160,7 @@ window.addEventListener('DOMContentLoaded', () => {
           });
 
           el.animInstance = inst;
+          el.hidden = false; // reveal once ready
 
           // Poster handling — wait for first frame to render
           inst.addEventListener('DOMLoaded', () => {
@@ -174,6 +176,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (el.dataset.autoplay === "true") tryStart(el);
           });
 
+          if (el.dataset.autoplay === "true") tryStart(el);
         } catch (err) {
           console.error("[Lottie] init failed:", err);
         }
