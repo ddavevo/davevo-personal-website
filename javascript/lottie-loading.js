@@ -1,3 +1,14 @@
+
+  function loadLottieScript(callback) {
+    if (window.lottie) { callback(); return; }
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.13.0/lottie.min.js';
+    script.async = true;
+    script.onload = callback;
+    document.head.appendChild(script);
+  }
+
+  // ...existing code...
 // ===================== Lottie Loader (delayed to after 'load') =====================
 (function() {
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -85,17 +96,19 @@
 
         try {
           const animData = await loadLottieFromDotLottie(path);
-          const inst = window.lottie.loadAnimation({
-            container: el,
-            renderer,
-            loop,
-            autoplay: false,
-            animationData: animData
-          });
-          el.animInstance = inst;
-          el.hidden = false; // reveal once ready
+          loadLottieScript(() => {
+            const inst = window.lottie.loadAnimation({
+              container: el,
+              renderer,
+              loop,
+              autoplay: false,
+              animationData: animData
+            });
+            el.animInstance = inst;
+            el.hidden = false; // reveal once ready
 
-          if (el.dataset.autoplay === "true") tryStart(el);
+            if (el.dataset.autoplay === "true") tryStart(el);
+          });
         } catch (err) {
           console.error("[Lottie] init failed:", err);
         }
