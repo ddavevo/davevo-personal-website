@@ -7,7 +7,10 @@
   let readyToAnimate = false;
 
   async function loadLottieFromDotLottie(path) {
-    // NOTE: still uses JSZip, but we run only after 'load' and on intersection
+    // Dynamically import JSZip only when needed
+    await import('../jszip/dist/jszip.min.js');
+    const JSZip = window.JSZip;
+
     const response = await fetch(path, { cache: 'force-cache' });
     if (!response.ok) throw new Error(`Failed to load ${path} (${response.status})`);
     const buf = await response.arrayBuffer();
@@ -73,13 +76,13 @@
         const renderer = el.dataset.renderer || "canvas"; // default to canvas
 
         try {
-          const data = await loadLottieFromDotLottie(path);
-          const inst = lottie.loadAnimation({
+          const animData = await loadLottieFromDotLottie(path);
+          const inst = window.lottie.loadAnimation({
             container: el,
             renderer,
             loop,
             autoplay: false,
-            animationData: data
+            animationData: animData
           });
           el.animInstance = inst;
           el.hidden = false; // reveal once ready
