@@ -10,13 +10,12 @@
 
     <link href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,500&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,500&display=swap" media="print" onload="this.media='all'">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,500&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
     </noscript>
 
     <!-- ======================================= -->
@@ -34,18 +33,15 @@
 
     <style>
         h1.fraunces {
-            font-family: "Fraunces", serif;
-            font-style: italic;
-            font-weight: 500;
-            letter-spacing: -0.05rem;
-            position: relative;
-            max-width: 1312px;
-            margin: 0 auto;
-            padding: 2.4rem;
-            color: var(--bg);
-            text-align: center;
+            font-family: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+            font-optical-sizing: auto; font-weight: 400;
+            font-style: italic; font-variation-settings: "SOFT" 0, "WONK" 1;
+            position: relative; max-width: 1312px; margin: 0 auto; padding: 2.4rem;
+            color: var(--bg); text-align: center;
         }
-    </style>
+        .hero { background-image: linear-gradient(to bottom, var(--accent-700), var(--accent-900)); color: var(--bg); padding-top: 6rem;}
+        .hero img { width: clamp(320px, 100%, 1312px); aspect-ratio: 16/9; object-fit: cover; margin: 0 auto; overflow: hidden;}
+  </style>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -124,7 +120,7 @@
 
     <main>
         <!--Table of Contents-->
-        <div>
+        <div class="toc-container">
             <div class="table-of-contents">
                 <p class="toc-header">
                     <b>Table of Contents</b>
