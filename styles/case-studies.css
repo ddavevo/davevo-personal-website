@@ -92,6 +92,29 @@ blockquote {
     overflow: hidden;
 }
 
+.lottie-wrapper {
+  position: relative;
+  width: clamp(320px, 100%, 1312px);
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.lottie-poster {
+    position: absolute;
+    width: clamp(320px, 100%, 1312px);
+    aspect-ratio: 16/9;
+    max-height: 738px;
+}
+
+.lottie-anim {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.lottie-anim.ready {
+  opacity: 1;
+}
+
 .logistics {
     display:flex; justify-content: space-around; gap: 2rem;
     padding: 0 2.4rem 3.5rem;

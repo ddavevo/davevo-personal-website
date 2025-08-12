@@ -146,7 +146,7 @@ window.addEventListener('DOMContentLoaded', () => {
         el.dataset.loaded = "true";
         const path = el.dataset.src;
         const loop = el.dataset.loop === "true";
-        const renderer = el.dataset.renderer || "canvas"; // default to canvas
+        const renderer = el.dataset.renderer || "svg";
 
         try {
           const data = await loadLottieFromDotLottie(path);
@@ -157,10 +157,23 @@ window.addEventListener('DOMContentLoaded', () => {
             autoplay: false,
             animationData: data
           });
-          el.animInstance = inst;
-          el.hidden = false; // reveal once ready
 
-          if (el.dataset.autoplay === "true") tryStart(el);
+          el.animInstance = inst;
+
+          // Poster handling — wait for first frame to render
+          inst.addEventListener('DOMLoaded', () => {
+            const poster = el.previousElementSibling;
+            if (poster && poster.classList.contains('lottie-poster')) {
+              poster.remove(); // remove static poster
+            }
+            el.hidden = false;
+            requestAnimationFrame(() => {
+              el.classList.add('ready'); // fade in animation
+            });
+
+            if (el.dataset.autoplay === "true") tryStart(el);
+          });
+
         } catch (err) {
           console.error("[Lottie] init failed:", err);
         }
@@ -180,6 +193,8 @@ window.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.25 });
 
     allAnimEls.forEach(el => {
+      // Keep hidden until Lottie is ready
+      el.hidden = true;
       loaderIO.observe(el);
       playerIO.observe(el);
     });
