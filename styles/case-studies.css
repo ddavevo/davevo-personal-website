@@ -72,7 +72,7 @@ blockquote {
     background-image: linear-gradient(to bottom, var(--accent-700), var(--accent-900));
     color: var(--bg);
     padding-top: 6rem;
-    min-height: calc(6rem + (1.2em * 6) + 2.4rem); 
+    min-height: calc(6rem + 300px + 7.5rem + (1.2em * 6) + 4.8rem); 
 }
 
 .hero p {
