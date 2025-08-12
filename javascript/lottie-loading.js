@@ -1,11 +1,11 @@
 
   function loadLottieScript(callback) {
-    if (window.lottie) { callback(); return; }
-    const script = document.createElement('script');
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.13.0/lottie.min.js';
-    script.async = true;
-    script.onload = callback;
-    document.head.appendChild(script);
+  if (window.lottie) { callback(); return; }
+  const script = document.createElement('script');
+  script.src = '/lottie-player/lottie_light.min.js';
+  script.async = true;
+  script.onload = callback;
+  document.head.appendChild(script);
   }
 
   // ...existing code...
