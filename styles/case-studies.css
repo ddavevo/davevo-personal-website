@@ -610,6 +610,7 @@ blockquote {
 
     .main-container {
         width: calc(100% - 4.8rem);
+        max-width: 410px;
         margin: 0 auto;
         padding: 0;
     }

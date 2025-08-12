@@ -1,4 +1,5 @@
 // Handling webp vs. png loading
+/*
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('picture').forEach(picture => {
     const source = picture.querySelector('source');
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+*/
 
 // ===================== TOC Section Highlight =====================
 window.addEventListener('DOMContentLoaded', () => {
