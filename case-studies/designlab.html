@@ -8,15 +8,14 @@
     
     <!-- ======================================= -->
 
-    <link rel="preload" href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,500&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,500&display=swap" media="print" onload="this.media='all'">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,500&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
     </noscript>
 
     <!-- ======================================= -->
@@ -35,12 +34,13 @@
     <style>
         h1.fraunces {
             font-family: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
-            font-style: italic; font-weight: 500; letter-spacing: -0.05rem;
+            font-optical-sizing: auto; font-weight: 400;
+            font-style: italic; font-variation-settings: "SOFT" 0, "WONK" 1;
             position: relative; max-width: 1312px; margin: 0 auto; padding: 2.4rem;
             color: var(--bg); text-align: center;
         }
         .hero { background-image: linear-gradient(to bottom, var(--accent-700), var(--accent-900)); color: var(--bg); padding-top: 6rem;}
-        .hero .lottie-anim { width: 100%; max-width: 1312px; height: auto; aspect-ratio: 16/9; object-fit: cover; margin: 0 auto; overflow: hidden;}
+        .hero .lottie-anim { width: clamp(320px, 100%, 1312px); aspect-ratio: 16/9; object-fit: cover; margin: 0 auto; overflow: hidden;}
   </style>
 
 </head>
@@ -94,8 +94,7 @@
             data-src="/lottie/dlab-hero.lottie"
             data-loop="true"
             data-autoplay="true"
-            data-renderer="svg"
-            hidden>
+            data-renderer="svg">
         </div>
         </div>
 
@@ -123,10 +122,10 @@
     <div class="hero-ribbon">
         <img style="transform: translateY(-40%);" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-3.png">
     </div>
-
+    
     <main>
         <!--Table of Contents-->
-        <div>
+        <div class="toc-container">
             <div class="table-of-contents">
                 <p class="toc-header">
                     <b>Table of Contents</b>
@@ -145,18 +144,18 @@
 
         <div class="main-container">
             <section> <!--Read our paper!-->
-
-                <p class="subtitle">Officially published!</p>
-                <h2>
-                    Click to read our paper
-                </h2>
-                <a class="open-new-page" href="https://doi.org/10.1145/3706598.3713649" target="_blank">
-                    <picture>
-                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/published-paper-link.webp">
-                        <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/published-paper-link.png">
-                    </picture>
-                </a>
-
+                <article>
+                    <p class="subtitle">Officially published!</p>
+                    <h2>
+                        Click to read our paper
+                    </h2>
+                    <a class="open-new-page" href="https://doi.org/10.1145/3706598.3713649" target="_blank">
+                        <picture>
+                            <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/published-paper-link.webp">
+                            <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/published-paper-link.png">
+                        </picture>
+                    </a>
+                </article>
             </section>
 
             <section id="background"> <!--Background-->

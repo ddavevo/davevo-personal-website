@@ -59,17 +59,13 @@
     size-adjust:101%; ascent-override:92%; descent-override:24%; line-gap-override:0%;
 }
 
-
 .fraunces {
   font-family: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
-  font-weight: 500;
-  font-style: italic;
   font-optical-sizing: auto;
-  font-display: swap;
+  font-weight: 400;
+  font-style: italic;
   letter-spacing: -0.05rem;
-  font-variation-settings:
-    "SOFT" 1,
-    "WONK" 1;
+  font-variation-settings: "SOFT" 0, "WONK" 1;
 }
 
 * {
@@ -135,6 +131,10 @@ figcaption {
     line-height: 150%;
     color: var(--neutral-600);
     font-size: clamp(0.95rem, 1vw, 1rem);
+}
+
+.lottie-anim {
+    aspect-ratio: 16 / 9;
 }
 
 ul {
