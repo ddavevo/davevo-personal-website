@@ -198,6 +198,12 @@
 </body>
 
 <script>
+    const hamburgerL = document.querySelector(".hamburger");
+    const menuL = document.querySelector(".menu");
+    function myFunction(x) { x.classList.toggle("active"); }
+</script>
+
+<script>
     // Handling landing page webp vs. png
     document.addEventListener('DOMContentLoaded', () => {
     const webpUrl = 'https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.webp';
@@ -219,10 +225,11 @@
     });
 </script>
 
+<script src="/jszip/dist/jszip.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.13.0/lottie.min.js"
           defer integrity="sha512-uOtp2vx2X/5+tLBEf5UoQyqwAkFZJBM5XwGa7BfXDnWR+wdpRvlSVzaIVcRe3tGNsStu6UMDCeXKEnr4IBT8gA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="/jszip/dist/jszip.min.js" defer></script>
+<script src="/javascript/lottie-loading.js" async></script>
 <script src="/javascript/case-study-links.js" defer></script>
 
 </html>
