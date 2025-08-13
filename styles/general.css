@@ -67,6 +67,7 @@
   font-style: italic;
   letter-spacing: -0.05rem;
   font-variation-settings: "SOFT" 0, "WONK" 1;
+  font-display: swap;
 }
 
 * {
