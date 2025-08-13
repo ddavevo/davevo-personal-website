@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>UCSD Design Lab - Dave Vo</title>
+    <link rel="icon" type="image/x-icon" href="https://media.dave-vo.com/file/dvfolio/general/davevo_favicon.png">
+    
     <!-- ======================================= -->
 
     <link href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=block" as="style" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=block">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
+    </noscript>
 
     <!-- ======================================= -->
 
@@ -25,12 +27,28 @@
 
     <link rel="preload" href="/styles/case-studies.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/styles/case-studies.css"></noscript>
+
+    <!-- ======================================= -->
+
+    <style>
+        h1.fraunces {
+            font-family: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+            font-optical-sizing: auto; font-weight: 400; font-size-adjust: 0.54;
+            font-style: italic; font-variation-settings: "SOFT" 0, "WONK" 1;
+            position: relative; max-width: 1312px; margin: 0 auto; padding: 2.4rem;
+            color: var(--bg); text-align: center;
+        }
+        .hero { background-image: linear-gradient(to bottom, var(--accent-700), var(--accent-900)); color: var(--bg); padding-top: 6rem;}
+        .hero .lottie-anim { width: clamp(320px, 100%, 1312px); aspect-ratio: 16/9; object-fit: cover; margin: 0 auto; overflow: hidden;}
+  </style>
+
 </head>
+
 <body>
     <header class="header">
         <a href="../index.html">
             <div class="wordmark open-new-page"> <!-- 111px x 74px / 127px x 74px -->
-                <span style="border: 1px solid" class="fraunces">dave v</span>
+                <span class="fraunces">dave v</span>
                 <img class="stylized-o" alt="" aria-label="Navigate back to homepage" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-2.png">
             </div> 
         </a>
@@ -60,5 +78,898 @@
         </button>
     </header>
     <div class="header-container"></div>
+
+    <div class="hero">
+        <div 
+            class="lottie-anim" 
+            data-src="/lottie/dlab-hero.lottie" 
+            data-loop="true" 
+            data-autoplay="true" 
+            data-renderer="svg"
+            fetchpriority="high"
+            decoding="async">
+        </div>
+
+        <h1 id="case-study-title" class="fraunces">Researching contextual AI frameworks to evaluate user-AI interactions and support better creative outcomes</h1>
+        <div class="logistics">
+            <div>
+                <p class="subtitle">My Role</p>
+                <p>UX Researcher</p>
+            </div>
+            <div>
+                <p class="subtitle">Team</p>
+                <p>1 PhD Lead <br> 4 UX Researchers</p>
+            </div>
+
+            <div>
+                <p class="subtitle">Skills</p>
+                <p>Interaction Design <br>Prototyping <br> UX Research</p>
+            </div>
+            <div>
+                <p class="subtitle">Timeline</p>
+                <p> 10 months <br> Dec. 2023 - Sep. 2024 </p>
+            </div>
+        </div>
+    </div>
+    <div class="hero-ribbon">
+        <img alt="" style="transform: translateY(-40%);" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-3.png">
+    </div>
+    
+    <main>
+        <!--Table of Contents-->
+        <div class="toc-container">
+            <div class="table-of-contents">
+                <p class="toc-header">
+                    <b>Table of Contents</b>
+                </p>
+                <ul>
+                    <li><a href="#background">Background</a></li>
+                    <li><a href="#solution">Solution</a></li>
+                    <li><a href="#methods">Methods</a></li>
+                    <li><a href="#design">Design</a></li>
+                    <li><a href="#results">Results</a></li>
+                    <li><a href="#journey">Our Journey</a></li>
+                    <li><a href="#reflection">Reflection</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <section> <!--Read our paper!-->
+                <article>
+                    <p class="subtitle">Officially published!</p>
+                    <h2>
+                        Click to read our paper
+                    </h2>
+                    <a class="open-new-page" href="https://doi.org/10.1145/3706598.3713649" target="_blank">
+                        <picture>
+                            <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/published-paper-link.webp">
+                            <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/published-paper-link.png">
+                        </picture>
+                    </a>
+                </article>
+            </section>
+
+            <section id="background"> <!--Background-->
+                <div class="toc-spacer"></div>
+                <span class="toc-section">
+                    01 - Background
+                </span>
+
+                <article class="extra-space">
+                    <h2>AI tools are major disrupters in creative work</h2>
+                    <div class="columns">
+                        <figure>
+                            <video autoplay muted loop playsinline webkit-playsinline width="100%">
+                                <source src="https://media.dave-vo.com/file/dvfolio/designlab/cursor-ai.webm" type="video/webm"/>
+                                <source src="https://media.dave-vo.com/file/dvfolio/designlab/cursor-ai.mp4" type="video/mp4"/>
+                            </video>
+                            <figcaption>Cursor AI</figcaption>
+                        </figure>
+
+                        <figure>
+                            <video autoplay muted loop playsinline webkit-playsinline width="100%">
+                                <source src="https://media.dave-vo.com/file/dvfolio/designlab/adobe-generative-fill-default.webm" type="video/webm"/>
+                                <source src="https://media.dave-vo.com/file/dvfolio/designlab/adobe-generative-fill.mp4" type="video/mp4"/>
+                            </video>
+                            <figcaption>Adobe Generative Fill</figcaption>
+                        </figure>
+                    </div>
+                    
+                    <hr>
+                    <p>
+                        It's true. They're not just accelerating productivity, but redefining how ideas are produced and refined altogether.
+                        Embedding these features directly into the workflow can reduce friction and spark new directions for creative problem-solving.
+                    </p>
+                </article>
+
+                <article class="extra-space">
+                    <p class="subtitle">The Current Space</p>
+                    <h3>Although these features are changing the game…</h3>
+                    <p>
+                        They also raise more questions about their usefulness long-term.
+                    </p>
+                    
+                    <picture>
+                        <source
+                            type="image/webp"
+                            srcset="
+                                /images/questions-about-ai-tools-820.webp   820w,
+                                /images/questions-about-ai-tools-1100.webp 1100w,
+                                /images/questions-about-ai-tools-1400.webp 1400w,
+                                /images/questions-about-ai-tools-1670.webp 1670w"
+                            sizes="
+                                (max-width: 623px) 410px,
+                                clamp(305px, 49vw, 835px)"
+                        >
+
+                        <img type="image/png"
+                            loading="lazy" decoding="async" alt="Link to check out our paper."
+                            src="https://media.dave-vo.com/file/dvfolio/designlab/png/questions-about-ai-tools-850.png"
+                            srcset="
+                                /images/questions-about-ai-tools-820.png   820w,
+                                /images/questions-about-ai-tools-1100.png 1100w,
+                                /images/questions-about-ai-tools-1400.png 1400w,
+                                /images/questions-about-ai-tools-1670.png 1670w"
+                            sizes="
+                                (max-width: 623px) 410px,
+                                clamp(305px, 49vw, 835px)"
+                            
+                            width="1670" aspect-ratio="16/9"
+                        >
+                            
+                    </picture>
+
+                    <hr>
+                    <p>
+                        Especially for creative work, today’s first pick might not be the same a year from now. Let's look at image generation for example: first it was DALL-E, then Midjourney took over, and now Adobe Firefly is built right into the Adobe Suite.
+                    </p>
+                    <p>
+                        Tools come and go fast, and creatives have learned to be more selective with their toolkit. Adopting a tool means changing habits, workflows, and sometimes even their creative voice.
+                    </p>
+                </article>
+
+                <article class="extra-space">
+                    <p class="subtitle">Identifying a Gap</p>
+                    <h3>Speed and seamlessness aren’t enough to secure users' trust</h3>
+                    <hr>
+                    <p>
+                        AI has to help people nurture their creativity instead of providing a shortcut to it. For this reason, it's risky to only be concerned with AI performance or user satisfaction.
+                    <p>
+                        While so many evaluations focus on outputs, fewer study how the <i>structure</i> of user-AI interaction shapes the experience in terms of cognitive engagement and creative depth.
+                    </p>
+                </article>
+                
+                <!-- RESEARCH QUESTION -->
+                <article>
+                    <p class="subtitle">Research Question</p>
+                    <h3>
+                        How does the positioning of AI within a creative workflow influence creative outcomes, cognitive effort, and how users perceive their own agency and the value of the AI?
+                    </h3>
+                    <div class="columns">
+                        <figure>
+                            <picture>
+                                <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/five-whys-simplified.webp">
+                                <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/five-whys-simplified.png">
+                            </picture>
+                            <figcaption>
+                                5 Whys
+                            </figcaption>
+                        </figure>
+
+                        <figure>
+                            <picture>
+                                <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/competitive-analysis-simplified.webp">
+                                <img loading="lazy" src="https://media.dave-vo.com/file/dvfolio/designlab/competitive-analysis-simplified.png"> 
+                            </picture>
+                            <figcaption>
+                                Competitive Analysis
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <hr>
+                    <p>
+                        To explore the role of structure (the timing and placement of AI support), we looked at integrating an LLM into design templates, a well-established strategy for guiding creative problem solving. This provides us a tangible way of observing how people think and develop creative ideas.
+                    </p>
+                </article>
+            </section>
+
+            <section id="solution"> <!--Solution-->
+                <div class="toc-spacer"></div>
+                <span class="toc-section">
+                    02 - Solution
+                </span>
+
+                <article>
+                    <h2>How our plugin works</h2>
+                    <p>
+                        POV: Do you find brainstorming a potential solution to a problem challenging? Imagine where generative AI could support you in your workflow.
+                    </p>
+                </article>
+            
+            </section>
+
+            <section id="methods"> <!--Research Methods-->
+                <div class="toc-spacer"></div>
+                <span class="toc-section">
+                    03 - Methods
+                </span>
+
+                <article>
+                    <h2>How we constructed our research methodology</h2>
+
+                    <p class="subtitle">User Study Setup</p>
+                    <h3>Defining our conditions</h3>
+                    <p>
+                        We ran a between-subjects experiment that randomly assigned N=47 users to one of the following three conditions:
+                    </p>
+                </article>
+
+                <article class="extra-space">
+                    <p class="subtitle">User Study Setup</p>
+                    <h3>Outlining the exercise protocol</h3>
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/user-study-process.webp">
+                        <img loading="lazy" alt="An overview of our user study protocol" src="https://media.dave-vo.com/file/dvfolio/designlab/user-study-process.png">
+                    </picture>
+                    <hr>
+                    <p>
+                        The research team and I led user studies that had participants walk through the problem solving process using the template plugin, followed by surveys and structured interviews.
+                    </p>
+                </article>
+
+                <article>
+                    <p class="subtitle">Metrics</p>
+                    <h3>How we measured user outcomes across conditions</h3>
+                    <hr>
+                    <p style="margin-bottom: 0.5rem;">
+                        For our interviews and surveys, we were curious how the plugin shaped their thinking and creative outcomes, using literature-backed metrics and frameworks that assessed:
+                    </p>
+
+                    <ul class="tags">
+                        <li>Reflective thinking</li>
+                        <li>Creative quality</li>
+                        <li>Cognitive load</li>
+                        <li>Usability</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Analyzing the effects of the tool, not the tool itself</h3>
+                    <hr>
+                    <p>
+                        This was something I learned in the process of defining the methodology. Similar to how you establish benchmarks for usability testing, we made sure our metrics provided insights for our research question.
+                    </p>
+                    <p>
+                        This even reflected in how we reworked the plugin prototype for this study.
+                    </p>
+                </article>
+            </section>
+
+            <section id="design"> <!--Design-->
+                <div class="toc-spacer"></div>
+                <span class="toc-section">
+                    04 - Design
+                </span>
+
+                <article>
+                    <h2>Building on the original plugin prototype</h2>
+                    <p>
+                        In reviewing the PhD’s earlier version of the plugin, we identified two major limitations with integrating AI into the problem-solving workflow:
+                    </p>
+
+                    <!-- PAIN POINTS -->
+                    <div class="columns">
+                        
+                        <div class="insight pain-point">
+                            <span>❌</span>
+                            <div>
+                                <p><b>Lacks user guidance</b></p>
+                                <p>
+                                    Users got stuck on how to reflect on AI-generated responses and extract key insights.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="insight pain-point">
+                            <span>❌</span>
+                            <div>
+                                <p><b>Not immediately usable</b></p>
+                                <p>
+                                    Users found AI-generated responses to be long-winded, inaccurate, repetitive, and hard to leverage.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article class="extra-space">
+                    <h3>
+                        In the interest of our research question,
+                    </h3>
+                    <hr>
+                    <p>
+                        We needed the interactions to keep users thinking so we could focus on how they’re affected by the tool. The following design principles guided our redesign process:
+                    </p>
+                </article>
+
+                <!-- LIGHTWEIGHT -->
+                <article class="extra-space">
+                    <p class="subtitle">Design Decisions</p>
+                    <h3>Interactions with AI should be easy to comprehend and actionable.</h3>
+                    <hr>
+                    <p>
+                        The initial plugin had these AI-generated Q&As to prompt reflection. However, previous participants felt like they were repetitive summaries without offering specific angles or concrete ways to explore a competitor further.
+                    </p>
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/design-ai-insights-v1.webp">
+                        <img loading="lazy" alt="Before picture of old plugin, showing AI generation features for the Competitive Analysis exercise." src="https://media.dave-vo.com/file/dvfolio/designlab/design-ai-insights-v1.png">
+                    </picture>
+
+
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/design-ai-insights-v2.webp">
+                        <img loading="lazy" alt="Before and after picture" src="https://media.dave-vo.com/file/dvfolio/designlab/design-ai-insights-v2.png">
+                    </picture>
+                    <hr>
+                    <p>
+                        Sometimes, the best interface is no interface. We realized these previous users struggled to act on AI insights because they were disconnected from where the work happened. Instead, we decided the easiest approach was to revise the backend to generate shorter, more targeted insights.
+                    </p>
+                    <p>
+                        From a research perspective, this also gave us more chances to see how users actually synthesized and applied AI input, rather than just skimming it.
+                    </p>
+                </article>
+
+
+                <!-- FLUID -->
+                <article class="extra-space">
+                    <p class="subtitle">Design Decisions</p>
+                    <h3>The plugin should guide users to keep thinking and exploring across sections without dictating exactly what to do next.</h3>
+                    <hr>
+
+                    <p>
+                        As mentioned previously, there was no smooth handoff between reading AI insights and applying them. Users were often left unsure of what to do next, breaking their momentum instead of advancing their analysis.
+                    </p>
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/design-ca-scaffolding-v1.webp">
+                        <img loading="lazy" alt="Before picture showing the gap between interacting with plugin and template." src="https://media.dave-vo.com/file/dvfolio/designlab/design-ca-scaffolding-v1.png">
+                    </picture>
+
+
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/design-ca-scaffolding-v2.webp">
+                        <img loading="lazy" alt="Before and after. We added more guidance screens." src="https://media.dave-vo.com/file/dvfolio/designlab/design-ca-scaffolding-v2.png">
+                    </picture>
+                    <hr>
+                    <p>
+                        So we decided to expand the interface to include guidance screens for every interactive element in the table, not just competitor headers or add-buttons.
+                    </p>
+                    <p>
+                        These screens provide light context on what each element is, how users can interact with it, and what role it plays in the overall exercise, keeping exploration fluid without defining a fixed path.
+                    </p>
+                </article>
+
+
+                <!-- SEAMLESS -->
+                <article class="extra-space">
+                    <p class="subtitle">Design Decisions</p>
+                    <h3>Keep users focused on their main goals by ensuring every interaction directly supports their progress.</h3>
+                    <hr>
+
+                    <p>
+                        To observe how users perceived AI-generated content, the previous plugin allowed them to mark any generated material for validity. But most skipped this feature since it felt like an extra task that interrupted their workflow, taking time away from research and synthesis. 
+                    </p>
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/design-review-ai-responses-v1.webp">
+                        <img loading="lazy" alt="Before picture" src="https://media.dave-vo.com/file/dvfolio/designlab/design-review-ai-responses-v1.png">
+                    </picture>
+
+                    
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/design-review-ai-responses-v2.webp">
+                        <img loading="lazy" alt="After picture" src="https://media.dave-vo.com/file/dvfolio/designlab/design-review-ai-responses-v2.png">
+                    </picture>
+                    <hr>
+                    <p>
+                        We decided to not move forward with this feature and instead embedded simple, contextual language like “Review and edit if needed” or “This may or may not reflect your own analysis.”
+                    </p>
+                    <p>
+                        This subtly encourages reflection without pulling users out of the task.
+                    </p>
+                </article>
+
+
+
+                <!-- EXPLORATIONS-->
+                <article class="extra-space">
+                    <p class="subtitle">Rejected Explorations</p>
+                    <h3>
+                        Possible actions to keep the flow going
+                    </h3>
+                    
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/explorations-ca-possible-actions.webp">
+                        <img loading="lazy" alt="We explored adding an idle state for the plugin for possible actions." src="https://media.dave-vo.com/file/dvfolio/designlab/explorations-ca-possible-actions.png">
+                    </picture>
+                    <hr>
+                    <p>
+                        Something we considered was creating an idle state that suggested next steps for exploration.
+                        Due to how non-linear the exercise is, we wanted to prevent decision paralysis by offering possible actions to keep them actively engaged.
+                    </p>
+                    
+                    <div class="insight pain-point">
+                        <span>❌</span>
+                        <p>
+                            We realized later this risked narrowing or biasing their decision-making—especially in an open-ended task where we want to observe how AI organically influences their thinking.
+                        </p>
+                    </div>
+                </article>
+
+                <article>
+                    <p class="subtitle">Rejected Explorations</p>
+                    <h3>
+                        Populate competitors as well
+                    </h3>
+                    
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/explorations-ca-populate-competitors.webp">
+                        <img loading="lazy" alt="Explored allowing competitor population as well." src="https://media.dave-vo.com/file/dvfolio/designlab/explorations-ca-populate-competitors.png">
+                    </picture>
+                    
+                    <hr>
+                    <p>
+                        In addition to populating dimensions, we explored letting users auto-generate entire rows for new competitors.
+                        The idea was to see whether giving users a full view of a single competitor might shift how they approach comparisons or structure their analysis.
+                    </p>
+
+                    <div class="insight pain-point">
+                        <span>❌</span>
+                        <p>
+                            We realized this risked over-structuring the competitor at once, turning it into a one-by-one review of each (just like the old plugin) instead of encouraging comparison and synthesis.
+                        </p>
+                    </div>
+                </article>
+                
+            </section>
+
+            <section id="results"> <!--Results-->
+                <div class="toc-spacer"></div>
+                <div class="toc-section">
+                    05 - Results
+                </div>
+
+                <article>
+                    <h2>Results & Takeaways</h2> <!--TODO-->
+                    <p>
+                        As expected, AI integration influenced participants to incorporate more topics into their ideas. Co-Led and AI-Led users generated more categories than those in the No-AI condition.
+                    </p>
+                    <p><i>
+                        But quantity wasn’t the whole story.
+                    </i></p>
+                </article>
+
+                <article>
+                    <h3>
+                        Differences emerged in how participants engaged with the template.
+                    </h3>
+
+                    <div class="columns"> <!--No-AI-->
+                        <div>
+                            <span class="tag no-ai">No-AI</span>
+                            <p>
+                                They spent the most time revisiting and editing earlier responses, refining half-formed ideas as their understanding evolved.
+                            </p>
+                        </div>
+                        <picture>
+                            <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/results-cognitive-engagement-no-ai.webp">
+                            <img loading="lazy" alt="No-AI participants' engagement behavior" src="https://media.dave-vo.com/file/dvfolio/designlab/results-cognitive-engagement-no-ai.png">
+                        </picture>
+                    </div>
+                    <hr>
+                </article>
+
+                <article>
+                    <div class="columns"> <!--Co-Led-->
+                        <div>
+                            <span class="tag co-led">Co-Led</span>
+                            <p>
+                                In contrast, these participants treated the AI as a dialogue partner. Their focus was on shaping responses in the moment, responding rather than revising. 
+                            </p>
+                        </div>
+                        <picture>
+                            <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/results-cognitive-engagement-co-led.webp">
+                            <img loading="lazy" alt="Co-Led participants' engagement behavior" src="https://media.dave-vo.com/file/dvfolio/designlab/results-cognitive-engagement-co-led.png">
+                        </picture>
+                    </div>
+                    <hr>
+                </article>
+
+                <article class="extra-space">
+                    <div class="columns"> <!--AI-Led-->
+                        <div>
+                            <span class="tag ai-led">AI-Led</span>
+                            <p>
+                                On the other hand, they spent their time digesting generated content. Their process leaned less on imagination and more on remixing already provided information rather than constructing a new line of reasoning.
+                            </p>
+                        </div>
+                        <picture>
+                            <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/results-cognitive-engagement-ai-led.webp">
+                            <img loading="lazy" alt="AI-Led participants' engagement behavior" src="https://media.dave-vo.com/file/dvfolio/designlab/results-cognitive-engagement-ai-led.png">
+                        </picture>
+                    </div>
+                </article>
+
+                <article class="extra-space"> <!--No-AI-->
+                    <p class="subtitle">As a result,</p>
+                    <h3>While No-AI participants expressed more confidence and ownership,</h3>
+                    
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/no-ai-takeaway.webp">
+                        <img loading="lazy" alt="No-AI participants' feeling about the process" src="https://media.dave-vo.com/file/dvfolio/designlab/no-ai-takeaway.png">
+                    </picture>
+                    <hr>
+                    <p>
+                        They were burdened with keeping track of everything as their understanding evolved or while gathering more context, which left less time for actually synthesizing ideas together.
+                    </p>
+                </article>
+            
+                <article class="extra-space"> <!--AI-Led-->
+                    <h3>While AI-led participants had exposure to more perspectives and topics early on,</h3>
+                    
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/ai-led-takeaway.webp">
+                        <img loading="lazy" alt="AI-Led participants' feeling about the process" src="https://media.dave-vo.com/file/dvfolio/designlab/ai-led-takeaway.png">
+                    </picture>
+                    <hr>
+                    <p>
+                        Users found it hard to explore beyond the AI’s suggestions because they seemed complete and convincing. And so, they spent more time deciding on their idea’s direction, leaving less room for depth and creativity.
+                    </p>
+
+                    <p>
+                        And due to the AI’s perceived comprehensiveness, some users even accepted surface-level ideas without fully questioning them. 
+                    </p>
+                </article>
+
+                <article class="extra-space"> <!--Co-Led-->
+                    <h3>Co-Led participants struck more of a happy medium, but...</h3>
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/co-led-takeaway.webp">
+                        <img loading="lazy" alt="Co-Led participants' feeling about the process" src="https://media.dave-vo.com/file/dvfolio/designlab/co-led-takeaway.png">
+                    </picture>
+                    <hr>
+                    <p>
+                        Users expanded their thinking with AI while staying active in shaping/challenging ideas without being overwhelmed by information.
+                    </p>
+                    <p>
+                        However, having a more complex understanding made them more self-critical toward their idea, as they grappled with unanswered “what-ifs” they felt weren't easy to resolve.
+                    </p>
+                </article>
+                
+
+                <article> <!--TODO: Recommendations-->
+                     <p class="subtitle">Product Strategy</p>
+                    <h3>What might creative AI support look like moving forward?</h3>
+                    <hr>
+                    <p>
+                        The patterns we saw in our study echoed a broader trend in today’s AI tools.
+                    </p>
+                    <p>
+                        Much of the market still leans into one of two extremes:
+                    </p>
+                    <div class="insight with-emoji">
+                        <span>1️⃣</span>
+                        <div>
+                            <p><b>Generate insights fast, connect later</b></p>
+                            <p>
+                                 AI-Led users synthesized the most ideas, but this may leave users preemptively satisfied at the first few convincing ideas rather than staying curious to develop them further.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="insight with-emoji">
+                        <span>2️⃣</span>
+                        <div>
+                            <p><b>Exclusively serve a supporting role</b></p>
+                            <p>
+                                Co-Led users balanced exposure to new ideas with agency. But AI that only reacts to user input can be limiting at times — especially if the user get stuck or leaves their own assumptions unspoken.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>
+                        If someone read our paper, how might they design a better AI product? 
+                    </h3>
+                    <hr>
+
+                    <p>
+                        Even after we submitted the paper, I couldn’t stop wondering what an answer could look like. I decided to put myself in the shoes of someone working on an AI tool, perhaps my goal now is to take our current plugin and improve it even further.
+                    </p>
+                </article>
+
+                <article>
+                    <p class="subtitle">Proof-of-Concepts</p>
+                    <h3>
+                        And so I decided to sketch out a bunch of ideas
+                    </h3>
+                    <hr>
+                    <ul class="tags">
+                        <li>Responsive workspaces - get help anywhere</li>
+                        <li>Contextual pop-ups when you need them</li>
+                        <li>Proactive guardrails - don't settle too soon</li>
+                        <li>Branching off - go beyond the template</li>
+                    </ul>
+                    <p>
+                        After filling out a few spreads, these were some of the themes that emerged from my ideation. They tie back to the gaps we saw in the study: users feeling boxed in, feeling stuck, needing a bit more help for instance. All while keeping it lightweight and leveraging AI's flexibility.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>
+                        But two of them stood out...
+                    </h3>
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/product-rec-sketches.webp">
+                        <img loading="lazy" alt="Sketches" src="https://media.dave-vo.com/file/dvfolio/designlab/product-rec-sketches.png">
+                    </picture>
+                    <hr>
+                    <p>
+                        During this process, I bumped into some of the risks of making AI proactive. Too invasive and users will tune it out, too heavy-handed and you’ll flatten their process. Striking the right balance matters. 
+                    </p>
+                    <p>
+                        I went with these two since they’re lightweight enough not to overwhelm, can gently nudge the user at the right moments, and can draw on the template’s context to offer relevant, well-timed insights or tips.
+                    </p>
+                </article>
+
+                <article>
+                    <article> <!--Feed-Forward Prompting-->
+                        <p class="subtitle">Feed-Forward Prompting</p>
+                        <div class="columns">
+                            <div>
+                                <h3>
+                                    Proactively help users drill deeper and expand their perspectives
+                                </h3>
+                                <p>
+                                    Jumps in after a user finishes a thought, highlighting gaps or alternative ideas to encourage users to keep going even if they have a convincing idea.
+                                </p>
+                            </div>
+                            <div class="lottie-anim" data-src="/lottie/feed-forward-prompting.lottie" data-loop="true" data-autoplay="true" data-renderer="svg"></div>
+                        </div>
+                        <hr>
+                    </article>
+
+                    <article> <!--Always Contextually-Aware-->
+                        <p class="subtitle">Gentle Troubleshooting</p>
+                        <div class="columns">
+                            <div>
+                                <h3>
+                                    Leveraging Figma chat to extend AI to anywhere in the workspace
+                                </h3>
+                                <p>
+                                    Help users test assumptions to flesh out the best version of their ideas, transforming self-critical reflection into tangible validation.
+                                </p>
+                            </div>
+                            <div class="lottie-anim" data-src="/lottie/gentle-troubleshooting.lottie" data-loop="true" data-autoplay="true" data-renderer="svg"></div>
+                        </div>
+                        <hr>
+                    </article>
+                </article>
+            </section>
+
+            <section id="journey"> <!--Our Journey-->
+                <div class="toc-spacer"></div>
+                <div class="toc-section">
+                    06 - Our Journey
+                </div>
+
+                <article class="extra-space">
+                    <h2>From design student to design researcher</h2>
+
+                    <p class="subtitle">Data Analysis</p>
+                    <h3>The trials of storytelling in research</h3>
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/why-does-this-matter.webp">
+                        <img loading="lazy" alt="Showing a messy collage of data visuals." src="https://media.dave-vo.com/file/dvfolio/designlab/why-does-this-matter.png">
+                    </picture>
+                    <hr>
+                    <p>
+                        Our research process began with coding timestamps for key task activities and running thematic analyses on user interviews responses to pinpoint patterns.
+                    </p>
+                    <p>
+                        However, we initially struggled to build a cohesive, data-driven narrative—partly because we were treating qualitative and quantitative data as separate silos.
+                    </p>
+                </article>
+                
+                <article class="extra-space">
+                    <h3>Data isn’t just words and numbers</h3>
+                    <hr>
+                    <p>
+                        The turning point came when we reframed them not as “words” and “numbers,” but as reflections of “what participants thought” and “what they did.” 
+                    </p>
+                </article>
+
+                <article class="extra-space">
+                    <h3>And so, we reversed our approach</h3>
+                    <hr>
+                    <p>
+                        Rather than beginning with thought processes and searching for matching behaviors, we started with statistically significant behaviors and traced them back to supporting quotes. 
+                    </p>
+                    <p>
+                    This clarified the <i>why</i> behind users’ actions and gave us a clearer lens to explain the various effects on their thinking. 
+                    </p>
+
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/data-driven-storytelling.webp">
+                        <img loading="lazy" alt="A bar chart and icons for supporting quotes" src="https://media.dave-vo.com/file/dvfolio/designlab/data-driven-storytelling.png">
+                    </picture>
+                </article>
+
+                
+                <article>
+                    <p class="subtitle">An Unexpected Turn</p>
+                    <h3>
+                        Reconciling with unexpected results
+                    </h3>
+                    <hr>
+                    <p>
+                        In a pre-survey, we asked users if they had any design thinking background. Then, experts blindly rated user responses across Likert-scale benchmarks, which we graphed against experience levels. 
+                    </p>
+
+                    <p>
+                        We initially anticipated a clear correlation—but the data suggested something more complex.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Solution quality is not black and white  – what qualities define a strong solution?</h3>
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/no-solution-bw-part1.webp">
+                       <img loading="lazy" alt="Shows the example of a participant's solution and its blind expert rating." src="https://media.dave-vo.com/file/dvfolio/designlab/no-solution-bw-part1.png">
+                    </picture>
+                    <hr>
+                    <p>
+                        Most expert ratings aligned with the quality of the participants’ solutions—but a few outliers reminded us that strong ideas don’t always look polished.  
+                    </p>
+                    <p>
+                        One participant, for instance, proposed a loosely structured solution around adaptive cultural change in education.
+                    </p>
+                    <div class="insight pain-point">
+                            <span>❌</span>
+                            <div>
+                                <p>
+                                    Experts blindly rated their solution low in several areas due to the lack of “how” this solution would be implemented and “how” this affects its audience.
+                                </p>
+                            </div>
+                    </div>
+                </article>
+
+                <article class="extra-space">
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/no-solution-bw-part2.webp">
+                        <img loading="lazy" alt="Shows their interview response explaining their process" src="https://media.dave-vo.com/file/dvfolio/designlab/no-solution-bw-part2.png">
+                    </picture>
+                    <hr>
+                    <p>
+                        Yet in their interview, they demonstrated clear signs of deep reflection: they questioned the AI’s logic, merged multiple ideas, and grounded their decisions in a human-centered way.
+                    </p>
+                    
+                </article>
+                
+                <article class="extra-space">
+                    <p class="subtitle">The Lightbulb Moment</p>
+                    <h3>Our most meaningful findings were about how users learned and felt during the process—not just what they produced. </h3>
+                    <hr>
+                    <p>
+                        Cases like those highlighted a key nuance in evaluating creativity: strong thinking isn’t always neatly packaged.
+                    </p>
+                    <p>
+                        This further drove our final thesis, saying that AI tools should go beyond generating outputs. Instead, they should anchor their value propositions in providing structures for nuanced thinking and fluid ways to elevate their creative workflows.
+                    </p>
+                    <p>
+                        <b>That’s the real value.</b>
+                    </p>
+                </article>
+            </section>
+
+            <section id="reflection"> <!-- Reflection -->
+                <div class="toc-spacer"></div>
+                <div class="toc-section">
+                    07 - Reflection
+                </div>
+
+                <article>
+                    <h2>Contributing to HCI in the era of AI</h2>
+                    <p>
+                        Thank you UCSD Design Lab for bringing me on! I valued the opportunity to contribute to the growth of creativity support tools (CSTs) and take initiative in various aspects of the research process.
+                    </p>
+                </article>
+
+                <article>
+                    <div class="reflection-unit">
+                        <span class="tag">Learning</span>
+                        <h3>
+                            Humanizing our key findings with storytelling
+                        </h3>
+                    </div>
+                    <p>
+                        I thought research was only about pushing the envelope and finding novelty. Over these 10 months, I realized that results only matter if they reflect something about us, the people who use and get influenced by this type of technology.
+                    </p>
+                </article>
+
+                <article>
+                    <div class="reflection-unit">
+                        <span class="tag">Challenge</span>
+                        <h3>
+                            Doing academic research for the first time
+                        </h3>
+                    </div>
+                    <p>
+                        It’s no secret that academic research demands rigor and many hats to be worn. While it took time to get up to speed with the literature and methods, the biggest lesson was staying present, being a self-starter, and staying hungry for more.
+                    </p>
+                </article>
+
+                <article class="extra-space">
+                    <div class="reflection-unit">
+                        <span class="tag">What I would have done differently</span>
+                        <h3>
+                            Seeking out more mentorship
+                        </h3>
+                    </div>
+                    <p>
+                        Academic research meant the ceiling is high and felt hard to reach on my own. For me, the most invalubale part was getting advice from all the researchers I met, so I wish I had taken more chances to accelerate my growth by looping in more perspectives whenever I hit different stages or hurdles.
+                    </p>
+                </article>
+                
+                <article>
+                    <h3>Have more questions about our paper?</h3>
+                    <hr>
+                    <p>
+                        I’m happy to walk through our research process in more depth or talk about bigger picture items, feel free to reach out to me at 
+                        <a class="underline-button" href="mailto:ddavevoddesign@gmail.com">ddavevoddesign@gmail.com</a> or <a class="underline-button open-new-page" href="https://www.linkedin.com/in/dave-vo" target="_blank">LinkedIn</a>. Thanks for reading!
+                    </p>
+                    <picture>
+                        <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/designlab/message-me.webp">
+                        <img loading="lazy" alt="Message me!" src="https://media.dave-vo.com/file/dvfolio/designlab/message-me.png">
+                    </picture>
+                </article>
+
+                <div class="hmw-wrap" id="next-case-study">
+                    <a class="open-new-page" href="sns.html">
+                        <p class="subtitle">Check out another case study!</p>
+                        <h2><u>SNS Salon & Beauty Supply</u></h2>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <span class="footer-text"><b>@<script>document.write(new Date().getFullYear())</script> • Reach out and let's make it happen!</b></span>
+            <div class="social-media-icons">
+                <a href="mailto:ddavevoddesign@gmail.com" aria-label="My email.">
+                    <img loading="lazy" alt="" class="media-links" src="../images/general/email-icon.svg" style="padding-right: .25rem;">
+                </a>
+                <a href="https://www.linkedin.com/in/dave-vo" target="_blank" aria-label="My LinkedIn">
+                    <img loading="lazy" alt="" class="media-links" src="../images/general/linkedin-logo.svg">
+                </a>
+                <a href="https://github.com/ddavevo" target="_blank" aria-label="My GitHub">
+                    <img loading="lazy" alt="" class="media-links" id="rightmost-icon" src="../images/general/github-logo.svg">
+                </a>
+            </div>
+        </div>    
+    </footer>
 </body>
+
+<script>
+    const hamburgerL = document.querySelector(".hamburger");
+    const menuL = document.querySelector(".menu");
+    function myFunction(x) { x.classList.toggle("active"); }
+</script>
+
+<script src="/javascript/lottie-loading.js" async></script>
+<script src="/javascript/case-study-links.js" defer></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fa5be1bd3f984e9f94e013099a36c4c4"}'></script><!-- End Cloudflare Web Analytics -->
+
 </html>
