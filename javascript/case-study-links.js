@@ -1,5 +1,5 @@
 // Handling webp vs. png loading
-/*
+
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('picture').forEach(picture => {
     const source = picture.querySelector('source');
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (source && img) {
       const testImg = new Image();
-      testImg.src = source.srcset;
+      testImg.src = source.srcset.split(',')[0].split(' ')[0];
 
       testImg.onerror = () => {
         // Remove the source so Safari reverts to <img> src
@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-*/
 
 // ===================== TOC Section Highlight =====================
 window.addEventListener('DOMContentLoaded', () => {
