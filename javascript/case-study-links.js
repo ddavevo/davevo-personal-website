@@ -1,20 +1,38 @@
 // Handling webp vs. png loading
+/*
+// Improved: Only set src/srcset for supported format after checking WebP support
+function supportsWebP(callback) {
+  const img = new window.Image();
+  img.onload = function () { callback(img.width > 0 && img.height > 0); };
+  img.onerror = function () { callback(false); };
+  img.src = "data:image/webp;base64,UklGRiIAAABXRUJQVlA4TAYAAAAvAAAAAAfQ//73v/+BiOh/AAA=";
+}
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('picture').forEach(picture => {
-    const source = picture.querySelector('source');
-    const img = picture.querySelector('img');
+  supportsWebP(function (isWebP) {
+    document.querySelectorAll('picture').forEach(picture => {
+      const source = picture.querySelector('source');
+      const img = picture.querySelector('img');
+      if (!source || !img) return;
 
-    if (source && img) {
-      const testImg = new Image();
-      testImg.src = source.srcset.split(',')[0].split(' ')[0];
+      // Store data attributes for both formats
+      const webpSrcset = source.getAttribute('data-webp-srcset') || source.getAttribute('srcset');
+      const pngSrcset = img.getAttribute('data-png-srcset');
+      const pngSrc = img.getAttribute('data-png-src') || img.getAttribute('src');
 
-      testImg.onerror = () => {
-        // Remove the source so Safari reverts to <img> src
-        source.remove();
-        img.src = img.getAttribute('src');
-      };
-    }
+          if (isWebP) {
+            // Only set webp srcset on <source>; do NOT set img src/srcset
+            if (webpSrcset) source.setAttribute('srcset', webpSrcset);
+            // Remove any src/srcset from <img> to avoid forcing PNG
+            img.removeAttribute('src');
+            img.removeAttribute('srcset');
+          } else {
+            // Remove <source> so only <img> loads (png)
+            source.remove();
+            if (pngSrc) img.setAttribute('src', pngSrc);
+            if (pngSrcset) img.setAttribute('srcset', pngSrcset);
+          }
+    });
   });
 });
 
@@ -42,6 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   targets.forEach(el => observer.observe(el));
 });
+*/
 
 // ===================== Video Lazy Play/Pause =====================
 window.addEventListener('DOMContentLoaded', () => {
