@@ -82,7 +82,7 @@
 .hamburger {
     /* Align menu button to the right by putting flexible space to the left */
     margin-left: auto;
-    width: 2rem;
+    width: 0;
 }
 .ham-bars {
     width: 0px;
@@ -297,6 +297,7 @@
     }
     .hamburger {
         width: 4.8rem;
+        margin-top: 0.5rem;
     }
     .hamburger-menu-options {
         margin-top: 1.4rem;
