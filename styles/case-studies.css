@@ -94,10 +94,16 @@ blockquote {
 }
 
 .logistics {
-    display:flex; justify-content: space-around; gap: 2rem;
-    padding: 0 2.4rem 3.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-around; gap: 1rem 0;
+    padding: 0 2.4rem 2.4rem;
     max-width: 1312px; margin: 0 auto;
-    min-height: 7.5rem;
+    min-height: 8.75rem;
+}
+
+.logistics div {
+    width: 100%;
 }
 
 .hero .subtitle {
@@ -592,10 +598,8 @@ blockquote {
     }
 
     .logistics {
-        display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-        min-height: 240px;
+        min-height: 15rem;
     }
 
     .table-of-contents {

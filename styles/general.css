@@ -55,12 +55,13 @@
 @font-face {
     font-family: gravity-bold;
     font-display: swap;
-    src: url('../fonts/Gravity-Bold.woff2') format('woff2');
+    src: url('../fonts/Gravity-Bold.woff2') format('woff2'),
+        local(Verdana);
     size-adjust:101%; ascent-override:92%; descent-override:24%; line-gap-override:0%;
 }
 
 .fraunces {
-  font-family: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+  font-family: "Fraunces", ui-serif, Georgia, serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: italic;

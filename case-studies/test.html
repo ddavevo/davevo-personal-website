@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- ======================================= -->
+
+    <link href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=block" as="style" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=block">
+
+    <!-- ======================================= -->
+
+    <link rel="preload" href="/styles/general.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/general.css"></noscript>
+
+    <link rel="preload" href="/styles/boilerplate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/boilerplate.css"></noscript>
+
+    <link rel="preload" href="/styles/case-studies.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/case-studies.css"></noscript>
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html">
+            <div class="wordmark open-new-page"> <!-- 111px x 74px / 127px x 74px -->
+                <span style="border: 1px solid" class="fraunces">dave v</span>
+                <img class="stylized-o" alt="" aria-label="Navigate back to homepage" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-2.png">
+            </div> 
+        </a>
+
+        <button type="button" aria-label="Hamburger Icon" class="hamburger" onclick="myFunction(this)">
+            <div class="ham-bars" id="bar1"></div>
+            <div class="ham-bars" id="bar2"></div>
+            <div class="ham-bars" id="bar3"></div>
+        </button>
+
+        <div class="menu">
+            <ul class="hamburger-menu-options">
+                <li> <!-- 45px x 22px / 49px x 22px -->
+                    <a style="border: 1px solid;" class="underline-button open-new-page" href="../about.html">About</a>
+                </li>
+                <li> <!-- 84px x 22px / 92px x 22px -->
+                    <a style="border: 1px solid;" class="underline-button open-new-page" href="../playground.html">
+                        Playground
+                    </a>
+                </li>
+                <li> <!-- 63px x 22px / 65px x 22px -->
+                    <a style="border: 1px solid;" class="underline-button open-new-page" href="https://drive.google.com/file/d/1OCZUXgrLguEa5f5sjY4AUzZDR1TiWaqZ/view?usp=sharing" target="_blank">
+                        Résumé
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="header-container"></div>
+</body>
+</html>
