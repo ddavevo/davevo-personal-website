@@ -1,26 +1,100 @@
-// ===================== Video Lazy Play/Pause =====================
-window.addEventListener('DOMContentLoaded', () => {
-  const vids = document.querySelectorAll('video');
-  if (!vids.length) return;
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".main-container section");
 
-  vids.forEach(v => {
-    v.setAttribute('preload', 'none');
-    v.removeAttribute('autoplay'); // we'll control via IO
-    v.pause();
-  });
+  function revealSection(section) {
+    if (section.classList.contains("visible")) return;
+    section.classList.add("visible");
 
-  const vObserver = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      const v = e.target;
-      if (e.isIntersecting) {
-        // start playing only when visible
-        v.play().catch(() => {});
-      } else {
-        v.pause();
-        v.currentTime = 0; // optional: free up decoder
+    // Lazy-load <img>
+    section.querySelectorAll("img[data-src]").forEach(img => {
+      img.src = img.dataset.src;
+    });
+
+    // Lazy-load <picture> sources
+    section.querySelectorAll("source[data-srcset]").forEach(source => {
+      source.srcset = source.dataset.srcset;
+    });
+
+    // Lazy-load <video> sources
+    section.querySelectorAll("video").forEach(video => {
+      const sources = video.querySelectorAll("source[data-src]");
+      let loaded = false;
+
+      sources.forEach(source => {
+        if (source.dataset.src) {
+          source.src = source.dataset.src;
+          loaded = true;
+        }
+      });
+
+      if (loaded) {
+        video.load();
+        if (video.muted) {
+          video.play().catch(err => {
+            console.warn("Autoplay failed:", err);
+          });
+        }
       }
     });
-  }, { threshold: 0.25 });
+  }
 
-  vids.forEach(v => vObserver.observe(v));
+  // IntersectionObserver for main reveal
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        revealSection(entry.target);
+      }
+    });
+  }, {
+    rootMargin: "100px 0px", // preload before entering
+    threshold: 0
+  });
+
+  sections.forEach(sec => {
+    revealObserver.observe(sec);
+
+    // Immediate check in case the section is already visible
+    const rect = sec.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      revealSection(sec);
+    }
+  });
+
+  // Scroll fallback for missed triggers
+  window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+      if (!sec.classList.contains("visible")) {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 200 && rect.bottom > -200) {
+          revealSection(sec);
+        }
+      }
+    });
+  });
+
+  // ===================== TOC Section Highlight =====================
+  const tocLinks = Array.from(document.querySelectorAll('.table-of-contents li a'));
+  if (tocLinks.length) {
+    const tocTargets = tocLinks
+      .map(a => document.querySelector(a.getAttribute('href')))
+      .filter(Boolean);
+
+    const setActive = (id) => {
+      tocLinks.forEach(a => {
+        a.parentElement.classList.toggle('active', a.getAttribute('href') === `#${id}`);
+      });
+    };
+
+    const tocObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const id = entry.target.getAttribute('id');
+        if (entry.isIntersecting) setActive(id);
+      });
+    }, {
+      rootMargin: '0px 0px -55% 0px',
+      threshold: [0, 0.25, 0.5, 0.75, 1]
+    });
+
+    tocTargets.forEach(el => tocObserver.observe(el));
+  }
 });

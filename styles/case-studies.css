@@ -51,11 +51,19 @@ blockquote {
 
 /* ====================================================================== */
 
-.toc-spacer {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    margin-top: -8rem;
+.toc-section {
+    display: inline-block;
+    font-family: gravity;
+    color: var(--accent-500);
+    border: 1px solid var(--accent-400);
+    background-color: var(--accent-100);
+    padding: .25rem 0.75rem;
+    border-radius: 100px;  
+    margin-bottom: 0.75rem; 
+}
+
+[id] {
+  scroll-margin-top: 2rem; /* adjust for header height */
 }
 
 /* ====================================================================== */
@@ -94,16 +102,11 @@ blockquote {
 }
 
 .logistics {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
     justify-content: space-around; gap: 1rem 0;
     padding: 0 2.4rem 2.4rem;
     max-width: 1312px; margin: 0 auto;
     min-height: 8.75rem;
-
-    & div {
-        width: 100%;
-    }
 }
 
 .hero .subtitle {
@@ -184,22 +187,19 @@ blockquote {
     opacity: 1;
 }
 
-.toc-section {
-    display: inline-block;
-    font-family: gravity;
-    color: var(--accent-500);
-    border: 1px solid var(--accent-400);
-    background-color: var(--accent-100);
-    padding: .25rem 0.75rem;
-    border-radius: 100px;  
-    margin-bottom: 0.75rem; 
-}
-
 /* ================================================================= */
 
 .main-container section {
     padding-bottom: 6ch;
     content-visibility: auto;
+    opacity: 0;
+    transform: translateY(4rem);
+    transition: opacity 1s cubic-bezier(.17,.67,.75,1.06), transform 1.75s cubic-bezier(.17,.67,.75,1.06);
+}
+
+.main-container section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .main-container article {
@@ -605,6 +605,7 @@ blockquote {
     }
 
     .logistics {
+        display: grid;
         grid-template-columns: 1fr 1fr;
         min-height: 15rem;
     }

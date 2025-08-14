@@ -8,7 +8,6 @@
   document.head.appendChild(script);
   }
 
-  // ...existing code...
 // ===================== Lottie Loader (delayed to after 'load') =====================
 (function() {
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -92,7 +91,7 @@
         el.dataset.loaded = "true";
         const path = el.dataset.src;
         const loop = el.dataset.loop === "true";
-        const renderer = el.dataset.renderer || "canvas"; // default to canvas
+        const renderer = el.dataset.renderer || "svg";
 
         try {
           const animData = await loadLottieFromDotLottie(path);
