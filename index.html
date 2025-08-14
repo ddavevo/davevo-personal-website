@@ -189,9 +189,10 @@
 </body>
 
 <script>
-    const hamburgerL = document.querySelector(".hamburger");
-    const menuL = document.querySelector(".menu");
-    function myFunction(x) { x.classList.toggle("active"); }
+    function myFunction(btn) {
+  btn.classList.toggle("active");
+  btn.closest(".header").classList.toggle("menu-open");
+}
 </script>
 
 <script>
