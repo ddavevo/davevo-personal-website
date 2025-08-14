@@ -73,10 +73,10 @@ blockquote {
     color: var(--bg);
     padding-top: 6rem;
     min-height: calc(6rem + 300px + 7.5rem + (1.2em * 6) + 4.8rem); 
-}
 
-.hero p {
-    color: var(--gray-300);
+    & p {
+        color: var(--gray-300);
+    }
 }
 
 .hero:after {
@@ -100,10 +100,10 @@ blockquote {
     padding: 0 2.4rem 2.4rem;
     max-width: 1312px; margin: 0 auto;
     min-height: 8.75rem;
-}
 
-.logistics div {
-    width: 100%;
+    & div {
+        width: 100%;
+    }
 }
 
 .hero .subtitle {
@@ -115,14 +115,14 @@ blockquote {
     width: 100%;
     height: 0.8rem;
     background-image: var(--case-study);
-}
 
-.hero-ribbon img {
-    position: absolute;
-    width: 80px;
-    height: 74px;
-    right: 8%;
-    transform: translateY(-50%);
+    & img {
+        position: absolute;
+        width: 80px;
+        height: 74px;
+        right: 8%;
+        transform: translateY(-50%);
+    }
 }
 
 /* ============================================================== */
@@ -165,16 +165,17 @@ blockquote {
     text-decoration: none;
     transition: 0.25s ease; 
 }
-.table-of-contents li.active a,
-.table-of-contents li a:hover { 
-    color: var(--neutral-900);
-}
 
 .table-of-contents li a:before {
     position: absolute; 
     content: "•";
     margin-left: -1rem;
     opacity: 0;
+}
+
+.table-of-contents li.active a,
+.table-of-contents li a:hover { 
+    color: var(--neutral-900);
 }
 
 .table-of-contents li a:hover:before,
@@ -221,11 +222,18 @@ blockquote {
 .columns * {
     object-fit: cover;
     object-position: 0 0;
-    /* min-height: 0; */
 }
 
 .columns img, .columns video, .columns figure {
     margin-bottom: 0;
+}
+
+.fake-h4 {
+    font-family: gravity-bold;
+    color: var(--accent-800);
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    margin-bottom: 2ch;
+    line-height: 150%; 
 }
 
 .gallery {
@@ -235,7 +243,7 @@ blockquote {
 }
 
 .gallery img {
-    /* width: 1fr; */
+    width: 1fr;
     height: 400px;
     object-fit: cover;
     object-position: 0 0;
@@ -264,8 +272,8 @@ blockquote {
 }
 
 .two-columns-text-and-image img {
-    /* width: auto; */
-    /* max-height: 500px; */
+    width: auto;
+    max-height: 500px;
     margin: 0;
 }
 
@@ -279,7 +287,6 @@ blockquote {
     border-radius: 0.6rem;
     background-color: var(--accent-100);
     border: 1.25px solid var(--accent-400);
-    /* max-width: clamp(min(70ch, 100%), 20vw, 160ch); */
 }
 
 .insight * {
@@ -441,7 +448,7 @@ blockquote {
 }
 
 #next-case-study:hover::before {
-    /* left: 100%; */
+    left: 100%;
 }
 
 /* ====================================================================== */
