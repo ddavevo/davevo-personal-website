@@ -193,13 +193,11 @@ blockquote {
     padding-bottom: 6ch;
     content-visibility: auto;
     opacity: 0;
-    transform: translateY(4rem);
     transition: opacity 1s cubic-bezier(.17,.67,.75,1.06), transform 1.75s cubic-bezier(.17,.67,.75,1.06);
 }
 
 .main-container section.visible {
   opacity: 1;
-  transform: translateY(0);
 }
 
 .main-container article {
