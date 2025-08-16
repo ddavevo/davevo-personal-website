@@ -53,14 +53,14 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach(sec => {
     revealObserver.observe(sec);
 
-    // Immediate check in case the section is already visible
+    // Immediate check
     const rect = sec.getBoundingClientRect();
     if (rect.top < window.innerHeight && rect.bottom > 0) {
       revealSection(sec);
     }
   });
 
-  // Scroll fallback for missed triggers
+  // Scroll fallback
   window.addEventListener("scroll", () => {
     sections.forEach(sec => {
       if (!sec.classList.contains("visible")) {
@@ -96,5 +96,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     tocTargets.forEach(el => tocObserver.observe(el));
+  }
+
+  // ===================== Hero Poster → Lottie Swap =====================
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const heroPoster = document.querySelector('.hero-poster');
+  const heroLottie = document.querySelector('.hero .lottie-anim');
+
+  if (heroPoster && heroLottie && !prefersReducedMotion) {
+    window.addEventListener('load', () => {
+      // dynamically load lottie script
+      const script = document.createElement('script');
+      script.src = '/lottie-player/lottie_light.min.js';
+      script.async = true;
+      script.onload = () => {
+        const inst = window.lottie.loadAnimation({
+          container: heroLottie,
+          renderer: "canvas",
+          loop: true,
+          autoplay: true,
+          path: heroLottie.dataset.src
+        });
+
+        inst.addEventListener("DOMLoaded", () => {
+          heroPoster.style.display = "none";   // hide poster
+          heroLottie.hidden = false;           // reveal Lottie
+        });
+      };
+      document.head.appendChild(script);
+    });
   }
 });
