@@ -112,35 +112,3 @@ document.addEventListener("DOMContentLoaded", () => {
     tocTargets.forEach(el => tocObserver.observe(el));
   }
 });
-
-
-  // ===================== Hero Poster → Lottie Swap =====================
-  
-  /*
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const heroPoster = document.querySelector('.hero-poster');
-  const heroLottie = document.querySelector('.hero .lottie-anim');
-
-  if (heroPoster && heroLottie && !prefersReducedMotion) {
-    window.addEventListener('load', () => {
-      // dynamically load lottie script
-      const script = document.createElement('script');
-      script.src = '/lottie-player/lottie_light.min.js';
-      script.async = true;
-      script.onload = () => {
-        const inst = window.lottie.loadAnimation({
-          container: heroLottie,
-          renderer: "svg",
-          loop: true,
-          autoplay: true,
-        });
-
-        inst.addEventListener("DOMLoaded", () => {
-          heroPoster.style.display = "none";   // hide poster
-
-        });
-      };
-      document.head.appendChild(script);
-    });
-  }
-  */

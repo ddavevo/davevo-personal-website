@@ -106,6 +106,17 @@
             el.animInstance = inst;
             el.hidden = false; // reveal once ready
 
+            // 👇 Hide poster if this is the hero anim
+            if (el.classList.contains("hero") || el.closest(".hero")) {
+              inst.addEventListener("DOMLoaded", () => {
+                const heroPoster = document.querySelector(".hero-poster");
+                if (heroPoster) {
+                  heroPoster.style.opacity = "0"; // fade out
+                  setTimeout(() => (heroPoster.style.display = "none"), 300);
+                }
+              });
+            }
+
             if (el.dataset.autoplay === "true") tryStart(el);
           });
         } catch (err) {
