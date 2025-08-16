@@ -46,6 +46,7 @@
     height: 3rem;
     transition: transform 0.75s cubic-bezier(.32,.02,.44,1.15);
     z-index: 1;
+    margin-bottom: 0;
 }
 
 .wordmark:hover {
