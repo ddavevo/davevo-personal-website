@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ===================== Hero Poster → Lottie Swap =====================
+  
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const heroPoster = document.querySelector('.hero-poster');
   const heroLottie = document.querySelector('.hero .lottie-anim');
@@ -115,12 +116,11 @@ document.addEventListener("DOMContentLoaded", () => {
           renderer: "svg",
           loop: true,
           autoplay: true,
-          path: heroLottie.dataset.src
         });
 
         inst.addEventListener("DOMLoaded", () => {
           heroPoster.style.display = "none";   // hide poster
-          heroLottie.hidden = false;           // reveal Lottie
+
         });
       };
       document.head.appendChild(script);
