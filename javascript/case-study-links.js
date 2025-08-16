@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
       script.onload = () => {
         const inst = window.lottie.loadAnimation({
           container: heroLottie,
-          renderer: "canvas",
+          renderer: "svg",
           loop: true,
           autoplay: true,
           path: heroLottie.dataset.src
