@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, {
-    threshold: 0.25 // play when at least 25% visible
+    threshold: 0
   });
 
   function revealSection(section) {
