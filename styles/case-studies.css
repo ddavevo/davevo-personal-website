@@ -192,6 +192,7 @@ blockquote {
 .main-container section {
     padding-bottom: 6ch;
     content-visibility: auto;
+    contain-intrinsic-size: auto;
     opacity: 0;
     transition: opacity 1s cubic-bezier(.17,.67,.75,1.06), transform 1.75s cubic-bezier(.17,.67,.75,1.06);
 }

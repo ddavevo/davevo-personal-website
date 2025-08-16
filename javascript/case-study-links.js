@@ -1,6 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".main-container section");
 
+  // ===================== Video Observer =====================
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target;
+      if (entry.isIntersecting) {
+        if (video.muted) {
+          video.play().catch(err => {
+            console.warn("Autoplay failed:", err);
+          });
+        }
+      } else {
+        video.pause();
+      }
+    });
+  }, {
+    threshold: 0.25 // play when at least 25% visible
+  });
+
   function revealSection(section) {
     if (section.classList.contains("visible")) return;
     section.classList.add("visible");
@@ -18,23 +36,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // Lazy-load <video> sources
     section.querySelectorAll("video").forEach(video => {
       const sources = video.querySelectorAll("source[data-src]");
-      let loaded = false;
 
+      // Only replace sources if they haven’t already been set
       sources.forEach(source => {
-        if (source.dataset.src) {
+        if (source.dataset.src && !source.src) {
           source.src = source.dataset.src;
-          loaded = true;
         }
       });
 
-      if (loaded) {
-        video.load();
-        if (video.muted) {
-          video.play().catch(err => {
-            console.warn("Autoplay failed:", err);
-          });
-        }
-      }
+      // Force video to recognize new sources
+      video.load();
+
+      // Observe video for play/pause
+      videoObserver.observe(video);
     });
   }
 
@@ -97,6 +111,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tocTargets.forEach(el => tocObserver.observe(el));
   }
+});
+
 
   // ===================== Hero Poster → Lottie Swap =====================
   
@@ -128,4 +144,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   */
-});
