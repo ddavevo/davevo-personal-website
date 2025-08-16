@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ===================== Hero Poster → Lottie Swap =====================
   
+  /*
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const heroPoster = document.querySelector('.hero-poster');
   const heroLottie = document.querySelector('.hero .lottie-anim');
@@ -126,4 +127,5 @@ document.addEventListener("DOMContentLoaded", () => {
       document.head.appendChild(script);
     });
   }
+  */
 });
