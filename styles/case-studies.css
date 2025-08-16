@@ -62,10 +62,6 @@ blockquote {
     margin-bottom: 0.75rem; 
 }
 
-[id] {
-  scroll-margin-top: 2rem; /* adjust for header height */
-}
-
 /* ====================================================================== */
 
 #case-study-title { /* 910px - 3 lines | 657px - 4 lines | 512px - 5 lines | 442px - 6 lines*/

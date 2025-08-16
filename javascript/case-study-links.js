@@ -87,28 +87,76 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===================== TOC Section Highlight =====================
-  const tocLinks = Array.from(document.querySelectorAll('.table-of-contents li a'));
-  if (tocLinks.length) {
+  window.addEventListener('DOMContentLoaded', () => {
+    const tocLinks = Array.from(document.querySelectorAll('.table-of-contents li a'));
+    if (!tocLinks.length) return;
+
     const tocTargets = tocLinks
       .map(a => document.querySelector(a.getAttribute('href')))
       .filter(Boolean);
 
-    const setActive = (id) => {
-      tocLinks.forEach(a => {
-        a.parentElement.classList.toggle('active', a.getAttribute('href') === `#${id}`);
-      });
-    };
+    let allowObserverUpdates = true;
 
-    const tocObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const id = entry.target.getAttribute('id');
-        if (entry.isIntersecting) setActive(id);
+    function setActive(id) {
+      if (!allowObserverUpdates) return;
+      tocLinks.forEach(a => {
+        a.parentElement.classList.toggle(
+          'active',
+          a.getAttribute('href') === `#${id}`
+        );
       });
+    }
+
+    // --- IntersectionObserver: pick section closest to top ---
+    const tocObserver = new IntersectionObserver(entries => {
+      if (!allowObserverUpdates) return;
+
+      const visible = entries
+        .filter(e => e.isIntersecting)
+        .sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top));
+
+      if (visible.length > 0) {
+        const id = visible[0].target.getAttribute('id');
+        setActive(id);
+      }
     }, {
-      rootMargin: '0px 0px -55% 0px',
+      rootMargin: '-20% 0px -70% 0px',
       threshold: [0, 0.25, 0.5, 0.75, 1]
     });
 
     tocTargets.forEach(el => tocObserver.observe(el));
-  }
+
+    // --- Click handler: smooth scroll with header offset ---
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const headerOffset = 128;
+      const elementPos = el.getBoundingClientRect().top + window.scrollY;
+      const offsetPos = elementPos - headerOffset;
+
+      window.scrollTo({
+        top: offsetPos,
+        behavior: 'smooth'
+      });
+    }
+
+    tocLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const id = link.getAttribute('href').substring(1);
+
+        // temporarily disable observer while scrolling
+        allowObserverUpdates = false;
+
+        tocLinks.forEach(a => a.parentElement.classList.remove('active'));
+        link.parentElement.classList.add('active');
+
+        scrollToSection(id);
+
+        // re-enable observer after scroll finishes
+        setTimeout(() => { allowObserverUpdates = true; }, 900);
+      });
+    });
+  });
 });
