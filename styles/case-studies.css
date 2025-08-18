@@ -44,9 +44,28 @@ main img {
 
 blockquote {
     display: flex;
-    flex-direction: column;
-    min-height: 0;
-    gap: 1rem;
+    min-height: 200px;
+    margin: auto auto;
+    background-image: linear-gradient(var(--accent-100), var(--neutral-200));
+    border-radius: 1rem;
+}
+
+blockquote h4 {
+    position: relative;
+    text-align: center;
+    margin: auto auto;
+}
+
+details {
+    padding: 0.5rem 0 0 0;
+    border-top: 1px solid var(--neutral-600);
+    border-bottom: 1px solid var(--neutral-600);
+}
+
+summary {
+    color: var(--neutral-800);
+    line-height: 150%; 
+    padding: 1.5rem 0 2rem 0;
 }
 
 /* ====================================================================== */
