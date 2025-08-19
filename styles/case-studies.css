@@ -54,6 +54,7 @@ blockquote h4 {
     position: relative;
     text-align: center;
     margin: auto auto;
+    padding: 2rem;
 }
 
 details {
@@ -693,6 +694,10 @@ summary {
 
     .columns p {
         width: 100%;
+    }
+
+    blockquote h4 {
+        font-size: clamp(1rem, 2vw, 1.25rem);
     }
 }
 
