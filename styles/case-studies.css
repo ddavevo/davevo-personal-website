@@ -57,15 +57,24 @@ blockquote h4 {
 }
 
 details {
+    position: relative;
     padding: 0.5rem 0 0 0;
     border-top: 1px solid var(--neutral-600);
-    border-bottom: 1px solid var(--neutral-600);
+}
+
+details article {
+    padding: 0 2.5rem;
 }
 
 summary {
+    position: sticky;
+    top: 6rem;
     color: var(--neutral-800);
+    background-color: var(--bg);
     line-height: 150%; 
     padding: 1.5rem 0 2rem 0;
+    border-bottom: 1px solid var(--neutral-600);
+    margin-bottom: 2rem;
 }
 
 /* ====================================================================== */
@@ -672,6 +681,10 @@ summary {
 
     .hmw-wrap h2::after {
         visibility: collapse;
+    }
+
+    details article {
+        padding: 0;
     }
 }
 
