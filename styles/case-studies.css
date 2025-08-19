@@ -251,6 +251,10 @@ summary {
     margin-bottom: 0;
 }
 
+.columns p {
+    width: 95%;
+}
+
 .fake-h4 {
     font-family: gravity-bold;
     color: var(--accent-800);
@@ -685,6 +689,10 @@ summary {
 
     details article {
         padding: 0;
+    }
+
+    .columns p {
+        width: 100%;
     }
 }
 
