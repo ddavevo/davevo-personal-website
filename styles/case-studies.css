@@ -50,11 +50,12 @@ blockquote {
     border-radius: 1rem;
 }
 
-blockquote h4 {
+blockquote h4, blockquote .fake-h4 {
     position: relative;
     text-align: center;
     margin: auto auto;
     padding: 2rem;
+    margin-bottom: 0;
 }
 
 details {
@@ -218,7 +219,6 @@ summary {
     padding-bottom: 6ch;
     content-visibility: auto;
     contain-intrinsic-size: auto;
-    opacity: 0;
     transition: opacity 1s cubic-bezier(.17,.67,.75,1.06), transform 1.75s cubic-bezier(.17,.67,.75,1.06);
 }
 
@@ -495,7 +495,7 @@ summary {
 }
 
 .hmw-wrap h2::after {
-    position: absolute; 
+    position: absolute;
     content: url("https://media.dave-vo.com/file/dvfolio/general/logo-stroked.png");
     width: 2rem; height: 2.25rem;
     left: -1.75rem; 
@@ -696,7 +696,7 @@ summary {
         width: 100%;
     }
 
-    blockquote h4 {
+    blockquote h4, blockquote .fake-h4 {
         font-size: clamp(1rem, 2vw, 1.25rem);
     }
 }
