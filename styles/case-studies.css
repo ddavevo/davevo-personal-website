@@ -44,7 +44,6 @@ main img {
 
 blockquote {
     display: flex;
-    min-height: 200px;
     margin: auto auto;
     background-image: linear-gradient(var(--accent-100), var(--neutral-200));
     border-radius: 1rem;
@@ -54,7 +53,7 @@ blockquote h4, blockquote .fake-h4 {
     position: relative;
     text-align: center;
     margin: auto auto;
-    padding: 2rem;
+    padding: 3rem;
     margin-bottom: 0;
 }
 
@@ -649,8 +648,7 @@ summary {
     }
 
     .main-container {
-        width: calc(100% - 4.8rem);
-        max-width: 410px;
+        width: clamp(calc(320px - 4.8rem), calc(100% - 4.8rem), 410px);
         margin: 0 auto;
         padding: 0;
     }
