@@ -149,6 +149,10 @@
     text-wrap: balance;
 }
 
+.keywords {
+    padding: 0;
+}
+
 .keywords li {
     font-family: gravity;
     display: inline;
