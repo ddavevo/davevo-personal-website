@@ -37,8 +37,14 @@
 .wordmark span {
     letter-spacing: -0.1rem;
     font-size: 48px;
-    color: var(--accent-400);
+    background: linear-gradient(var(--accent-600), var(--accent-400) 80%);
     margin-right: 0.125rem;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
 }
 
 .stylized-o {
