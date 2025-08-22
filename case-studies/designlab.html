@@ -1163,11 +1163,23 @@
 <link rel="preload" href="/styles/case-studies.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/styles/case-studies.css"></noscript>
 
-<script>
+<script defer>
     function myFunction(btn) {
-  btn.classList.toggle("active");
-  btn.closest(".header").classList.toggle("menu-open");
-}
+        btn.classList.toggle("active");
+        btn.closest(".header").classList.toggle("menu-open");
+    }
+</script>
+
+<script defer>
+    const detailsElements = document.querySelectorAll('details');
+
+    detailsElements.forEach(details => {
+    details.addEventListener('toggle', () => {
+        if (!details.open) { // Check if the details element is now closed
+        details.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
+        }
+    });
+    });
 </script>
 
 <script src="/javascript/lottie-loading.js" async></script>
