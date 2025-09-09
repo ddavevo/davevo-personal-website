@@ -1,5 +1,7 @@
 main p {
     max-width: 80ch;
+    color: var(--neutral-700);
+    margin-top: 1rem;
 }
 
 .about-page {
@@ -14,14 +16,29 @@ main p {
 .landing-text {
     font-weight: 500;
     letter-spacing: -0.05rem;
-    color: var(--accent-400);
     font-size: clamp(3rem, 4.25vw, 4.5rem);
     line-height: 100%;
     margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+
+    background: repeating-linear-gradient(to bottom, var(--accent-600) 0, var(--accent-400) 2.64rem, var(--accent-400) 3.3rem);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
-.functional, .design-values, .fun-stuff {
+section {
     margin-bottom: 4rem;
+}
+
+ul {
+    margin: 1.25rem 0 1.75rem 0;
+}
+
+li {
+    margin-bottom: .5rem;
+    color: var(--neutral-800);
 }
 
 .functional {
@@ -33,6 +50,10 @@ main p {
 .profile-pic-container {
     display: flex;
     flex-direction: column;
+}
+
+.profile-pic-container p {
+    margin-top: 0;
 }
 
 .profile-pic, .playlist {

@@ -144,9 +144,9 @@ ul {
     line-height: 2.4rem;
 }
 
-a:link, a:visited, a:hover, a:active { 
+a, a:link, a:visited, a:hover, a:active { 
     text-decoration: none;
-    color: inherit; 
+    color: var(--accent-800);
 }
 
 b {
@@ -175,6 +175,7 @@ button {
 .underline-button {
     position: relative;
     white-space: nowrap;
+    color: var(--accent-800);
 }
 
 .underline-button::after {

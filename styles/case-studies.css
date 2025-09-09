@@ -34,7 +34,7 @@ main {
 }
 
 main p {
-    color: var(--neutral-800);
+    color: var(--neutral-700);
 }
 
 main img {

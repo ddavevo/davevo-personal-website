@@ -20,6 +20,13 @@ main p {
     font-size: clamp(3rem, 4.25vw, 4.5rem);
     line-height: 100%;
     margin-bottom: .75ch;
+    padding-bottom: 0.5rem;
+
+    background: repeating-linear-gradient(to bottom, var(--accent-600) 0, var(--accent-400) 2.64rem, var(--accent-400) 3.3rem);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 .text-with-emote {
