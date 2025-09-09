@@ -4,6 +4,10 @@ main p {
     margin-top: 1rem;
 }
 
+main a {
+    color: var(--accent-800);
+}
+
 .about-page {
     padding: 8rem 4rem 1rem 4rem;
 
