@@ -37,6 +37,10 @@ main p {
     color: var(--neutral-700);
 }
 
+main a {
+    color: var(--accent-800);
+}
+
 main img {
     object-fit: contain;
     object-position: center;
