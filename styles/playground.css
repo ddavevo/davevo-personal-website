@@ -16,8 +16,7 @@ main a {
     padding: 10rem 4rem 1rem 4rem;
     position: relative;
     max-width: 1312px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
 }
 
 .landing-text {
@@ -34,6 +33,39 @@ main a {
     color: transparent;
 }
 
+.row {
+    column-count: 3;
+    column-gap: 2rem;
+}
+
+.gallery-item {
+    break-inside: avoid;
+    height: auto;
+    vertical-align: middle;
+    margin-bottom: 2rem;
+}
+
+.gallery-item h4, .gallery-item p {
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .row {
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .row {
+        column-count: 1;
+    }
+}
 
 @media screen and (max-width: 620px) {
     .playground-page {
