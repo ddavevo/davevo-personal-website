@@ -7,18 +7,27 @@
     <link rel="icon" type="image/x-icon" href="https://media.dave-vo.com/file/dvfolio/general/davevo_favicon.png">
 
     <!--CSS-->
-    <link rel="preload" href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=block" as="style" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=block">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
+    </noscript>
 
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/boilerplate.css">
-    <link rel="stylesheet" href="styles/about-page.css">
+    <!-- ======================================= -->
 
-    <script src="javascript/case-study-links.js"></script>
+    <link rel="preload" href="/styles/general.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/general.css"></noscript>
+
+    <link rel="preload" href="/styles/boilerplate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/boilerplate.css"></noscript>
+
+    <link rel="preload" href="styles/about-page.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles/about-page.css"></noscript>
 </head>
 
 <body>
@@ -60,9 +69,9 @@
 
         <section class="functional"> <!--Functional-->
             <section>
-                <h1 class="landing-text fraunces">dave, nice to meet ya~</h1>
+                <h1 class="landing-text fraunces"> hi there, i'm dave~</h1>
                 <p>
-                    I’m a product designer based in California who enjoys both the craft and the purpose. Always looking to build trustworthy experiences, delight with visuals, and solving problems, one day at a time.
+                    I'm a product designer based in California who enjoys both the craft and the purpose. Always looking to build trustworthy experiences, delight with visuals, and solving problems, one day at a time.
                 </p>
                 <p>
                     Currently seeking a role in product design or research. Previously, I’ve designed AI-assisted creativity and energy tech. Also very interested in design systems and product strategy. If you’re in these spaces, let’s chat~
@@ -84,7 +93,8 @@
                 </ul>
 
                 <p>
-                    Looking to hire? Reach out on <a class="underline-button open-new-page">LinkedIn</a> or <a class="underline-button open-new-page">email</a> – I’d be happy to meet you!
+                    Looking to hire? Reach out on <a href="https://www.linkedin.com/in/dave-vo" target="_blank" aria-label="My LinkedIn" class="underline-button open-new-page">LinkedIn</a> or 
+                    <a class="underline-button" href="mailto:ddavevoddesign@gmail.com" aria-label="My email.">email</a> – I’d be happy to meet you!
                 </p>
             </section>
 
@@ -103,16 +113,13 @@
 
         <section class="design-values"> <!--Paper cranes-->
             <h1 class="landing-text fraunces">(de)sign of good living</h1>
-            <div class="senbazuru">
-                <p>
-                    <i>senbazuru 千羽鶴 • (the act of folding 1,000 paper cranes)</i> 
-                </p>
-                <img class="listening-pic" src="https://media.dave-vo.com/file/dvfolio/about/listening-pic.png"> 
-            </div><br>
+            <p>
+                <i>senbazuru 千羽鶴 • (the act of folding 1,000 paper cranes)</i> 
+            </p><br>
 
             <div class="playlist-text-container">
                 <div class="playlist">
-                    <a href="https://open.spotify.com/playlist/0gmuRZRuqPMszO5Z6oOfsN?si=455a9de4c05d4880" target="_blank">
+                    <a class="open-new-page" href="https://open.spotify.com/playlist/0gmuRZRuqPMszO5Z6oOfsN?si=455a9de4c05d4880" target="_blank">
                         <img class="subliminal" src="https://media.dave-vo.com/file/dvfolio/about/subliminal-playlist.png">
                     </a>
                 </div>
@@ -138,14 +145,14 @@
         <div class="footer-container">
             <span class="footer-text"><b>@<script>document.write(new Date().getFullYear())</script> • Reach out and let's make it happen!</b></span>
             <div class="social-media-icons">
-                <a href="mailto:ddavevoddesign@gmail.com">
-                    <img class="media-links" src="../images/general/email-icon.svg" style="padding-right: .25rem;">
+                <a href="mailto:ddavevoddesign@gmail.com" aria-label="My email.">
+                    <img loading="lazy" alt="" class="media-links" src="../images/general/email-icon.svg" style="padding-right: .25rem;">
                 </a>
-                <a href="https://www.linkedin.com/in/dave-vo" target="_blank">
-                    <img class="media-links" src="../images/general/linkedin-logo.svg">
+                <a href="https://www.linkedin.com/in/dave-vo" target="_blank" aria-label="My LinkedIn" class="open-new-page">
+                    <img loading="lazy" alt="" class="media-links" src="../images/general/linkedin-logo.svg">
                 </a>
-                <a href="https://github.com/ddavevo" target="_blank">
-                    <img class="media-links" id="rightmost-icon" src="../images/general/github-logo.svg">
+                <a href="https://github.com/ddavevo" target="_blank" aria-label="My GitHub" class="open-new-page">
+                    <img loading="lazy" alt="" class="media-links" id="rightmost-icon" src="../images/general/github-logo.svg">
                 </a>
             </div>
         </div>    

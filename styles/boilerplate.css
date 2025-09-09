@@ -164,6 +164,10 @@
     text-align: center;
 }
 
+.made-with p, .made-with span {
+    color: var(--neutral-700);
+}
+
 .made-with span {
     margin-left: .15rem;
     padding: .1rem .5em;

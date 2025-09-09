@@ -100,6 +100,7 @@
                 <ul>
                     <li><a href="#background">Background</a></li>
                     <li><a href="#solution">Solution</a></li>
+                    <li><a href="#design">Design</a></li>
                     <li><a href="#methods">Methods</a></li>
                     <li><a href="#results">Results</a></li>
                     <li><a href="#journey">Our Journey</a></li>
@@ -271,7 +272,8 @@
                     <hr>
                 </article>
 
-                <div class="columns"> <!--Add Competitors/Dims-->
+                <article> <!--Add Competitors/Dims-->
+                    <div class="columns">
                     <div>
                         <p class="fake-h4">
                             Uncover more market players and factors by expanding your table with AI-suggested competitors and dimensions.
@@ -290,110 +292,16 @@
                         </div>
                     </div>
                 </div>
+                </article>
             </section>
 
-            <section id="methods"> <!--Research Methods-->
+            <section id="design"> <!--Design-->
                 <div class="toc-spacer"></div>
                 <span class="toc-section">
-                    03 - Methods
+                    03 - Design
                 </span>
-
                 <article>
-                    <h2>How we constructed our research methodology</h2>
-
-                    <p class="subtitle">User Study Setup</p>
-                    <h3>Defining our conditions</h3>
-                    <p>
-                        We ran a between-subjects study with N=47 university participants, most with little to no design thinking experience, randomly assigned to one of three conditions:
-                </article>
-
-                <article> <!--No-AI-->
-                    <div class="columns">
-                        <div>
-                            <span class="tag no-ai">No-AI</span>
-                            <p>
-                                Users approach a problem/solution without LLM assistance, manually filling out the templates based only on their current knowledge.
-                            </p>
-                        </div>
-                        <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                            <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/think-about-why.mp4" type="video/mp4"/>
-                            <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/think-about-why.webm" type="video/webm"/>
-                        </video>
-                    </div>
-                    <hr>
-                </article>
-
-                <article> <!--Co-Led-->
-                    <div class="columns">
-                        <div>
-                            <span class="tag co-led">Co-Led</span>
-                            <p>
-                                Users gain access to LLM generation features in specific parts of the templates, assisting with reflection or proposing alternative ideas.
-                            </p>
-                        </div>
-                        <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                            <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/generate-why.mp4" type="video/mp4"/>
-                            <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/generate-why.webm" type="video/webm"/>
-                        </video>
-                    </div>
-                    <hr>
-                </article>
-
-                <article class="extra-space"> <!--AI-Led-->
-                    <div class="columns">
-                        <div>
-                            <span class="tag ai-led">AI-Led</span>
-                            <p>
-                            Templates are already filled out by AI. Users don't have to initiate any writing, only reading and processing what was generated.
-                        </div>
-                        <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                            <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/review-why.mp4" type="video/mp4"/>
-                            <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/review-why.webm" type="video/webm"/>
-                        </video>
-                    </div>
-                </article>
-
-                <!-- =================================================== -->
-
-                <article class="extra-space">
-                    <p class="subtitle">User Study Setup</p>
-                    <h3>
-                        Why design templates?
-                    </h3>
-                    <div class="columns">
-                        <figure>
-                            <picture>
-                                <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/five-whys-simplified.webp">
-                                <img loading="lazy" alt="5 Whys Template" data-src="https://media.dave-vo.com/file/dvfolio/designlab/five-whys-simplified.png">
-                            </picture>
-                            <figcaption>
-                                5 Whys
-                            </figcaption>
-                        </figure>
-
-                        <figure>
-                            <picture>
-                                <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/competitive-analysis-simplified.webp">
-                                <img loading="lazy" alt="Competitive Analysis Template" data-src="https://media.dave-vo.com/file/dvfolio/designlab/competitive-analysis-simplified.png"> 
-                            </picture>
-                            <figcaption>
-                                Competitive Analysis
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <hr>
-                    <p>
-                        To explore how different conditions think and engage in creative thinking, we looked at integrating an LLM into design templates. The key advantage comes in being both a familiar and task-oriented format for guiding users to dive into problems and develop solutions. 
-                    </p>
-                    <p>
-                        This allowed us to visibly observe their thinking at each stage and which content/factors inspired their end deliverables.
-                    </p>
-                </article>
-
-                <article>
-                    <p class="subtitle">User Study Setup</p>
-                    <h3>Redesigning the original plugin prototype</h3>
-                    <hr>
+                    <h2>Redesigning the original plugin prototype</h2>
                     <p>
                         In reviewing the PhD’s earlier version of the plugin, we identified two major limitations with integrating AI into the problem-solving workflow:
                     </p>
@@ -422,18 +330,16 @@
                         </div>
 
                     </div>
-                </article>
 
-                <article>
                     <p>
                         In the interest of our research question, we needed the interactions to keep users thinking so we could focus on how they’re affected by the tool. Here are the major adjustments we made to the interface:
                     </p>
                 </article>
 
                 <article> <!-- DESIGN DECISIONS 1-->
-                    <h4>
+                    <h3>
                         Interactions with AI should be easy to comprehend and actionable.
-                    </h4>
+                    </h3>
                     <picture>
                         <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/design-overview1.webp">
                         <img loading="lazy" alt="Our approach to actionable, in-situ template insights." data-src="https://media.dave-vo.com/file/dvfolio/designlab/design-overview1.png">
@@ -458,9 +364,9 @@
                 </article>
 
                 <article> <!-- DESIGN DECISIONS 2-->
-                    <h4>
+                    <h3>
                        The plugin should guide users to keep thinking and exploring across sections without dictating exactly what to do next.
-                    </h4>
+                    </h3>
                     <picture>
                         <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/design-overview2.webp">
                         <img loading="lazy" alt="A snippet of additional guidance screens we added." data-src="https://media.dave-vo.com/file/dvfolio/designlab/design-overview2.png">
@@ -485,9 +391,9 @@
                 </article>
 
                 <article> <!-- DESIGN DECISIONS 3-->
-                    <h4>
+                    <h3>
                         Keep users focused on their main goals by ensuring every interaction directly supports their progress.
-                    </h4>
+                    </h3>
                     <picture>
                             <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/design-overview3.webp">
                             <img loading="lazy" alt="Our approach to keeping the process seamless using copywriting." data-src="https://media.dave-vo.com/file/dvfolio/designlab/design-overview3.png">
@@ -512,7 +418,7 @@
 
                 <!-- =================================================== -->
                  
-                <article class="extra-space"> <!-- FULL DESIGN RATIONALE -->
+                <article> <!-- FULL DESIGN RATIONALE -->
                     <details aria-label="Expand to read the full design rationale.">
                         <summary>
                             <b>
@@ -658,6 +564,105 @@
                         </article>
                     </details>
                 </article>
+            </section>
+
+            <section id="methods"> <!--Research Methods-->
+                <div class="toc-spacer"></div>
+                <span class="toc-section">
+                    04 - Methods
+                </span>
+
+                <article>
+                    <h2>How we constructed our research methodology</h2>
+
+                    <p class="subtitle">User Study Setup</p>
+                    <h3>Defining our conditions</h3>
+                    <p>
+                        We ran a between-subjects study with N=47 university participants, most with little to no design thinking experience, randomly assigned to one of three conditions:
+                </article>
+
+                <article> <!--No-AI-->
+                    <div class="columns">
+                        <div>
+                            <span class="tag no-ai">No-AI</span>
+                            <p>
+                                Users approach a problem/solution without LLM assistance, manually filling out the templates based only on their current knowledge.
+                            </p>
+                        </div>
+                        <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                            <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/think-about-why.mp4" type="video/mp4"/>
+                            <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/think-about-why.webm" type="video/webm"/>
+                        </video>
+                    </div>
+                    <hr>
+                </article>
+
+                <article> <!--Co-Led-->
+                    <div class="columns">
+                        <div>
+                            <span class="tag co-led">Co-Led</span>
+                            <p>
+                                Users gain access to LLM generation features in specific parts of the templates, assisting with reflection or proposing alternative ideas.
+                            </p>
+                        </div>
+                        <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                            <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/generate-why.mp4" type="video/mp4"/>
+                            <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/generate-why.webm" type="video/webm"/>
+                        </video>
+                    </div>
+                    <hr>
+                </article>
+
+                <article class="extra-space"> <!--AI-Led-->
+                    <div class="columns">
+                        <div>
+                            <span class="tag ai-led">AI-Led</span>
+                            <p>
+                            Templates are already filled out by AI. Users don't have to initiate any writing, only reading and processing what was generated.
+                        </div>
+                        <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                            <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/review-why.mp4" type="video/mp4"/>
+                            <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/review-why.webm" type="video/webm"/>
+                        </video>
+                    </div>
+                </article>
+
+                <!-- =================================================== -->
+
+                <article class="extra-space">
+                    <p class="subtitle">User Study Setup</p>
+                    <h3>
+                        Why design templates?
+                    </h3>
+                    <div class="columns">
+                        <figure>
+                            <picture>
+                                <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/five-whys-simplified.webp">
+                                <img loading="lazy" alt="5 Whys Template" data-src="https://media.dave-vo.com/file/dvfolio/designlab/five-whys-simplified.png">
+                            </picture>
+                            <figcaption>
+                                5 Whys
+                            </figcaption>
+                        </figure>
+
+                        <figure>
+                            <picture>
+                                <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/competitive-analysis-simplified.webp">
+                                <img loading="lazy" alt="Competitive Analysis Template" data-src="https://media.dave-vo.com/file/dvfolio/designlab/competitive-analysis-simplified.png"> 
+                            </picture>
+                            <figcaption>
+                                Competitive Analysis
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <hr>
+                    <p>
+                        To explore how different conditions think and engage in creative thinking, we looked at integrating an LLM into design templates. The key advantage comes in being both a familiar and task-oriented format for guiding users to dive into problems and develop solutions. 
+                    </p>
+                    <p>
+                        This allowed us to visibly observe their thinking at each stage and which content/factors inspired their end deliverables.
+                    </p>
+                </article>
 
                 <article>
                     <p class="subtitle">Data Analysis</p>
@@ -683,7 +688,7 @@
             <section id="results"> <!--Results-->
                 <div class="toc-spacer"></div>
                 <div class="toc-section">
-                    04 - Results
+                    05 - Results
                 </div>
 
                 <article class="extra-space">
@@ -956,7 +961,7 @@
             <section id="journey"> <!--Our Journey-->
                 <div class="toc-spacer"></div>
                 <div class="toc-section">
-                    05 - Our Journey
+                    06 - Our Journey
                 </div>
 
                 <article>
@@ -1055,13 +1060,13 @@
             <section id="reflection"> <!-- Reflection -->
                 <div class="toc-spacer"></div>
                 <div class="toc-section">
-                    06 - Reflection
+                    07 - Reflection
                 </div>
 
                 <article>
                     <h2>Informing design guidelines for future AI-assisted creativity tools</h2>
                     <p>
-                        This project taught me about surfacing the invisible experiences that shape how people create. It also reinforced how design and research are inseparable in crafting effective user studies.
+                        This project taught me about discovering the invisible experiences that shape how people create. It also reinforced how design and research are inseparable in crafting effective user studies.
                         Thank you UCSD Design Lab for bringing me on! 
                     </p>
                 </article>
@@ -1070,7 +1075,7 @@
                     <div class="reflection-unit">
                         <span class="tag">Learning</span>
                         <h3>
-                            Humanizing our key findings with storytelling
+                            Humanizing our key findings
                         </h3>
                     </div>
                     <p>
@@ -1094,12 +1099,11 @@
                     <div class="reflection-unit">
                         <span class="tag">What I would have done differently</span>
                         <h3>
-                            Continue seeking out mentorship
+                            Starting with a storytelling perspective
                         </h3>
                     </div>
                     <p>
-                        Academic research meant the ceiling was high and felt hard to reach on my own. For me, the most valuable part was getting advice from all the researchers I met, so I wish I had taken more chances to accelerate my growth by looping in more perspectives at crucial stages or hurdles.
-                    </p>
+                        In hindsight, I see how easy it was to get lost in patterns and numbers without a clear anchor. We had coding schemes, but next time I’d lean less on proving absolutes and more on using data to tell stories about how people think/do.
                 </article>
                 
                 <article>

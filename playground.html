@@ -6,18 +6,27 @@
     <title>Playground - Dave Vo</title>
     <link rel="icon" type="image/x-icon" href="https://media.dave-vo.com/file/dvfolio/general/davevo_favicon.png">
 
-    <link rel="preload" href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=block" as="style" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=block">
-    
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/boilerplate.css">
-    <link rel="stylesheet" href="styles/playground.css">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
+    </noscript>
 
-    <script src="javascript/case-study-links.js"></script>
+    <!-- ======================================= -->
+
+    <link rel="preload" href="/styles/general.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/general.css"></noscript>
+
+    <link rel="preload" href="/styles/boilerplate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/boilerplate.css"></noscript>
+
+    <link rel="preload" href="styles/playground.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles/playground.css"></noscript>
 </head>
 
 <body>

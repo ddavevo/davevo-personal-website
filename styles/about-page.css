@@ -42,7 +42,7 @@ ul {
 
 li {
     margin-bottom: .5rem;
-    color: var(--neutral-800);
+    color: var(--neutral-700);
 }
 
 .functional {
@@ -127,12 +127,6 @@ li {
 
 .current-role-container figure:hover::before {
     left: 100%;
-}
-
-.senbazuru {
-    display: flex; 
-    justify-content: space-between; 
-    position: relative;
 }
 
 .subliminal {
