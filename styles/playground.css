@@ -36,6 +36,7 @@ main a {
 .row {
     column-count: 3;
     column-gap: 2rem;
+    padding-bottom: 6rem;
 }
 
 .gallery-item {
