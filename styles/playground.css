@@ -6,6 +6,7 @@ main p {
     max-width: 80ch;
     color: var(--neutral-700);
     margin-top: 1rem;
+    text-wrap: balance;
 }
 
 main a {
