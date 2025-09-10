@@ -41,7 +41,7 @@ main a {
 }
 
 .gallery-item {
-    break-inside: avoid;
+    overflow: hidden;
     height: auto;
     vertical-align: middle;
     margin-bottom: 2rem;
@@ -55,6 +55,12 @@ main a {
 .gallery-item img {
     width: 100%;
     height: auto;
+    object-fit: cover;
+}
+
+a > .gallery-item img:hover {
+    opacity: 70%;
+    transition: opacity 0.5s ease-in-out;
 }
 
 @media screen and (max-width: 1024px) {

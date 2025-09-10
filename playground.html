@@ -87,26 +87,26 @@
 
             <a class="open-new-page" href="https://ucsdguardian.org" target="_blank">
                 <div class="gallery-item">
-                <img src="https://media.dave-vo.com/file/dvfolio/playground/guardian-newspaper-quality-shot.PNG">
-                <h4>
-                    Designing the weekly print issue
-                </h4>
-                <p>
-                    Pick one up from your nearby newsstand.
-                </p>
-            </div>
+                    <img src="https://media.dave-vo.com/file/dvfolio/playground/guardian-newspaper-quality-shot.PNG">
+                    <h4>
+                        Designing the weekly print issue
+                    </h4>
+                    <p>
+                        Pick one up from your nearby newsstand.
+                    </p>
+                </div>
             </a>
 
             <a class="open-new-page" href="https://www.instagram.com/maximalistmag/?hl=en" target="_blank">
                 <div class="gallery-item">
-                <img src="https://media.dave-vo.com/file/dvfolio/playground/maxmag-zine-post.JPG">
-                <h4>
-                    Zines, zines, zines
-                </h4>
-                <p>
-                    ‘24-’25 EIC of Maximalist Magazine
-                </p>
-            </div>
+                    <img src="https://media.dave-vo.com/file/dvfolio/playground/maxmag-zine-post.JPG">
+                    <h4>
+                        Zines, zines, zines
+                    </h4>
+                    <p>
+                        ‘24-’25 EIC of Maximalist Magazine
+                    </p>
+                </div>
             </a>
 
             <div class="gallery-item">
@@ -132,13 +132,22 @@
             </div>
 
             <div class="gallery-item">
-                <img src="https://media.dave-vo.com/file/dvfolio/playground/world-keeps-score-panel2.png">
-                <img src="https://media.dave-vo.com/file/dvfolio/playground/is-to-be.png">
+                <img src="https://media.dave-vo.com/file/dvfolio/playground/world-keeps-score-panel2-1100.png">
                 <h4>
-                    Experimenting on Procreate
+                    The World Keeps the Score
                 </h4>
                 <p>
-                    Gradient maps for life
+                    Panel 2/3, 2023
+                </p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://media.dave-vo.com/file/dvfolio/playground/is-to-be.png">
+                <h4>
+                    is to be
+                </h4>
+                <p>
+                    2024
                 </p>
             </div>
 
@@ -152,8 +161,9 @@
                 </p>
             </div>
 
-            <div class="gallery-item">
+            <div class="gallery-item" id="this-website">
                 <img src="https://media.dave-vo.com/file/dvfolio/playground/playground-this-website.png">
+                <audio src="/images/gnarly-katseye.mp3"></audio>
                 <h4>
                     This website
                 </h4>
@@ -188,9 +198,20 @@
 
 <script defer>
     function myFunction(btn) {
-  btn.classList.toggle("active");
-  btn.closest(".header").classList.toggle("menu-open");
-}
+        btn.classList.toggle("active");
+        btn.closest(".header").classList.toggle("menu-open");
+    }
+
+    const img = document.querySelector("#this-website");
+    const gnarly = document.querySelector("#this-website audio");
+
+    img.addEventListener("mouseover", () => {
+        gnarly.play();
+    });
+    img.addEventListener("mouseleave", () => {
+        gnarly.pause();
+        gnarly.currentTime = 0;
+    });
 </script>
  
 </html>
