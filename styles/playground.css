@@ -41,6 +41,7 @@ main a {
 }
 
 .gallery-item {
+    display: inline-block;
     overflow: hidden;
     height: auto;
     vertical-align: middle;

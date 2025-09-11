@@ -72,8 +72,8 @@
 /* ========================================================================= */
 
 .featured-case-studies {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     place-content: center;
     padding: 0rem 4rem;
