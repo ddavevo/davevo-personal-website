@@ -74,6 +74,7 @@
 .featured-case-studies {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-width: 1312px;
     gap: 2rem;
     place-content: center;
     padding: 0rem 4rem;
@@ -181,14 +182,6 @@
 /* ========================================================================= */
 
 @media screen and (min-width: 1321px) {
-    #projects-header, .featured-case-studies {
-        padding: 0 0 0 0;
-        position: relative;
-        max-width: 1312px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
     .project img {
         height: clamp(275px, 100rem, 400px);
     }

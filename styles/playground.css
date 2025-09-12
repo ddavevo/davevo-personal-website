@@ -59,7 +59,7 @@ main a {
     object-fit: cover;
 }
 
-a > .gallery-item img:hover {
+a > .gallery-item:hover{
     opacity: 70%;
     transition: opacity 0.5s ease-in-out;
 }
