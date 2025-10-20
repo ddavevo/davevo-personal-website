@@ -37,7 +37,7 @@
 .wordmark span {
     letter-spacing: -0.1rem;
     font-size: 48px;
-    background: linear-gradient(var(--accent-600), var(--accent-400) 80%);
+    background: linear-gradient(var(--accent-600), var(--accent-400) 69%);
     margin-right: 0.125rem;
 
     -webkit-background-clip: text;
