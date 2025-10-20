@@ -5,30 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playground - Dave Vo</title>
     <link rel="icon" type="image/x-icon" href="https://media.dave-vo.com/file/dvfolio/general/davevo_favicon.png">
-
-    <link href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
-    </noscript>
-
-    <!-- ======================================= -->
-
-    <link rel="preload" href="/styles/general.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/styles/general.css"></noscript>
-
-    <link rel="preload" href="/styles/boilerplate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/styles/boilerplate.css"></noscript>
-
-    <link rel="preload" href="styles/playground.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="styles/playground.css"></noscript>
-
-    <script src="/javascript/case-study-links.js" defer></script>
 </head>
 
 <body>
@@ -66,13 +42,13 @@
     </header>
     <div class="header-container"></div>
 
-    <main class="playground-page">
+    <main class="main-container">
         <h1 class="landing-text fraunces">design like there’s no ceiling</h1>
         <p style="margin-bottom: 4rem;">
             Outside of work, I always made time to connect with my creativity, whether by bouncing ideas with my friends or my whimsical personal projects. Check out some things I’m quite proud of!
         </p>
 
-        <div class="row">
+        <section class="row">
             <a class="open-new-page" href="https://www.instagram.com/p/DHFCWRryQRY/" target="_blank">
                 <div class="gallery-item">
                     <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
@@ -89,7 +65,10 @@
 
             <a class="open-new-page" href="https://ucsdguardian.org" target="_blank">
                 <div class="gallery-item">
-                    <img src="https://media.dave-vo.com/file/dvfolio/playground/guardian-newspaper-quality-shot.PNG">
+                    <picture>
+                        <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/evolving-research-question.webp"> -->
+                        <img loading="lazy" alt="A picture of UCSD Guardian newspaper" data-src="https://media.dave-vo.com/file/dvfolio/playground/guardian-newspaper-quality-shot.PNG">
+                    </picture>
                     <h4>
                         Designing the weekly print issue
                     </h4>
@@ -101,7 +80,10 @@
 
             <a class="open-new-page" href="https://www.instagram.com/maximalistmag/?hl=en" target="_blank">
                 <div class="gallery-item">
-                    <img src="https://media.dave-vo.com/file/dvfolio/playground/maxmag-zine-post.JPG">
+                    <picture>
+                        <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/evolving-research-question.webp"> -->
+                        <img loading="lazy" alt="Evolution of our research question" data-src="https://media.dave-vo.com/file/dvfolio/playground/maxmag-zine-post.JPG">
+                    </picture>
                     <h4>
                         Zines, zines, zines
                     </h4>
@@ -112,8 +94,14 @@
             </a>
 
             <div class="gallery-item">
-                <img src="https://media.dave-vo.com/file/dvfolio/playground/guardian-press-tv-min.png">
-                <img src="https://media.dave-vo.com/file/dvfolio/playground/guardian-press-marquee.png">
+                <picture>
+                    <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/evolving-research-question.webp"> -->
+                    <img loading="lazy" alt="A picture of our PRESS collateral live on the TVs at UCSD Price Center." data-src="https://media.dave-vo.com/file/dvfolio/playground/guardian-press-tv-min.png">
+                </picture>
+                <picture>
+                    <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/evolving-research-question.webp"> -->
+                    <img loading="lazy" alt="A picture of our PRESS collateral live on the marquee at UCSD Price Center." data-src="https://media.dave-vo.com/file/dvfolio/playground/guardian-press-marquee.png">
+                </picture>
                 <h4>
                     Vote YES on PRESS
                 </h4>
@@ -123,8 +111,14 @@
             </div>
 
             <div class="gallery-item">
-                <img src="/images/Design System - Splash Page.png">
-                <img src="https://media.dave-vo.com/file/dvfolio/playground/guardian-design-system-pitch.png">
+                <picture>
+                    <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/evolving-research-question.webp"> -->
+                    <img loading="lazy" alt="A picture of our PRESS collateral live on the TVs at UCSD Price Center." data-src="/images/Design System - Splash Page.png">
+                </picture>
+                <picture>
+                    <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/evolving-research-question.webp"> -->
+                    <img loading="lazy" alt="A slide from my pitch to all creative functions at The UCSD Guardian." data-src="https://media.dave-vo.com/file/dvfolio/playground/guardian-design-system-pitch.png">
+                </picture>
                 <h4>
                     Building out The UCSD Guardian’s official design system
                 </h4>
@@ -134,7 +128,10 @@
             </div>
 
             <div class="gallery-item">
-                <img src="https://media.dave-vo.com/file/dvfolio/playground/world-keeps-score-panel2-1100.png">
+                <picture>
+                    <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/playground/world-keeps-score-panel2-1100.webp">
+                    <img loading="lazy" alt="World Keeps The Score, my FA23 piece." data-src="https://media.dave-vo.com/file/dvfolio/playground/world-keeps-score-panel2-1100.png">
+                </picture>
                 <h4>
                     The World Keeps the Score
                 </h4>
@@ -144,7 +141,10 @@
             </div>
 
             <div class="gallery-item">
-                <img src="https://media.dave-vo.com/file/dvfolio/playground/is-to-be.png">
+                <picture>
+                    <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/evolving-research-question.webp"> -->
+                    <img loading="lazy" alt="is to be, my FA24 piece." data-src="https://media.dave-vo.com/file/dvfolio/playground/is-to-be.png">
+                </picture>
                 <h4>
                     is to be
                 </h4>
@@ -154,7 +154,10 @@
             </div>
 
             <div class="gallery-item">
-                <img src="https://media.dave-vo.com/file/dvfolio/playground/design-courses-ia.JPG">
+                <picture>
+                    <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/evolving-research-question.webp"> -->
+                    <img loading="lazy" alt="DSGN100 end-of-quarter showcase." data-src="https://media.dave-vo.com/file/dvfolio/playground/design-courses-ia.JPG">
+                </picture>
                 <h4>
                     Teaching for design courses
                 </h4>
@@ -165,18 +168,21 @@
 
             <a class="open-new-page" href="https://github.com/ddavevo" target="_blank">
                 <div class="gallery-item" id="this-website">
-                <img src="https://media.dave-vo.com/file/dvfolio/playground/playground-this-website.png">
-                <audio src="/images/gnarly-katseye.mp3"></audio>
-                <h4>
-                    This website (GNARLY)
-                </h4>
-                <p>
-                    Learning through code.
-                </p>
-                <p class="subtitle">Click anywhere to enable audio on hover.</p>
-            </div>
+                    <picture>
+                        <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/evolving-research-question.webp"> -->
+                        <img loading="lazy" alt="Personal brand asset." data-src="https://media.dave-vo.com/file/dvfolio/playground/playground-this-website.png">
+                    </picture>
+                    <audio src="/images/gnarly-katseye.mp3"></audio>
+                    <h4>
+                        This website (GNARLY)
+                    </h4>
+                    <p>
+                        Learning through code.
+                    </p>
+                    <p class="subtitle">Click anywhere to enable audio on hover.</p>
+                </div>
             </a>
-        </div>
+        </section>
     </main>
 
     <aside class="made-with" style="padding: 0 2.4rem">
@@ -201,6 +207,28 @@
     </footer>
 </body>
 
+<link href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap" media="print" onload="this.media='all'">
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
+</noscript>
+
+<!-- ======================================= -->
+
+<link rel="preload" href="/styles/general.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/styles/general.css"></noscript>
+
+<link rel="preload" href="/styles/boilerplate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/styles/boilerplate.css"></noscript>
+
+<link rel="preload" href="styles/playground.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="styles/playground.css"></noscript>
+
 <script defer>
     function myFunction(btn) {
         btn.classList.toggle("active");
@@ -218,5 +246,7 @@
         gnarly.currentTime = 0;
     });
 </script>
+
+<script src="/javascript/case-study-links.js" defer></script>
  
 </html>
