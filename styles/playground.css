@@ -22,12 +22,12 @@ main a {
 
 .landing-text {
     color: var(--accent-400);
-    font-size: clamp(3rem, 4.25vw, 4.5rem);
-    line-height: 100%;
+    line-height: 110%;
     margin-bottom: .75ch;
     padding-bottom: 0.5rem;
 
-    background: repeating-linear-gradient(to bottom, var(--accent-600) 0, var(--accent-400) 2.64rem, var(--accent-400) 3.3rem);
+    font-size: 3rem;
+    background: repeating-linear-gradient(to bottom, var(--accent-600), var(--accent-400) 2.75rem, var(--accent-400) 3.45rem);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -62,6 +62,17 @@ main a {
 a > .gallery-item:hover{
     opacity: 70%;
     transition: opacity 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 1312px) {
+    .landing-text {
+        font-size: 4rem;
+        background: repeating-linear-gradient(to bottom, var(--accent-600), var(--accent-400) 3.75rem, var(--accent-400) 4.75rem);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
 }
 
 @media screen and (max-width: 1024px) {
