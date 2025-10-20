@@ -30,7 +30,7 @@
     color: var(--accent-800);
     line-height: clamp(125%, 2vw, 100%);
     margin-bottom: 1rem;
-    font-size: clamp(1.3rem, 5vw, 2rem);
+    font-size: clamp(1.4rem, 5vw, 2rem);
 }
 
 .landing-link {
@@ -135,11 +135,10 @@
     font-family: gravity;
     display: inline;
     list-style-type: none;
-    white-space: nowrap;
-
     padding: .25rem 1rem;
     margin-right: 0.6rem;
     border-radius: 100rem;
+    text-align: center;
     
     background-color: var(--accent-100);
 }
@@ -228,12 +227,8 @@
 @media screen and (max-width: 390px) {
     .project-metric {
         border-radius: 1rem;
-        overflow: hidden;
-        max-width: calc(168px - 2rem);
-        text-align: center;
     }
     .project-metric, .keywords li {
         font-size: 0.9rem;
-        max-width: calc(168px - 2rem);
     }
 }
