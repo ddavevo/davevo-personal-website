@@ -87,7 +87,7 @@ li {
     position: relative;
     width: 100%; 
     height: clamp(.6rem, 1vw, 1rem); 
-    background-color: var(--midtone);
+    background-color: var(--accent-600);
     border-radius: clamp(.3rem, 1vw, .5rem); 
 }
 
