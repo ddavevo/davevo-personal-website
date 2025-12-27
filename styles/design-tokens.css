@@ -1,0 +1,236 @@
+/* ============================================================
+   Design Tokens - Brand Collection (Base Tokens)
+   ============================================================ */
+
+:root {
+    /* Color Tokens - Red Scale */
+    --red-100: rgb(255 235 233);
+    --red-150: rgb(250 214 206);
+    --red-200: rgb(245 182 172);
+    --red-300: rgb(242 148 138);
+    --red-400: rgb(237 116 104);
+    --red-default: rgb(233 84 70);
+    --red-600: rgb(186 67 56);
+    --red-700: rgb(140 50 42);
+    --red-800: rgb(93 34 28);
+    --red-900: rgb(47 17 14);
+
+    /* Color Tokens - Green Scale */
+    --green-100: rgb(237 246 212);
+    --green-150: rgb(227 234 207);
+    --green-200: rgb(199 222 173);
+    --green-300: rgb(173 208 140);
+    --green-400: rgb(145 196 106);
+    --green-default: rgb(118 184 73);
+    --green-600: rgb(94 147 58);
+    --green-700: rgb(71 110 44);
+    --green-800: rgb(47 74 29);
+    --green-900: rgb(24 37 15);
+
+    /* Color Tokens - Gray Scale */
+    --gray-100: rgb(247 243 242);
+    --gray-200: rgb(229 224 223);
+    --gray-300: rgb(202 197 196);
+    --gray-400: rgb(173 168 168);
+    --gray-500: rgb(143 139 139);
+    --gray-600: rgb(114 110 110);
+    --gray-700: rgb(86 81 81);
+    --gray-800: rgb(60 56 56);
+    --gray-900: rgb(39 37 37);
+    --gray-1000: rgb(23 20 20);
+
+    /* Color Tokens - Brown Scale */
+    --brown-100: rgb(254 246 240);
+    --brown-200: rgb(245 234 224);
+    --brown-300: rgb(213 202 190);
+    --brown-400: rgb(189 159 134);
+    --brown-500: rgb(163 129 97);
+    --brown-600: rgb(129 100 81);
+    --brown-700: rgb(100 74 63);
+    --brown-800: rgb(66 50 41);
+    --brown-900: rgb(38 30 23);
+    --brown-1000: rgb(66 50 41);  /* #423229 */
+    --brown-1100: rgb(38 30 23);  /* #261e17 - same as brown-900 */
+
+    /* Color Tokens - Teal Scale */
+    --teal-100: rgb(228 239 237);
+    --teal-200: rgb(172 228 237);
+    --teal-300: rgb(108 212 229);
+    --teal-500: rgb(4 151 180);
+    --teal-600: rgb(0 108 140);
+    --teal-700: rgb(1 85 111);
+    --teal-800: rgb(6 47 63);
+    --teal-900: rgb(8 26 28);
+    --teal-default: rgb(0 175 205);
+
+    /* Typography Scale Tokens */
+    --Scale-0: 0px;
+    --Scale-25: 1px;
+    --Scale-50: 2px;
+    --Scale-100: 4px;
+    --Scale-200: 8px;
+    --Scale-250: 10px;
+    --Scale-300: 12px;
+    --Scale-350: 14.399999618530273px;
+    --Scale-375: 15.199999809265137px;
+    --Scale-default: 16px;
+    --Scale-425: 16.799999237060547px;
+    --Scale-450: 17.600000381469727px;
+    --Scale-500: 20px;
+    --Scale-550: 22px;
+    --Scale-600: 24px;
+    --Scale-700: 28px;
+    --Scale-800: 32px;
+    --Scale-900: 36px;
+    --Scale-1000: 40px;
+    --Scale-1100: 44px;
+    --Scale-1200: 48px;
+    --Scale-1300: 64px;
+    --Scale-1400: 160px;
+
+    /* Font Family Tokens */
+    --Font-family-h1: 'Fraunces';
+    --Font-family-h2: 'Gravity';
+    --Font-family-h3: 'Gravity';
+    --Font-family-h4: 'Gravity';
+    --Font-family-body: 'Gravity';
+
+    /* Font Weight Tokens */
+    --Font-weight-Regular: 'Regular';
+    --Font-weight-Bold: 'Bold';
+    --Font-weight-Italic: 'Italic';
+    --Font-weight-Bold-Italic: 'Bold Italic';
+}
+
+/* ============================================================
+   Design Tokens - Alias Collection (Semantic Tokens)
+   ============================================================ */
+
+:root {
+    /* Background Aliases */
+    --Background-100: var(--brown-100);
+    --Background-200: var(--brown-200);
+    --Background-300: var(--brown-300);
+    --Background-400: var(--brown-400);
+    --Background-500: var(--brown-500);
+    --Background-600: var(--brown-600);
+    --Background-700: var(--brown-700);
+    --Background-800: var(--brown-800);
+    --Background-900: var(--brown-900);
+    --Background-1000: var(--brown-1000);
+    --Background-1100: var(--brown-1100);
+
+    /* Border Radius Aliases */
+    --Border-Radius-none: var(--Scale-0);
+    --Border-Radius-sm: var(--Scale-200);
+    --Border-Radius-md: var(--Scale-250);
+    --Border-Radius-lg: var(--Scale-default);
+
+    /* Border Width Aliases */
+    --Border-Width-none: var(--Scale-0);
+    --Border-Width-sm: var(--Scale-25);
+    --Border-Width-md: var(--Scale-50);
+    --Border-Width-lg: var(--Scale-100);
+
+    /* Error Aliases */
+    --Error-100: var(--red-100);
+    --Error-150: var(--red-150);
+    --Error-200: var(--red-200);
+    --Error-300: var(--red-300);
+    --Error-400: var(--red-400);
+    --Error-default: var(--red-default);
+    --Error-600: var(--red-600);
+    --Error-700: var(--red-700);
+    --Error-800: var(--red-800);
+    --Error-900: var(--red-900);
+
+    /* Neutral Aliases */
+    --Neutral-100: var(--gray-100);
+    --Neutral-100-2: var(--gray-1000);
+    --Neutral-200: var(--gray-200);
+    --Neutral-300: var(--gray-300);
+    --Neutral-400: var(--gray-400);
+    --Neutral-500: var(--gray-500);
+    --Neutral-600: var(--gray-600);
+    --Neutral-700: var(--gray-700);
+    --Neutral-800: var(--gray-800);
+    --Neutral-900: var(--gray-900);
+
+    /* Primary Aliases */
+    --Primary-100: var(--teal-100);
+    --Primary-200: var(--teal-200);
+    --Primary-300: var(--teal-300);
+    --Primary-500: var(--teal-500);
+    --Primary-600: var(--teal-600);
+    --Primary-700: var(--teal-700);
+    --Primary-800: var(--teal-800);
+    --Primary-900: var(--teal-900);
+    --Primary-default: var(--teal-default);
+
+    /* Spacing Aliases - Gap */
+    --Spacing-gap-sm: var(--Scale-default);
+    --Spacing-gap-md: var(--Scale-800);
+    --Spacing-gap-lg: var(--Scale-1300);
+
+    /* Spacing Aliases - Space */
+    --Spacing-none: var(--Scale-0);
+    --Spacing-space-xxs: var(--Scale-100);
+    --Spacing-space-xs: var(--Scale-300);
+    --Spacing-space-sm: var(--Scale-default);
+    --Spacing-space-md: var(--Scale-800);
+    --Spacing-space-lg: var(--Scale-1000);
+    --Spacing-space-xl: var(--Scale-1200);
+    --Spacing-space-xxl: var(--Scale-1300);
+
+    /* Success Aliases */
+    --Success-100: var(--green-100);
+    --Success-200: var(--green-200);
+    --Success-300: var(--green-300);
+    --Success-400: var(--green-400);
+    --Success-default: var(--green-default);
+    --Success-600: var(--green-600);
+    --Success-700: var(--green-700);
+    --Success-800: var(--green-800);
+    --Success-900: var(--green-900);
+}
+
+/* ============================================================
+   Design Tokens - Mapped Collection (Composite Tokens)
+   ============================================================ */
+
+:root {
+    /* Border Tokens */
+    --Border-action: rgb(255 255 255);
+    --Border-action-hover: rgb(255 255 255);
+    --Border-default: rgb(255 255 255);
+    --Border-disabled: rgb(255 255 255);
+    --Border-error: var(--Error-default);
+    --Border-focus: rgb(255 255 255);
+    --Border-insight: var(--Primary-default);
+    --Border-success: var(--Success-default);
+
+    /* Icon Tokens */
+    --Icons-var: rgb(255 255 255);
+
+    /* Surface Tokens */
+    --Surface-action: var(--Primary-500);
+    --Surface-action-hover: var(--Primary-800);
+    --Surface-default: var(--Background-100);
+    --Surface-error: var(--Error-100);
+    --Surface-insight: var(--Primary-100);
+    --Surface-page: var(--Background-100);
+    --Surface-success: var(--Success-100);
+
+    /* Text Tokens */
+    --Text-action: var(--Primary-800);
+    --Text-action-hover: var(--Primary-100);
+    --Text-body: var(--Background-700);
+    --Text-caption: var(--Background-600);
+    --Text-disabled: var(--Background-400);
+    --Text-error: var(--Background-700);
+    --Text-heading: var(--Primary-800);
+    --Text-on-action: var(--Primary-100);
+    --Text-success: var(--Background-700);
+    --Text-toc-selected: var(--Background-900);
+}
+
