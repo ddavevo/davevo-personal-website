@@ -231,6 +231,6 @@ button {
     }
     
     p, li, span, figcaption {
-    font-size: clamp(16.8px, 1.25vw, 22px);
+    font-size: clamp(1.1rem, 1.25vw, 1.375rem);
     }
 }
