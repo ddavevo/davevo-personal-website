@@ -207,6 +207,7 @@
     --Border-error: var(--Error-default);
     --Border-focus: rgb(255 255 255);
     --Border-insight: var(--Primary-default);
+    --Border-toc-section: var(--Primary-default);
     --Border-success: var(--Success-default);
 
     /* Icon Tokens */
@@ -218,6 +219,7 @@
     --Surface-default: var(--Background-100);
     --Surface-error: var(--Error-100);
     --Surface-insight: var(--Primary-100);
+    --Surface-toc-section: var(--Primary-100);
     --Surface-page: var(--Background-100);
     --Surface-success: var(--Success-100);
 

@@ -90,8 +90,8 @@ summary {
     display: inline-block;
     font-family: gravity;
     color: var(--accent-500);
-    border: 1px solid var(--accent-400);
-    background-color: var(--accent-100);
+    border: 1px solid var(--Border-toc-section);
+    background-color: var(--Surface-toc-section);
     padding: .25rem 0.75rem;
     border-radius: 100px;  
     margin-bottom: 0.75rem; 
@@ -104,6 +104,8 @@ summary {
     padding: 2.4rem;
     max-width: 1312px;
     font-size-adjust: from-font;
+    color: var(--Background-100);
+    text-align: center;
 }
 
 .hero {
