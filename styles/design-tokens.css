@@ -63,6 +63,9 @@
     --teal-900: rgb(8 26 28);
     --teal-default: rgb(0 175 205);
 
+    --white: rgb(255 255 255);
+    --black: rgb(0 0 0);
+
     /* Typography Scale Tokens */
     --Scale-0: 0px;
     --Scale-25: 1px;
@@ -201,11 +204,11 @@
 
 :root {
     /* Border Tokens */
-    --Border-default: rgb(255 255 255);
-    --Border-action: rgb(255 255 255);
-    --Border-action-hover: rgb(255 255 255);
-    --Border-focus: rgb(255 255 255);
-    --Border-disabled: rgb(255 255 255);
+    --Border-default: var(--Primary-800);
+    --Border-action: var(--Primary-800);
+    --Border-action-hover: var(--Primary-800);
+    --Border-focus: var(--Primary-800);
+    --Border-disabled: var(--Primary-800);
     --Border-error: var(--Error-default);
     --Border-success: var(--Success-default);
     --Border-insight: var(--Primary-500);
@@ -213,13 +216,15 @@
     --Border-line: var(--Background-300);
     --Border-summary: var(--Background-600);
     --Border-tag: var(--Background-700);
+    --Border-keyword: var(--gray-600);
+    --Border-project-card: var(--Background-200);
 
     /* Icon Tokens */
     --Icons-var: rgb(255 255 255);
 
     /* Surface Tokens */
     --Surface-page: var(--Background-100);
-    --Surface-default: var(--Background-100);
+    --Surface-default: var(--white);
     --Surface-action: var(--Primary-500);
     --Surface-action-hover: var(--Primary-800);
     --Surface-error: var(--Error-100);
@@ -227,6 +232,7 @@
     --Surface-insight: var(--Primary-100);
     --Surface-toc-badge: var(--Primary-100);
     --Surface-tag: var(--Background-200);
+    --Surface-metric: var(--Primary-100);
 
     /* Text Tokens */
     --Text-heading-light-bg: var(--Primary-800);
@@ -250,5 +256,6 @@
     --Text-success: var(--Background-700);
     --Text-toc-badge: var(--Primary-500);
     --Text-toc-selected: var(--Background-900);
+    --Text-keyword: var(--gray-600);
 }
 

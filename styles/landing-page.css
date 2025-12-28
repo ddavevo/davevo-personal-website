@@ -27,7 +27,7 @@
 }
 
 .landing-page h2 {
-    color: var(--Primary-800);
+    color: var(--Text-heading-light-bg);
     line-height: clamp(125%, 2vw, 100%);
     margin-bottom: 1rem;
     font-size: clamp(1.4rem, 5vw, 2rem);
@@ -43,13 +43,13 @@
     border-radius: 100rem;
     line-height: clamp(2.75rem, calc(2vw + 1rem), 3.3rem);
     
-    border: 1.25px solid var(--Primary-800);
-    color: var(--Primary-800);
+    border: 1.25px solid var(--Border-action);
+    color: var(--Text-link-light-bg);
 }
 
 .landing-link:hover {
-    color: var(--Background-100);
-    background-color: var(--Primary-800);
+    color: var(--Text-link-dark-bg);
+    background-color: var(--Border-action-hover);
 }
 
 .landing-text {
@@ -87,8 +87,8 @@
     height: auto;
     position: relative;
     
-    background-color: #fff;
-    border: .1rem solid var(--gray-200);
+    background-color: var(--Surface-default);
+    border: .1rem solid var(--Border-project-card);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
     border-radius: 1rem;
     overflow: hidden;
@@ -123,11 +123,11 @@
     justify-content: flex-start;
     align-self: stretch;
 
-    background-color: #fff;
+    background-color: var(--Surface-default);
     z-index: 1;
 
     border-radius: 0px 0px 1rem 1rem;  
-    border-top: .1rem solid var(--gray-200);  
+    border-top: .1rem solid var(--Border-project-card);  
     padding: 2rem 2rem;
     gap: 1rem;
 }
@@ -141,7 +141,7 @@
     border-radius: 100rem;
     text-align: center;
     
-    background-color: var(--Primary-100);
+    background-color: var(--Surface-metric);
 }
 
 .title {
@@ -165,9 +165,9 @@
     margin-right: 0.6rem;
     border-radius: 100rem;
     line-height: clamp(2.75rem, calc(2vw + 1rem), 3.3rem);
-    
-    border: 1.25px solid var(--gray-600);
-    color: var(--gray-600);
+
+    border: 1.25px solid var(--Border-keyword);
+    color: var(--Text-keyword);
 }
 
 .insight {
@@ -175,8 +175,8 @@
     padding: .25rem .75em;
     margin-bottom: 1.2rem;
     border-radius: 0.4rem;
-    background-color: var(--Primary-100);
-    border: 1.25px solid var(--Primary-default);
+    background-color: var(--Surface-insight);
+    border: 1.25px solid var(--Border-insight);
 }
 
 /* ========================================================================= */
