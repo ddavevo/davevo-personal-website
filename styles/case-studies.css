@@ -86,12 +86,12 @@ summary {
 
 /* ====================================================================== */
 
-.toc-section {
+.toc-badge {
     display: inline-block;
     font-family: gravity;
     color: var(--accent-500);
-    border: 1px solid var(--Border-toc-section);
-    background-color: var(--Surface-toc-section);
+    border: 1px solid var(--Border-toc-badge);
+    background-color: var(--Surface-toc-badge);
     padding: .25rem 0.75rem;
     border-radius: 100px;  
     margin-bottom: 0.75rem; 
