@@ -1,7 +1,7 @@
 # Design Token Structure Summary
 
 ## Overview
-This document summarizes the complete design token structure from the Figma file, focusing on the connection points between variable collections: **Brand**, **Alias**, and **Mapped** collections.
+This document summarizes the complete design token structure from the Figma file, focusing on the connection points between variable collections: **Brand**, **Alias**, and **Mapped** collections!
 
 ## Collection Architecture
 

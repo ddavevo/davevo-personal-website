@@ -53,6 +53,7 @@
 }
 
 .landing-text {
+    max-width: var(--Spacing-max-page-width);
     position: relative;
     margin: auto auto;
     width: clamp(75vw, 1vw, 80vw);
@@ -74,11 +75,11 @@
 .featured-case-studies {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1312px;
+    max-width: var(--Spacing-max-page-width);
     gap: 2rem;
     place-content: center;
     padding: 0rem 4rem;
-    margin-top: -6rem;
+    margin: -6rem auto 0 auto;
 }
 
 .project {

@@ -1,48 +1,48 @@
+/* ============================================================
+   Import Design Tokens
+   ============================================================ */
+@import url('design-tokens.css');
+
+/* ============================================================
+   Backward Compatibility Mappings
+   Maps existing variable names to new design token structure
+   ============================================================ */
+
 :root {
-    --pain-point: #FFEBE9;
-    --quote-pain: #E95446;
-    --gain-point: #E9FBD7;
-    --quote-gain: #76B849;
-    --gain: #C7F29B;
+    /* Legacy color variables mapped to new token structure */
+    --pain-point: var(--Error-100);
+    --quote-pain: var(--Error-default);
+    --gain-point: var(--Success-100);
+    --quote-gain: var(--Success-default);
+    --gain: var(--green-200);
     
-    --navgradient: linear-gradient(var(--bg), var(--bg) 9.4rem, rgb(254,246,240, 0.8) 10.2rem, transparent);
+    /* Legacy accent colors mapped to Primary/Teal tokens */
+    --accent-100: var(--Primary-100);
+    --accent-200: var(--Primary-200);
+    --accent-300: var(--Primary-300);
+    --accent-400: var(--Primary-default);
+    --accent-500: var(--Primary-500);
+    --accent-600: var(--Primary-600);
+    --accent-700: var(--Primary-700);
+    --accent-800: var(--Primary-800);
+    --accent-900: var(--Primary-900);
+
+    /* Legacy background mapped to Background tokens */
+    --bg: var(--Background-100);
+    --neutral-200: var(--Background-200);
+    --neutral-300: var(--Background-300);
+    --neutral-400: var(--Background-400);
+    --neutral-500: var(--Background-500);
+    --neutral-600: var(--Background-600);
+    --neutral-700: var(--Background-700);
+    --neutral-800: var(--Background-800);
+    --neutral-900: var(--Background-900);
+    --neutral-1000: var(--Background-1000);
+    --neutral-1100: var(--Background-1100);
+
+    /* Legacy gradients using new tokens */
+    --navgradient: linear-gradient(var(--Surface-page), var(--Surface-page) 9.4rem, rgb(254,246,240, 0.8) 10.2rem, transparent);
     --case-study: linear-gradient(to left, var(--accent-400), var(--accent-800));
-
-    /* --------------------------------------------- */
-
-    --accent-100: #e4efed;
-    --accent-200: #ace4ed;
-    --accent-300: #6cd4e5;
-    --accent-400: #00afcd;
-    --accent-500: #0497b4;
-    --accent-600: #006c8c;
-    --accent-700: #01556f;
-    --accent-800: #062f3f;
-    --accent-900: #081a1c;
-
-    --bg: #fef6f0;
-    --neutral-200: #F9EEE4;
-    --neutral-300: #E2D6CB;
-    --neutral-400: #ccbfb3;
-    --neutral-500: #b5a89c;
-    --neutral-600: #9e9186;
-    --neutral-700: #887b70;
-    --neutral-800: #71665b;
-    --neutral-900: #5a5047;
-    --neutral-1000: #423229;
-    --neutral-1100: #261e17;
-
-    --gray-100: #f7f3f2;
-    --gray-200: #e5e0df;
-    --gray-300: #cac5c4;
-    --gray-400: #ada8a8;
-    --gray-500: #8f8b8b;
-    --gray-600: #726e6e;
-    --gray-700: #565151;
-    --gray-800: #3c3838;
-    --gray-900: #272525;
-    --gray-1000: #171414;
-
 }
 
 @font-face {
@@ -79,14 +79,14 @@ html {
 }
 
 body {
-    background-color: var(--bg);
+    background-color: var(--Surface-page);
     font-family: 'gravity', 'Inter', system-ui, sans-serif;
 }
 
 h1, h2, h3, h4 {
     font-weight: normal;
     font-family: gravity-bold;
-    color: var(--accent-800);
+    color: var(--Text-heading);
     text-wrap: balance;
 }
 
@@ -119,7 +119,7 @@ p, li, span, form, input, button { /* landing-body: I am a... I'm an upcoming UI
 }
 
 figcaption {
-    color: var(--neutral-600);
+    color: var(--Text-caption);
     margin-top: .5rem;
     text-align: center;
 }
@@ -131,7 +131,7 @@ figcaption {
 .subtitle, figcaption {
     font-family: gravity;
     line-height: 150%;
-    color: var(--neutral-600);
+    color: var(--Text-caption);
     font-size: clamp(0.95rem, 1vw, 1rem);
 }
 
@@ -157,7 +157,7 @@ b {
 
 hr {
     margin-bottom: 2.5ch;
-    color: var(--neutral-200);
+    border: 1px solid var(--neutral-300);
 }
 
 button {
