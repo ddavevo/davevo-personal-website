@@ -8,11 +8,13 @@
 }
 
 main {
+    max-width: var(--Spacing-max-page-width);
     position: relative;
     display: grid;
     grid-template-columns: 12rem minmax(0, 1fr);
     gap: 4rem;
     padding-top: 4rem;
+    margin: 0 auto;
 }
 
 .toc-container {
@@ -24,7 +26,7 @@ main {
 .main-container {
     box-sizing: border-box;
     width: 100%;
-    max-width: 90ch;       
+    max-width: --Spacing-max-content-width;       
     padding-right: 4rem;
 }
 
@@ -102,7 +104,7 @@ summary {
 #case-study-title { /* 910px - 3 lines | 657px - 4 lines | 512px - 5 lines | 442px - 6 lines*/
     margin: 0 auto;
     padding: 2.4rem;
-    max-width: 1312px;
+    max-width: var(--Spacing-max-page-width);
     font-size-adjust: from-font;
     color: var(--Background-100);
     text-align: center;
@@ -134,7 +136,7 @@ summary {
     display: flex;
     justify-content: space-around; gap: 1rem 0;
     padding: 0 2.4rem 2.4rem;
-    max-width: 1312px; margin: 0 auto;
+    max-width: var(--Spacing-max-page-width); margin: 0 auto;
     min-height: 8.75rem;
 }
 
@@ -183,7 +185,7 @@ summary {
 .toc-header {
     font-family: gravity-bold; 
     color: var(--accent-800);
-    margin-bottom: 0.5ch;
+    margin-bottom: var(--Spacing-space-3xs);
 }
 
 [id] { scroll-margin-top: 8rem; }
@@ -415,7 +417,7 @@ summary {
     gap: 0 0.75rem;
 
     > h3 {
-    margin-bottom: 1ch;
+    margin-bottom: var(--Spacing-1ch);
     }
 }
 
@@ -605,6 +607,12 @@ summary {
 
 
 /* =========================================================== */
+
+@media screen and (min-width: 1376px) {
+    .toc-container {
+        padding-left: 0;
+    }
+}
 
 @media screen and (max-width: 1100px) {
     .two-columns-text-and-image {

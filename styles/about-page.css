@@ -1,3 +1,7 @@
+main section {
+    margin-bottom: 4rem;
+}
+
 main p {
     max-width: 80ch;
     color: var(--neutral-700);
@@ -9,12 +13,11 @@ main a {
 }
 
 .main-container {
-    padding: 8rem 4rem 1rem 4rem;
-
+    padding: 10rem 4rem 1rem 4rem;
     position: relative;
-    max-width: 1312px;
-    left: 50%;
-    transform: translateX(-50%);
+    max-width: var(--Spacing-max-page-width);
+    margin: 0 auto;
+    
 }
 
 .landing-text {
@@ -29,10 +32,6 @@ main a {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-}
-
-section {
-    margin-bottom: 4rem;
 }
 
 ul {
@@ -152,7 +151,7 @@ li {
     z-index: 2;
 }
 
-@media screen and (min-width: 1312px) {
+@media screen and (min-width: var(--Spacing-max-page-width)) {
     .landing-text {
         font-size: 4rem;
         background: repeating-linear-gradient(to bottom, var(--accent-600), var(--accent-400) 3.75rem, var(--accent-400) 4.75rem);

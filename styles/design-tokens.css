@@ -66,27 +66,25 @@
     /* Typography Scale Tokens */
     --Scale-0: 0px;
     --Scale-25: 1px;
-    --Scale-50: 2px;
-    --Scale-100: 4px;
-    --Scale-200: 8px;
-    --Scale-250: 10px;
-    --Scale-300: 12px;
-    --Scale-350: 14.399999618530273px;
-    --Scale-375: 15.199999809265137px;
-    --Scale-default: 16px;
-    --Scale-425: 16.799999237060547px;
-    --Scale-450: 17.600000381469727px;
-    --Scale-500: 20px;
-    --Scale-550: 22px;
-    --Scale-600: 24px;
-    --Scale-700: 28px;
-    --Scale-800: 32px;
-    --Scale-900: 36px;
-    --Scale-1000: 40px;
-    --Scale-1100: 44px;
-    --Scale-1200: 48px;
-    --Scale-1300: 64px;
-    --Scale-1400: 160px;
+    --Scale-50: 0.125rem; /* 2px */
+    --Scale-100: .25rem; /* 4px */
+    --Scale-200: .5rem; /* 8px */
+    --Scale-250: 0.625rem; /* 10px */
+    --Scale-300: 0.75rem; /* 12px */
+    --Scale-350: 0.875rem; /* 14px */
+    --Scale-default: 1rem; /* 16px */
+    --Scale-450: 1.125rem; /* 18px */
+    --Scale-500: 1.25rem; /* 20px */
+    --Scale-550: 1.375rem; /* 22px */
+    --Scale-600: 1.5rem; /* 24px */
+    --Scale-700: 1.75rem; /* 28px */
+    --Scale-800: 2rem; /* 32px */
+    --Scale-900: 2.25rem; /* 36px */
+    --Scale-1000: 2.5rem; /* 40px */
+    --Scale-1100: 2.75rem; /* 44px */
+    --Scale-1200: 3rem; /* 48px */
+    --Scale-1300: 4rem; /* 64px */
+    --Scale-1400: 10rem; /* 160px */
 
     /* Font Family Tokens */
     --Font-family-h1: 'Fraunces';
@@ -107,6 +105,17 @@
    ============================================================ */
 
 :root {
+    /* Primary Aliases */
+    --Primary-100: var(--teal-100);
+    --Primary-200: var(--teal-200);
+    --Primary-300: var(--teal-300);
+    --Primary-default: var(--teal-default);
+    --Primary-500: var(--teal-500);
+    --Primary-600: var(--teal-600);
+    --Primary-700: var(--teal-700);
+    --Primary-800: var(--teal-800);
+    --Primary-900: var(--teal-900);
+
     /* Background Aliases */
     --Background-100: var(--brown-100);
     --Background-200: var(--brown-200);
@@ -120,17 +129,17 @@
     --Background-1000: var(--brown-1000);
     --Background-1100: var(--brown-1100);
 
-    /* Border Radius Aliases */
-    --Border-Radius-none: var(--Scale-0);
-    --Border-Radius-sm: var(--Scale-200);
-    --Border-Radius-md: var(--Scale-250);
-    --Border-Radius-lg: var(--Scale-default);
-
-    /* Border Width Aliases */
-    --Border-Width-none: var(--Scale-0);
-    --Border-Width-sm: var(--Scale-25);
-    --Border-Width-md: var(--Scale-50);
-    --Border-Width-lg: var(--Scale-100);
+    /* Neutral Aliases */
+    --Neutral-100: var(--gray-100);
+    --Neutral-100-2: var(--gray-1000);
+    --Neutral-200: var(--gray-200);
+    --Neutral-300: var(--gray-300);
+    --Neutral-400: var(--gray-400);
+    --Neutral-500: var(--gray-500);
+    --Neutral-600: var(--gray-600);
+    --Neutral-700: var(--gray-700);
+    --Neutral-800: var(--gray-800);
+    --Neutral-900: var(--gray-900);
 
     /* Error Aliases */
     --Error-100: var(--red-100);
@@ -144,44 +153,6 @@
     --Error-800: var(--red-800);
     --Error-900: var(--red-900);
 
-    /* Neutral Aliases */
-    --Neutral-100: var(--gray-100);
-    --Neutral-100-2: var(--gray-1000);
-    --Neutral-200: var(--gray-200);
-    --Neutral-300: var(--gray-300);
-    --Neutral-400: var(--gray-400);
-    --Neutral-500: var(--gray-500);
-    --Neutral-600: var(--gray-600);
-    --Neutral-700: var(--gray-700);
-    --Neutral-800: var(--gray-800);
-    --Neutral-900: var(--gray-900);
-
-    /* Primary Aliases */
-    --Primary-100: var(--teal-100);
-    --Primary-200: var(--teal-200);
-    --Primary-300: var(--teal-300);
-    --Primary-500: var(--teal-500);
-    --Primary-600: var(--teal-600);
-    --Primary-700: var(--teal-700);
-    --Primary-800: var(--teal-800);
-    --Primary-900: var(--teal-900);
-    --Primary-default: var(--teal-default);
-
-    /* Spacing Aliases - Gap */
-    --Spacing-gap-sm: var(--Scale-default);
-    --Spacing-gap-md: var(--Scale-800);
-    --Spacing-gap-lg: var(--Scale-1300);
-
-    /* Spacing Aliases - Space */
-    --Spacing-none: var(--Scale-0);
-    --Spacing-space-xxs: var(--Scale-100);
-    --Spacing-space-xs: var(--Scale-300);
-    --Spacing-space-sm: var(--Scale-default);
-    --Spacing-space-md: var(--Scale-800);
-    --Spacing-space-lg: var(--Scale-1000);
-    --Spacing-space-xl: var(--Scale-1200);
-    --Spacing-space-xxl: var(--Scale-1300);
-
     /* Success Aliases */
     --Success-100: var(--green-100);
     --Success-200: var(--green-200);
@@ -192,6 +163,45 @@
     --Success-700: var(--green-700);
     --Success-800: var(--green-800);
     --Success-900: var(--green-900);
+
+    /* Border Radius Aliases */
+    --Border-Radius-none: var(--Scale-0);
+    --Border-Radius-sm: var(--Scale-200);
+    --Border-Radius-md: var(--Scale-250);
+    --Border-Radius-lg: var(--Scale-default);
+
+    /* Border Width Aliases */
+    --Border-Width-none: var(--Scale-0);
+    --Border-Width-sm: var(--Scale-25);
+    --Border-Width-md: var(--Scale-50);
+    --Border-Width-lg: var(--Scale-100);
+
+    /* Spacing Aliases - Gap */
+    --Spacing-gap-sm: var(--Scale-default);
+    --Spacing-gap-md: var(--Scale-800);
+    --Spacing-gap-lg: var(--Scale-1300);
+
+    /* Spacing Aliases - Space */
+    --Spacing-none: var(--Scale-0);
+    --Spacing-space-3xs: var(--Scale-100);
+    --Spacing-space-2xs: var(--Scale-200);
+    --Spacing-1ch: 1ch;
+    --Spacing-space-xs: var(--Scale-300);
+    --Spacing-h3-margin: 1.5ch;
+    --Spacing-space-sm: var(--Scale-default);
+    --Spacing-h2-h4-margin: 2ch;
+    --Spacing-content-margin-primary: 2.5ch;
+    --Spacing-space-md: var(--Scale-800);
+    --Spacing-article-margin-sm: 4ch;
+    --Spacing-space-lg: var(--Scale-1000);
+    --Spacing-space-xl: var(--Scale-1200);
+    --Spacing-section-margin: 6ch;
+    --Spacing-space-2xl: var(--Scale-1300);
+    --Spacing-article-margin-lg: 8ch;
+    --Spacing-article-margin-xl: 9ch;
+    --Spacing-max-content-width: 90ch;
+    --Spacing-max-page-width: 1312px;
+
 }
 
 /* ============================================================
