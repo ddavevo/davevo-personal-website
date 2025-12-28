@@ -84,7 +84,9 @@
     --Scale-1100: 2.75rem; /* 44px */
     --Scale-1200: 3rem; /* 48px */
     --Scale-1300: 4rem; /* 64px */
-    --Scale-1400: 10rem; /* 160px */
+    --Scale-1400: 6rem; /* 96px */
+    --Scale-1500: 8rem; /* 128px */
+    --Scale-1600: 10rem; /* 160px */
 
     /* Font Family Tokens */
     --Font-family-h1: 'Fraunces';
@@ -153,16 +155,16 @@
     --Success-900: var(--green-900);
 
     /* Border Radius Aliases */
-    --Border-Radius-none: var(--Scale-0);
-    --Border-Radius-sm: var(--Scale-200);
-    --Border-Radius-md: var(--Scale-250);
-    --Border-Radius-lg: var(--Scale-default);
+    --Border-radius-none: var(--Scale-0);
+    --Border-radius-sm: var(--Scale-200);
+    --Border-radius-md: var(--Scale-250);
+    --Border-radius-lg: var(--Scale-default);
 
     /* Border Width Aliases */
-    --Border-Width-none: var(--Scale-0);
-    --Border-Width-sm: var(--Scale-25);
-    --Border-Width-md: var(--Scale-50);
-    --Border-Width-lg: var(--Scale-100);
+    --Border-width-none: var(--Scale-0);
+    --Border-width-sm: var(--Scale-25);
+    --Border-width-md: var(--Scale-50);
+    --Border-width-lg: var(--Scale-100);
 
     /* Spacing Aliases - Gap */
     --Spacing-gap-sm: var(--Scale-default);
@@ -199,28 +201,30 @@
 
 :root {
     /* Border Tokens */
+    --Border-default: rgb(255 255 255);
     --Border-action: rgb(255 255 255);
     --Border-action-hover: rgb(255 255 255);
-    --Border-default: rgb(255 255 255);
+    --Border-focus: rgb(255 255 255);
     --Border-disabled: rgb(255 255 255);
     --Border-error: var(--Error-default);
-    --Border-focus: rgb(255 255 255);
+    --Border-success: var(--Success-default);
     --Border-insight: var(--Primary-500);
     --Border-toc-badge: var(--Primary-500);
-    --Border-success: var(--Success-default);
+    --Border-line: var(--Background-300);
+    --Border-summary: var(--Background-600);
 
     /* Icon Tokens */
     --Icons-var: rgb(255 255 255);
 
     /* Surface Tokens */
+    --Surface-page: var(--Background-100);
+    --Surface-default: var(--Background-100);
     --Surface-action: var(--Primary-500);
     --Surface-action-hover: var(--Primary-800);
-    --Surface-default: var(--Background-100);
     --Surface-error: var(--Error-100);
+    --Surface-success: var(--Success-100);
     --Surface-insight: var(--Primary-100);
     --Surface-toc-badge: var(--Primary-100);
-    --Surface-page: var(--Background-100);
-    --Surface-success: var(--Success-100);
 
     /* Text Tokens */
     --Text-heading-light-bg: var(--Primary-800);

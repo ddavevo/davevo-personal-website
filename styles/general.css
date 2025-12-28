@@ -1,12 +1,4 @@
-/* ============================================================
-   Import Design Tokens
-   ============================================================ */
 @import url('design-tokens.css');
-
-/* ============================================================
-   Backward Compatibility Mappings
-   Maps existing variable names to new design token structure
-   ============================================================ */
 
 :root {
     /* Legacy color variables mapped to new token structure */
@@ -133,7 +125,7 @@ b {
 
 hr {
     margin-bottom: var(--Spacing-primary-content-margin);
-    border: 1px solid var(--Background-300);
+    border: var(--Border-width-sm) solid var(--Border-line);
 }
 
 button {
