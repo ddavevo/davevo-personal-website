@@ -26,21 +26,21 @@ main {
 .main-container {
     box-sizing: border-box;
     width: 100%;
-    max-width: --Spacing-max-content-width;       
+    max-width: var(--Spacing-max-content-width);       
     padding-right: 4rem;
 }
 
 .main-container section, p, hr, picture img, img, picture, figure, .columns, .main-container ul, aside, blockquote, .lottie-anim {
     width: 100%;
-    margin-bottom: 2.5ch;
+    margin-bottom: var(--Spacing-primary-content-margin);
 }
 
 main p {
-    color: var(--neutral-700);
+    color: var(--Text-body-light-bg);
 }
 
 main a {
-    color: var(--accent-800);
+    color: var(--Primary-800);
 }
 
 main img {
@@ -51,7 +51,7 @@ main img {
 blockquote {
     display: flex;
     margin: auto auto;
-    background-image: linear-gradient(var(--accent-100), var(--neutral-200));
+    background-image: linear-gradient(var(--Primary-100), var(--Background-200));
     border-radius: 1rem;
 }
 
@@ -66,7 +66,7 @@ blockquote h4, blockquote .fake-h4 {
 details {
     position: relative;
     padding: 0.5rem 0 0 0;
-    border-top: 1px solid var(--neutral-600);
+    border-top: 1px solid var(--Background-600);
     scroll-margin-top: 8rem;
 }
 
@@ -77,11 +77,11 @@ details article {
 summary {
     position: sticky;
     top: 6rem;
-    color: var(--neutral-800);
-    background-color: var(--bg);
+    color: var(--Background-800);
+    background-color: var(--Background-100);
     line-height: 150%; 
     padding: 1.5rem 0 2rem 0;
-    border-bottom: 1px solid var(--neutral-600);
+    border-bottom: 1px solid var(--Background-600);
     margin-bottom: 2rem;
     scroll-margin-top: 8rem;
 }
@@ -91,7 +91,7 @@ summary {
 .toc-badge {
     display: inline-block;
     font-family: gravity;
-    color: var(--accent-500);
+    color: var(--Text-toc-badge);
     border: 1px solid var(--Border-toc-badge);
     background-color: var(--Surface-toc-badge);
     padding: .25rem 0.75rem;
@@ -112,8 +112,8 @@ summary {
 
 .hero {
     width: 100%;
-    background-image: linear-gradient(to bottom, var(--accent-700), var(--accent-900));
-    color: var(--bg);
+    background-image: linear-gradient(to bottom, var(--Primary-700), var(--Primary-900));
+    color: var(--Background-100);
     padding-top: 6rem;
     min-height: calc(6rem + 300px + 7.5rem + (1.2em * 6) + 4.8rem); 
 }
@@ -184,8 +184,8 @@ summary {
 
 .toc-header {
     font-family: gravity-bold; 
-    color: var(--accent-800);
-    margin-bottom: var(--Spacing-space-3xs);
+    color: var(--Primary-800);
+    margin-bottom: var(--Spacing-4);
 }
 
 [id] { scroll-margin-top: 8rem; }
@@ -199,7 +199,7 @@ summary {
     font-family: gravity-bold;
     font-size: clamp(0.9rem, 1vw, 1.05rem);
     line-height: 240%;
-    color: var(--neutral-400); 
+    color: var(--Background-400); 
     text-decoration: none;
     transition: 0.25s ease; 
 }
@@ -213,7 +213,7 @@ summary {
 
 .table-of-contents li.active a,
 .table-of-contents li a:hover { 
-    color: var(--neutral-900);
+    color: var(--Background-900);
 }
 
 .table-of-contents li a:hover:before,
@@ -225,7 +225,7 @@ summary {
 /* ================================================================= */
 
 .main-container section {
-    padding-bottom: 6ch;
+    padding-bottom: var(--Spacing-section-margin);
     content-visibility: auto;
     contain-intrinsic-size: auto;
     transition: opacity 1s cubic-bezier(.17,.67,.75,1.06), transform 1.75s cubic-bezier(.17,.67,.75,1.06);
@@ -236,11 +236,11 @@ summary {
 }
 
 .main-container article {
-    padding-bottom: 4ch;
+    padding-bottom: var(--Spacing-article-margin-sm);
 }
 
 .main-container article.extra-space {
-    padding-bottom: 9ch;
+    padding-bottom: var(--Spacing-article-margin-xl);
 }
 
 /* ====================================================================== */
@@ -267,9 +267,9 @@ summary {
 
 .fake-h4 {
     font-family: gravity-bold;
-    color: var(--accent-800);
+    color: var(--Primary-800);
     font-size: clamp(1.1rem, 2vw, 1.25rem);
-    margin-bottom: 2ch;
+    margin-bottom: var(--Spacing-h2-h4-margin);
     line-height: 150%; 
 }
 
@@ -322,8 +322,8 @@ summary {
     padding: 1rem 1.5rem;
     margin-bottom: 1.75rem;
     border-radius: 0.6rem;
-    background-color: var(--accent-100);
-    border: 1.25px solid var(--accent-400);
+    background-color: var(--Primary-100);
+    border: 1.25px solid var(--Primary-default);
 }
 
 .insight * {
@@ -371,7 +371,7 @@ summary {
 .quote {
     box-sizing: border-box;
     padding-left: 1.25rem;
-    border-left: 0.3rem solid var(--accent-400);
+    border-left: 0.3rem solid var(--Primary-default);
     align-items: center;
     /* height: 100%; */
 }
@@ -402,10 +402,10 @@ summary {
 .tag {
     display: inline-block;
     width: fit-content;
-    border: 1px solid var(--neutral-700);
+    border: 1px solid var(--Background-700);
     padding: .25rem 0.75rem;
     border-radius: 100px;
-    color: var(--neutral-700);
+    color: var(--Background-700);
     margin-bottom: 0.75rem;
 }
 
@@ -433,9 +433,9 @@ summary {
     list-style-type: none;
     white-space: nowrap;
 
-    color: var(--neutral-700);
-    background-color: var(--neutral-200);
-    border: 1.25px solid var(--neutral-700);
+    color: var(--Background-700);
+    background-color: var(--Background-200);
+    border: 1.25px solid var(--Background-700);
     padding: .25rem 0.75rem;
     border-radius: 100px; 
 
@@ -519,14 +519,14 @@ summary {
 
 .numbered span, .numbered-span {
     font-family: gravity-bold;
-    color: var(--bg);
+    color: var(--Background-100);
     background-color: #14ae5c;
     border-radius: 50%;
     padding: .2rem .55rem;
 }
 
 .numbered-span {
-    background-color: var(--accent-400);
+    background-color: var(--Primary-default);
     padding: .2rem .65rem;
 }
 
@@ -588,14 +588,14 @@ summary {
     height: 2rem;
     border-radius: .4rem;
     padding: .25rem .75rem;
-    border: 1px solid var(--neutral-600);
+    border: 1px solid var(--Background-600);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .locked-input button {
     max-width: 22rem;
     width: 100%;
-    background-color: var(--accent-400);
+    background-color: var(--Primary-default);
     padding: .5rem 1.2rem;
     border-radius: .4rem;
     color: white;
@@ -675,11 +675,11 @@ summary {
     }
 
     .main-container article {
-        padding-bottom: 4ch;
+        padding-bottom: var(--Spacing-article-margin-sm);
     }
 
     .main-container article.extra-space {
-        padding-bottom: 8ch;
+        padding-bottom: var(--Spacing-article-margin-lg);
     }
 
     .gallery {

@@ -4,12 +4,12 @@ main section {
 
 main p {
     max-width: 80ch;
-    color: var(--neutral-700);
+    color: var(--Background-700);
     margin-top: 1rem;
 }
 
 main a {
-    color: var(--accent-800);
+    color: var(--Primary-800);
 }
 
 .main-container {
@@ -21,13 +21,13 @@ main a {
 }
 
 .landing-text {
-    color: var(--accent-400);
+    color: var(--Primary-default);
     line-height: 110%;
     margin-bottom: .75ch;
     padding-bottom: 0.5rem;
 
     font-size: 3rem;
-    background: repeating-linear-gradient(to bottom, var(--accent-600), var(--accent-400) 2.75rem, var(--accent-400) 3.45rem);
+    background: repeating-linear-gradient(to bottom, var(--Primary-600), var(--Primary-default) 2.75rem, var(--Primary-default) 3.45rem);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -40,7 +40,7 @@ ul {
 
 li {
     margin-bottom: .5rem;
-    color: var(--neutral-700);
+    color: var(--Background-700);
 }
 
 .functional {
@@ -86,7 +86,7 @@ li {
     position: relative;
     width: 100%; 
     height: clamp(.6rem, 1vw, 1rem); 
-    background-color: var(--accent-600);
+    background-color: var(--Primary-600);
     border-radius: clamp(.3rem, 1vw, .5rem); 
 }
 
@@ -94,7 +94,7 @@ li {
     position: absolute;
     width: 0%;
     height: 100%;
-    background-color: var(--accent-400);
+    background-color: var(--Primary-default);
     border-radius: .5rem;
 }
 
@@ -154,7 +154,7 @@ li {
 @media screen and (min-width: var(--Spacing-max-page-width)) {
     .landing-text {
         font-size: 4rem;
-        background: repeating-linear-gradient(to bottom, var(--accent-600), var(--accent-400) 3.75rem, var(--accent-400) 4.75rem);
+        background: repeating-linear-gradient(to bottom, var(--Primary-600), var(--Primary-default) 3.75rem, var(--Primary-default) 4.75rem);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;

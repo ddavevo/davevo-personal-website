@@ -129,18 +129,6 @@
     --Background-1000: var(--brown-1000);
     --Background-1100: var(--brown-1100);
 
-    /* Neutral Aliases */
-    --Neutral-100: var(--gray-100);
-    --Neutral-100-2: var(--gray-1000);
-    --Neutral-200: var(--gray-200);
-    --Neutral-300: var(--gray-300);
-    --Neutral-400: var(--gray-400);
-    --Neutral-500: var(--gray-500);
-    --Neutral-600: var(--gray-600);
-    --Neutral-700: var(--gray-700);
-    --Neutral-800: var(--gray-800);
-    --Neutral-900: var(--gray-900);
-
     /* Error Aliases */
     --Error-100: var(--red-100);
     --Error-150: var(--red-150);
@@ -183,20 +171,21 @@
 
     /* Spacing Aliases - Space */
     --Spacing-none: var(--Scale-0);
-    --Spacing-space-3xs: var(--Scale-100);
-    --Spacing-space-2xs: var(--Scale-200);
+    --Spacing-4: var(--Scale-100);
+    --Spacing-8: var(--Scale-200);
     --Spacing-1ch: 1ch;
-    --Spacing-space-xs: var(--Scale-300);
+    --Spacing-12: var(--Scale-300);
     --Spacing-h3-margin: 1.5ch;
-    --Spacing-space-sm: var(--Scale-default);
+    --Spacing-caption-margin: 1.5ch;
+    --Spacing-16: var(--Scale-default);
     --Spacing-h2-h4-margin: 2ch;
-    --Spacing-content-margin-primary: 2.5ch;
-    --Spacing-space-md: var(--Scale-800);
+    --Spacing-primary-content-margin: 2.5ch;
+    --Spacing-32: var(--Scale-800);
     --Spacing-article-margin-sm: 4ch;
-    --Spacing-space-lg: var(--Scale-1000);
-    --Spacing-space-xl: var(--Scale-1200);
+    --Spacing-40: var(--Scale-1000);
+    --Spacing-48: var(--Scale-1200);
     --Spacing-section-margin: 6ch;
-    --Spacing-space-2xl: var(--Scale-1300);
+    --Spacing-64: var(--Scale-1300);
     --Spacing-article-margin-lg: 8ch;
     --Spacing-article-margin-xl: 9ch;
     --Spacing-max-content-width: 90ch;
@@ -216,8 +205,8 @@
     --Border-disabled: rgb(255 255 255);
     --Border-error: var(--Error-default);
     --Border-focus: rgb(255 255 255);
-    --Border-insight: var(--Primary-default);
-    --Border-toc-badge: var(--Primary-default);
+    --Border-insight: var(--Primary-500);
+    --Border-toc-badge: var(--Primary-500);
     --Border-success: var(--Success-default);
 
     /* Icon Tokens */
@@ -234,15 +223,22 @@
     --Surface-success: var(--Success-100);
 
     /* Text Tokens */
-    --Text-action: var(--Primary-800);
-    --Text-action-hover: var(--Primary-100);
-    --Text-body: var(--Background-700);
-    --Text-caption: var(--Background-600);
+    --Text-heading-light-bg: var(--Primary-800);
+    --Text-heading-dark-bg: var(--Background-100);
+    --Text-body-light-bg: var(--Background-700);
+    --Text-body-dark-bg: var(--Background-300);
+    --Text-caption-light-bg: var(--Background-600);
+    --Text-caption-dark-bg: var(--Background-300);
+    
     --Text-disabled: var(--Background-400);
     --Text-error: var(--Background-700);
-    --Text-heading: var(--Primary-800);
+
+    --Text-action: var(--Primary-800);
+    --Text-action-hover: var(--Primary-100);
+
     --Text-on-action: var(--Primary-100);
     --Text-success: var(--Background-700);
+    --Text-toc-badge: var(--Primary-500);
     --Text-toc-selected: var(--Background-900);
 }
 

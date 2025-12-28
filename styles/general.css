@@ -15,34 +15,10 @@
     --gain-point: var(--Success-100);
     --quote-gain: var(--Success-default);
     --gain: var(--green-200);
-    
-    /* Legacy accent colors mapped to Primary/Teal tokens */
-    --accent-100: var(--Primary-100);
-    --accent-200: var(--Primary-200);
-    --accent-300: var(--Primary-300);
-    --accent-400: var(--Primary-default);
-    --accent-500: var(--Primary-500);
-    --accent-600: var(--Primary-600);
-    --accent-700: var(--Primary-700);
-    --accent-800: var(--Primary-800);
-    --accent-900: var(--Primary-900);
-
-    /* Legacy background mapped to Background tokens */
-    --bg: var(--Background-100);
-    --neutral-200: var(--Background-200);
-    --neutral-300: var(--Background-300);
-    --neutral-400: var(--Background-400);
-    --neutral-500: var(--Background-500);
-    --neutral-600: var(--Background-600);
-    --neutral-700: var(--Background-700);
-    --neutral-800: var(--Background-800);
-    --neutral-900: var(--Background-900);
-    --neutral-1000: var(--Background-1000);
-    --neutral-1100: var(--Background-1100);
 
     /* Legacy gradients using new tokens */
     --navgradient: linear-gradient(var(--Surface-page), var(--Surface-page) 9.4rem, rgb(254,246,240, 0.8) 10.2rem, transparent);
-    --case-study: linear-gradient(to left, var(--accent-400), var(--accent-800));
+    --case-study: linear-gradient(to left, var(--Primary-default), var(--Primary-800));
 }
 
 @font-face {
@@ -86,7 +62,7 @@ body {
 h1, h2, h3, h4 {
     font-weight: normal;
     font-family: gravity-bold;
-    color: var(--Text-heading);
+    color: var(--Text-heading-light-bg);
     text-wrap: balance;
 }
 
@@ -96,42 +72,42 @@ h1 {
 
 h2 {
     font-size: clamp(1.75rem, 2vw, 2rem);
-    margin-bottom: 2ch;
+    margin-bottom: var(--Spacing-h2-h4-margin);
 }
 
 h3 {
     font-size: clamp(1.25rem, 2vw, 1.5rem);
-    margin-bottom: 1.4ch;
+    margin-bottom: var(--Spacing-h3-margin);
     line-height: 150%;
 }
 
 h4 {
     font-size: clamp(1.1rem, 2vw, 1.25rem);
-    margin-bottom: 2ch;
+    margin-bottom: var(--Spacing-h2-h4-margin);
     line-height: 150%; 
 }
 
 p, li, span, form, input, button { /* landing-body: I am a... I'm an upcoming UI/UX... */
     font-family: gravity;
     line-height: 150%;
-    color: var(--accent-800);
+    color: var(--Primary-800);
     font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 figcaption {
-    color: var(--Text-caption);
+    color: var(--Text-caption-light-bg);
     margin-top: .5rem;
     text-align: center;
 }
 
 .subtitle {
-    margin-bottom: 1.4ch;
+    margin-bottom: var(--Spacing-caption-margin);
 }
 
 .subtitle, figcaption {
     font-family: gravity;
     line-height: 150%;
-    color: var(--Text-caption);
+    color: var(--Text-caption-light-bg);
     font-size: clamp(0.95rem, 1vw, 1rem);
 }
 
@@ -146,7 +122,7 @@ ul {
 
 a, a:link, a:visited, a:hover, a:active { 
     text-decoration: none;
-    color: var(--accent-800);
+    color: var(--Primary-800);
 }
 
 b {
@@ -156,8 +132,8 @@ b {
 }
 
 hr {
-    margin-bottom: 2.5ch;
-    border: 1px solid var(--neutral-300);
+    margin-bottom: var(--Spacing-primary-content-margin);
+    border: 1px solid var(--Background-300);
 }
 
 button {
@@ -175,7 +151,7 @@ button {
 .underline-button {
     position: relative;
     white-space: nowrap;
-    color: var(--accent-800);
+    color: var(--Primary-800);
 }
 
 .underline-button::after {
@@ -186,7 +162,7 @@ button {
   height: 1px;
   bottom: -0.2rem;
   left: 0;
-  background-color: var(--accent-800);
+  background-color: var(--Primary-800);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
