@@ -212,6 +212,7 @@
     --Border-toc-badge: var(--Primary-500);
     --Border-line: var(--Background-300);
     --Border-summary: var(--Background-600);
+    --Border-tag: var(--Background-700);
 
     /* Icon Tokens */
     --Icons-var: rgb(255 255 255);
@@ -225,6 +226,7 @@
     --Surface-success: var(--Success-100);
     --Surface-insight: var(--Primary-100);
     --Surface-toc-badge: var(--Primary-100);
+    --Surface-tag: var(--Background-200);
 
     /* Text Tokens */
     --Text-heading-light-bg: var(--Primary-800);
@@ -233,7 +235,11 @@
     --Text-body-dark-bg: var(--Background-300);
     --Text-caption-light-bg: var(--Background-600);
     --Text-caption-dark-bg: var(--Background-300);
+    --Text-link-light-bg: var(--Primary-800);
+    --Text-link-dark-bg: var(--Background-100);
     
+    --Text-unselected: var(--Background-400);
+    --Text-selected: var(--Background-900);
     --Text-disabled: var(--Background-400);
     --Text-error: var(--Background-700);
 

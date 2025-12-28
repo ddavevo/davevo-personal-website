@@ -82,7 +82,7 @@ h4 {
 p, li, span, form, input, button { /* landing-body: I am a... I'm an upcoming UI/UX... */
     font-family: gravity;
     line-height: 150%;
-    color: var(--Primary-800);
+    color: var(--Text-body-light-bg);
     font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
@@ -114,7 +114,7 @@ ul {
 
 a, a:link, a:visited, a:hover, a:active { 
     text-decoration: none;
-    color: var(--Primary-800);
+    color: var(--Text-link-light-bg);
 }
 
 b {
@@ -143,7 +143,7 @@ button {
 .underline-button {
     position: relative;
     white-space: nowrap;
-    color: var(--Primary-800);
+    color: var(--Text-link-light-bg);
 }
 
 .underline-button::after {
@@ -154,7 +154,7 @@ button {
   height: 1px;
   bottom: -0.2rem;
   left: 0;
-  background-color: var(--Primary-800);
+  background-color: var(--Text-link-light-bg);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
