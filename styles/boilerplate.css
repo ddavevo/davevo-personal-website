@@ -35,7 +35,7 @@
 }
 
 .wordmark span {
-    letter-spacing: -0.1rem;
+    letter-spacing: var(--Font-tracking-wordmark);
     font-size: 48px;
     background: linear-gradient(var(--Primary-600), var(--Primary-default) 69%);
     margin-right: 0.125rem;
