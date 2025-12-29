@@ -331,7 +331,7 @@ summary {
 }
 
 .insight-half {
-    background-color: var(--pain-point); 
+    background-color: var(--Error-100); 
     border-radius: .6rem 0 0 .6rem;
     display: flex;
     align-items: center;
@@ -349,15 +349,15 @@ summary {
 .pain-point {
     grid-template-columns: 2ch 1fr;
     gap: 1.5rem;
-    background-color: var(--pain-point);
-    border: 1.25px solid var(--quote-pain);
+    background-color: var(--Error-100);
+    border: 1.25px solid var(--Error-default);
 }
 
 .gain-point {
     grid-template-columns: 1ch 1fr;
     gap: 1.5rem;
-    background-color: var(--gain-point);
-    border: 1.25px solid var(--quote-gain);
+    background-color: var(--Success-100);
+    border: 1.25px solid var(--Success-default);
 }
 
 /* ====================================================================== */
@@ -611,7 +611,7 @@ summary {
     }
 
     .insight-half {
-        background-color: var(--pain-point); 
+        background-color: var(--Error-100); 
         border-radius: .6rem;
         margin-bottom: 1.5rem;
     }

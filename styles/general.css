@@ -66,6 +66,19 @@
     --white: rgb(255 255 255);
     --black: rgb(0 0 0);
 
+    /* Font Family Tokens */
+    --Font-family-h1: 'Fraunces';
+    --Font-family-h2: 'Gravity';
+    --Font-family-h3: 'Gravity';
+    --Font-family-h4: 'Gravity';
+    --Font-family-body: 'Gravity';
+
+    /* Font Weight Tokens */
+    --Font-weight-normal: 'Regular';
+    --Font-weight-bold: 'Bold';
+    --Font-weight-italic: 'Italic';
+    --Font-weight-bold-italic: 'Bold Italic';
+
     /* Typography Scale Tokens */
     --Scale-0: 0px;
     --Scale-25: 1px;
@@ -90,19 +103,6 @@
     --Scale-1400: 6rem; /* 96px */
     --Scale-1500: 8rem; /* 128px */
     --Scale-1600: 10rem; /* 160px */
-
-    /* Font Family Tokens */
-    --Font-family-h1: 'Fraunces';
-    --Font-family-h2: 'Gravity';
-    --Font-family-h3: 'Gravity';
-    --Font-family-h4: 'Gravity';
-    --Font-family-body: 'Gravity';
-
-    /* Font Weight Tokens */
-    --Font-weight-normal: 'Regular';
-    --Font-weight-bold: 'Bold';
-    --Font-weight-italic: 'Italic';
-    --Font-weight-bold-italic: 'Bold Italic';
 
 }
 
@@ -266,13 +266,6 @@
 }
 
 :root {
-    /* Legacy color variables mapped to new token structure */
-    --pain-point: var(--Error-100);
-    --quote-pain: var(--Error-default);
-    --gain-point: var(--Success-100);
-    --quote-gain: var(--Success-default);
-    --gain: var(--green-200);
-
     /* Legacy gradients using new tokens */
     --navgradient: linear-gradient(var(--Surface-page), var(--Surface-page) 9.4rem, rgb(254,246,240, 0.8) 10.2rem, transparent);
     --case-study: linear-gradient(to left, var(--Primary-default), var(--Primary-800));
