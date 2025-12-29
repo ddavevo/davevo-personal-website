@@ -351,6 +351,15 @@ summary {
     gap: 1.5rem;
     background-color: var(--Error-100);
     border: 1.25px solid var(--Error-default);
+
+    > div :nth-child(1) {
+        color: var(--Error-700);
+        margin-bottom: 0.25rem;
+    }
+
+    > div :nth-child(2) {
+        color: var(--Error-700);
+    }
 }
 
 .gain-point {
@@ -358,6 +367,15 @@ summary {
     gap: 1.5rem;
     background-color: var(--Success-100);
     border: 1.25px solid var(--Success-default);
+
+    > div :nth-child(1) {
+        color: var(--Success-700);
+        margin-bottom: 0.25rem;
+    }
+
+    > div :nth-child(2) {
+        color: var(--Success-700);
+    }
 }
 
 /* ====================================================================== */

@@ -88,7 +88,7 @@
     position: relative;
     
     background-color: var(--Surface-default);
-    border: .1rem solid var(--Border-project-card);
+    border: .1rem solid var(--Border-card);
     box-shadow: var(--Shadow-default);
     border-radius: 1rem;
     overflow: hidden;
@@ -127,7 +127,7 @@
     z-index: 1;
 
     border-radius: 0px 0px 1rem 1rem;  
-    border-top: .1rem solid var(--Border-project-card);  
+    border-top: .1rem solid var(--Border-card);  
     padding: 2rem 2rem;
     gap: 1rem;
 }

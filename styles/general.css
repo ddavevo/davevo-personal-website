@@ -227,7 +227,7 @@
     --Border-summary: var(--Background-600);
     --Border-tag: var(--Background-700);
     --Border-keyword: var(--gray-600);
-    --Border-project-card: var(--Background-200);
+    --Border-card: var(--Background-200);
     --Border-unemphasized: var(--Background-400);
 
     --Border-header-bottom: var(--Spacing-16);
@@ -465,8 +465,13 @@ button {
     h4 {
         font-size: clamp(1.25rem, 1.25vw, 1.5rem);
     }
-    
-    p, li, span, figcaption {
-    font-size: clamp(var(--Scale-450), 1.25vw, var(--Scale-550));
+}
+
+@media screen and (min-width: 1000px) {
+    p, li, span {
+        font-size: clamp(var(--Scale-450), 1.25vw, var(--Scale-550));
+    }
+    .subtitle, figcaption {
+        font-size: clamp(var(--Scale-default), 1.25vw, var(--Scale-450));
     }
 }
