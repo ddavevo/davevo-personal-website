@@ -210,6 +210,9 @@
     --Font-tracking-wordmark: calc(-1 * var(--Scale-50));
     --Font-tracking-h1: calc(-1 * var(--Scale-25));
 
+    /* Shadow Tokens */
+    --Shadow-default: 0px 4px 4px rgba(0, 0, 0, 0.12);
+
     /* Border Tokens */
     --Border-default: var(--Primary-800);
     --Border-action: var(--Primary-800);
@@ -256,9 +259,9 @@
     --Text-link-light-bg: var(--Primary-800);
     --Text-link-dark-bg: var(--Background-100);
     
-    --Text-unemphasized: var(--Background-400);
-    --Text-unselected: var(--Background-400);
     --Text-selected: var(--Background-900);
+    --Text-unselected: var(--Background-400);
+    --Text-unemphasized: var(--Background-400);
     --Text-disabled: var(--Background-400);
     --Text-error: var(--Background-700);
 

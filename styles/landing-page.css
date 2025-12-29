@@ -89,7 +89,7 @@
     
     background-color: var(--Surface-default);
     border: .1rem solid var(--Border-project-card);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--Shadow-default);
     border-radius: 1rem;
     overflow: hidden;
 

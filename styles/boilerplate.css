@@ -221,7 +221,8 @@
     background-color: var(--Surface-page);
     padding: 1.5rem 2rem 1.5rem 1.5rem;
     border-radius: var(--Border-radius-sm);
-    border: var(--Border-width-sm) solid var(--Border-unemphasized);
+    border: var(--Border-width-sm) solid var(--Border-project-card);
+    box-shadow: var(--Shadow-default);
     flex-grow: 1;
 }
 
@@ -335,7 +336,7 @@
         padding: 2.5rem 2.5rem 2.5rem 2.5rem;
     }
     .footer-nav-container {
-        flex-direction: column;
+        gap: 0.5rem;
     }
 }
 
@@ -344,9 +345,5 @@
         grid-template-columns: 1fr;
         height: auto;
         padding-top: 0.8rem;
-    }
-    .footer p {
-        text-align: center;
-        margin-bottom: 1rem;
     }
 }
