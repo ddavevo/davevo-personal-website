@@ -2,7 +2,7 @@
     width: 100%;
     background-color: var(--Background-100);
     max-height: 5rem;
-    border-bottom: 1rem solid var(--Background-100);
+    border-bottom: var(--Border-header-bottom) solid var(--Background-100);
 
     position: fixed;
     display: flex; flex-direction: row;
@@ -110,7 +110,7 @@
 
 .hamburger-menu-options {
     font-family: gravity-bold;
-    color: var(--Primary-800);
+    color: var(--Text-link-light-bg);
     position: fixed;
     z-index: -1;
     left: 50%;
@@ -165,15 +165,15 @@
 }
 
 .made-with p, .made-with span {
-    color: var(--Background-700);
+    color: var(--Text-unemphasized);
 }
 
 .made-with span {
     margin-left: .15rem;
     padding: .1rem .5em;
     border-radius: .4rem;
-    background-color: var(--Primary-100); 
-    border: 1.25px solid var(--Primary-default);
+    background-color: var(--Surface-unemphasized); 
+    border: 1.25px solid var(--Border-unemphasized);
     white-space: nowrap;
 }
 

@@ -100,6 +100,7 @@
     --Scale-1100: 2.75rem; /* 44px */
     --Scale-1200: 3rem; /* 48px */
     --Scale-1300: 4rem; /* 64px */
+    --Scale-1350: 5rem; /* 80px */
     --Scale-1400: 6rem; /* 96px */
     --Scale-1500: 8rem; /* 128px */
     --Scale-1600: 10rem; /* 160px */
@@ -214,7 +215,7 @@
     --Border-action: var(--Primary-800);
     --Border-action-hover: var(--Primary-800);
     --Border-focus: var(--Primary-800);
-    --Border-disabled: var(--Primary-800);
+    --Border-disabled: var(--Background-400);
     --Border-error: var(--Error-default);
     --Border-success: var(--Success-default);
     --Border-insight: var(--Primary-500);
@@ -224,6 +225,9 @@
     --Border-tag: var(--Background-700);
     --Border-keyword: var(--gray-600);
     --Border-project-card: var(--Background-200);
+    --Border-unemphasized: var(--Background-400);
+
+    --Border-header-bottom: var(--Spacing-16);
 
     /* Icon Tokens */
     --Icons-var: rgb(255 255 255);
@@ -239,6 +243,7 @@
     --Surface-toc-badge: var(--Primary-100);
     --Surface-tag: var(--Background-200);
     --Surface-metric: var(--Primary-100);
+    --Surface-unemphasized: var(--Background-200);
 
     /* Text Tokens */
     --Text-heading-light-bg: var(--Primary-800);
@@ -250,6 +255,7 @@
     --Text-link-light-bg: var(--Primary-800);
     --Text-link-dark-bg: var(--Background-100);
     
+    --Text-unemphasized: var(--Background-400);
     --Text-unselected: var(--Background-400);
     --Text-selected: var(--Background-900);
     --Text-disabled: var(--Background-400);
@@ -332,7 +338,7 @@ h3 {
 }
 
 h4 {
-    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    font-size: clamp(var(--Scale-450), 2vw, 1.25rem);
     margin-bottom: var(--Spacing-h2-h4-margin);
     line-height: 150%; 
 }
@@ -341,7 +347,7 @@ p, li, span, form, input, button { /* landing-body: I am a... I'm an upcoming UI
     font-family: gravity;
     line-height: 150%;
     color: var(--Text-body-light-bg);
-    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-size: clamp(var(--Scale-default), 2vw, var(--Scale-450));
 }
 
 figcaption {
@@ -358,7 +364,7 @@ figcaption {
     font-family: gravity;
     line-height: 150%;
     color: var(--Text-caption-light-bg);
-    font-size: clamp(0.95rem, 1vw, 1rem);
+    font-size: clamp(var(--Scale-350), 1vw, var(--Scale-default));
 }
 
 .lottie-anim {
@@ -457,6 +463,6 @@ button {
     }
     
     p, li, span, figcaption {
-    font-size: clamp(1.1rem, 1.25vw, 1.375rem);
+    font-size: clamp(var(--Scale-450), 1.25vw, var(--Scale-550));
     }
 }
