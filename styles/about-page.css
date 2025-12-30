@@ -13,7 +13,7 @@ main a {
 }
 
 .main-container {
-    padding: 10rem 4rem 1rem 4rem;
+    padding: 10rem 4rem 4rem 4rem;
     position: relative;
     max-width: var(--Spacing-max-page-width);
     margin: 0 auto;

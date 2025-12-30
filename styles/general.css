@@ -319,6 +319,34 @@ body {
     font-family: 'gravity', 'Inter', system-ui, sans-serif;
 }
 
+main::after {
+  content: "";
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  height: 6rem;
+  z-index: 100;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.78)
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 80%
+  );
+  
+  backdrop-filter:
+    blur(5px)
+    saturate(1.05)
+    contrast(1.08);
+}
+
+
 h1, h2, h3, h4 {
     font-weight: normal;
     font-family: gravity-bold;

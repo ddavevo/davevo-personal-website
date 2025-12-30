@@ -157,25 +157,6 @@
   transform: translateY(0);
   opacity: 1;
 }
-/* ======================================================== */
-
-.made-with {
-    margin-top: 2rem;
-    text-align: center;
-}
-
-.made-with p, .made-with span {
-    color: var(--Text-unemphasized);
-}
-
-.made-with span {
-    margin-left: .15rem;
-    padding: .1rem .5em;
-    border-radius: .4rem;
-    background-color: var(--Surface-unemphasized); 
-    border: 1.25px solid var(--Border-unemphasized);
-    white-space: nowrap;
-}
 
 /* ======================================================== */
 

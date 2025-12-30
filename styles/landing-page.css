@@ -78,7 +78,7 @@
     max-width: var(--Spacing-max-page-width);
     gap: 2rem;
     place-content: center;
-    padding: 0rem 4rem;
+    padding: 0rem 4rem 4rem 4rem;
     margin: -6rem auto 0 auto;
 }
 
