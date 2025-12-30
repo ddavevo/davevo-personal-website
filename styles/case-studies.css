@@ -324,6 +324,10 @@ summary {
     border-radius: 0.6rem;
     background-color: var(--Surface-insight);
     border: var(--Border-width-sm) solid var(--Border-insight);
+
+    > p, > div p {
+        color: var(--Primary-600);
+    }
 }
 
 .insight * {
