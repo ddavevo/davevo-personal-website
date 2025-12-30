@@ -203,6 +203,13 @@
     align-items: flex-start;
 }
 
+.footer-logo {
+    width: 2.25rem; height: 2.5rem;
+    transform: scaleX(-1) rotate(300deg);
+    object-fit: contain;
+    object-position: center;
+}
+
 .footer-content {
     display: flex;
     flex-direction: column;

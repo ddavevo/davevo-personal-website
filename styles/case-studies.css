@@ -521,12 +521,14 @@ summary {
     transform: rotate(4deg);
 }
 
-.hmw-wrap h2::after {
-    position: absolute;
+.hmw-wrap img {
+    position: inline-block; float: left;
+    object-fit: contain;
+    object-position: center;
     content: url("https://media.dave-vo.com/file/dvfolio/general/logo-stroked.png");
-    width: 2rem; height: 2.25rem;
-    left: -1.75rem; 
-    transform: scale(.2) scaleX(-1) rotate(300deg); 
+    width: 2.25rem; height: 2.5rem;
+    margin-right: 1rem; margin-top: -0.25rem;
+    transform: scaleX(-1) rotate(300deg); 
 }
 
 /* ====================================================================== */
@@ -701,10 +703,6 @@ summary {
         margin-top: 2rem;
     }
 
-    .hmw-wrap h2::after {
-        visibility: collapse;
-    }
-
     details article {
         padding: 0;
     }
@@ -728,4 +726,8 @@ summary {
     .rotate-img {
         grid-template-columns: 1fr;
     }
+    .hmw-wrap img {
+        margin-bottom: 2.5rem;
+    }
 }
+
