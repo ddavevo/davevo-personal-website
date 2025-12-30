@@ -8,7 +8,7 @@
     display: flex; flex-direction: row;
     z-index: 100;
 
-    max-width: var(--Spacing-max-page-width);
+    max-width: var(--width-max);
     left: 50%;
     transform: translateX(-50%);
 }
@@ -178,7 +178,7 @@
     transform: translateX(-50%);
 
     width: 100%;
-    max-width: var(--Spacing-max-page-width);
+    max-width: var(--width-max);
     
     justify-content: space-between;
     align-items: flex-start;

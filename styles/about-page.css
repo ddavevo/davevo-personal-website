@@ -141,7 +141,7 @@ li {
     opacity: .8;
 }
 
-@media screen and (min-width: var(--Spacing-max-page-width)) {
+@media screen and (min-width: var(--width-max)) {
     .landing-text {
         font-size: 4rem;
         background: repeating-linear-gradient(to bottom, var(--Primary-600), var(--Primary-default) 3.75rem, var(--Primary-default) 4.75rem);
