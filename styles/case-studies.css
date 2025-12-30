@@ -500,8 +500,6 @@ summary {
     position: absolute;
     top: 0;
     left: -100%;
-    /* width: 100%; */
-    /* height: 100%; */
     background: linear-gradient(90deg, transparent, #fef6f090, transparent);
     transition: .5s ease-in-out;
 }
@@ -525,7 +523,7 @@ summary {
     transform: rotate(4deg);
 }
 
-.hmw-wrap img {
+.hmw-wrap #logo-arrow {
     position: inline-block; float: left;
     object-fit: contain;
     object-position: center;
