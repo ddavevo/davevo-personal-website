@@ -4,30 +4,30 @@ main section {
 
 main p {
     max-width: 80ch;
-    color: var(--Background-700);
+    color: var(--text-body-on-light);
     margin-top: 1rem;
     text-wrap: balance;
 }
 
 main a {
-    color: var(--Primary-800);
+    color: var(--text-link-on-light);
 }
 
 .main-container {
     padding: 10rem 4rem 4rem 4rem;
     position: relative;
-    max-width: var(--Spacing-max-page-width);
+    max-width: var(--width-max);
     margin: 0 auto;
 }
 
 .landing-text {
-    color: var(--Primary-default);
+    color: var(--teal-default);
     line-height: 110%;
     margin-bottom: .75ch;
     padding-bottom: 0.5rem;
 
     font-size: 3rem;
-    background: repeating-linear-gradient(to bottom, var(--Primary-600), var(--Primary-default) 2.75rem, var(--Primary-default) 3.45rem);
+    background: repeating-linear-gradient(to bottom, var(--teal-600), var(--teal-default) 2.75rem, var(--teal-default) 3.45rem);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -66,7 +66,7 @@ a > .gallery-item:hover{
 @media screen and (min-width: 1312px) {
     .landing-text {
         font-size: 4rem;
-        background: repeating-linear-gradient(to bottom, var(--Primary-600), var(--Primary-default) 3.75rem, var(--Primary-default) 4.75rem);
+        background: repeating-linear-gradient(to bottom, var(--teal-600), var(--teal-default) 3.75rem, var(--teal-default) 4.75rem);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;

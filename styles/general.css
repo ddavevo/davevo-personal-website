@@ -108,178 +108,145 @@
 }
 
 /* ============================================================
-   Design Tokens - Alias Collection (Semantic Tokens)
+   Design Tokens - Semantic Collection (Spacing & Typography)
    ============================================================ */
 
 :root {
-    /* Primary Aliases */
-    --Primary-100: var(--teal-100);
-    --Primary-200: var(--teal-200);
-    --Primary-300: var(--teal-300);
-    --Primary-default: var(--teal-default);
-    --Primary-500: var(--teal-500);
-    --Primary-600: var(--teal-600);
-    --Primary-700: var(--teal-700);
-    --Primary-800: var(--teal-800);
-    --Primary-900: var(--teal-900);
+    /* Spacing Scale - T-Shirt Sizing (Intent-based) */
+    --space-none: var(--Scale-0);
+    --space-2xs: var(--Scale-25);
+    --space-xs: var(--Scale-100);
+    --space-sm: var(--Scale-200);
+    --space-md: var(--Scale-default);
+    --space-lg: var(--Scale-800);
+    --space-xl: var(--Scale-1000);
+    --space-2xl: var(--Scale-1200);
+    --space-3xl: var(--Scale-1300);
 
-    /* Background Aliases */
-    --Background-100: var(--brown-100);
-    --Background-200: var(--brown-200);
-    --Background-300: var(--brown-300);
-    --Background-400: var(--brown-400);
-    --Background-500: var(--brown-500);
-    --Background-600: var(--brown-600);
-    --Background-700: var(--brown-700);
-    --Background-800: var(--brown-800);
-    --Background-900: var(--brown-900);
-    --Background-1000: var(--brown-1000);
-    --Background-1100: var(--brown-1100);
+    --space-1ch: 1ch;
+    --space-h3-margin: 1.5ch;
+    --space-h2-h4-margin: 2ch;
+    --space-caption-margin: 1.5ch;
+    --space-primary-content-margin: 2.5ch;
+    --space-article-margin-sm: 4ch;
+    --space-section-margin: 6ch;
+    --space-article-margin-lg: 8ch;
+    --space-article-margin-xl: 9ch;
 
-    /* Error Aliases */
-    --Error-100: var(--red-100);
-    --Error-150: var(--red-150);
-    --Error-200: var(--red-200);
-    --Error-300: var(--red-300);
-    --Error-400: var(--red-400);
-    --Error-default: var(--red-default);
-    --Error-600: var(--red-600);
-    --Error-700: var(--red-700);
-    --Error-800: var(--red-800);
-    --Error-900: var(--red-900);
+    /* Typography - Font Families */
+    --font-display: 'Fraunces';
+    --font-body: 'gravity';
+    --font-bold: 'gravity-bold';
 
-    /* Success Aliases */
-    --Success-100: var(--green-100);
-    --Success-200: var(--green-200);
-    --Success-300: var(--green-300);
-    --Success-400: var(--green-400);
-    --Success-default: var(--green-default);
-    --Success-600: var(--green-600);
-    --Success-700: var(--green-700);
-    --Success-800: var(--green-800);
-    --Success-900: var(--green-900);
+    /* Border Radius */
+    --radius-none: var(--Scale-0);
+    --radius-sm: var(--space-sm);
+    --radius-md: var(--Scale-250);
+    --radius-lg: var(--space-md);
 
-    /* Border Radius Aliases */
-    --Border-radius-none: var(--Scale-0);
-    --Border-radius-sm: var(--Scale-200);
-    --Border-radius-md: var(--Scale-250);
-    --Border-radius-lg: var(--Scale-default);
+    /* Border Width */
+    --border-none: var(--Scale-0);
+    --border-thin: var(--Scale-25);
+    --border-sm: var(--Scale-50);
+    --border-md: var(--Scale-100);
 
-    /* Border Width Aliases */
-    --Border-width-none: var(--Scale-0);
-    --Border-width-sm: var(--Scale-25);
-    --Border-width-md: var(--Scale-50);
-    --Border-width-lg: var(--Scale-100);
-
-    /* Spacing Aliases - Gap */
-    --Spacing-gap-sm: var(--Scale-default);
-    --Spacing-gap-md: var(--Scale-800);
-    --Spacing-gap-lg: var(--Scale-1300);
-
-    /* Spacing Aliases - Space */
-    --Spacing-none: var(--Scale-0);
-    --Spacing-4: var(--Scale-100);
-    --Spacing-8: var(--Scale-200);
-    --Spacing-1ch: 1ch;
-    --Spacing-12: var(--Scale-300);
-    --Spacing-h3-margin: 1.5ch;
-    --Spacing-caption-margin: 1.5ch;
-    --Spacing-16: var(--Scale-default);
-    --Spacing-h2-h4-margin: 2ch;
-    --Spacing-primary-content-margin: 2.5ch;
-    --Spacing-32: var(--Scale-800);
-    --Spacing-article-margin-sm: 4ch;
-    --Spacing-40: var(--Scale-1000);
-    --Spacing-48: var(--Scale-1200);
-    --Spacing-section-margin: 6ch;
-    --Spacing-64: var(--Scale-1300);
-    --Spacing-article-margin-lg: 8ch;
-    --Spacing-article-margin-xl: 9ch;
-    --Spacing-max-content-width: 90ch;
-    --Spacing-max-page-width: 1312px;
+    /* Content Width */
+    --width-content-max: 90ch;
+    --width-max: 1312px;
 
 }
 
 /* ============================================================
-   Design Tokens - Mapped Collection (Composite Tokens)
+   Design Tokens - Component Collection (Semantic Composites)
    ============================================================ */
 
 :root {
+    /* Typography Traits */
+    --letter-spacing-tight: calc(-1 * var(--Scale-50));
+    --letter-spacing-h1: calc(-1 * var(--Scale-25));
 
-    /* Font Trait Tokens */
-    --Font-tracking-wordmark: calc(-1 * var(--Scale-50));
-    --Font-tracking-h1: calc(-1 * var(--Scale-25));
+    /* Shadow */
+    --shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
 
-    /* Shadow Tokens */
-    --Shadow-default: 0px 4px 4px rgba(0, 0, 0, 0.12);
+    /* Surface - Page & UI Containers */
+    --surface-page: var(--brown-100);
+    --surface-default: var(--white);
+    --surface-secondary: var(--brown-200);
+    --surface-tertiary: var(--brown-300);
 
-    /* Border Tokens */
-    --Border-default: var(--Primary-800);
-    --Border-action: var(--Primary-800);
-    --Border-action-hover: var(--Primary-800);
-    --Border-focus: var(--Primary-800);
-    --Border-disabled: var(--Background-400);
-    --Border-error: var(--Error-default);
-    --Border-success: var(--Success-default);
-    --Border-insight: var(--Primary-500);
-    --Border-toc-badge: var(--Primary-500);
-    --Border-line: var(--Background-300);
-    --Border-summary: var(--Background-600);
-    --Border-tag: var(--Background-700);
-    --Border-keyword: var(--gray-600);
-    --Border-card: var(--Background-200);
-    --Border-unemphasized: var(--Background-400);
+    /* Surface - Interactive States */
+    --surface-action: var(--teal-500);
+    --surface-action-hover: var(--teal-800);
+    --surface-action-active: var(--teal-900);
+    --surface-action-disabled: var(--brown-400);
 
-    --Border-header-bottom: var(--Spacing-16);
+    /* Surface - Feedback */
+    --surface-error: var(--red-100);
+    --surface-error-subtle: var(--red-150);
+    --surface-success: var(--green-100);
+    --surface-success-subtle: var(--green-150);
+    --surface-info: var(--teal-100);
 
-    /* Icon Tokens */
-    --Icons-var: rgb(255 255 255);
+    /* Text - Body & Content */
+    --text-body-on-light: var(--brown-700);
+    --text-body-on-dark: var(--brown-300);
+    --text-body-inverse: var(--surface-page);
+    --text-body-muted: var(--brown-400);
+    --text-body-disabled: var(--brown-400);
 
-    /* Surface Tokens */
-    --Surface-page: var(--Background-100);
-    --Surface-default: var(--white);
-    --Surface-action: var(--Primary-500);
-    --Surface-action-hover: var(--Primary-800);
-    --Surface-error: var(--Error-100);
-    --Surface-success: var(--Success-100);
-    --Surface-insight: var(--Primary-100);
-    --Surface-toc-badge: var(--Primary-100);
-    --Surface-tag: var(--Background-200);
-    --Surface-footer: var(--Background-200);
-    --Surface-metric: var(--Primary-100);
-    --Surface-unemphasized: var(--Background-200);
+    /* Text - Headings */
+    --text-heading-on-light: var(--teal-800);
+    --text-heading-on-dark: var(--brown-100);
 
-    /* Text Tokens */
-    --Text-heading-light-bg: var(--Primary-800);
-    --Text-heading-dark-bg: var(--Background-100);
-    --Text-body-light-bg: var(--Background-700);
-    --Text-body-dark-bg: var(--Background-300);
-    --Text-caption-light-bg: var(--Background-600);
-    --Text-caption-dark-bg: var(--Background-300);
-    --Text-link-light-bg: var(--Primary-800);
-    --Text-link-dark-bg: var(--Background-100);
-    
-    --Text-selected: var(--Background-900);
-    --Text-unselected: var(--Background-400);
-    --Text-unemphasized: var(--Background-400);
-    --Text-disabled: var(--Background-400);
-    --Text-error: var(--Background-700);
+    /* Text - Interactive */
+    --text-action: var(--teal-800);
+    --text-action-hover: var(--teal-100);
+    --text-link-on-light: var(--teal-800);
+    --text-link-on-dark: var(--brown-100);
+    --text-link-visited: var(--teal-600);
 
-    --Text-action: var(--Primary-800);
-    --Text-action-hover: var(--Primary-100);
+    /* Text - Feedback & Status */
+    --text-error: var(--red-700);
+    --text-success: var(--green-700);
+    --text-info: var(--teal-600);
 
-    --Text-on-action: var(--Primary-100);
-    --Text-success: var(--Background-700);
-    --Text-toc-badge: var(--Primary-500);
-    --Text-toc-selected: var(--Background-900);
-    --Text-keyword: var(--gray-600);
+    /* Text - Captions & Secondary */
+    --text-caption: var(--brown-600);
+    --text-caption-muted: var(--brown-500);
+    --text-code: var(--gray-600);
+
+    /* Text - Selected/Emphasized */
+    --text-selected: var(--brown-900);
+    --text-unselected: var(--brown-400);
+    --text-unemphasized: var(--brown-400);
+
+    /* Border - Structural */
+    --border-default: var(--teal-800);
+    --border-subtle: var(--brown-300);
+    --border-muted: var(--brown-400);
+    --border-weak: var(--brown-200);
+
+    /* Border - Interactive */
+    --border-action: var(--teal-800);
+    --border-action-hover: var(--teal-900);
+    --border-focus: var(--teal-800);
+    --border-disabled: var(--brown-400);
+    --border-tag: var(--brown-700);
+
+    /* Border - Feedback */
+    --border-error: var(--red-default);
+    --border-success: var(--green-default);
+    --border-info: var(--teal-default);
+
+    /* Icon */
+    --icon-on-accent: rgb(255 255 255);
+
+    /* Gradient */
+    --gradient-nav: linear-gradient(var(--surface-page), var(--surface-page) 9.4rem, rgb(254,246,240, 0.8) 10.2rem, transparent);
+    --gradient-case-study: linear-gradient(to left, var(--teal-default), var(--teal-800));
 }
 
-:root {
-    /* Legacy gradients using new tokens */
-    --navgradient: linear-gradient(var(--Surface-page), var(--Surface-page) 9.4rem, rgb(254,246,240, 0.8) 10.2rem, transparent);
-    --case-study: linear-gradient(to left, var(--Primary-default), var(--Primary-800));
-}
+
 
 @font-face {
     font-family: gravity;
@@ -297,11 +264,11 @@
 }
 
 .fraunces {
-  font-family: "Fraunces", ui-serif, Georgia, serif;
+  font-family: var(--font-display), ui-serif, Georgia, serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: italic;
-  letter-spacing: -0.05rem;
+  letter-spacing: var(--letter-spacing-h1);
   font-variation-settings: "SOFT" 0, "WONK" 1;
   font-display: swap;
 }
@@ -315,14 +282,14 @@ html {
 }
 
 body {
-    background-color: var(--Surface-page);
-    font-family: 'gravity', 'Inter', system-ui, sans-serif;
+    background-color: var(--surface-page);
+    font-family: var(--font-body), 'Inter', system-ui, sans-serif;
 }
 
 h1, h2, h3, h4 {
     font-weight: normal;
-    font-family: gravity-bold;
-    color: var(--Text-heading-light-bg);
+    font-family: var(--font-bold);
+    color: var(--text-heading-on-light);
     text-wrap: balance;
 }
 
@@ -332,42 +299,42 @@ h1 {
 
 h2 {
     font-size: clamp(1.75rem, 2vw, 2rem);
-    margin-bottom: var(--Spacing-h2-h4-margin);
+    margin-bottom: var(--space-h2-h4-margin);
 }
 
 h3 {
     font-size: clamp(1.25rem, 2vw, 1.5rem);
-    margin-bottom: var(--Spacing-h3-margin);
+    margin-bottom: var(--space-h3-margin);
     line-height: 150%;
 }
 
 h4 {
     font-size: clamp(var(--Scale-450), 2vw, 1.25rem);
-    margin-bottom: var(--Spacing-h2-h4-margin);
+    margin-bottom: var(--space-h2-h4-margin);
     line-height: 150%; 
 }
 
 p, li, span, form, input, button { /* landing-body: I am a... I'm an upcoming UI/UX... */
-    font-family: gravity;
+    font-family: var(--font-body);
     line-height: 150%;
-    color: var(--Text-body-light-bg);
+    color: var(--text-body-on-light);
     font-size: clamp(var(--Scale-default), 2vw, var(--Scale-450));
 }
 
 figcaption {
-    color: var(--Text-caption-light-bg);
+    color: var(--text-caption);
     margin-top: .5rem;
     text-align: center;
 }
 
 .subtitle {
-    margin-bottom: var(--Spacing-caption-margin);
+    margin-bottom: var(--space-caption-margin);
 }
 
 .subtitle, figcaption {
-    font-family: gravity;
+    font-family: var(--font-body);
     line-height: 150%;
-    color: var(--Text-caption-light-bg);
+    color: var(--text-caption);
     font-size: clamp(var(--Scale-350), 1vw, var(--Scale-default));
 }
 
@@ -382,18 +349,18 @@ ul {
 
 a, a:link, a:visited, a:hover, a:active { 
     text-decoration: none;
-    color: var(--Text-link-light-bg);
+    color: var(--text-link-on-light);
 }
 
 b {
     font-weight: normal;
     -webkit-text-stroke: 0.02rem inherit;
-    font-family: gravity-bold;
+    font-family: var(--font-bold);
 }
 
 hr {
-    margin-bottom: var(--Spacing-primary-content-margin);
-    border: var(--Border-width-sm) solid var(--Border-line);
+    margin-bottom: var(--space-lg);
+    border: var(--border-thin) solid var(--border-subtle);
 }
 
 button {
@@ -411,7 +378,7 @@ button {
 .underline-button {
     position: relative;
     white-space: nowrap;
-    color: var(--Text-link-light-bg);
+    color: var(--text-link-on-light);
 }
 
 .underline-button::after {
@@ -422,7 +389,7 @@ button {
   height: 1px;
   bottom: -0.2rem;
   left: 0;
-  background-color: var(--Text-link-light-bg);
+  background-color: var(--text-link-on-light);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
