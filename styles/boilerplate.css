@@ -36,8 +36,8 @@
 
 .wordmark span {
     letter-spacing: var(--letter-spacing-tight);
-    font-size: 48px;
-    background: repeating-linear-gradient(to bottom, var(--teal-600), var(--teal-default) 2.75rem, var(--teal-default) 3.45rem);
+    font-size: 3rem;
+    background: repeating-linear-gradient(to bottom, var(--teal-800), var(--teal-default) 2.75rem, var(--teal-default) 3.45rem);
     margin-right: 0.125rem;
 
     -webkit-background-clip: text;
