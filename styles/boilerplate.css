@@ -210,7 +210,6 @@
     padding: 1.5rem 2rem 1.5rem 1.5rem;
     border-radius: var(--radius-sm);
     border: var(--border-thin) solid var(--border-subtle);
-    box-shadow: var(--shadow);
     flex-grow: 1;
 }
 
