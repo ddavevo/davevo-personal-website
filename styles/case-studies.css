@@ -325,10 +325,14 @@ summary {
     border-radius: 0.6rem;
     background-color: var(--surface-info);
     border: var(--border-thin) solid var(--border-info);
+}
 
-    > p, > div p {
+.insight p {
         color: var(--text-info);
-    }
+    
+        > b {
+           color: var(--text-info); 
+        }
 }
 
 .insight * {
