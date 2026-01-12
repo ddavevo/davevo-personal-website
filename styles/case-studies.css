@@ -382,7 +382,7 @@ summary {
         margin-bottom: 0.25rem;
     }
 
-    > div :nth-child(2) {
+    > div :nth-child(2), > p {
         color: var(--text-success);
     }
 }
@@ -490,13 +490,13 @@ summary {
 
 .success {
     background-color: var(--surface-success);
-    border: 1.25px solid var(--border-success);
+    border: var(--border-thin) solid var(--border-success);
     color: var(--text-success);
 }
 
 .negative {
-    border: var(--border-thin) solid var(--border-error);
     background-color: var(--surface-error);
+    border: var(--border-thin) solid var(--border-error);
     color: var(--text-error);
 }
 
