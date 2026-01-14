@@ -124,7 +124,7 @@ summary {
     clear: both;
 }
 
-.hero .lottie-anim, .hero picture {
+.hero .lottie-anim, .hero picture, .hero video {
     display: block;
     aspect-ratio: 16/9;
     object-fit: cover;
