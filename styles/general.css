@@ -188,16 +188,27 @@
     --surface-success-subtle: var(--green-150);
     --surface-info: var(--teal-100);
 
+    /* Text - Headings */
+    --text-heading-on-light: var(--teal-800);
+    --text-heading-on-dark: var(--brown-100);
+
     /* Text - Body & Content */
-    --text-body-on-light: var(--brown-700);
+    --text-body-on-light: var(--brown-600);
+    --text-body-bold-on-light: var(--brown-900);
     --text-body-on-dark: var(--brown-300);
     --text-body-inverse: var(--surface-page);
     --text-body-muted: var(--brown-400);
     --text-body-disabled: var(--brown-400);
 
-    /* Text - Headings */
-    --text-heading-on-light: var(--teal-800);
-    --text-heading-on-dark: var(--brown-100);
+    /* Text - Captions & Secondary */
+    --text-caption: var(--brown-500);
+    --text-caption-muted: var(--brown-500);
+    --text-code: var(--gray-500);
+
+    /* Text - Selected/Emphasized */
+    --text-selected: var(--brown-900);
+    --text-unselected: var(--brown-300);
+    --text-unemphasized: var(--brown-300);
 
     /* Text - Interactive */
     --text-action: var(--teal-800);
@@ -210,16 +221,6 @@
     --text-error: var(--red-700);
     --text-success: var(--green-700);
     --text-info: var(--teal-600);
-
-    /* Text - Captions & Secondary */
-    --text-caption: var(--brown-600);
-    --text-caption-muted: var(--brown-500);
-    --text-code: var(--gray-600);
-
-    /* Text - Selected/Emphasized */
-    --text-selected: var(--brown-900);
-    --text-unselected: var(--brown-400);
-    --text-unemphasized: var(--brown-400);
 
     /* Border - Structural */
     --border-default: var(--teal-800);
@@ -357,6 +358,7 @@ b {
     font-weight: normal;
     -webkit-text-stroke: 0.02rem inherit;
     font-family: var(--font-bold);
+    color: var(--text-body-bold-on-light);
 }
 
 hr {
@@ -437,7 +439,7 @@ button {
 
 @media screen and (min-width: 1000px) {
     p, li, span {
-        font-size: clamp(var(--Scale-450), 1.25vw, var(--Scale-550));
+        font-size: clamp(var(--Scale-450), 1.25vw, var(--Scale-500));
     }
     .subtitle, figcaption {
         font-size: clamp(var(--Scale-default), 1.25vw, var(--Scale-450));
