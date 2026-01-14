@@ -235,8 +235,8 @@
                     <p class="subtitle">Problem</p>
                     <h3>The need for visual storytelling</h3>
                     <div class="columns">
-                        <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-landing.png">
-                        <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-bottom.png">
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-landing.png" alt="From the first impression, the landing page promotes deals before communicating the salon’s value to the viewer.">
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-bottom.png" alt="Images of past work only makes an appearance at the bottom of the page.">
                     </div>
                     <hr>
                 </article>
@@ -244,8 +244,8 @@
                 <article class="extra-space">
                     <h3>Usability issues make navigation hard</h3>
                     <div class="columns">
-                        <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-services.png">
-                        <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-dropdowns.png">
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-services.png" alt="The readability suffers because the services are images instead of inline elements, especially across different screen sizes.">
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-dropdowns.png" alt="Too many drop-downs and variants overwhelms the users and makes it hard to distinguish between items.">
                     </div>
                 </article>
                 <!-- ------ -->
@@ -398,29 +398,53 @@
                     <p class="subtitle">Constraints</p>
                     <h3>Working within a 3rd party design system</h3>
                     <p>
-                        Since the salon’s booking is done through Vagaro, we proposed changes that can realistically be implemented within that platform. By reviewing other businesses’ Vagaro setups and referencing their official documentation, we focused on improving structure and clarity using available components rather than proposing custom features that couldn’t ship.
+                        Since the salon’s booking is done through Vagaro, we proposed changes that can realistically be implemented within that platform. Referencing official docs and other businesses’ setups, 90% of UI patterns were built using existing Vagaro components, with only layout and hierarchy changes. This avoided custom engineering while still enabling a 55.6% reduction in option complexity.
                     </p>
                     <hr>
                 </article>
+
                 <article>
-                    <picture>
-                        <img loading="lazy" alt="test" data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-before-booking-components.png" class="lazyload">
-                    </picture>
+                    <figure>
+                        <picture>
+                            <img loading="lazy" alt="test" data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-before-booking-components.png" class="lazyload">
+                        </picture>
+                        <figcaption>
+                            Hair and nail services are scattered and not intuitive to search. Variants leave customers confused on what the service is and how it factors into prices.
+                        </figcaption>
+                    </figure>
                 </article>
+
                 <article>
-                    <picture>
-                        <img loading="lazy" alt="test" data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-after-booking-organization.png" class="lazyload">
-                    </picture>
+                    <figure>
+                        <picture>
+                            <img loading="lazy" alt="test" data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-after-booking-organization.png" class="lazyload">
+                        </picture>
+                        <figcaption>
+                            The dropdowns already exist, let's just consolidate them and create more tabs to organize them into (no more page bloat).
+                        </figcaption>
+                    </figure>
                 </article>
+
                 <article>
-                    <picture>
-                        <img loading="lazy" alt="test" data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-after-booking-addcart.png" class="lazyload">
-                    </picture>
+                    <figure>
+                        <picture>
+                            <img loading="lazy" alt="test" data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-after-booking-addcart.png" class="lazyload">
+                        </picture>
+                        <figcaption>
+                            "Add to Cart" feature helps users explore catalog without being locked into a purchase early on.
+                        </figcaption>
+                    </figure>
                 </article>
+
                 <article>
-                    <picture>
-                        <img loading="lazy" alt="test" data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-after-booking-servicecards.png" class="lazyload">
-                    </picture>
+                    <figure>
+                        <picture>
+                            <img loading="lazy" alt="test" data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-after-booking-servicecards.png" class="lazyload">
+                        </picture>
+                        <figcaption>
+                            In addition to standardizing service cards, the "Add-ons" feature combines similar services together and provides users more clarity on what the service is.
+                        </figcaption>
+                    </figure>
                 </article>
 
                 <article> <!-- Design System -->
@@ -452,7 +476,7 @@
                         </h3>
                     </div>
                     <p>
-                        I would formalize success metrics earlier on. While we aligned on goals conceptually, having clearer signals for a working solution would have better helped us evaluate tradeoffs and measure changes.
+                        I would formalize success metrics earlier on. While we aligned on big-picture goals, having clearer signals for a working solution would have better helped us evaluate tradeoffs and measure changes.
                     </p>
                 </article>
 
@@ -464,7 +488,7 @@
                         </h3>
                     </div>
                     <p>
-                        Salon patronship took on different meanings across customers and business owners. Identifying these gaps early on could help us align our stakeholders’ goals, or potentially explore more tailored solutions for each need.
+                        Salon patronship took on different meanings across customers and business owners. Digging further into these gaps could've helped us better align our stakeholders’ goals, or potentially explore more tailored solutions for each need.
                     </p>
                 </article>
 
