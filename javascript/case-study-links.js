@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll(".main-container section");
+  // Get sections from main-container AND hero/featured sections
+  const mainSections = document.querySelectorAll(".main-container section");
+  const heroSection = document.querySelector(".hero");
+  const featuredSection = document.querySelector(".featured-case-studies");
+  
+  const allSections = Array.from(mainSections);
+  if (heroSection) allSections.unshift(heroSection);
+  if (featuredSection) allSections.unshift(featuredSection);
 
   // ===================== Video Observer =====================
   const videoObserver = new IntersectionObserver((entries) => {
@@ -64,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     threshold: 0
   });
 
-  sections.forEach(sec => {
+  allSections.forEach(sec => {
     revealObserver.observe(sec);
 
     // Immediate check
@@ -76,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Scroll fallback
   window.addEventListener("scroll", () => {
-    sections.forEach(sec => {
+    allSections.forEach(sec => {
       if (!sec.classList.contains("visible")) {
         const rect = sec.getBoundingClientRect();
         if (rect.top < window.innerHeight + 200 && rect.bottom > -200) {
