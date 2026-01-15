@@ -195,6 +195,7 @@
     /* Text - Body & Content */
     --text-body-on-light: var(--brown-600);
     --text-body-bold-on-light: var(--brown-900);
+    --text-body-bold-on-dark: var(--gray-300);
     --text-body-on-dark: var(--brown-300);
     --text-body-inverse: var(--surface-page);
     --text-body-muted: var(--brown-400);

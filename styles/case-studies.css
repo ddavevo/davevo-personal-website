@@ -144,8 +144,8 @@ summary {
     margin-bottom: 0.5rem;
 }
 
-.hero p {
-    color: var(--gray-300);
+.hero p, .hero b {
+    color: var(--text-body-bold-on-dark);
 }
 
 .hero-ribbon {

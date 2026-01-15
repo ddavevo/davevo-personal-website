@@ -67,23 +67,11 @@
 
         <section class="featured-case-studies">
             <!--Design Lab-->
-            <a class="project open-new-page hero" href="case-studies/designlab.html">
-                <div style="position: relative; max-width: 1312px; width: 100%; aspect-ratio: 16/9; margin: 0 auto;">
-                    <img class="hero-poster" style="position: absolute; top: 0; left: 0; width: 100%; aspect-ratio: 16/9; object-fit: cover; z-index: 2;"
-                        src="/images/dlab-hero-cover.png" 
-                        alt="Hero animation poster"
-                        width="1312" height="738"
-                        fetchpriority="high"
-                        decoding="async"/>
-                    <div 
-                        class="lottie-anim" 
-                        data-src="/lottie/dlab-hero.lottie" 
-                        data-loop="true" 
-                        data-autoplay="true" 
-                        data-renderer="svg"
-                        decoding="async" style="z-index: 2;">
-                    </div>
-                </div>
+            <a class="project open-new-page" href="case-studies/designlab.html">
+                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                    <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/dlab-hero-compressed.mp4" type="video/mp4"/>
+                    <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/dlab-hero-compressed.webm" type="video/webm"/>
+                </video>
                 <div class="project-overview">
 
                     <p class="project-metric">Published to CHI’25</p>
@@ -248,7 +236,6 @@
     });
 </script>
 
-<script src="/javascript/lottie-loading.js" async></script>
 <script src="/javascript/case-study-links.js" defer></script>
  
 </html>
