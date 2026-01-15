@@ -336,6 +336,7 @@ figcaption {
 .subtitle, figcaption {
     font-family: var(--font-body);
     line-height: 150%;
+    text-wrap: balance;
     color: var(--text-caption);
     font-size: clamp(var(--Scale-350), 1vw, var(--Scale-default));
 }
