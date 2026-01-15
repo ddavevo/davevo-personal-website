@@ -219,8 +219,10 @@
     --text-link-visited: var(--teal-600);
 
     /* Text - Feedback & Status */
-    --text-error: var(--red-700);
-    --text-success: var(--green-700);
+    --text-error: var(--red-600);
+    --text-error-bold: var(--red-700);
+    --text-success: var(--green-600);
+    --text-success-bold: var(--green-700);
     --text-info: var(--teal-600);
 
     /* Border - Structural */

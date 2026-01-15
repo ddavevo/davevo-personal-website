@@ -360,15 +360,6 @@ summary {
     gap: 1.5rem;
     background-color: var(--surface-error);
     border: 1.25px solid var(--border-error);
-
-    > div :nth-child(1) {
-        color: var(--text-error);
-        margin-bottom: 0.25rem;
-    }
-
-    > div :nth-child(2), > p {
-        color: var(--text-error);
-    }
 }
 
 .gain-point {
@@ -376,15 +367,22 @@ summary {
     gap: 1.5rem;
     background-color: var(--surface-success);
     border: 1.25px solid var(--border-success);
+}
 
-    > div :nth-child(1) {
-        color: var(--text-success);
-        margin-bottom: 0.25rem;
-    }
+.pain-point p b {
+    color: var(--text-error-bold);
+}
 
-    > div :nth-child(2), > p {
-        color: var(--text-success);
-    }
+.pain-point p, .pain-point li {
+    color: var(--text-error);
+}
+
+.gain-point p b {
+    color: var(--text-success-bold);
+}
+
+.gain-point p, .gain-point li {
+    color: var(--text-success);
 }
 
 /* ====================================================================== */
