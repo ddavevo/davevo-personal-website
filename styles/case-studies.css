@@ -385,6 +385,14 @@ summary {
     color: var(--text-success);
 }
 
+.impact-point {
+    margin-bottom: var(--space-xl);
+}
+
+.impact-point :nth-child(1) {
+    margin-bottom: var(--space-sm);
+}
+
 /* ====================================================================== */
 
 .interview-data {
@@ -434,7 +442,7 @@ summary {
     margin-bottom: 0.75rem;
 }
 
-.tags li {
+.tags li, .tag-inline {
     font-family: gravity;
     display: inline;
     list-style-type: none;
