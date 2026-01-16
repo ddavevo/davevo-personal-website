@@ -327,14 +327,6 @@ summary {
     border: var(--border-thin) solid var(--border-info);
 }
 
-.insight p {
-        color: var(--text-info);
-    
-        > b {
-           color: var(--text-info); 
-        }
-}
-
 .insight * {
     margin-bottom: 0;
 }
@@ -367,6 +359,14 @@ summary {
     gap: 1.5rem;
     background-color: var(--surface-success);
     border: 1.25px solid var(--border-success);
+}
+
+.insight p b {
+    color: var(--text-info-bold);
+}
+
+.insight p, .insight li {
+    color: var(--text-info);
 }
 
 .pain-point p b {

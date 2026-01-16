@@ -224,6 +224,7 @@
     --text-success: var(--green-600);
     --text-success-bold: var(--green-700);
     --text-info: var(--teal-600);
+    --text-info-bold: var(--teal-700);
 
     /* Border - Structural */
     --border-default: var(--teal-800);
