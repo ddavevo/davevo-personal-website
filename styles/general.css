@@ -203,7 +203,7 @@
 
     /* Text - Captions & Secondary */
     --text-caption: var(--brown-500);
-    --text-caption-muted: var(--brown-500);
+    --text-caption-muted: var(--brown-400);
     --text-code: var(--gray-500);
 
     /* Text - Selected/Emphasized */
