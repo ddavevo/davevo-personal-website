@@ -32,7 +32,7 @@ main {
 
 .main-container section, p, hr, picture img, img, picture, figure, .columns, .main-container ul, aside, blockquote, .lottie-anim {
     width: 100%;
-    margin-bottom: var(--space-primary-content-margin);
+    margin-bottom: var(--space-xl);
 }
 
 main p {
@@ -180,7 +180,7 @@ summary {
 .table-of-contents {
     position: sticky;
     top: 8rem;
-    padding-bottom: calc(var(--space-3xl) + var(--space-primary-content-margin) + 1.75rem);
+    padding-bottom: calc(var(--space-5xl) + var(--space-xl) + 1.75rem);
 }
 
 .toc-header {
@@ -226,7 +226,7 @@ summary {
 /* ================================================================= */
 
 .main-container section {
-    padding-bottom: var(--space-3xl);
+    padding-bottom: var(--space-5xl);
     content-visibility: auto;
     contain-intrinsic-size: auto;
     transition: opacity 1s cubic-bezier(.17,.67,.75,1.06), transform 1.75s cubic-bezier(.17,.67,.75,1.06);
@@ -237,11 +237,11 @@ summary {
 }
 
 .main-container article {
-    padding-bottom: var(--space-xl);
+    padding-bottom: var(--space-3xl);
 }
 
 .main-container article.extra-space {
-    padding-bottom: var(--space-5xl);
+    padding-bottom: var(--space-7xl);
 }
 
 /* ====================================================================== */
@@ -386,7 +386,7 @@ summary {
 }
 
 .impact-point {
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-3xl);
 }
 
 .impact-point :nth-child(1) {
@@ -706,11 +706,11 @@ summary {
     }
 
     .main-container article {
-        padding-bottom: var(--space-xl);
+        padding-bottom: var(--space-3xl);
     }
 
     .main-container article.extra-space {
-        padding-bottom: var(--space-4xl);
+        padding-bottom: var(--space-6xl);
     }
 
     .gallery {

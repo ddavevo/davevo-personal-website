@@ -119,14 +119,14 @@
     --space-xs: var(--Scale-200);
     --space-sm: var(--Scale-300);
     --space-md: var(--Scale-default);
-    --space-h3-margin: var(--Scale-500);
-    --space-primary-content-margin: var(--Scale-600);
-    --space-lg: var(--Scale-800);
-    --space-xl: var(--Scale-1000);
-    --space-2xl: var(--Scale-1200);
-    --space-3xl: var(--Scale-1300);
-    --space-4xl: var(--Scale-1350);
-    --space-5xl: var(--Scale-1400);
+    --space-lg: var(--Scale-500);
+    --space-xl: var(--Scale-600);
+    --space-2xl: var(--Scale-800);
+    --space-3xl: var(--Scale-1000);
+    --space-4xl: var(--Scale-1200);
+    --space-5xl: var(--Scale-1300);
+    --space-6xl: var(--Scale-1350);
+    --space-7xl: var(--Scale-1400);
 
     /* Typography - Font Families */
     --font-display: 'Fraunces';
@@ -135,9 +135,9 @@
 
     /* Border Radius */
     --radius-none: var(--Scale-0);
-    --radius-sm: var(--space-xs);
+    --radius-sm: var(--Scale-200);
     --radius-md: var(--Scale-250);
-    --radius-lg: var(--space-md);
+    --radius-lg: var(--Scale-default);
 
     /* Border Width */
     --border-none: var(--Scale-0);
@@ -299,12 +299,12 @@ h1 {
 
 h2 {
     font-size: clamp(1.75rem, 2vw, 2rem);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-2xl);
 }
 
 h3 {
     font-size: clamp(1.25rem, 2vw, 1.5rem);
-    margin-bottom: var(--space-h3-margin);
+    margin-bottom: var(--space-lg);
     line-height: 150%;
 }
 
@@ -361,7 +361,7 @@ b {
 }
 
 hr {
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-2xl);
     border: var(--border-thin) solid var(--border-subtle);
 }
 
