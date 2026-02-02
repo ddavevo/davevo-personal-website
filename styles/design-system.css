@@ -1,0 +1,38 @@
+main section {
+    margin-bottom: 4rem;
+}
+
+main p {
+    max-width: 80ch;
+    color: var(--text-body-on-light);
+    margin-top: 1rem;
+}
+
+main a {
+    color: var(--text-link-on-light);
+}
+
+main {
+    padding: 10rem 4rem 4rem 4rem;
+    max-width: var(--width-max);
+    position: relative;
+    display: grid;
+    grid-template-columns: 12rem minmax(0, 1fr);
+    gap: 4rem;
+    margin: 0 auto;
+}
+
+.color-scale {
+    display: flex;
+}
+
+.color-scale div {
+    flex-grow: 1;
+    height: 4rem;
+    background-color: green;
+    border: 1px solid;
+}
+
+.color-scale p {
+     mix-blend-mode: difference;
+}

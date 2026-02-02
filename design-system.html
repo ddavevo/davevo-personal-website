@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Design Tokens</title>
+    <link rel="icon" type="image/x-icon" href="https://media.dave-vo.com/file/dvfolio/general/davevo_favicon.png">
+    <meta
+      name="description" content="Design token reference for colors, typography, and UI primitives used across the system."/>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html">
+            <div class="wordmark open-new-page"> <!-- 111px x 74px / 127px x 74px -->
+                <span class="fraunces">dave v</span>
+                <img class="stylized-o" alt="" aria-label="Navigate back to homepage" src="https://media.dave-vo.com/file/dvfolio/general/logo-pinwheel-formation.svg">
+            </div> 
+        </a>
+
+        <div class="menu">
+            <ul class="hamburger-menu-options">
+                <li> <!-- 45px x 22px / 49px x 22px -->
+                    <a class="underline-button open-new-page" href="about.html">About</a>
+                </li>
+                <li> <!-- 84px x 22px / 92px x 22px -->
+                    <a class="underline-button open-new-page" href="playground.html">
+                        Play
+                    </a>
+                </li>
+                <li> <!-- 63px x 22px / 65px x 22px -->
+                    <a class="underline-button open-new-page" href="https://drive.google.com/file/d/1yYrBAnPRDSHiks1AfV7YPR5DxmK0dA1y/view?usp=sharing" target="_blank">
+                        Résumé
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <button type="button" aria-label="Hamburger Icon" class="hamburger" onclick="myFunction(this)">
+            <div class="ham-bars" id="bar1"></div>
+            <div class="ham-bars" id="bar2"></div>
+            <div class="ham-bars" id="bar3"></div>
+        </button>
+    </header>
+    <div class="header-container"></div>
+
+    <main>
+      <!--Table of Contents-->
+        <div class="toc-container">
+            <div class="table-of-contents">
+                <p class="toc-header">
+                    <b>Table of Contents</b>
+                </p>
+                <ul>
+                    <li><a href="#solution">Solution</a></li>
+                    <li><a href="#background">Background</a></li>
+                    <li><a href="#discovery">Discovery</a></li>
+                    <li><a href="#design">Design</a></li>
+                    <li><a href="#reflection">Reflection</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-container">
+              <h2> Colors </h2>
+              <p>
+                Primitive color palettes used across the design system.
+              </p>
+              
+              <h3>Grayscale</h3>
+              <section class="color-scale">
+                  <div style="background-color: var(--gray-100);"><p>100</p></div>
+                  <div style="background-color: var(--gray-200);"><p>200</p></div>
+                  <div style="background-color: var(--gray-300);"><p>300</p></div>
+                  <div style="background-color: var(--gray-400);"><p>400</p></div>
+                  <div style="background-color: var(--gray-500);"><p>500</p></div>
+                  <div style="background-color: var(--gray-600);"><p>600</p></div>
+                  <div style="background-color: var(--gray-700);"><p>700</p></div>
+                  <div style="background-color: var(--gray-800);"><p>800</p></div>
+                  <div style="background-color: var(--gray-900);"><p>900</p></div>
+                  <div style="background-color: var(--gray-1000);"><p>1000</p></div>
+              </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <img class="footer-logo" src="https://media.dave-vo.com/file/dvfolio/general/logo-stroked.png" alt="Decorative element.">
+
+            <div class="footer-content">
+                <h4>I’m Dave, a product designer based in California (willing to relocate). Actively searching for full-time roles.</h4>
+
+                <div class="footer-nav-container">
+                    <ul class="footer-nav">
+                        <p class="subtitle">Site</p>
+                        <li><a class="underline-button" href="/index.html">Home</a></li>
+                        <li><a class="underline-button" href="/about.html">About</a></li>
+                        <li><a class="underline-button" href="/playground.html">Play</a></li>
+                    </ul>
+
+                    <ul class="footer-nav">
+                        <p class="subtitle">Links</p>
+                        <li><a class="underline-button" href="mailto:ddavevoddesign@gmail.com" aria-label="My email.">Email</a></li>
+                        <li><a class="underline-button" href="https://www.linkedin.com/in/dave-vo" target="_blank" aria-label="My LinkedIn">Linkedin</a></li>
+                        <li><a class="underline-button" href="https://github.com/ddavevo" target="_blank" aria-label="My Github">Github</a></li>
+                    </ul>
+                </div>
+
+                <p id="copyright">@<script>document.write(new Date().getFullYear())</script> Dave Vo • Deployed on Github </p>
+            </div>
+        </div>    
+    </footer>
+</body>
+
+<link href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap" media="print" onload="this.media='all'">
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
+</noscript>
+
+<!-- ======================================= -->
+
+<link rel="preload" href="/styles/general.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/styles/general.css"></noscript>
+
+<link rel="preload" href="/styles/boilerplate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/styles/boilerplate.css"></noscript>
+
+<link rel="preload" href="/styles/design-system.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/styles/design-system.css"></noscript>
+
+</html>
