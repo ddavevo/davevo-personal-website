@@ -145,7 +145,7 @@
     position: fixed;
     left: 0%;
     width: 100%;
-    background-image: var(--navgradient);
+    background-image: var(--gradient-nav);
     opacity: 0;
     height: 11.8rem;
     transform: translateY(-100%); 

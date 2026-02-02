@@ -180,13 +180,13 @@ summary {
 .table-of-contents {
     position: sticky;
     top: 8rem;
-    padding-bottom: calc(var(--space-section-margin) + var(--space-primary-content-margin) + 1.75rem);
+    padding-bottom: calc(var(--space-3xl) + var(--space-primary-content-margin) + 1.75rem);
 }
 
 .toc-header {
     font-family: var(--font-bold); 
     color: var(--text-heading-on-light);
-    margin-bottom: var(--space-xs);
+    margin-bottom: var(--space-2xs);
 }
 
 [id] { scroll-margin-top: 8rem; }
@@ -226,7 +226,7 @@ summary {
 /* ================================================================= */
 
 .main-container section {
-    padding-bottom: var(--space-section-margin);
+    padding-bottom: var(--space-3xl);
     content-visibility: auto;
     contain-intrinsic-size: auto;
     transition: opacity 1s cubic-bezier(.17,.67,.75,1.06), transform 1.75s cubic-bezier(.17,.67,.75,1.06);
@@ -237,11 +237,11 @@ summary {
 }
 
 .main-container article {
-    padding-bottom: var(--space-article-margin-sm);
+    padding-bottom: var(--space-xl);
 }
 
 .main-container article.extra-space {
-    padding-bottom: var(--space-article-margin-xl);
+    padding-bottom: var(--space-5xl);
 }
 
 /* ====================================================================== */
@@ -270,7 +270,7 @@ summary {
     font-family: gravity-bold;
     color: var(--Text-heading-light-bg);
     font-size: clamp(1.1rem, 2vw, 1.25rem);
-    margin-bottom: var(--space-h4-margin);
+    margin-bottom: var(--space-sm);
     line-height: 150%; 
 }
 
@@ -390,7 +390,7 @@ summary {
 }
 
 .impact-point :nth-child(1) {
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-xs);
 }
 
 /* ====================================================================== */
@@ -466,7 +466,7 @@ summary {
     gap: 0 0.75rem;
 
     > h3 {
-    margin-bottom: var(--space-1ch);
+    margin-bottom: var(--space-sm);
     }
 }
 
@@ -668,7 +668,7 @@ summary {
     .columns div {
         margin-bottom: 1rem;
     }
-    .columns p {
+    .columns p:not(.subtitle) {
         margin-bottom: 0;
     }
 }
@@ -706,11 +706,11 @@ summary {
     }
 
     .main-container article {
-        padding-bottom: var(--space-article-margin-sm);
+        padding-bottom: var(--space-xl);
     }
 
     .main-container article.extra-space {
-        padding-bottom: var(--space-article-margin-lg);
+        padding-bottom: var(--space-4xl);
     }
 
     .gallery {

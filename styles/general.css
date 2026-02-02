@@ -114,25 +114,19 @@
 :root {
     /* Spacing Scale - T-Shirt Sizing (Intent-based) */
     --space-none: var(--Scale-0);
-    --space-2xs: var(--Scale-25);
-    --space-xs: var(--Scale-100);
-    --space-sm: var(--Scale-200);
+    --space-3xs: var(--Scale-25);
+    --space-2xs: var(--Scale-100);
+    --space-xs: var(--Scale-200);
+    --space-sm: var(--Scale-300);
     --space-md: var(--Scale-default);
+    --space-h3-margin: var(--Scale-500);
+    --space-primary-content-margin: var(--Scale-600);
     --space-lg: var(--Scale-800);
     --space-xl: var(--Scale-1000);
     --space-2xl: var(--Scale-1200);
     --space-3xl: var(--Scale-1300);
-
-    --space-1ch: 1ch;
-    --space-h2-margin: 2ch;
-    --space-h3-margin: 1.5ch;
-    --space-h4-margin: 1ch;
-    --space-caption-margin: 1.5ch;
-    --space-primary-content-margin: 2.5ch;
-    --space-article-margin-sm: 4ch;
-    --space-section-margin: 6ch;
-    --space-article-margin-lg: 8ch;
-    --space-article-margin-xl: 9ch;
+    --space-4xl: var(--Scale-1350);
+    --space-5xl: var(--Scale-1400);
 
     /* Typography - Font Families */
     --font-display: 'Fraunces';
@@ -141,7 +135,7 @@
 
     /* Border Radius */
     --radius-none: var(--Scale-0);
-    --radius-sm: var(--space-sm);
+    --radius-sm: var(--space-xs);
     --radius-md: var(--Scale-250);
     --radius-lg: var(--space-md);
 
@@ -305,7 +299,7 @@ h1 {
 
 h2 {
     font-size: clamp(1.75rem, 2vw, 2rem);
-    margin-bottom: var(--space-h2-margin);
+    margin-bottom: var(--space-lg);
 }
 
 h3 {
@@ -316,7 +310,7 @@ h3 {
 
 h4 {
     font-size: clamp(var(--Scale-450), 2vw, 1.25rem);
-    margin-bottom: var(--space-h4-margin);
+    margin-bottom: var(--space-sm);
     line-height: 150%; 
 }
 
@@ -334,7 +328,7 @@ figcaption {
 }
 
 .subtitle {
-    margin-bottom: var(--space-caption-margin);
+    margin-bottom: var(--space-md);
 }
 
 .subtitle, figcaption {
