@@ -49,19 +49,19 @@
     --brown-700: rgb(100 74 63);
     --brown-800: rgb(66 50 41);
     --brown-900: rgb(38 30 23);
-    --brown-1000: rgb(66 50 41);  /* #423229 */
-    --brown-1100: rgb(38 30 23);  /* #261e17 - same as brown-900 */
+    --brown-1000: #423229;
+    --brown-1100: #261E17;
 
     /* Color Tokens - Teal Scale */
     --teal-100: rgb(228 239 237);
     --teal-200: rgb(172 228 237);
     --teal-300: rgb(108 212 229);
+    --teal-default: rgb(0 175 205);
     --teal-500: rgb(4 151 180);
     --teal-600: rgb(0 108 140);
     --teal-700: rgb(1 85 111);
     --teal-800: rgb(6 47 63);
     --teal-900: rgb(8 26 28);
-    --teal-default: rgb(0 175 205);
 
     --white: rgb(255 255 255);
     --black: rgb(0 0 0);
@@ -189,8 +189,8 @@
     /* Text - Body & Content */
     --text-body-on-light: var(--brown-600);
     --text-body-bold-on-light: var(--brown-900);
-    --text-body-bold-on-dark: var(--gray-300);
     --text-body-on-dark: var(--brown-300);
+    --text-body-bold-on-dark: var(--gray-300);
     --text-body-inverse: var(--surface-page);
     --text-body-muted: var(--brown-400);
     --text-body-disabled: var(--brown-400);
