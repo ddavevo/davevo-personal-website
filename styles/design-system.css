@@ -63,7 +63,7 @@ main {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
     border-bottom: var(--border-thin) solid var(--gray-400);
 }
 
@@ -81,14 +81,21 @@ main {
     border: var(--border-thin) solid var(--gray-400);
 }
 
+.token-preview-large {
+    width: 3rem; height: 3rem;
+}
+
 .token-name {
     width: min-content;
     white-space: nowrap;
+    color: var(--brown-900);
+    background-color: var(--brown-250);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-pill);
 }
 
-.token-values {
-    padding: 0;
-    margin: 0;
+.token-info-container code:not(.token-name) {
+    color: var(--brown-600);
 }
 
 @media screen and (max-width: 623px) {

@@ -42,6 +42,7 @@
     /* Color Tokens - Brown Scale */
     --brown-100: rgb(254 246 240);
     --brown-200: rgb(245 234 224);
+    --brown-250: rgb(238, 223, 212);
     --brown-300: rgb(213 202 190);
     --brown-400: rgb(189 159 134);
     --brown-500: rgb(163 129 97);
@@ -67,11 +68,11 @@
     --black: rgb(0 0 0);
 
     /* Font Family Tokens */
-    --Font-family-h1: 'Fraunces';
-    --Font-family-h2: 'Gravity';
-    --Font-family-h3: 'Gravity';
-    --Font-family-h4: 'Gravity';
-    --Font-family-body: 'Gravity';
+    --Font-family-h1: var(--font-display);
+    --Font-family-h2: var(--font-bold);
+    --Font-family-h3: var(--font-bold);
+    --Font-family-h4: var(--font-bold);
+    --Font-family-body: var(--font-body);
 
     /* Font Weight Tokens */
     --Font-weight-normal: 'Regular';
@@ -138,6 +139,7 @@
     --radius-sm: var(--Scale-200);
     --radius-md: var(--Scale-250);
     --radius-lg: var(--Scale-default);
+    --radius-pill: 9999px;
 
     /* Border Width */
     --border-none: var(--Scale-0);
