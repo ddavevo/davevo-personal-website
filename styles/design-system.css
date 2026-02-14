@@ -1,0 +1,122 @@
+main section {
+    margin-bottom: 4rem;
+}
+
+main p {
+    max-width: 80ch;
+    color: var(--text-body-on-light);
+    margin-top: 1rem;
+}
+
+main a {
+    color: var(--text-link-on-light);
+}
+
+main {
+    padding: 10rem 4rem 4rem 4rem;
+    max-width: var(--width-max);
+    position: relative;
+    display: grid;
+    grid-template-columns: 12rem minmax(0, 1fr);
+    gap: 4rem;
+    margin: 0 auto;
+}
+
+.main-container section, p, hr, picture img, img, picture, figure, .columns, .main-container ul, aside, blockquote, .lottie-anim {
+    width: 100%;
+    margin-bottom: var(--space-xl);
+}
+
+.design-system-sidebar ul {
+    padding: 0;
+}
+
+.design-system-sidebar li {
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+}
+
+.design-system-sidebar li:hover {
+    background-color: var(--brown-200);
+}
+
+.color-scale {
+    display: grid;
+    grid-template-columns: repeat(5, auto); /* Creates 2 rows, sized by content */
+    grid-auto-flow: row; /* Fills columns first, then moves to new rows */
+    width: 100%;
+    border: var(--border-thin) solid var(--gray-400);
+}
+
+.color-scale div {
+    height: 4rem;
+}
+
+.color-scale div p {
+    text-align: center;
+}
+
+.token-info-container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-sm);
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: var(--border-thin) solid var(--gray-400);
+}
+
+.token-info-container :nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-sm);
+    align-items: center;
+}
+
+.token-preview {
+    width: 2rem; height: 2rem;
+    background-color: green;
+    border-radius: var(--radius-sm);
+    border: var(--border-thin) solid var(--gray-400);
+}
+
+.token-preview-large {
+    width: 3rem; height: 3rem;
+}
+
+.token-name {
+    width: min-content;
+    white-space: nowrap;
+    color: var(--brown-900);
+    background-color: var(--brown-250);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-pill);
+}
+
+.token-info-container code:not(.token-name) {
+    color: var(--brown-600);
+}
+
+@media screen and (max-width: 623px) {
+
+    .table-of-contents {
+        visibility: hidden;
+        display: none;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        padding: 4rem 0 0 0;
+    }
+
+    .main-container {
+        width: clamp(calc(320px - 4.8rem), calc(100% - 4.8rem), 410px);
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .color-scale {
+        grid-template-rows: repeat(2, auto);
+    }
+}

@@ -1,0 +1,448 @@
+/* ============================================================
+   Design Tokens - Brand Collection (Base Tokens)
+   ============================================================ */
+
+:root {
+    /* Color Tokens - Red Scale */
+    --red-100: rgb(255 235 233);
+    --red-150: rgb(250 214 206);
+    --red-200: rgb(245 182 172);
+    --red-300: rgb(242 148 138);
+    --red-400: rgb(237 116 104);
+    --red-default: rgb(233 84 70);
+    --red-600: rgb(186 67 56);
+    --red-700: rgb(140 50 42);
+    --red-800: rgb(93 34 28);
+    --red-900: rgb(47 17 14);
+
+    /* Color Tokens - Green Scale */
+    --green-100: rgb(237 246 212);
+    --green-150: rgb(227 234 207);
+    --green-200: rgb(199 222 173);
+    --green-300: rgb(173 208 140);
+    --green-400: rgb(145 196 106);
+    --green-default: rgb(118 184 73);
+    --green-600: rgb(94 147 58);
+    --green-700: rgb(71 110 44);
+    --green-800: rgb(47 74 29);
+    --green-900: rgb(24 37 15);
+
+    /* Color Tokens - Gray Scale */
+    --gray-100: rgb(247 243 242);
+    --gray-200: rgb(229 224 223);
+    --gray-300: rgb(202 197 196);
+    --gray-400: rgb(173 168 168);
+    --gray-500: rgb(143 139 139);
+    --gray-600: rgb(114 110 110);
+    --gray-700: rgb(86 81 81);
+    --gray-800: rgb(60 56 56);
+    --gray-900: rgb(39 37 37);
+    --gray-1000: rgb(23 20 20);
+
+    /* Color Tokens - Brown Scale */
+    --brown-100: rgb(254 246 240);
+    --brown-200: rgb(245 234 224);
+    --brown-250: rgb(238, 223, 212);
+    --brown-300: rgb(213 202 190);
+    --brown-400: rgb(189 159 134);
+    --brown-500: rgb(163 129 97);
+    --brown-600: rgb(129 100 81);
+    --brown-700: rgb(100 74 63);
+    --brown-800: rgb(66 50 41);
+    --brown-900: rgb(38 30 23);
+    --brown-1000: #423229;
+    --brown-1100: #261E17;
+
+    /* Color Tokens - Teal Scale */
+    --teal-100: rgb(228 239 237);
+    --teal-200: rgb(172 228 237);
+    --teal-300: rgb(108 212 229);
+    --teal-default: rgb(0 175 205);
+    --teal-500: rgb(4 151 180);
+    --teal-600: rgb(0 108 140);
+    --teal-700: rgb(1 85 111);
+    --teal-800: rgb(6 47 63);
+    --teal-900: rgb(8 26 28);
+
+    --white: rgb(255 255 255);
+    --black: rgb(0 0 0);
+
+    /* Font Family Tokens */
+    --Font-family-h1: var(--font-display);
+    --Font-family-h2: var(--font-bold);
+    --Font-family-h3: var(--font-bold);
+    --Font-family-h4: var(--font-bold);
+    --Font-family-body: var(--font-body);
+
+    /* Font Weight Tokens */
+    --Font-weight-normal: 'Regular';
+    --Font-weight-bold: 'Bold';
+    --Font-weight-italic: 'Italic';
+    --Font-weight-bold-italic: 'Bold Italic';
+
+    /* Typography Scale Tokens */
+    --Scale-0: 0px;
+    --Scale-25: 1px;
+    --Scale-50: 0.125rem; /* 2px */
+    --Scale-100: .25rem; /* 4px */
+    --Scale-200: .5rem; /* 8px */
+    --Scale-250: 0.625rem; /* 10px */
+    --Scale-300: 0.75rem; /* 12px */
+    --Scale-350: 0.875rem; /* 14px */
+    --Scale-default: 1rem; /* 16px */
+    --Scale-450: 1.125rem; /* 18px */
+    --Scale-500: 1.25rem; /* 20px */
+    --Scale-550: 1.375rem; /* 22px */
+    --Scale-600: 1.5rem; /* 24px */
+    --Scale-700: 1.75rem; /* 28px */
+    --Scale-800: 2rem; /* 32px */
+    --Scale-900: 2.25rem; /* 36px */
+    --Scale-1000: 2.5rem; /* 40px */
+    --Scale-1100: 2.75rem; /* 44px */
+    --Scale-1200: 3rem; /* 48px */
+    --Scale-1300: 4rem; /* 64px */
+    --Scale-1350: 5rem; /* 80px */
+    --Scale-1400: 6rem; /* 96px */
+    --Scale-1500: 8rem; /* 128px */
+    --Scale-1600: 10rem; /* 160px */
+
+}
+
+/* ============================================================
+   Design Tokens - Semantic Collection (Spacing & Typography)
+   ============================================================ */
+
+:root {
+    /* Spacing Scale - T-Shirt Sizing (Intent-based) */
+    --space-none: var(--Scale-0);
+    --space-3xs: var(--Scale-25);
+    --space-2xs: var(--Scale-100);
+    --space-xs: var(--Scale-200);
+    --space-sm: var(--Scale-300);
+    --space-md: var(--Scale-default);
+    --space-lg: var(--Scale-500);
+    --space-xl: var(--Scale-600);
+    --space-2xl: var(--Scale-800);
+    --space-3xl: var(--Scale-1000);
+    --space-4xl: var(--Scale-1200);
+    --space-5xl: var(--Scale-1300);
+    --space-6xl: var(--Scale-1350);
+    --space-7xl: var(--Scale-1400);
+
+    /* Typography - Font Families */
+    --font-display: 'Fraunces';
+    --font-body: 'gravity';
+    --font-bold: 'gravity-bold';
+
+    /* Border Radius */
+    --radius-none: var(--Scale-0);
+    --radius-sm: var(--Scale-200);
+    --radius-md: var(--Scale-250);
+    --radius-lg: var(--Scale-default);
+    --radius-pill: 9999px;
+
+    /* Border Width */
+    --border-none: var(--Scale-0);
+    --border-thin: var(--Scale-25);
+    --border-sm: var(--Scale-50);
+    --border-md: var(--Scale-100);
+
+    /* Content Width */
+    --width-content-max: 90ch;
+    --width-max: 1312px;
+
+}
+
+/* ============================================================
+   Design Tokens - Component Collection (Semantic Composites)
+   ============================================================ */
+
+:root {
+    /* Typography Traits */
+    --letter-spacing-tight: calc(-1 * var(--Scale-50));
+    --letter-spacing-h1: calc(-1 * var(--Scale-25));
+
+    /* Shadow */
+    --shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+
+    /* Surface - Page & UI Containers */
+    --surface-page: var(--brown-100);
+    --surface-default: var(--white);
+    --surface-secondary: var(--brown-200);
+    --surface-tertiary: var(--brown-300);
+
+    /* Surface - Interactive States */
+    --surface-action: var(--teal-500);
+    --surface-action-hover: var(--teal-800);
+    --surface-action-active: var(--teal-900);
+    --surface-action-disabled: var(--brown-400);
+
+    /* Surface - Feedback */
+    --surface-error: var(--red-100);
+    --surface-error-subtle: var(--red-150);
+    --surface-success: var(--green-100);
+    --surface-success-subtle: var(--green-150);
+    --surface-info: var(--teal-100);
+
+    /* Text - Headings */
+    --text-heading-on-light: var(--teal-800);
+    --text-heading-on-dark: var(--brown-100);
+
+    /* Text - Body & Content */
+    --text-body-on-light: var(--brown-600);
+    --text-body-bold-on-light: var(--brown-900);
+    --text-body-on-dark: var(--brown-300);
+    --text-body-bold-on-dark: var(--gray-300);
+    --text-body-inverse: var(--surface-page);
+    --text-body-muted: var(--brown-400);
+    --text-body-disabled: var(--brown-400);
+
+    /* Text - Captions & Secondary */
+    --text-caption: var(--brown-500);
+    --text-caption-muted: var(--brown-400);
+    --text-code: var(--gray-500);
+
+    /* Text - Selected/Emphasized */
+    --text-selected: var(--brown-900);
+    --text-unselected: var(--brown-300);
+    --text-unemphasized: var(--brown-300);
+
+    /* Text - Interactive */
+    --text-action: var(--teal-800);
+    --text-action-hover: var(--teal-100);
+    --text-link-on-light: var(--teal-800);
+    --text-link-on-dark: var(--brown-100);
+    --text-link-visited: var(--teal-600);
+
+    /* Text - Feedback & Status */
+    --text-error: var(--red-600);
+    --text-error-bold: var(--red-700);
+    --text-success: var(--green-600);
+    --text-success-bold: var(--green-700);
+    --text-info: var(--teal-600);
+    --text-info-bold: var(--teal-700);
+
+    /* Border - Structural */
+    --border-default: var(--teal-800);
+    --border-subtle: var(--brown-300);
+    --border-muted: var(--brown-400);
+    --border-weak: var(--brown-200);
+
+    /* Border - Interactive */
+    --border-action: var(--teal-800);
+    --border-action-hover: var(--teal-900);
+    --border-focus: var(--teal-800);
+    --border-disabled: var(--brown-400);
+    --border-tag: var(--brown-700);
+
+    /* Border - Feedback */
+    --border-error: var(--red-default);
+    --border-success: var(--green-default);
+    --border-info: var(--teal-default);
+
+    /* Icon */
+    --icon-on-accent: rgb(255 255 255);
+
+    /* Gradient */
+    --gradient-nav: linear-gradient(var(--surface-page), var(--surface-page) 9.4rem, rgb(254,246,240, 0.8) 10.2rem, transparent);
+    --gradient-case-study: linear-gradient(to left, var(--teal-default), var(--teal-800));
+}
+
+
+
+@font-face {
+    font-family: gravity;
+    font-display: swap;
+    src: url('../fonts/Gravity-Regular.woff2') format('woff2');
+    size-adjust:102%; ascent-override:92%; descent-override:24%; line-gap-override:0%;
+}
+
+@font-face {
+    font-family: gravity-bold;
+    font-display: swap;
+    src: url('../fonts/Gravity-Bold.woff2') format('woff2'),
+        local(Verdana);
+    size-adjust:101%; ascent-override:92%; descent-override:24%; line-gap-override:0%;
+}
+
+.fraunces {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: var(--letter-spacing-h1);
+  font-variation-settings: "SOFT" 0, "WONK" 1;
+  font-display: swap;
+}
+
+* {
+    margin: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--surface-page);
+    font-family: var(--font-body), 'Inter', system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+    font-family: var(--font-bold);
+    color: var(--text-heading-on-light);
+    text-wrap: balance;
+}
+
+h1 {
+    font-size: clamp(2.25rem, 2vw, 2.5rem);
+}
+
+h2 {
+    font-size: clamp(1.75rem, 2vw, 2rem);
+    margin-bottom: var(--space-2xl);
+}
+
+h3 {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    margin-bottom: var(--space-lg);
+    line-height: 150%;
+}
+
+h4 {
+    font-size: clamp(var(--Scale-450), 2vw, 1.25rem);
+    margin-bottom: var(--space-sm);
+    line-height: 150%; 
+}
+
+p, li, span, form, input, button { /* landing-body: I am a... I'm an upcoming UI/UX... */
+    font-family: var(--font-body);
+    line-height: 150%;
+    color: var(--text-body-on-light);
+    font-size: clamp(var(--Scale-default), 2vw, var(--Scale-450));
+}
+
+figcaption {
+    color: var(--text-caption);
+    margin-top: .5rem;
+    text-align: center;
+}
+
+.subtitle {
+    margin-bottom: var(--space-md);
+}
+
+.subtitle, figcaption {
+    font-family: var(--font-body);
+    line-height: 150%;
+    text-wrap: balance;
+    color: var(--text-caption);
+    font-size: clamp(var(--Scale-350), 1vw, var(--Scale-default));
+}
+
+.lottie-anim {
+    aspect-ratio: 16 / 9;
+}
+
+ul {
+    list-style-type: none;
+    line-height: 2.4rem;
+}
+
+a, a:link, a:visited, a:hover, a:active { 
+    text-decoration: none;
+    color: var(--text-link-on-light);
+}
+
+b {
+    font-weight: normal;
+    -webkit-text-stroke: 0.02rem inherit;
+    font-family: var(--font-bold);
+    color: var(--text-body-bold-on-light);
+}
+
+hr {
+    margin-bottom: var(--space-2xl);
+    border: var(--border-thin) solid var(--border-subtle);
+}
+
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+/* ====================================================== */
+
+.underline-button {
+    position: relative;
+    white-space: nowrap;
+    color: var(--text-link-on-light);
+}
+
+.underline-button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -0.2rem;
+  left: 0;
+  background-color: var(--text-link-on-light);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* ====================================================== */
+
+.open-new-page {
+    position: relative; 
+    overflow: hidden;
+    transition: 0.25s ease-in-out;
+}
+
+.open-new-page:hover {
+    cursor: url("https://media.dave-vo.com/file/dvfolio/general/open-new-page-hover-cursor.svg"), pointer;
+}
+.open-new-page:active {
+    cursor: url("https://media.dave-vo.com/file/dvfolio/general/open-new-page-active-cursor.svg"), auto;
+}
+
+/* ====================================================== */
+
+@media screen and (min-width: 1281px) {
+    h1 {
+        font-size: clamp(2.5rem, 1.25vw, 2.75rem);
+    }
+    
+    h2 {
+        font-size: clamp(2rem, 1.25vw, 2.5rem);
+    }
+    
+    h3 {
+        font-size: clamp(1.5rem, 1.25vw, 2rem);
+    }
+    
+    h4 {
+        font-size: clamp(1.25rem, 1.25vw, 1.5rem);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    p, li, span {
+        font-size: clamp(var(--Scale-450), 1.25vw, var(--Scale-500));
+    }
+    .subtitle, figcaption {
+        font-size: clamp(var(--Scale-default), 1.25vw, var(--Scale-450));
+    }
+}

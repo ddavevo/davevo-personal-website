@@ -1,0 +1,235 @@
+.landing-page {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-image: linear-gradient(180deg, var(--teal-100, #E4EFED) 0%, var(--surface-page, #FEF6F0) 100%), url("https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.png");
+    background-blend-mode: soft-light, normal;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: clamp(500px, 2vw, 700px);
+
+    margin-bottom: 4rem;
+    padding-top: 6rem;
+}
+
+@supports (background-image: linear-gradient(180deg, var(--teal-100, #E4EFED) 0%, var(--surface-page, #FEF6F0) 100%), url("https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.webp")) {
+        .landing-page {
+            background-image: linear-gradient(180deg, var(--teal-100, #E4EFED) 0%, var(--surface-page, #FEF6F0) 100%), url("https://media.dave-vo.com/file/dvfolio/landing-page/portfolio-sky.webp"); /* WebP version if supported */
+        }
+    }
+
+.landing-page:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.landing-page h2 {
+    color: var(--text-heading-on-light);
+    line-height: clamp(125%, 2vw, 100%);
+    margin-bottom: 1rem;
+    font-size: clamp(1.4rem, 5vw, 2rem);
+}
+
+.landing-link {
+    display: inline;
+    list-style-type: none;
+    white-space: nowrap;
+
+    padding: .25rem .75em;
+    margin-right: 0.6rem;
+    border-radius: 100rem;
+    line-height: clamp(2.75rem, calc(2vw + 1rem), 3.3rem);
+    
+    border: 1.25px solid var(--border-action);
+    color: var(--text-link-on-light);
+}
+
+.landing-link:hover {
+    color: var(--text-link-on-dark);
+    background-color: var(--border-action-hover);
+}
+
+.landing-text {
+    max-width: var(--width-max);
+    position: relative;
+    margin: auto auto;
+    width: clamp(75vw, 1vw, 80vw);
+    padding: 1rem 0 3rem 0;
+    text-wrap: balance;
+}
+
+.landing-text::after {
+    position: absolute; 
+    content: url("https://media.dave-vo.com/file/dvfolio/general/logo-stroked.png");
+    width: 2rem; height: 2.25rem;
+    top: 1.25rem;
+    left: -1.75rem; 
+    transform: scale(.2) scaleX(-1) rotate(300deg); 
+}
+
+/* ========================================================================= */
+
+.featured-case-studies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: var(--width-max);
+    gap: 2rem;
+    place-content: center;
+    padding: 0rem 4rem 4rem 4rem;
+    margin: -6rem auto 0 auto;
+}
+
+.project {
+    width: 100%;
+    height: auto;
+    position: relative;
+    
+    background-color: var(--surface-default);
+    border: .1rem solid var(--border-weak);
+    box-shadow: var(--shadow);
+    border-radius: 1rem;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.project img, .project picture, .project .lottie-anim  {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem 1rem 0px 0px;
+}
+
+.project img, .project picture, .project .lottie-anim  {
+    transition: transform 0.2s ease-in;
+    object-fit: cover;
+}
+
+.project:hover img, .project:hover .lottie-anim {
+    transform: scale(105%);
+}
+
+.project-overview {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+
+    background-color: var(--Surface-default);
+    z-index: 1;
+
+    border-radius: 0px 0px 1rem 1rem;  
+    border-top: .1rem solid var(--Border-card);  
+    padding: 2rem 2rem;
+    gap: 1rem;
+}
+
+.project-metric {
+    font-family: gravity;
+    display: inline;
+    list-style-type: none;
+    padding: .25rem 1rem;
+    margin-right: 0.6rem;
+    border-radius: 100rem;
+    text-align: center;
+    
+    background-color: var(--surface-info);
+}
+
+.title {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    margin-bottom: 0;
+    line-height: 150%;
+    text-wrap: balance;
+}
+
+.keywords {
+    padding: 0;
+}
+
+.keywords li {
+    font-family: gravity;
+    display: inline;
+    list-style-type: none;
+    white-space: nowrap;
+
+    padding: .25rem .75em;
+    margin-right: 0.6rem;
+    border-radius: 100rem;
+    line-height: clamp(2.75rem, calc(2vw + 1rem), 3.3rem);
+
+    border: 1.25px solid var(--gray-600);
+    color: var(--gray-600);
+}
+
+.insight {
+    display: inline-block;
+    padding: .25rem .75em;
+    margin-bottom: 1.2rem;
+    border-radius: 0.4rem;
+    background-color: var(--Surface-insight);
+    border: 1.25px solid var(--Border-insight);
+}
+
+/* ========================================================================= */
+
+@media screen and (min-width: 1321px) {
+    .project img {
+        height: clamp(275px, 100rem, 400px);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+    .draggable {
+        max-width: clamp(70px, 15vw, 90px);
+    }
+    .featured-case-studies {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .landing-page {
+        padding-bottom: 4rem;
+    }
+    .landing-body, .landing-text {
+        text-align: left;
+    }
+    #move-me {
+        visibility: collapse;
+        width: 0; height: 0;
+    }
+    .project img {
+        height: 450px;
+    }
+    
+    .featured-case-studies {
+        padding: 0rem 2.4rem;
+        margin-top: -10rem;
+    }
+    .keywords li {
+        margin-right: 0.2rem;
+    }
+
+    .landing-text::after {
+        visibility: collapse;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .project-metric {
+        border-radius: 1rem;
+    }
+    .project-metric, .keywords li {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,93 @@
+main section {
+    margin: auto;
+}
+
+main p {
+    max-width: 80ch;
+    color: var(--text-body-on-light);
+    margin-top: 1rem;
+    text-wrap: balance;
+}
+
+main a {
+    color: var(--text-link-on-light);
+}
+
+.main-container {
+    padding: 10rem 4rem 4rem 4rem;
+    position: relative;
+    max-width: var(--width-max);
+    margin: 0 auto;
+}
+
+.landing-text {
+    color: var(--teal-default);
+    line-height: 110%;
+    margin-bottom: .75ch;
+    padding-bottom: 0.5rem;
+
+    font-size: 3rem;
+    background: repeating-linear-gradient(to bottom, var(--teal-600), var(--teal-default) 2.75rem, var(--teal-default) 3.45rem);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.row {
+    column-count: 3;
+    column-gap: 2rem;
+}
+
+.gallery-item {
+    display: inline-block;
+    overflow: hidden;
+    height: auto;
+    vertical-align: middle;
+    margin-bottom: 2rem;
+}
+
+.gallery-item h4, .gallery-item p {
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+a > .gallery-item:hover{
+    opacity: 70%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 1312px) {
+    .landing-text {
+        font-size: 4rem;
+        background: repeating-linear-gradient(to bottom, var(--teal-600), var(--teal-default) 3.75rem, var(--teal-default) 4.75rem);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .row {
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .row {
+        column-count: 1;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .playground-page {
+        padding: 10rem 2.4rem 1rem 2.4rem;
+    }
+}
