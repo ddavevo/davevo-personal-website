@@ -1,3 +1,7 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,41 +13,7 @@
       name="description" content="Design token reference for colors, typography, and UI primitives used across the system."/>
 </head>
 
-<body>
-    <header class="header">
-        <a href="index.html">
-            <div class="wordmark open-new-page"> <!-- 111px x 74px / 127px x 74px -->
-                <span class="fraunces">dave v</span>
-                <img class="stylized-o" alt="" aria-label="Navigate back to homepage" src="https://media.dave-vo.com/file/dvfolio/general/logo-pinwheel-formation.svg">
-            </div> 
-        </a>
-
-        <div class="menu">
-            <ul class="hamburger-menu-options">
-                <li> <!-- 45px x 22px / 49px x 22px -->
-                    <a class="underline-button open-new-page" href="about.html">About</a>
-                </li>
-                <li> <!-- 84px x 22px / 92px x 22px -->
-                    <a class="underline-button open-new-page" href="playground.html">
-                        Play
-                    </a>
-                </li>
-                <li> <!-- 63px x 22px / 65px x 22px -->
-                    <a class="underline-button open-new-page" href="https://drive.google.com/file/d/1yYrBAnPRDSHiks1AfV7YPR5DxmK0dA1y/view?usp=sharing" target="_blank">
-                        Résumé
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <button type="button" aria-label="Hamburger Icon" class="hamburger" onclick="myFunction(this)">
-            <div class="ham-bars" id="bar1"></div>
-            <div class="ham-bars" id="bar2"></div>
-            <div class="ham-bars" id="bar3"></div>
-        </button>
-    </header>
-    <div class="header-container"></div>
-
+<BaseLayout>
     <main>
       <!--Table of Contents-->
         <nav class="design-system-sidebar">
@@ -271,36 +241,7 @@
               </section>
         </div>
     </main>
-
-    <footer class="footer">
-        <div class="footer-container">
-
-            <img class="footer-logo" src="https://media.dave-vo.com/file/dvfolio/general/logo-stroked.png" alt="Decorative element.">
-
-            <div class="footer-content">
-                <h4>I’m Dave, a product designer based in California (willing to relocate). Actively searching for full-time roles.</h4>
-
-                <div class="footer-nav-container">
-                    <ul class="footer-nav">
-                        <p class="subtitle">Site</p>
-                        <li><a class="underline-button" href="/index.html">Home</a></li>
-                        <li><a class="underline-button" href="/about.html">About</a></li>
-                        <li><a class="underline-button" href="/playground.html">Play</a></li>
-                    </ul>
-
-                    <ul class="footer-nav">
-                        <p class="subtitle">Links</p>
-                        <li><a class="underline-button" href="mailto:ddavevoddesign@gmail.com" aria-label="My email.">Email</a></li>
-                        <li><a class="underline-button" href="https://www.linkedin.com/in/dave-vo" target="_blank" aria-label="My LinkedIn">Linkedin</a></li>
-                        <li><a class="underline-button" href="https://github.com/ddavevo" target="_blank" aria-label="My Github">Github</a></li>
-                    </ul>
-                </div>
-
-                <p id="copyright">@<script>document.write(new Date().getFullYear())</script> Dave Vo • Deployed on Github </p>
-            </div>
-        </div>    
-    </footer>
-</body>
+</BaseLayout>
 
 <link href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
