@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNS Salon & Beauty Supply - Dave Vo</title>
+    <link rel="icon" type="image/x-icon" href="https://media.dave-vo.com/file/dvfolio/general/davevo_favicon.png">
+    
+    <!-- ======================================= -->
+
+    <link href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
+    </noscript>
+
+    <!-- ======================================= -->
+
+    <link rel="preload" href="/styles/general.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/general.css"></noscript>
+
+    <link rel="preload" href="/styles/boilerplate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/boilerplate.css"></noscript>
+
+    <link rel="preload" href="/styles/case-studies.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/case-studies.css"></noscript>
+
+    <!-- ======================================= -->
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="../index.html">
+            <div class="wordmark open-new-page"> <!-- 111px x 74px / 127px x 74px -->
+                <span class="fraunces">dave v</span>
+                <img class="stylized-o" alt="" aria-label="Navigate back to homepage" src="https://media.dave-vo.com/file/dvfolio/general/logo-pinwheel-formation.svg">
+            </div> 
+        </a>
+
+        <div class="menu">
+            <ul class="hamburger-menu-options">
+                <li> <!-- 45px x 22px / 49px x 22px -->
+                    <a class="underline-button open-new-page" href="../about.html">About</a>
+                </li>
+                <li> <!-- 84px x 22px / 92px x 22px -->
+                    <a class="underline-button open-new-page" href="../playground.html">
+                        Play
+                    </a>
+                </li>
+                <li> <!-- 63px x 22px / 65px x 22px -->
+                    <a class="underline-button open-new-page" href="https://drive.google.com/file/d/1yYrBAnPRDSHiks1AfV7YPR5DxmK0dA1y/view?usp=sharing" target="_blank">
+                        Résumé
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <button type="button" aria-label="Hamburger Icon" class="hamburger" onclick="myFunction(this)">
+            <div class="ham-bars" id="bar1"></div>
+            <div class="ham-bars" id="bar2"></div>
+            <div class="ham-bars" id="bar3"></div>
+        </button>
+    </header>
+    <div class="header-container"></div>
+
+    <section class="hero">
+        <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+            <source data-src="https://media.dave-vo.com/file/dvfolio/sns/sns-hero-compressed.mp4" type="video/mp4"/>
+            <source data-src="https://media.dave-vo.com/file/dvfolio/sns/sns-hero-compressed.webm" type="video/webm"/>
+        </video>
+        
+        <h1 id="case-study-title" class="fraunces">Rehauling SNS Salon & Beauty Supply’s service discovery and booking for salon patrons</h1>
+        <div class="logistics">
+            <div>
+                <p class="subtitle">My Role</p>
+                <p>UI/UX Designer </p>
+            </div>
+            <div>
+                <p class="subtitle">Team</p>
+                <p>4 UI/UX Designers </p>
+            </div>
+
+            <div>
+                <p class="subtitle">Skills</p>
+                <p>UI/UX Design <br> Design Systems <br> User Testing</p>
+            </div>
+            <div>
+                <p class="subtitle"">Timeline</p>
+                <p>7 weeks <br> Jan. 2024 - Mar. 2024 </p>
+            </div>
+        </div>
+    </section>
+    <div class="hero-ribbon">
+        <img style="transform: translateY(-43%);" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-6.png">
+    </div>
+
+    <main>
+        <!--Table of Contents-->
+        <div class="toc-container">
+            <div class="table-of-contents">
+                <p class="toc-header">
+                    <b>Table of Contents</b>
+                </p>
+                <ul>
+                    <li><a href="#solution">Solution</a></li>
+                    <li><a href="#background">Background</a></li>
+                    <li><a href="#discovery">Discovery</a></li>
+                    <li><a href="#design">Design</a></li>
+                    <li><a href="#reflection">Reflection</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-container">
+
+            <section id="solution"> <!--Solution-->
+                <div class="toc-spacer"></div>
+                <span class="toc-badge">
+                    01 - Solution
+                </span>
+
+                <article>
+                    <h2>The revamped SNS Salon & Beauty Supply website</h2>
+                    <p>
+                        I worked with the salon owner to redesign the website with the aim of clarifying the booking experience and better showcasing the quality of services. The work I did helped:
+                    </p>
+
+                    <div class="insight gain-point">
+                        <span>✅</span>
+                        <p>
+                            Led an end-to-end redesign across two core user journeys.
+                        </p>  
+                    </div>
+
+                    <div class="insight gain-point">
+                        <span>✅</span>
+                        <p>
+                            Reduced booking complexity by 55.6% + service discovery down to 2-3 scans avg.
+                        </p>  
+                    </div>
+                </article>
+                
+                <article>
+                    <div class="columns">
+                        <div>
+                            <h3>Web-responsive</h3>
+                            <p>
+                                The redesigned SNS Salon & Beauty Supply website is built for both desktop and mobile screens.
+                            </p>
+                        </div>
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/deliverables-web-mobile.png" alt="The redesigned SNS Salon & Beauty Supply website is built for both desktop and mobile screens.">
+                    </div>
+                    <hr>
+                </article>
+
+                <article>
+                    <div class="columns">
+                    <div>
+                        <h3>Everything you need to know for your SNS Salon visit</h3>
+                        <p>
+                            With a fresh look and feel, users can better resonate with the salon's story and easily find key information about the offered services.
+                        </p>
+                    </div>
+                    <img src="https://media.dave-vo.com/file/dvfolio/sns/deliverables-landing.gif" alt="A looping video of the main site.">
+                    </div>
+                    <hr>
+                </article>
+
+                <article class="extra-space">
+                    <div class="columns">
+                        <div>
+                            <h3>Enjoy a streamlined booking experience</h3>
+                            <p>
+                                Say goodbye to a cluttered booking page, and say hello to smooth booking and exciting experiences to come.
+                            </p>
+                        </div>
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/deliverables-booking.gif" alt="A looping video of the booking flow.">
+                    </div>
+                </article>
+            </section>
+
+            <section id="background"> <!--Background-->
+                <div class="toc-spacer"></div>
+                <span class="toc-badge">
+                    02 - Background
+                </span>
+
+                <!-- INTRODUCE CLIENT -->
+                <article>
+                    <h2>What our client wants to achieve through a redesign</h2>
+                    <p>
+                        The goal of this project was to redesign SNS Salon’s website to better support discovery, trust, and booking for new customers. While the salon relied strongly on word-of-mouth, the website needed to play a more active role in helping users evaluate quality and feel confident booking online.
+                    </p>
+                    <hr>
+
+                    <p class="subtitle">Goals</p>
+                    <h3 class="fake-h4">Strengthen first impressions</h3>
+                    <p style="margin-bottom: 0;">
+                        The site needed to communicate the salon’s quality at a glance, using real salon work and clear storytelling to build immediate trust.
+                    </p>
+                </article>
+
+                <article>
+                    <h3 class="fake-h4">Make services easy to evaluate and book</h3>
+                    <p style="margin-bottom: 0;">
+                        The site needed to help users quickly understand, compare, and choose services so booking online felt as confident as booking over the phone.
+                    </p>
+                </article>
+
+                <article>
+                    <h3 class="fake-h4">Turn the website into a primary trust signal</h3>
+                    <p style="margin-bottom: 0;">
+                        The site needed to establish credibility on its own through visual proof, clarity, and transparency, rather than relying on Yelp or referrals to do that work.
+                    </p>
+                </article>
+            </section>
+            
+            <section id="discovery"> <!-- Discovery -->
+                <div class="toc-spacer"></div>
+                <span class="toc-badge">
+                    03 - Discovery
+                </span>
+
+                <article>
+                    <h2>Auditing the original website</h2>
+                    <p>
+                        After taking a closer look at their current website, we found that visual clutter and usability issues hindered the website's ability to communicate the salon brand and core specialties.
+                    </p>
+                    <hr>
+                </article>
+
+                <!-- AUDIT -->
+                <article>
+                    <p class="subtitle">Problem</p>
+                    <h3>The need for visual storytelling</h3>
+                    <div class="columns">
+                        <picture>
+                            <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/website-audit-landing.webp">
+                            <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-landing.png" alt="From the first impression, the landing page promotes deals before communicating the salon’s value to the viewer.">
+                        </picture>
+                        <picture>
+                            <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/website-audit-bottom.webp">
+                            <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-bottom.png" alt="Images of past work only makes an appearance at the bottom of the page.">
+                        </picture>
+                    </div>
+                    <hr>
+                </article>
+
+                <article class="extra-space">
+                    <h3>Usability issues make navigation hard</h3>
+                    <div class="columns">
+                        <picture>
+                            <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/website-audit-services.webp">
+                            <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-services.png" alt="The readability suffers because the services are images instead of inline elements, especially across different screen sizes.">
+                        </picture>
+                        <picture>
+                            <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/website-audit-dropdowns.webp">
+                            <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-dropdowns.png" alt="Too many drop-downs and variants overwhelms the users and makes it hard to distinguish between items.">
+                        </picture>
+                    </div>
+                </article>
+                <!-- ------ -->
+
+                <article>
+                    <p class="subtitle">User Interviews</p>
+                    <h3>Talking with salon-goers to polish our perspective</h3>
+                    <p>
+                        The client’s perspective on loyalty set an initial direction, but conversations with salon-goers clarified how customers evaluate a salon when deciding to book.
+                    </p>
+
+                    <div class="insight pain-point">
+                        <span>❌</span>
+                        <div>
+                            <p><b>Trust must be shown, not told</b></p>
+                            <p>
+                                Customers expected to see real examples of hair and nail work easily. Several users said they would not book without browsing images, even if they trusted recommends.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="insight pain-point">
+                        <span>❌</span>
+                        <div>
+                            <p><b>Booking was complex and uncertain</b></p>
+                            <p>
+                                The number of dropdowns and unclear service distinctions made users hesitant, especially on mobile. Even loyal customers avoided booking through the site.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="insight pain-point">
+                        <span>❌</span>
+                        <div>
+                            <p><b>Users weren’t sold on the salon yet</b></p>
+                            <p>
+                                Customers also relied on online reviews to vet the salon’s quality—suggesting the website wasn’t doing enough to establish credibility.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section id="design"> <!-- Design -->
+                <div class="toc-spacer"></div>
+                <span class="toc-badge">
+                    04 - Design
+                </span>
+
+                <article>
+                    <h2>Prioritizing for customer conversion</h2>
+                    <p>
+                        Due to limited access to internal data, we prioritized qualitative signals and scoped the work to two critical user journeys. Secondary features were explored, but deprioritized to focus on clarity and confidence in the core flows.
+                    </p>
+                </article>
+
+                <article class="extra-space"> <!-- Prioritize -->
+                    <span class="tag success">Prioritized</span>
+                    <div class="columns">
+                        <div>
+                            <h3 class="fake-h4">Salon service exploration</h3>
+                            <p>
+                                Focusing on a stronger first impression on potential patrons.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="fake-h4">Booking an appointment</h3>
+                            <p>
+                                Reworking how services are presented to prevent drop-off is crucial.
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <span style="margin-top: 2.5ch;" class="tag negative">Not prioritized</span>
+                    <div class="columns">
+                        <div>
+                            <h3 class="fake-h4">Live availability tracker</h3>
+                            <p>
+                                Stylists’ schedules can vary, would be tedious to manually update continuously.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="fake-h4">Easier way to cancel/reschedule</h3>
+                            <p>
+                                Most issues users dealt with came before making an appointment.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!---->
+
+                <article class="extra-space"> <!-- Homepage-->
+                    <p class="subtitle">Homepage</p>
+                    <h3>Streamlined hero, stronger impression</h3>
+                    <br>
+                    <picture>
+                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/hifi-before-after-landing.webp">
+                        <img loading="lazy" data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-before-after-landing.png" class="lazyload" alt="The updated homepage.">
+                    </picture>
+
+                    <hr>
+                    <p>
+                        The hero was redesigned to build trust before asking users to book.  Instead of promotions dominating the page, they were moved to a navigation ribbon, freeing the main space to showcase real salon work and guide users toward services and staff profiles so they could explore before committing.
+                    </p>
+
+                    <details aria-label="Click to see updated 'About' and 'Policies' pages.">
+                        <summary>
+                            <b>Show 'About' & 'Policies' pages.</b>
+                        </summary>
+                        <article>
+                            <picture>
+                                <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/hifi-about-policies-pages.webp">
+                                <img loading="lazy" data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-about-policies-pages.png" class="lazyload" alt="The updated About and Policies pages.">
+                            </picture>
+                            <hr>
+                            <p>
+                                While smaller additions to the redesign, salon-goers shared that knowing whether a stylist was right for them and how to manage appointments was key to booking with confidence. These pages reduced uncertainty around fit and expectations without relying on external reviews or word-of-mouth.
+                            </p>
+                        </article>
+                    </details>
+                </article>
+
+                <article class="extra-space"> <!-- Services -->
+                    <p class="subtitle">Services</p>
+                    <h3>A catalog made for easy vetting and decision-making</h3>
+                    <br>
+
+                    <picture>
+                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/hifi-before-after-services.webp">
+                        <img loading="lazy" data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-before-after-services.png" class="lazyload" alt="The updated services page.">
+                    </picture>
+
+                    <picture>
+                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/hifi-after-gallery.webp">
+                        <img loading="lazy" data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-after-gallery.png" class="lazyload" alt="The updated gallery users can click into if users scroll to the bottom of the services page.">
+                    </picture>
+                </article>
+
+                <article class="extra-space">
+                    <p class="subtitle">Iteration</p>
+                    <h3>Structuring for faster discovery</h3>
+                    <br>
+
+                    <picture>
+                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/hifi-iteration-services.webp">
+                        <img loading="lazy" data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-iteration-services.png" class="lazyload" alt="The iterations from first draft to final services page.">
+                    </picture>
+
+                    <hr>
+                    <p>
+                        Early versions tried to make each service clearer by adding more detail, but testing showed this made the page feel dense and long to navigate. The final design grouped services into color-blocked categories so users could locate specific services in 2-3 scans instead of searching the full list, while curated salon suggestions preserved visual context without overextending scroll duration.
+                </article>
+
+                <article class="extra-space"> <!-- Booking -->
+                    <p class="subtitle">Booking</p>
+                    <h3>Reduced booking search complexity by 55.6%</h3>
+                    <br>
+                    <picture>
+                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/hifi-before-after-booking-fullpage.webp">
+                        <img loading="lazy" data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-before-after-booking-fullpage.png" class="lazyload" alt="The updated booking page.">
+                    </picture>
+
+                    <hr>
+                    <p>
+                       The booking flow was simplified by consolidating overlapping options (184 → 82) and standardizing service cards. This reduced visual noise, made differences between services easier to understand, and created a more guided path booking that users were less likely to drop off. Add-to-cart and Add-on features supported exploration without forcing them into early decisions.
+                    </p>
+                </article>
+
+                <article> <!-- Constraints -->
+                    <p class="subtitle">Constraints</p>
+                    <h3>Working within a 3rd party design system</h3>
+                    <p>
+                        Because booking runs through Vagaro, we proposed changes that can realistically be implemented within that platform. Most of our components were built referencing existing Vagaro specs and official docs, which kept the designs realistic while still making the experience clearer and easier to navigate.
+                    </p>
+                    <hr>
+                </article>
+
+                <article>
+                    <figure>
+                        <picture>
+                            <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/hifi-before-booking-components.webp">
+                            <img loading="lazy" data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-before-booking-components.png" class="lazyload" alt="The before booking components.">
+                        </picture>
+                        <figcaption>
+                            Hair and nail services are scattered and not intuitive to search. Variants leave customers confused on what the service is and how it factors into prices.
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <picture>
+                            <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/hifi-after-booking-organization.webp">
+                            <img loading="lazy" data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-after-booking-organization.png" class="lazyload" alt="The after booking components - dropdowns and tab reorganization.">
+                        </picture>
+                        <figcaption>
+                            The dropdowns already exist, let's just consolidate them and create more tabs to organize them into (no more page bloat).
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <picture>
+                            <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/hifi-after-booking-addcart.webp">
+                            <img loading="lazy" alt="The after booking components for Add to Cart." data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-after-booking-addcart.png" class="lazyload">
+                        </picture>
+                        <figcaption>
+                            "Add to Cart" feature helps users explore catalog without being locked into a purchase early on.
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <figure>
+                        <picture>
+                            <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/hifi-after-booking-servicecards.webp">
+                            <img loading="lazy" alt="The after booking components for service cards." data-src="https://media.dave-vo.com/file/dvfolio/sns/hifi-after-booking-servicecards.png" class="lazyload">
+                        </picture>
+                        <figcaption>
+                            In addition to standardizing service cards, the "Add-ons" feature combines similar services together and provides users more clarity on what the service is.
+                        </figcaption>
+                    </figure>
+                </article>
+
+                <article> <!-- Design System -->
+                    <p class="subtitle">Joint Design Systems</p>
+                    <div class="columns">
+                        <picture>
+                            <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/design-system-sns.webp">
+                            <img loading="lazy" alt="The SNS design system." data-src="https://media.dave-vo.com/file/dvfolio/sns/design-system-sns.png" class="lazyload">
+                        </picture>
+                        <picture>
+                            <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/design-system-vagaro.webp">
+                            <img loading="lazy" alt="The Vagaro design system." data-src="https://media.dave-vo.com/file/dvfolio/sns/design-system-vagaro.png" class="lazyload">
+                        </picture>
+                    </div>
+                </article>
+            </section>
+
+            <section id="reflection"> <!-- Reflection -->
+                <div class="toc-spacer"></div>
+                <span class="toc-badge">
+                    07 - Reflection
+                </span>
+                <h2>And that's a wrap!</h2>
+
+                <article class="extra-space"> <!--Impact-->
+                    <p class="subtitle">Impact</p>
+                    <hr>
+                    <div class="impact-point">
+                        <p class="subtitle">
+                            Goal: Strengthen first impressions
+                        </p>
+
+                        <div class="insight gain-point">
+                            <p> → </p>
+                            <p>
+                                <b>Reclaimed ~70% of above-the-fold space</b> to showcase real client work, shifting from promoting deals to setting clearer expectations for the salon experience with visual proof of quality.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="impact-point">
+                        <p class="subtitle">
+                            Goal: Make services easy to evaluate and book
+                        </p>
+
+                        <div class="insight gain-point">
+                            <p> → </p>
+                            <p>
+                                <b>Reduced booking complexity by 55.6%</b> and <b>avg. scans down to 2-3</b>, turning an overwhelming search process into a guided, scannable flow.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="impact-point">
+                        <p class="subtitle">
+                            Goal: Turn the website into a primary trust signal 
+                        </p>
+
+                        <div class="insight gain-point">
+                            <p> → </p>
+                            <p>
+                                Helped users validate the salon directly through the site by adding staff specialties, structured services, and gallery previews, reducing reliance on Yelp or word-of-mouth to feel confident booking.
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                </article>
+
+                <article>
+                    <div class="reflection-unit">
+                        <span class="tag">What I would have done differently</span>
+                        <h3>
+                            Defining success earlier
+                        </h3>
+                    </div>
+                    <p>
+                        I would formalize success metrics earlier on. While we aligned on big-picture goals, having clearer signals for a working solution would have better helped us evaluate tradeoffs and measure changes.
+                    </p>
+                </article>
+
+                <article>
+                    <div class="reflection-unit">
+                        <span class="tag">If I had more time</span>
+                        <h3>
+                            Explore my client’s assumptions further
+                        </h3>
+                    </div>
+                    <p>
+                        Salon patronship took on different meanings across customers and business owners. Digging further into these gaps could've helped us better align our stakeholders’ goals, or potentially explore more tailored solutions for each need.
+                    </p>
+                </article>
+
+                <article class="extra-space">
+                    <div class="reflection-unit">
+                        <span class="tag">Learning</span>
+                        <h3>
+                            Owning the design despite uncertainty
+                        </h3>
+                    </div>
+                    <p>
+                        I gained confidence in making decisions without perfect information. I learned how to define constraints, prioritize what mattered most, and move the project forward without taking on too much all at once.
+                    </p>
+                </article>
+
+                <div class="hmw-wrap" id="next-case-study">
+                    <a class="open-new-page" href="aromacovery.html">
+                        <p class="subtitle">Check out another case study!</p>
+                        <img id="logo-arrow" src="https://media.dave-vo.com/file/dvfolio/general/logo-stroked.png">
+                        <h2><u>Aromacovery</u></h2>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <img class="footer-logo" src="https://media.dave-vo.com/file/dvfolio/general/logo-stroked.png" alt="Decorative element.">
+
+            <div class="footer-content">
+                <h4>I’m Dave, a product designer based in California (willing to relocate). Actively searching for full-time roles.</h4>
+
+                <div class="footer-nav-container">
+                    <ul class="footer-nav">
+                        <p class="subtitle">Site</p>
+                        <li><a class="underline-button" href="/index.html">Home</a></li>
+                        <li><a class="underline-button" href="/about.html">About</a></li>
+                        <li><a class="underline-button" href="/playground.html">Play</a></li>
+                    </ul>
+
+                    <ul class="footer-nav">
+                        <p class="subtitle">Links</p>
+                        <li><a class="underline-button" href="mailto:ddavevoddesign@gmail.com" aria-label="My email.">Email</a></li>
+                        <li><a class="underline-button" href="https://www.linkedin.com/in/dave-vo" target="_blank" aria-label="My LinkedIn">Linkedin</a></li>
+                        <li><a class="underline-button" href="https://github.com/ddavevo" target="_blank" aria-label="My Github">Github</a></li>
+                    </ul>
+                </div>
+
+                <p id="copyright">@<script>document.write(new Date().getFullYear())</script> Dave Vo • Deployed on Github </p>
+            </div>
+        </div>    
+    </footer>
+</body>
+
+<script src="/javascript/case-study-links.js" defer></script>
+ 
+
+</html>
