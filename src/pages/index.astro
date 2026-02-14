@@ -1,6 +1,5 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <!DOCTYPE html>
@@ -24,8 +23,7 @@ import Footer from "../components/Footer.astro";
 
 </head>
 
-<body>
-    <Header />
+<BaseLayout>
 
     <main>
         <section class="landing-page">
@@ -124,35 +122,7 @@ import Footer from "../components/Footer.astro";
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-container">
-
-            <img class="footer-logo" src="https://media.dave-vo.com/file/dvfolio/general/logo-stroked.png" alt="Decorative element.">
-
-            <div class="footer-content">
-                <h4>I’m Dave, a product designer based in California (willing to relocate). Actively searching for full-time roles.</h4>
-
-                <div class="footer-nav-container">
-                    <ul class="footer-nav">
-                        <p class="subtitle">Site</p>
-                        <li><a class="underline-button" href="/index.html">Home</a></li>
-                        <li><a class="underline-button" href="/about.html">About</a></li>
-                        <li><a class="underline-button" href="/playground.html">Play</a></li>
-                    </ul>
-
-                    <ul class="footer-nav">
-                        <p class="subtitle">Links</p>
-                        <li><a class="underline-button" href="mailto:ddavevoddesign@gmail.com" aria-label="My email.">Email</a></li>
-                        <li><a class="underline-button" href="https://www.linkedin.com/in/dave-vo" target="_blank" aria-label="My LinkedIn">Linkedin</a></li>
-                        <li><a class="underline-button" href="https://github.com/ddavevo" target="_blank" aria-label="My Github">Github</a></li>
-                    </ul>
-                </div>
-
-                <p id="copyright">@<script>document.write(new Date().getFullYear())</script> Dave Vo • Deployed on Github </p>
-            </div>
-        </div>    
-    </footer>
-</body>
+</BaseLayout>
 
 <link href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
