@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - migrate-to-astro
+      - gh-pages
 
 permissions:
   contents: write
