@@ -1,3 +1,7 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,41 +38,7 @@
     gtag('config', 'G-D3KQT24T12');
 </script>
 
-<body>
-    <header class="header">
-        <a href="../index.html">
-            <div class="wordmark open-new-page">
-                <span class="fraunces">dave v</span>
-                <img class="stylized-o" src="https://media.dave-vo.com/file/dvfolio/general/logo-pinwheel-formation.svg">
-            </div> 
-        </a>
-
-        <button type="button"  class="hamburger" onclick="myFunction(this)">
-            <div class="ham-bars" id="bar1"></div>
-            <div class="ham-bars" id="bar2"></div>
-            <div class="ham-bars" id="bar3"></div>
-        </button>
-
-        <div class="menu">
-            <ul class="hamburger-menu-options">
-                <li>
-                    <a class="underline-button open-new-page" href="../about.html">About</a>
-                </li>
-                <li>
-                    <a class="underline-button open-new-page" href="../playground.html">
-                        Play
-                    </a>
-                </li>
-                <li>
-                    <a class="underline-button open-new-page" href="https://drive.google.com/file/d/1yYrBAnPRDSHiks1AfV7YPR5DxmK0dA1y/view?usp=sharing" target="_blank">
-                        Résumé
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </header>
-    <div class="header-container"></div>
-
+<BaseLayout>
     <section class="locked">
         <h2>Confidential check 🔒</h2>
         <p>If you would like to request an access code, please reach me at dtvo@ucsd.edu. Thanks!</p>
@@ -92,5 +62,5 @@
         
         <a href="../index.html"><p class="subtitle">↩ Return to Home</p></a>
     </section>
-</body>
+</BaseLayout>
 </html>
