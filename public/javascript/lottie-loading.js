@@ -18,7 +18,7 @@
 
   async function loadLottieFromDotLottie(path) {
     // Dynamically import JSZip only when needed
-    await import('../jszip/dist/jszip.min.js');
+    await import('../../jszip/dist/jszip.min.js');
     const JSZip = window.JSZip;
 
     const response = await fetch(path, { cache: 'force-cache' });
