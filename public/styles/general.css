@@ -311,11 +311,14 @@ h3 {
 }
 
 h4, .fake-h4 {
-    font-family: var(--font-bold);
     color: var(--text-heading-on-light);
     font-size: clamp(var(--Scale-450), 2vw, 1.25rem);
     margin-bottom: var(--space-sm);
     line-height: 150%; 
+}
+
+.fake-h4 {
+    font-family: var(--font-bold);
 }
 
 p, li, span, form, input, button { /* landing-body: I am a... I'm an upcoming UI/UX... */
