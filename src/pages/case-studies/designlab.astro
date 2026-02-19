@@ -1,6 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CaseStudyHero from "../../components/CaseStudyHero.astro";
+import TableOfContents from "../../components/TableOfContents.astro";
+
+const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", "Reflection"];
 ---
 
 <!DOCTYPE html>
@@ -38,28 +41,13 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
     />
     
     <main>
-        <!--Table of Contents-->
-        <div class="toc-container">
-            <div class="table-of-contents">
-                <p class="toc-header">
-                    <b>Table of Contents</b>
-                </p>
-                <ul>
-                    <li><a href="#solution">Solution</a></li>
-                    <li><a href="#background">Background</a></li>
-                    <li><a href="#design">Design</a></li>
-                    <li><a href="#methods">Methods</a></li>
-                    <li><a href="#results">Results</a></li>
-                    <li><a href="#reflection">Reflection</a></li>
-                </ul>
-            </div>
-        </div>
+        <TableOfContents sectionNames={sectionNames}/>
 
         <div class="main-container">
-            <section id="solution"> <!--Solution-->
+            <section id={`${sectionNames[0]}`}> <!--Solution-->
                 <div class="toc-spacer"></div>
                 <span class="toc-badge">
-                    01 - Solution
+                    01 - {sectionNames[0]}
                 </span>
 
                 <article>
@@ -150,10 +138,10 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
                 </article>
             </section>
 
-            <section id="background"> <!--Background-->
+            <section id={`${sectionNames[1]}`}> <!--Background-->
                 <div class="toc-spacer"></div>
                 <span class="toc-badge">
-                    02 - Background
+                    02 - {sectionNames[1]}
                 </span>
 
                 <article class="extra-space">
@@ -245,10 +233,10 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
                 </article>
             </section>
 
-            <section id="design"> <!--Design-->
+            <section id={`${sectionNames[2]}`}> <!--Design-->
                 <div class="toc-spacer"></div>
                 <span class="toc-badge">
-                    03 - Design
+                    03 - {sectionNames[2]}
                 </span>
                 <article>
                     <h2>Redesigning the original plugin prototype</h2>
@@ -452,10 +440,10 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
                 </article>
             </section>
 
-            <section id="methods"> <!--Research Methods-->
+            <section id={`${sectionNames[3]}`}> <!--Methods-->
                 <div class="toc-spacer"></div>
                 <span class="toc-badge">
-                    04 - Methods
+                    04 - {sectionNames[3]}
                 </span>
 
                 <article>
@@ -534,10 +522,10 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
                 </article>
             </section>
 
-            <section id="results"> <!--Results-->
+            <section id={`${sectionNames[4]}`}> <!--Results-->
                 <div class="toc-spacer"></div>
                 <div class="toc-badge">
-                    05 - Results
+                    05 - {sectionNames[4]}
                 </div>
 
                 <article class="extra-space">
@@ -731,10 +719,10 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
                 </article>
             </section>
 
-            <section id="reflection"> <!-- Reflection -->
+            <section id={`${sectionNames[5]}`}> <!-- Reflection -->
                 <div class="toc-spacer"></div>
                 <div class="toc-badge">
-                    07 - Reflection
+                    06 - {sectionNames[5]}
                 </div>
                 <h2>Informing design guidelines for future AI-assisted creativity tools</h2>
 

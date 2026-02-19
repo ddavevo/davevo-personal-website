@@ -1,0 +1,18 @@
+---
+const { sectionNames } = Astro.props;
+---
+
+<div class="toc-container">
+    <div class="table-of-contents">
+        <p class="toc-header">
+            <b>Table of Contents</b>
+        </p>
+        <ul>
+            {sectionNames.map((sectionName) => (
+                <li>
+                <a href={`#${sectionName}`}>{sectionName}</a>
+                </li>
+            ))}
+        </ul>
+    </div>
+</div>

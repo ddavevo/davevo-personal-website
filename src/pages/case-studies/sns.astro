@@ -1,6 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CaseStudyHero from "../../components/CaseStudyHero.astro";
+import TableOfContents from "../../components/TableOfContents.astro";
+
+const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflection"];
 ---
 
 <!DOCTYPE html>
@@ -28,8 +31,8 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
         heroMediaUrl="https://media.dave-vo.com/file/dvfolio/sns/sns-hero-compressed"
         caseStudyTitle="Rehauling SNS Salon & Beauty Supply’s service discovery and booking for salon patrons"
         logisticItems={[
-            "UI/UX Designer",
-            "4 UI/UX Designers",
+            ["UI/UX Designer"],
+            ["4 UI/UX Designers"],
             ["UI/UX Design", "Design Systems", "User Testing"],
             ["7 weeks", "Jan. 2024 - Mar. 2024"]
         ]}
@@ -38,27 +41,13 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
     />
 
     <main>
-        <!--Table of Contents-->
-        <div class="toc-container">
-            <div class="table-of-contents">
-                <p class="toc-header">
-                    <b>Table of Contents</b>
-                </p>
-                <ul>
-                    <li><a href="#solution">Solution</a></li>
-                    <li><a href="#background">Background</a></li>
-                    <li><a href="#discovery">Discovery</a></li>
-                    <li><a href="#design">Design</a></li>
-                    <li><a href="#reflection">Reflection</a></li>
-                </ul>
-            </div>
-        </div>
+        <TableOfContents sectionNames={sectionNames} />
 
         <div class="main-container">
-            <section id="solution"> <!--Solution-->
+            <section id={`${sectionNames[0]}`}> <!--Solution-->
                 <div class="toc-spacer"></div>
                 <span class="toc-badge">
-                    01 - Solution
+                    01 - {sectionNames[0]}
                 </span>
 
                 <article>
@@ -121,10 +110,10 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
                 </article>
             </section>
 
-            <section id="background"> <!--Background-->
+            <section id={`${sectionNames[1]}`}> <!--Background-->
                 <div class="toc-spacer"></div>
                 <span class="toc-badge">
-                    02 - Background
+                    02 - {sectionNames[1]}
                 </span>
 
                 <!-- INTRODUCE CLIENT -->
@@ -157,10 +146,10 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
                 </article>
             </section>
             
-            <section id="discovery"> <!-- Discovery -->
+            <section id={`${sectionNames[2]}`}> <!-- Discovery -->
                 <div class="toc-spacer"></div>
                 <span class="toc-badge">
-                    03 - Discovery
+                    03 - {sectionNames[2]}
                 </span>
 
                 <article>
@@ -240,10 +229,10 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
                 </article>
             </section>
 
-            <section id="design"> <!-- Design -->
+            <section id={`${sectionNames[3]}`}> <!-- Design -->
                 <div class="toc-spacer"></div>
                 <span class="toc-badge">
-                    04 - Design
+                    04 - {sectionNames[3]}
                 </span>
 
                 <article>
@@ -439,10 +428,10 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
                 </article>
             </section>
 
-            <section id="reflection"> <!-- Reflection -->
+            <section id={`${sectionNames[4]}`}> <!-- Reflection -->
                 <div class="toc-spacer"></div>
                 <span class="toc-badge">
-                    07 - Reflection
+                    05 - {sectionNames[4]}
                 </span>
                 <h2>And that's a wrap!</h2>
 
