@@ -15,14 +15,23 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
     <noscript><link rel="stylesheet" href="/styles/case-studies.css"></noscript>
 
     <script defer>
-        const detailsElements = document.querySelectorAll('details');
+        // ensure the DOM is ready before querying
+        document.addEventListener('DOMContentLoaded', () => {
+            const detailsElements = document.querySelectorAll('details');
 
-        detailsElements.forEach(details => {
-        details.addEventListener('toggle', () => {
-            if (!details.open) { // Check if the details element is now closed
-            details.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
-            }
-        });
+            detailsElements.forEach(details => {
+                details.addEventListener('toggle', () => {
+                    if (!details.open) { // closed state
+                        // scroll the summary (header) into view so users don't skip ahead
+                        const summary = details.querySelector('summary');
+                        if (summary) {
+                            summary.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        } else {
+                            details.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
         });
     </script>
 </head>
