@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import CaseStudySection from "../../layouts/CaseStudySection.astro";
 import CaseStudyHero from "../../components/CaseStudyHero.astro";
 import TableOfContents from "../../components/TableOfContents.astro";
 
@@ -44,12 +45,8 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
         <TableOfContents sectionNames={sectionNames} />
 
         <div class="main-container">
-            <section id={`${sectionNames[0]}`}> <!--Solution-->
-                <div class="toc-spacer"></div>
-                <span class="toc-badge">
-                    01 - {sectionNames[0]}
-                </span>
 
+            <CaseStudySection sectionName={sectionNames[0]} num={1}> <!--Solution-->
                 <article>
                     <h2>The revamped SNS Salon & Beauty Supply website</h2>
                     <p>
@@ -108,14 +105,9 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                         <img src="https://media.dave-vo.com/file/dvfolio/sns/deliverables-booking.gif" alt="A looping video of the booking flow.">
                     </div>
                 </article>
-            </section>
+            </CaseStudySection>
 
-            <section id={`${sectionNames[1]}`}> <!--Background-->
-                <div class="toc-spacer"></div>
-                <span class="toc-badge">
-                    02 - {sectionNames[1]}
-                </span>
-
+            <CaseStudySection sectionName={sectionNames[1]} num={2}> <!--Background-->
                 <!-- INTRODUCE CLIENT -->
                 <article>
                     <h2>What our client wants to achieve through a redesign</h2>
@@ -144,14 +136,9 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                         The site needed to establish credibility on its own through visual proof, clarity, and transparency, rather than relying on Yelp or referrals to do that work.
                     </p>
                 </article>
-            </section>
-            
-            <section id={`${sectionNames[2]}`}> <!-- Discovery -->
-                <div class="toc-spacer"></div>
-                <span class="toc-badge">
-                    03 - {sectionNames[2]}
-                </span>
+            </CaseStudySection>
 
+            <CaseStudySection sectionName={sectionNames[2]} num={3}> <!-- Discovery -->
                 <article>
                     <h2>Auditing the original website</h2>
                     <p>
@@ -227,14 +214,9 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                         </div>
                     </div>
                 </article>
-            </section>
+            </CaseStudySection>
 
-            <section id={`${sectionNames[3]}`}> <!-- Design -->
-                <div class="toc-spacer"></div>
-                <span class="toc-badge">
-                    04 - {sectionNames[3]}
-                </span>
-
+            <CaseStudySection sectionName={sectionNames[3]} num={4}> <!-- Design -->
                 <article>
                     <h2>Prioritizing for customer conversion</h2>
                     <p>
@@ -339,6 +321,7 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                     <hr>
                     <p>
                         Early versions tried to make each service clearer by adding more detail, but testing showed this made the page feel dense and long to navigate. The final design grouped services into color-blocked categories so users could locate specific services in 2-3 scans instead of searching the full list, while curated salon suggestions preserved visual context without overextending scroll duration.
+                    </p>
                 </article>
 
                 <article class="extra-space"> <!-- Booking -->
@@ -426,13 +409,9 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                         </picture>
                     </div>
                 </article>
-            </section>
+            </CaseStudySection>
 
-            <section id={`${sectionNames[4]}`}> <!-- Reflection -->
-                <div class="toc-spacer"></div>
-                <span class="toc-badge">
-                    05 - {sectionNames[4]}
-                </span>
+            <CaseStudySection sectionName={sectionNames[4]} num={5}> <!-- Reflection -->
                 <h2>And that's a wrap!</h2>
 
                 <article class="extra-space"> <!--Impact-->
@@ -522,8 +501,7 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                         <h2><u>Aromacovery</u></h2>
                     </a>
                 </div>
-            </section>
-
+            </CaseStudySection>
         </div>
     </main>
 </BaseLayout>
