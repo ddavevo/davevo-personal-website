@@ -48,7 +48,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <section class="profile-pic-container"> <!--Profile Picture -->
                 <div class="profile-pic">
                     <picture>
-                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/about/profile-pic-full.webp">
+                        <source type="image/webp" fetchpriority="high" data-srcset="https://media.dave-vo.com/file/dvfolio/about/profile-pic-full.webp">
                         <img class="profile" src="https://media.dave-vo.com/file/dvfolio/about/profile-pic-full.png" loading="lazy" alt="Profile picture.">
                     </picture>
                     <picture>
