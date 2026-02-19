@@ -213,6 +213,13 @@
     flex-grow: 1;
 }
 
+.footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+}
+
 .footer-nav li {
     padding-bottom: 0.5rem;
 }
