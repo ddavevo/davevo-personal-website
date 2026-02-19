@@ -5,53 +5,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aromacovery - Dave Vo</title>
-    <link rel="icon" type="image/x-icon" href="https://media.dave-vo.com/file/dvfolio/general/davevo_favicon.png">
-    
-    <!-- ======================================= -->
-
-    <link href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
-    </noscript>
-
-    <!-- ======================================= -->
-
-    <link rel="preload" href="/styles/general.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/styles/general.css"></noscript>
-
-    <link rel="preload" href="/styles/boilerplate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/styles/boilerplate.css"></noscript>
-
     <link rel="preload" href="/styles/case-studies.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/styles/case-studies.css"></noscript>
-
-    <!-- ======================================= -->
-
-    <!--
-    <style>
-        h1.fraunces {
-            font-family: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
-            font-optical-sizing: auto; font-weight: 400;
-            font-style: italic; font-variation-settings: "SOFT" 0, "WONK" 1;
-            position: relative; max-width: 1312px; margin: 0 auto; padding: 2.4rem;
-            color: var(--bg); text-align: center;
-        }
-        .hero { background-image: linear-gradient(to bottom, var(--Primary-700), var(--Primary-900)); color: var(--bg); padding-top: 6rem;}
-        .hero img { width: clamp(320px, 100%, 1312px); aspect-ratio: 16/9; object-fit: cover; margin: 0 auto; overflow: hidden;}
-  </style>
-  -->
-  
 </head>
 
-<BaseLayout>
+<BaseLayout title="Aromacovery">
     <section class="hero">
         <picture fetchpriority="high" style="position: relative; max-width: 1312px; margin: 0 auto;">
             <source type="image/webp" loading="lazy" srcset="https://media.dave-vo.com/file/dvfolio/aromacovery/aromacovery-hero.webp">
@@ -102,8 +60,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         </div>
 
         <!--Main Content-->
-        <div class="main-container">
-            
+        <div class="main-container">  
             <section id="solution"> <!--Final Deliverables-->
                 <div class="toc-spacer"></div>
                 <span class="toc-badge">
@@ -708,7 +665,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                 </article>
 
                 <div class="hmw-wrap" id="next-case-study">
-                    <a class="open-new-page" href="designlab.html">
+                    <a class="open-new-page" href="/case-studies/designlab/">
                         <p class="subtitle">Check out another case study!</p>
                         <img id="logo-arrow" src="https://media.dave-vo.com/file/dvfolio/general/logo-stroked.png">
                         <h2><u>UCSD Design Lab</u></h2>
@@ -717,9 +674,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             </section>
         </div>
     </main>
-</BaseLayout>
-
-<script src="/javascript/case-study-links.js" defer></script>
- 
+</BaseLayout> 
 
 </html>

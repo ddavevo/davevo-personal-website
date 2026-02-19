@@ -4,6 +4,22 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <link rel="preload" href="/styles/case-studies.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/case-studies.css"></noscript>
+
+    <script defer>
+        const detailsElements = document.querySelectorAll('details');
+
+        detailsElements.forEach(details => {
+        details.addEventListener('toggle', () => {
+            if (!details.open) { // Check if the details element is now closed
+            details.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
+            }
+        });
+        });
+    </script>
+</head>
 
 <BaseLayout title="UCSD Design Lab">
     <div class="hero">
@@ -56,8 +72,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         </div>
 
         <div class="main-container">
-
-
             <section id="solution"> <!--Solution-->
                 <div class="toc-spacer"></div>
                 <span class="toc-badge">
@@ -823,7 +837,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                 </article>
 
                 <div class="hmw-wrap" id="next-case-study">
-                    <a class="open-new-page" href="sns.html">
+                    <a class="open-new-page" href="/case-studies/sns/">
                         <p class="subtitle">Check out another case study!</p>
                         <img id="logo-arrow" src="https://media.dave-vo.com/file/dvfolio/general/logo-stroked.png">
                         <h2><u>SNS Salon & Beauty Supply</u></h2>
@@ -833,20 +847,5 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         </div>
     </main>
 </BaseLayout>
-
-<link rel="preload" href="/styles/case-studies.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/styles/case-studies.css"></noscript>
-
-<script defer>
-    const detailsElements = document.querySelectorAll('details');
-
-    detailsElements.forEach(details => {
-    details.addEventListener('toggle', () => {
-        if (!details.open) { // Check if the details element is now closed
-        details.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
-        }
-    });
-    });
-</script>
 
 </html>

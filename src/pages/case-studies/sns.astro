@@ -5,39 +5,23 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNS Salon & Beauty Supply - Dave Vo</title>
-    <link rel="icon" type="image/x-icon" href="https://media.dave-vo.com/file/dvfolio/general/davevo_favicon.png">
-    
-    <!-- ======================================= -->
-
-    <link href="/fonts/gravity-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link href="/fonts/gravity-bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,WONK@1,9..144,1&display=swap">
-    </noscript>
-
-    <!-- ======================================= -->
-
-    <link rel="preload" href="/styles/general.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/styles/general.css"></noscript>
-
-    <link rel="preload" href="/styles/boilerplate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/styles/boilerplate.css"></noscript>
-
     <link rel="preload" href="/styles/case-studies.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/styles/case-studies.css"></noscript>
 
-    <!-- ======================================= -->
+    <script defer>
+        const detailsElements = document.querySelectorAll('details');
 
+        detailsElements.forEach(details => {
+        details.addEventListener('toggle', () => {
+            if (!details.open) { // Check if the details element is now closed
+            details.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
+            }
+        });
+        });
+    </script>
 </head>
 
-<BaseLayout>
+<BaseLayout title="SNS Salon & Beauty Supply">
     <section class="hero">
         <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
             <source data-src="https://media.dave-vo.com/file/dvfolio/sns/sns-hero-compressed.mp4" type="video/mp4"/>
@@ -87,7 +71,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         </div>
 
         <div class="main-container">
-
             <section id="solution"> <!--Solution-->
                 <div class="toc-spacer"></div>
                 <span class="toc-badge">
@@ -560,7 +543,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                 </article>
 
                 <div class="hmw-wrap" id="next-case-study">
-                    <a class="open-new-page" href="aromacovery.html">
+                    <a class="open-new-page" href="/case-studies/aromacovery/">
                         <p class="subtitle">Check out another case study!</p>
                         <img id="logo-arrow" src="https://media.dave-vo.com/file/dvfolio/general/logo-stroked.png">
                         <h2><u>Aromacovery</u></h2>
@@ -571,8 +554,5 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         </div>
     </main>
 </BaseLayout>
-
-<script src="/javascript/case-study-links.js" defer></script>
- 
 
 </html>
