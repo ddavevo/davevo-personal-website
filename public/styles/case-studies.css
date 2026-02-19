@@ -266,14 +266,6 @@ summary {
     width: 95%;
 }
 
-.fake-h4 {
-    font-family: gravity-bold;
-    color: var(--Text-heading-light-bg);
-    font-size: clamp(1.1rem, 2vw, 1.25rem);
-    margin-bottom: var(--space-sm);
-    line-height: 150%; 
-}
-
 .gallery {
     display: grid; 
     grid-template-columns: 1fr 1fr;
@@ -443,7 +435,7 @@ summary {
 }
 
 .tags li, .tag-inline {
-    font-family: gravity;
+    font-family: var(--font-body);
     display: inline;
     list-style-type: none;
     white-space: nowrap;
@@ -563,7 +555,7 @@ summary {
 }
 
 .numbered span {
-    font-family: gravity-bold;
+    font-family: var(--font-bold);
     color: var(--text-body-inverse);
     background-color: #14ae5c;
     border-radius: 50%;

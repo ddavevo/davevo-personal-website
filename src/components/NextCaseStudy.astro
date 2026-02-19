@@ -1,0 +1,11 @@
+---
+const { title, url } = Astro.props;
+---
+
+<div class="hmw-wrap" id="next-case-study">
+    <a class="open-new-page" href={url}>
+        <p class="subtitle">Check out another case study!</p>
+        <img id="logo-arrow" src="https://media.dave-vo.com/file/dvfolio/general/logo-stroked.png" alt="Decorative arrow pointing to next case study">
+        <h2><u>{title}</u></h2>
+    </a>
+</div>

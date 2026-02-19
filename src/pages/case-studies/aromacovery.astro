@@ -1,5 +1,10 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import CaseStudySection from "../../layouts/CaseStudySection.astro";
+import TableOfContents from "../../components/TableOfContents.astro";
+import NextCaseStudy from "../../components/NextCaseStudy.astro";
+
+const sectionNames = ["Solution", "Background", "Research", "Design", "Testing", "Reflection"];
 ---
 
 <!DOCTYPE html>
@@ -42,32 +47,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     </div>
 
     <main>
-        <!--Table of Contents-->
-        <div class="toc-container">
-            <div class="table-of-contents">
-                <p class="toc-header">
-                    <b>Table of Contents</b>
-                </p>
-                <ul>
-                    <li><a href="#solution">Solution</a></li>
-                    <li><a href="#background">Background</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#ux-design">UX Design</a></li>
-                    <li><a href="#kiosk-design">Kiosk Design</a></li>
-                    <li><a href="#usability-testing">Usability Testing</a></li>
-                    <li><a href="#reflection">Reflection</a></li>
-                </ul>
-            </div>
-        </div>
+        <TableOfContents sectionNames={sectionNames} />
 
         <!--Main Content-->
         <div class="main-container">  
-            <section id="solution"> <!--Final Deliverables-->
-                <div class="toc-spacer"></div>
-                <span class="toc-badge">
-                    01 - Solution
-                </span>
-
+            <CaseStudySection sectionName={sectionNames[0]} num={1}> <!--Solution-->
                 <article>
                     <h2>How we recharged and refreshed the sleeping pods</h2>
                     <p>
@@ -152,14 +136,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                     </div>
                 </article>
                 
-            </section>
+            </CaseStudySection>
 
-            <section id="background"> <!--Background-->
-                <div class="toc-spacer"></div>
-                <span class="toc-badge">
-                    02 - Background
-                </span>
-
+            <CaseStudySection sectionName={sectionNames[1]} num={2}> <!--Background-->
                 <article class="extra-space">
                     <h2>MetroNaps™ - UCSD's attempt at student burnout relief</h2>
                     
@@ -210,14 +189,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                     </div>
                  </article>
                 
-            </section>
+            </CaseStudySection>
             
-            <section id="research"> <!--Research-->
-                <div class="toc-spacer"></div>
-                <span class="toc-badge">
-                    03 - Research
-                </span>
-
+            <CaseStudySection sectionName={sectionNames[2]} num={3}> <!--Research-->
                 <!-- ACADEMIC RESEARCH -->
                 <article>
                     <h2>Expanding the sleeping pods' audience to students</h2>
@@ -370,14 +344,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                         </figure>
                     </div>
                 </article>
-            </section>
+            </CaseStudySection>
 
-            <section id="ux-design"> <!--UX Design-->
-                <div class="toc-spacer"></div>
-                <span class="toc-badge">
-                    04 - UX Design
-                </span>
-
+            <CaseStudySection sectionName={sectionNames[3]} num={4}> <!--Design-->
                 <article>
                     <h2>Refreshing the sleeping pod experience</h2>
 
@@ -509,14 +478,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                     <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/design-system-colors.png">
                     <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/design-system-ui-library.png">
                 </article>
-            </section>
+            </CaseStudySection>
 
-            <section id="kiosk-design"> <!--Kiosk Design-->
-                <div class="toc-spacer"></div>
-                <span class="toc-badge">
-                    05 - Kiosk Design
-                </span>
-
+            <!--
+            <CaseStudySection sectionName={sectionNames[4]} num={5}>
                 <article class="extra-space">
                     <h2>Constructing the kiosk</h2>
 
@@ -558,14 +523,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                     </div>
                 </article>
                 
-            </section>
+            </CaseStudySection>
+            -->
 
-            <section id="usability-testing"> <!--Usability Testing-->
-                <div class="toc-spacer"></div>
-                <span class="toc-badge">
-                    06 - Usability Testing
-                </span>
-
+            <CaseStudySection sectionName={sectionNames[5]} num={6}> <!--Usability Testing-->
                 <article>
                     <h2>Testing the Aromacovery experience</h2>
                     <p>
@@ -626,14 +587,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                         </p>
                     </div>
                 </div>
-            </section>
+            </CaseStudySection>
             
-            <section id="reflection"> <!--Reflection-->
-                <div class="toc-spacer"></div>
-                <span class="toc-badge">
-                    07 - Reflection
-                </span>
-
+            <CaseStudySection sectionName={sectionNames[6]} num={7}> <!--Reflection-->
                 <article>
                     <div class="columns">
                         <div>
@@ -665,14 +621,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                     </p>
                 </article>
 
-                <div class="hmw-wrap" id="next-case-study">
-                    <a class="open-new-page" href="/case-studies/designlab/">
-                        <p class="subtitle">Check out another case study!</p>
-                        <img id="logo-arrow" src="https://media.dave-vo.com/file/dvfolio/general/logo-stroked.png">
-                        <h2><u>UCSD Design Lab</u></h2>
-                    </a>
-                </div>
-            </section>
+                <NextCaseStudy title="UCSD Design Lab" url="/case-studies/designlab/" />
+                
+            </CaseStudySection>
         </div>
     </main>
 </BaseLayout> 

@@ -3,6 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CaseStudySection from "../../layouts/CaseStudySection.astro";
 import CaseStudyHero from "../../components/CaseStudyHero.astro";
 import TableOfContents from "../../components/TableOfContents.astro";
+import NextCaseStudy from "../../components/NextCaseStudy.astro";
 
 const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflection"];
 ---
@@ -503,13 +504,8 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                     </p>
                 </article>
 
-                <div class="hmw-wrap" id="next-case-study">
-                    <a class="open-new-page" href="/case-studies/aromacovery/">
-                        <p class="subtitle">Check out another case study!</p>
-                        <img id="logo-arrow" src="https://media.dave-vo.com/file/dvfolio/general/logo-stroked.png">
-                        <h2><u>Aromacovery</u></h2>
-                    </a>
-                </div>
+                <NextCaseStudy title="Aromacovery" url="/case-studies/aromacovery/" />
+
             </CaseStudySection>
         </div>
     </main>
