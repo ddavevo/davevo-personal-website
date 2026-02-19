@@ -1,0 +1,4 @@
+# robots.txt for dave-vo.com
+# allow all crawlers to index the site
+User-agent: *
+Allow: /
