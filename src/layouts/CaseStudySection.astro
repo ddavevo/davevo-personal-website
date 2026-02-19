@@ -1,0 +1,11 @@
+---
+const { sectionName, num } = Astro.props;
+---
+
+<section id={`${sectionName}`}>
+    <div class="toc-spacer"></div>
+    <span class="toc-badge">
+        0{num} - {sectionName}
+    </span>
+    <slot />
+</section>

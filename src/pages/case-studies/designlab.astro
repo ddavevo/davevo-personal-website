@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import CaseStudySection from "../../layouts/CaseStudySection.astro";
 import CaseStudyHero from "../../components/CaseStudyHero.astro";
 import TableOfContents from "../../components/TableOfContents.astro";
 
@@ -44,12 +45,7 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
         <TableOfContents sectionNames={sectionNames}/>
 
         <div class="main-container">
-            <section id={`${sectionNames[0]}`}> <!--Solution-->
-                <div class="toc-spacer"></div>
-                <span class="toc-badge">
-                    01 - {sectionNames[0]}
-                </span>
-
+            <CaseStudySection sectionName={sectionNames[0]} num={1}> <!--Solution-->
                 <article>
                     <h2>Design smarter: An adaptive plugin that guides, challenges, and strengthens your creative problem solving</h2>
                     <p>
@@ -136,14 +132,9 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
                     </div>
                 </div>
                 </article>
-            </section>
+            </CaseStudySection>
 
-            <section id={`${sectionNames[1]}`}> <!--Background-->
-                <div class="toc-spacer"></div>
-                <span class="toc-badge">
-                    02 - {sectionNames[1]}
-                </span>
-
+            <CaseStudySection sectionName={sectionNames[1]} num={2}> <!--Background-->
                 <article class="extra-space">
                     <h2>AI tools are major disrupters in creative work</h2>
                     <div class="columns">
@@ -231,13 +222,9 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
                         </div>
                     </div>
                 </article>
-            </section>
+            </CaseStudySection>
 
-            <section id={`${sectionNames[2]}`}> <!--Design-->
-                <div class="toc-spacer"></div>
-                <span class="toc-badge">
-                    03 - {sectionNames[2]}
-                </span>
+            <CaseStudySection sectionName={sectionNames[2]} num={3}> <!--Design-->
                 <article>
                     <h2>Redesigning the original plugin prototype</h2>
                     <p>
@@ -376,8 +363,6 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
                         </div>
                     </div>
                 </article>
-
-                <!-- =================================================== -->
                  
                 <article> <!-- FULL DESIGN RATIONALE -->
                     <details aria-label="Some design features we didn't go with.">
@@ -438,14 +423,9 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
                         </article>
                     </details>
                 </article>
-            </section>
+            </CaseStudySection>
 
-            <section id={`${sectionNames[3]}`}> <!--Methods-->
-                <div class="toc-spacer"></div>
-                <span class="toc-badge">
-                    04 - {sectionNames[3]}
-                </span>
-
+            <CaseStudySection sectionName={sectionNames[3]} num={4}> <!--Methods-->
                 <article>
                     <h2>How we constructed our research methodology</h2>
 
@@ -493,7 +473,8 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
                         <div>
                             <span class="tag ai-led">AI-Led</span>
                             <p>
-                            Templates are already filled out by AI. Users don't have to initiate any writing, only reading and processing what was generated.
+                                Templates are already filled out by AI. Users don't have to initiate any writing, only reading and processing what was generated.
+                            </p>
                         </div>
                         <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
                             <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/review-why.mp4" type="video/mp4"/>
@@ -520,14 +501,9 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
                         We created a single source of truth that mapped each screen to a condition and feature. This kept the prototype aligned with research goals and ensured all interactions could be accurately compared and implemented.
                     </p>
                 </article>
-            </section>
+            </CaseStudySection>
 
-            <section id={`${sectionNames[4]}`}> <!--Results-->
-                <div class="toc-spacer"></div>
-                <div class="toc-badge">
-                    05 - {sectionNames[4]}
-                </div>
-
+            <CaseStudySection sectionName={sectionNames[4]} num={5}> <!--Results-->
                 <article class="extra-space">
                     <h2>Results & Takeaways</h2>
                     <p class="subtitle">The Golden Question</p>
@@ -717,13 +693,9 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
                         </picture>
                     </div>
                 </article>
-            </section>
+            </CaseStudySection>
 
-            <section id={`${sectionNames[5]}`}> <!-- Reflection -->
-                <div class="toc-spacer"></div>
-                <div class="toc-badge">
-                    06 - {sectionNames[5]}
-                </div>
+            <CaseStudySection sectionName={sectionNames[5]} num={6}> <!-- Reflection -->
                 <h2>Informing design guidelines for future AI-assisted creativity tools</h2>
 
                 <article class="extra-space"> <!--Impact-->
@@ -815,7 +787,8 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
                         <h2><u>SNS Salon & Beauty Supply</u></h2>
                     </a>
                 </div>
-            </section>
+            </CaseStudySection>
+
         </div>
     </main>
 </BaseLayout>
