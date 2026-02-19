@@ -48,9 +48,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <section class="profile-pic-container"> <!--Profile Picture -->
                 <div class="profile-pic">
                     <picture>
-                        <img class="profile" src="https://media.dave-vo.com/file/dvfolio/about/profile-pic-full.png">
+                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/about/profile-pic-full.webp">
+                        <img class="profile" src="https://media.dave-vo.com/file/dvfolio/about/profile-pic-full.png" loading="lazy" alt="Profile picture.">
                     </picture>
-                    <img class="wildcard" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-7.png">
+                    <picture>
+                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/about/snowflake-7.webp">
+                        <img class="wildcard" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-7.png" loading="lazy" alt="Decorative piece.">
+                    </picture>
                 </div>
                 
                 <div style="display: flex; justify-content: space-between;">
@@ -70,7 +74,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 <div class="playlist">
                     <a class="open-new-page" href="https://open.spotify.com/playlist/0gmuRZRuqPMszO5Z6oOfsN?si=455a9de4c05d4880" target="_blank">
                         <picture>
-                            <img class="subliminal" src="https://media.dave-vo.com/file/dvfolio/about/subliminal-playlist.png">
+                            <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/about/subliminal-playlist.webp">
+                            <img class="subliminal" src="https://media.dave-vo.com/file/dvfolio/about/subliminal-playlist.png" loading="lazy" alt="Subliminal playlist cover.">
                         </picture>
                     </a>
                 </div>
