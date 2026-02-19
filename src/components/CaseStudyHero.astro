@@ -1,0 +1,35 @@
+---
+const { heroMediaUrl, caseStudyTitle, logisticItems, ribbonOffset, ribbonImageUrl } = Astro.props;
+---
+
+<section class="hero">
+    <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+        <source data-src={`${heroMediaUrl}.mp4`} type="video/mp4"/>
+        <source data-src={`${heroMediaUrl}.webm`} type="video/webm"/>
+    </video>
+    
+    <h1 id="case-study-title" class="fraunces">{caseStudyTitle}</h1>
+    <div class="logistics">
+        <div>
+            <p class="subtitle">My Role</p>
+            <p set:html={logisticItems[0].join('<br>')} />
+        </div>
+        <div>
+            <p class="subtitle">Team</p>
+            <p set:html={logisticItems[1].join('<br>')} />
+        </div>
+
+        <div>
+            <p class="subtitle">Skills</p>
+            <p set:html={logisticItems[2].join('<br>')} />
+            
+        </div>
+        <div>
+            <p class="subtitle">Timeline</p>
+            <p set:html={logisticItems[3].join('<br>')} />
+        </div>
+    </div>
+</section>
+<div class="hero-ribbon">
+    <img style=`transform: ${ribbonOffset};` src=`${ribbonImageUrl}.png`>
+</div>

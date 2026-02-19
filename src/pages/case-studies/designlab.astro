@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import CaseStudyHero from "../../components/CaseStudyHero.astro";
 ---
 
 <!DOCTYPE html>
@@ -23,36 +24,18 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </head>
 
 <BaseLayout title="UCSD Design Lab">
-    <div class="hero">
-        <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-            <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/dlab-hero-compressed.mp4" type="video/mp4"/>
-            <source data-src="https://media.dave-vo.com/file/dvfolio/designlab/dlab-hero-compressed.webm" type="video/webm"/>
-        </video>
-
-        <h1 id="case-study-title" class="fraunces">Researching contextual AI frameworks to evaluate user-AI interactions and support better creative outcomes</h1>
-        <div class="logistics">
-            <div>
-                <p class="subtitle">My Role</p>
-                <p> Product Designer <br> Product Researcher </p>
-            </div>
-            <div>
-                <p class="subtitle">Team</p>
-                <p>1 Research Lead <br> 4 Designers + Researchers</p>
-            </div>
-
-            <div>
-                <p class="subtitle">Skills</p>
-                <p>Interaction Design <br>Prototyping <br> UX Research</p>
-            </div>
-            <div>
-                <p class="subtitle">Timeline</p>
-                <p> 10 months <br> Dec. 2023 - Sep. 2024 </p>
-            </div>
-        </div>
-    </div>
-    <div class="hero-ribbon">
-        <img alt="" style="transform: translateY(-40%);" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-3.png">
-    </div>
+    <CaseStudyHero
+        heroMediaUrl="https://media.dave-vo.com/file/dvfolio/designlab/dlab-hero-compressed"
+        caseStudyTitle="Researching contextual AI frameworks to evaluate user-AI interactions and support better creative outcomes"
+        logisticItems={[
+            ["Product Designer", "Product Researcher"],
+            ["1 Research Lead", "4 Designers + Researchers"],
+             ["Interaction Design", "Prototyping", "UX Research"],
+             ["10 months", "Dec. 2023 - Sep. 2024"]
+        ]}
+        ribbonOffset="translateY(-40%)"
+        ribbonImageUrl="https://media.dave-vo.com/file/dvfolio/about/snowflake-3"
+    />
     
     <main>
         <!--Table of Contents-->

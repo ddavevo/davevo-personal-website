@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import CaseStudyHero from "../../components/CaseStudyHero.astro";
 ---
 
 <!DOCTYPE html>
@@ -23,36 +24,18 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </head>
 
 <BaseLayout title="SNS Salon & Beauty Supply">
-    <section class="hero">
-        <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-            <source data-src="https://media.dave-vo.com/file/dvfolio/sns/sns-hero-compressed.mp4" type="video/mp4"/>
-            <source data-src="https://media.dave-vo.com/file/dvfolio/sns/sns-hero-compressed.webm" type="video/webm"/>
-        </video>
-        
-        <h1 id="case-study-title" class="fraunces">Rehauling SNS Salon & Beauty Supply’s service discovery and booking for salon patrons</h1>
-        <div class="logistics">
-            <div>
-                <p class="subtitle">My Role</p>
-                <p>UI/UX Designer </p>
-            </div>
-            <div>
-                <p class="subtitle">Team</p>
-                <p>4 UI/UX Designers </p>
-            </div>
-
-            <div>
-                <p class="subtitle">Skills</p>
-                <p>UI/UX Design <br> Design Systems <br> User Testing</p>
-            </div>
-            <div>
-                <p class="subtitle"">Timeline</p>
-                <p>7 weeks <br> Jan. 2024 - Mar. 2024 </p>
-            </div>
-        </div>
-    </section>
-    <div class="hero-ribbon">
-        <img style="transform: translateY(-43%);" src="https://media.dave-vo.com/file/dvfolio/about/snowflake-6.png">
-    </div>
+    <CaseStudyHero 
+        heroMediaUrl="https://media.dave-vo.com/file/dvfolio/sns/sns-hero-compressed"
+        caseStudyTitle="Rehauling SNS Salon & Beauty Supply’s service discovery and booking for salon patrons"
+        logisticItems={[
+            "UI/UX Designer",
+            "4 UI/UX Designers",
+            ["UI/UX Design", "Design Systems", "User Testing"],
+            ["7 weeks", "Jan. 2024 - Mar. 2024"]
+        ]}
+        ribbonOffset="translateY(-43%)"
+        ribbonImageUrl="https://media.dave-vo.com/file/dvfolio/about/snowflake-6"
+    />
 
     <main>
         <!--Table of Contents-->
