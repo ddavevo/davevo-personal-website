@@ -226,7 +226,7 @@ summary {
 /* ================================================================= */
 
 .main-container section {
-    padding-bottom: var(--space-5xl);
+    margin-bottom: var(--space-5xl);
     content-visibility: auto;
     contain-intrinsic-size: auto;
     transition: opacity 1s cubic-bezier(.17,.67,.75,1.06), transform 1.75s cubic-bezier(.17,.67,.75,1.06);
@@ -237,18 +237,37 @@ summary {
 }
 
 .main-container article {
-    padding-bottom: var(--space-3xl);
+    margin-bottom: var(--space-3xl);
 }
 
 .main-container article.extra-space {
-    padding-bottom: var(--space-7xl);
+    margin-bottom: var(--space-7xl);
 }
 
 /* ====================================================================== */
 
+.generic-container {
+    background-image: var(--gradient-generic-container);
+    padding: 4rem 0 4rem 0;
+    margin-bottom: var(--space-xl);
+}
+
+.columns-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
 .columns {
     display: grid;
     grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+}
+
+.columns-vertical {
+    display: grid;
+    grid-auto-flow: row;
     grid-auto-columns: 1fr;
     gap: 1rem;
 }
@@ -656,6 +675,9 @@ summary {
 
     .columns {
         grid-auto-flow: row;    
+    }
+    .columns-flex {
+        flex-direction: column;
     }
     .columns div {
         margin-bottom: 1rem;

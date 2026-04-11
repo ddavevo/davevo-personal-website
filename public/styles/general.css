@@ -246,6 +246,7 @@
     /* Gradient */
     --gradient-nav: linear-gradient(var(--surface-page), var(--surface-page) 9.4rem, rgb(254,246,240, 0.8) 10.2rem, transparent);
     --gradient-case-study: linear-gradient(to left, var(--teal-default), var(--teal-800));
+    --gradient-generic-container: linear-gradient(var(--brown-200), var(--brown-100));
 }
 
 
