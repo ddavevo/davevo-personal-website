@@ -53,6 +53,9 @@
     --brown-1000: #423229;
     --brown-1100: #261E17;
 
+    --yellow-100: rgb(255 252 230);
+    --yellow-700: rgb(109, 74, 9);
+
     /* Color Tokens - Teal Scale */
     --teal-100: rgb(228 239 237);
     --teal-200: rgb(172 228 237);

@@ -28,6 +28,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             left: -1.75rem; 
             transform: scale(.2) scaleX(-1) rotate(300deg); 
         }
+
+        .custom-landing-page-banner-warning {
+            background-color: var(--yellow-100);
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+            padding: 0.75rem 0;
+        }
     </style>
 
     <!-- ======================================= -->
@@ -37,6 +45,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout>
     <main>
         <section class="landing-page">
+            <div class="custom-landing-page-banner-warning">
+                <p>
+                    Using the nav will revert to the default site. To return, the URL is <a href="https://dave-vo.com/creativex" target="_blank" aria-label="Open Creative X website in new tab"><span class="open-new-page"><u>dave-vo.com/creativex</u></span></a>
+                </p>
+            </div>
             <div class="landing-text">
                 <span class="subtitle" style="color: var(--brown-100); background-color: var(--teal-default); margin-bottom: 0.5rem; padding: 0.25rem 0.5rem; display: inline-block;">Hi Creative X hiring team!</span>
                 <h2 class="fraunces">
@@ -51,8 +64,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <!-- MAXMIC  -->
             <a class="project open-new-page" href="/case-studies/maxmic/">
                 <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-hero.mp4" type="video/mp4"/>
-                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-hero.webm" type="video/webm"/>
+                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-performance-pics.mp4" type="video/mp4"/>
+                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-performance-pics.webm" type="video/webm"/>
                 </video>
                 <div class="project-overview">
 
