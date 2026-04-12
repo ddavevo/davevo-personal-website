@@ -5,7 +5,7 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
 import TableOfContents from "../../components/TableOfContents.astro";
 import NextCaseStudy from "../../components/NextCaseStudy.astro";
 
-const sectionNames = ["Solution", "Background", "The Idea", "Decisions", "Reflection"];
+const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"];
 ---
 
 <!DOCTYPE html>
@@ -40,12 +40,12 @@ const sectionNames = ["Solution", "Background", "The Idea", "Decisions", "Reflec
 <BaseLayout title="MaxMic">
     <CaseStudyHero
         heroMediaUrl="https://media.dave-vo.com/file/dvfolio/designlab/dlab-hero-compressed"
-        caseStudyTitle="Researching contextual AI frameworks to evaluate user-AI interactions and support better creative outcomes"
+        caseStudyTitle="Concept-to-launch of MaxMic, a cross-disciplinary event redefining creative community on campus"
         logisticItems={[
-            ["Product Designer", "Product Researcher"],
-            ["1 Research Lead", "4 Designers + Researchers"],
-             ["Interaction Design", "Prototyping", "UX Research"],
-             ["10 months", "Dec. 2023 - Sep. 2024"]
+            ["Brand Director"],
+            ["Design (4)", "Marketing (1)", "Copywriting (1)"],
+             ["Art Direction", "Visual Systems", "Campaign Strategy"],
+             ["5 weeks", "Feb. 2025 - Mar. 2025"]
         ]}
         ribbonOffset="translateY(-40%)"
         ribbonImageUrl="https://media.dave-vo.com/file/dvfolio/about/snowflake-3"
@@ -55,11 +55,18 @@ const sectionNames = ["Solution", "Background", "The Idea", "Decisions", "Reflec
         <TableOfContents sectionNames={sectionNames}/>
 
         <div class="main-container">
-            <CaseStudySection sectionName={sectionNames[0]} num={1}> <!--Solution-->
-                <article>
-                    <h2>Design smarter: An adaptive plugin that guides, challenges, and strengthens your creative problem solving</h2>
+            <CaseStudySection sectionName={sectionNames[0]} num={1}> <!--Context-->
+
+                <article class="extra-space">
+                    <h2>The birth of <i>MaxMic</i></h2>
+
+                    <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%" style="margin-bottom: var(--space-xl);">
+                        <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-performance-pics.mp4" type="video/mp4"/>
+                        <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-performance-pics.webm" type="video/webm"/>
+                    </video>
+                    <hr>
                     <p>
-                        POV: Knee deep in brainstorming novel solutions? Imagine how our AI-powered plugin can leave your idea with a better value prop, with more resilience against edge cases, and more!
+                        Maximalist Magazine launched MaxMic, a cross-disciplinary open mic to bring fragmented creative communities on campus together into a shared experience.
                     </p>
                     <p>
                         The work I did led to:
@@ -68,65 +75,204 @@ const sectionNames = ["Solution", "Background", "The Idea", "Decisions", "Reflec
                     <div class="insight gain-point">
                         <span>✅</span>
                         <p>
-                            Shipped redesigned research plugin for CHI’25 research study.
+                            Drove 28K+ views on social platforms over 4 weeks
                         </p>  
                     </div>
 
                     <div class="insight gain-point">
                         <span>✅</span>
                         <p>
-                            Drove 61% more topic diversity + 20% faster iteration during user sprints.
+                            Obtained 150+ attendees and 10+ student org partnerships
                         </p>  
+                    </div>
+                    <div class="insight gain-point">
+                        <span>✅</span>
+                        <p>
+                            Widened interest in participation across future MaxMag activities
+                        </p>  
+                    </div>
+                    
+                </article>
+
+                <article class="extra-space">
+                    <p class="subtitle"> Problem </p>
+                    <h3>
+                        Interest in creative communities was rising, but engagement was hard to harness.
+                    </h3>
+                    <p>
+                        Zines in particular struggled to reach beyond literary and visual arts circles, while their events (like workshops) felt repetitive and limited in appeal. Through traditional formats, there was no clear way to effectively tap into this growing broader interest.
+                    </p>
+                </article>
+
+                <article class="extra-space">
+                    <p class="subtitle">Competitor/Cultural Analysis</p>
+                    <h3>Creative outlets were growing across campus, but remained disconnected.</h3>
+                    <picture>
+                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/competitor-analysis-peer-orgs.webp">
+                        <img loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/competitor-analysis-peer-orgs.png">
+                    </picture>
+                    <hr>
+                    <p>
+                        A new wave of student organizations was rapidly growing through social/experiential events, ushering in a heightened demand for creative participation across the general student body—<b>but without a shared space to bring it all together</b>.
+                    </p>
+                </article>
+
+                <article>
+                    <div class="columns">
+                        <div>
+                            <p class="subtitle"> Key Insight </p>
+                                <h3>
+                                    Students tend to settle into what they’re already familiar with
+                                </h3>
+                                <p>
+                                    Attending multiple events for the sake of exploring other interests consistently isn’t sustainable for your typical student.
+                                </p>
+                        </div>
+
+                        <div>
+                            <p class="subtitle"> Key Insight </p>
+                                <h3>
+                                    Most events weren’t structured to support multiple formats
+                                </h3>
+                                <p>
+                                    They’re typically built around a single medium, which restricts variety and makes experiences feel predictable.
+                                </p>
+                        </div>
                     </div>
                 </article>
                 
             </CaseStudySection>
 
             <CaseStudySection sectionName={sectionNames[1]} num={2}>
-                <article class="extra-space">
-                    <h2>Starting a new type of experience on campus</h2>
+                <article> <!-- MaxMic brand -->
+                    <h2>Defining the MaxMic brand</h2>
                     
-                    <p class="subtitle">The Opportunity</p>
-                    <h3>The birth of <i>MaxMic</i></h3>
-                    <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%" style="margin-bottom: var(--space-xl);">
-                        <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-performance-pics.mp4" type="video/mp4"/>
-                        <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-performance-pics.webm" type="video/webm"/>
-                    </video>
+                    <p class="subtitle">Creative Direction</p>
+                    <h3>Capturing energy, creativity, and spectacle!</h3>
+
+                    <div class="generic-container"> <!-- MaxMic Phamplet -->
+                        <div class="generic-container-margin-wrapper">
+                            <picture style="margin-bottom: 0;">
+                                <img style="margin-bottom: 0;" loading="lazy" alt="Criticisms about creative AI tools" data-src="/images/maxmic-phamplet.PNG">
+                            </picture>
+                        </div>
+                    </div>
+
                     <hr>
                     <p>
-                        Maximalist Magazine launched MaxMic, a cross-disciplinary open mic bringing together performers across spoken word, music, and fashion
+                        The design team and I established a bold, high-contrast palette (purple + orange) to stand apart visually from peer organizations.
                     </p>
                 </article>
 
                 <article>
-                    <p class="subtitle">Competitor Analysis</p>
-                    <h3>Why did this matter culturally?</h3>
+                    <div class="generic-container extra-space"> <!-- Selected performer teasers -->
+                        <div class="generic-container-margin-wrapper">
+                            <div class="columns">
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-musings-teaser.mp4" type="video/mp4"/>
+                                </video>
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-comforttone-teaser.mp4" type="video/mp4"/>
+                                </video>
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-tokens-teaser.mp4" type="video/mp4"/>
+                                </video>
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-auburnite-teaser.mp4" type="video/mp4"/>
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
                     <p>
-                        There was a massive shift this year in how UCSD’s creative communities grew.
+                        Designed for fast comprehension + high shareability, prioritizing clear hierarchy, eye-catching composition, and easy access to CTA in high-scroll platforms like Instagram.
                     </p>
-                    <p>
-                        A new wave of student orgs rapidly blew up through social/experiential events, signaling that students weren’t just looking for creative outlets, but shared in-person spaces to participate and connect.
-                    </p>
-                    <picture>
-                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/competitor-analysis-peer-orgs.webp">
-                        <img loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/competitor-analysis-peer-orgs.png">
-                    </picture>
+                </article>
+
+                <article>
+                    <p class="subtitle">Execution</p>
+                    <h3>Drumming up hype for MaxMic!</h3>
+                </article>
+
+                <article class="generic-container"> <!-- Cryptic teaser + performer teasers -->
+                    <div class="generic-container-margin-wrapper">
+                        <div class="columns" style="margin-bottom: 0;">
+                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-cryptic-reveal.mp4" type="video/mp4"/>
+                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-cryptic-reveal.webm" type="video/webm"/>
+                            </video>
+                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-teaser-compilation.mp4" type="video/mp4"/>
+                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-teaser-compilation.webm" type="video/webm"/>
+                            </video>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="generic-container"> <!-- All feed posts (announcement, org reveals, presentation workshop, bts) -->
+                    <div class="generic-container-margin-wrapper">
+                        <div class="columns">
+                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="/images/maxmic-announcement.mp4" type="video/mp4"/>
+                            </video>
+                            
+                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="/images/maxmic-org-reveal.mov" type="video/mp4"/>
+                            </video>
+                        </div>
+
+                        <div class="columns">
+                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="/images/maxmic-bts-feed.mp4" type="video/mp4"/>
+                            </video>
+                            <picture style="margin-bottom: 0;">
+                                <img style="margin-bottom: 0;" loading="lazy" alt="Criticisms about creative AI tools" data-src="/images/maximalist-presentation101.jpg">
+                            </picture>
+                        </div>
+                    </div>
                 </article>
             </CaseStudySection>
 
             <CaseStudySection sectionName={sectionNames[2]} num={3}>
                 <article>
-                    <h2>Launching a new cultural moment on campus</h2>
-                    
-                    <p class="subtitle">The Concept</p>
-                    <h3>How do you design for an experience that’s never been done before?</h3>
-                    <hr>
+                    <h2>A visual design system, but not really a "system"</h2>
                     <p>
-                        Our idea was to reimagine the traditional open mic as a multi-disciplinary cultural moment, where different forms of expression coexist, collide, and amplify each other.
+                        Maximalism for us meant variation, imperfection, individuality—and not repeating oneself. Of course, this is something that doesn’t lend well to a traditional design system that hinges on uniform consistency and QA. 
                     </p>
                 </article>
 
                 <article>
+                    <p class="subtitle">Design Decisions</p>
+                    <h3>So how did we protect bespoke design choices while keeping everything unified?</h3>
+                    <picture>
+                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/teaser-content-structure.webp">
+                        <img loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/teaser-content-structure.png">
+                    </picture>
+                    <div class="insight">
+                        <p>
+                            We established a consistent layout structure (content order, hierarchy) for clarity.
+                        </p>
+                    </div>
+                </article>
+
+                <article>
+                    <picture>
+                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/anti-style-guide.webp">
+                        <img loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/anti-style-guide.png">
+                    </picture>
+                    <div class="insight">
+                        <p>
+                            Limited design rules to intentionally leave room for designers to interpret freely within constraints.
+                        </p>
+                    </div>
+                </article>
+
+            </CaseStudySection>
+
+            <CaseStudySection sectionName={sectionNames[3]} num={4}>
+                <article>
+                    <h2>Reimagining the open mic</h2>
+
                     <p class="subtitle">Creative Angle</p>
                     <h3>What makes MaxMic different?</h3>
                     <picture>
@@ -140,111 +286,6 @@ const sectionNames = ["Solution", "Background", "The Idea", "Decisions", "Reflec
                     <p>
                         This made the event feel less like a performance lineup and more like a collectively shared cultural exchange, where people were connecting across communities they wouldn’t normally encounter.
                     </p>
-                </article>
-            </CaseStudySection>
-
-            <CaseStudySection sectionName={sectionNames[3]} num={4}>
-                <article>
-                    <h2>Defining the MaxMic brand</h2>
-                    
-                    <p class="subtitle">Creative Direction</p>
-                    <h3>Defining the MaxMic brand</h3>
-                    <hr>
-                    <p>
-                        The design team and I established a bold, high-contrast palette (purple + orange) to stand apart visually from peer organizations, as well as capture the event's energy, creativity, and spectacle.
-                    </p>
-                    <p>
-                        Designed for fast comprehension + high shareability, prioritizing clear hierarchy and eye-catching composition in high-scroll platforms like Instagram.
-                    </p>
-                </article>
-
-                <article class="generic-container">
-                    <div style="margin: 0 4rem 0 4rem;">
-                        <div class="columns" style="margin-bottom: 0;">
-                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                    <source data-src="/images/maxmic-cryptic-reveal.mp4" type="video/mp4"/>
-                            </video>
-                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                    <source data-src="/images/maxmic-cryptic-reveal.mp4" type="video/mp4"/>
-                            </video>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="generic-container">
-                    <div style="margin: 0 4rem 0 4rem;">
-                        <div class="columns-vertical">
-                            <picture style="margin-bottom: 0;">
-                                <img style="margin-bottom: 0;" loading="lazy" alt="Criticisms about creative AI tools" data-src="/images/maxmic-phamplet.PNG">
-                            </picture>
-
-                            <div class="columns">
-                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                        <source data-src="/images/maxmic-org-reveal.mov" type="video/mp4"/>
-                                </video>
-                                
-                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                        <source data-src="/images/maxmic-org-reveal.mov" type="video/mp4"/>
-                                </video>
-                            </div>
-
-                            
-                        </div>
-                    </div>
-                </article>
-
-                <article class="generic-container extra-space">
-                    <div style="margin: 0 4rem 0 4rem;">
-                        <div class="columns">
-                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-musings-teaser.mp4" type="video/mp4"/>
-                            </video>
-                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-comforttone-teaser.mp4" type="video/mp4"/>
-                            </video>
-                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-tokens-teaser.mp4" type="video/mp4"/>
-                            </video>
-                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-auburnite-teaser.mp4" type="video/mp4"/>
-                            </video>
-                        </div>
-                    </div>
-                </article>
-
-                <article>
-                    <p class="subtitle">Visual Language</p>
-                    <h3>A visual design system, but not really a "system"</h3>
-                    <hr>
-                    <p>
-                        Maximalism for us meant variation, imperfection, individuality—and not repeating oneself. Of course, this is something that doesn’t lend well to a traditional design system that hinges on uniform consistency. 
-                    </p>
-                </article>
-
-                <article>
-                    <p class="subtitle">Challenge </p>
-                    <h3>So how did we protect bespoke design choices while keeping everything unified?</h3>
-                    <picture>
-                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/teaser-content-structure.webp">
-                        <img loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/teaser-content-structure.png">
-                    </picture>
-                    <div class="insight">
-                        <p>
-                            We established a consistent layout structure (content order, hierarchy) for clarity.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="extra-space">
-                    <picture>
-                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/anti-style-guide.webp">
-                        <img loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/anti-style-guide.png">
-                    </picture>
-                    <div class="insight">
-                        <p>
-                            Limited design rules to intentionally leave room for designers to interpret freely within constraints.
-                        </p>
-                    </div>
                 </article>
 
                 <article>
@@ -262,7 +303,7 @@ const sectionNames = ["Solution", "Background", "The Idea", "Decisions", "Reflec
             </CaseStudySection>
 
             <CaseStudySection sectionName={sectionNames[4]} num={5}>
-                <h2>To the max!</h2>
+                <h2>Debut to the max!</h2>
                 <article class="extra-space">
                     <p class="subtitle">Impact</p>
                     <div class="columns">
@@ -303,10 +344,10 @@ const sectionNames = ["Solution", "Background", "The Idea", "Decisions", "Reflec
                     <div class="columns">
                         <div>
                             <h4>
-                                Encourage UGC #maxmicready
+                                Encourage UGC
                             </h4>
                             <p class="subtitle">
-                                Perhaps challenging people to post something purple/orange, or share their creative talents in a maximalist way to get into the spirit.
+                                Invite people to participate and build organic community prior to the event, prompting people to post something purple/orange, or share their talents in a maximalist spirit.
                             </p>
                         </div>
                         <picture>
@@ -319,10 +360,10 @@ const sectionNames = ["Solution", "Background", "The Idea", "Decisions", "Reflec
                     <div class="columns">
                         <div>
                             <h4>
-                                Mini-series built around craft
+                                Weave craftsmanship into worldbuilding
                             </h4>
                             <p class="subtitle">
-                                Encourage people to engage deeper with our performers’ craft, like a BTS into how they prepared for MaxMic, or a spotlight on what got them into their creative field.
+                                Spotlight performers and how they make time to hone their passion as students, positioning MaxMic as a space for people who take their creativity seriously, and showing others they can do the same.
                             </p>
                         </div>
                         <picture>
