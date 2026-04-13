@@ -421,10 +421,15 @@ summary {
 
 .figure-metric {
     position: absolute;
-    padding: 0.5rem 0.75rem;
-    background-color: var(--yellow-400);
+    padding: 0.25rem 0.75rem;
+    background-color: var(--surface-success);
+    color: var(--text-success);
+    font-size: var(--Scale-350);
     border-radius: 0.6rem;
-    top: 0.75rem; left: 0.75rem;
+    white-space: nowrap;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* ====================================================================== */
