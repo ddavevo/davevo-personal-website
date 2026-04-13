@@ -5,7 +5,7 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
 import TableOfContents from "../../components/TableOfContents.astro";
 import NextCaseStudy from "../../components/NextCaseStudy.astro";
 
-const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"];
+const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflection"];
 ---
 
 <!DOCTYPE html>
@@ -143,55 +143,8 @@ const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"
             </CaseStudySection>
 
             <CaseStudySection sectionName={sectionNames[1]} num={2}> <!-- Design -->
-                <article> <!-- MaxMic brand -->
-                    <h2>Defining the MaxMic brand</h2>
-                    
-                    <p class="subtitle">Creative Direction</p>
-                    <h3>Capturing energy, creativity, and spectacle!</h3>
-
-                    <div class="generic-container"> <!-- MaxMic Phamplet -->
-                        <div class="generic-container-margin-wrapper">
-                            <picture style="margin-bottom: 0;">
-                                <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-phamplet.webp">
-                                <img style="margin-bottom: 0;" loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-phamplet.png">
-                            </picture>
-                        </div>
-                    </div>
-
-                    <hr>
-                    <p>
-                        The design team and I established a bold, high-contrast palette (purple + orange) to stand apart visually from peer organizations while extending the base Maximalist brand.
-                    </p>
-                </article>
-
-                <article class="extra-space"> <!-- Selected performer teasers -->
-                    <div class="generic-container">
-                        <div class="generic-container-margin-wrapper">
-                            <div class="columns">
-                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-musings-teaser.mp4" type="video/mp4"/>
-                                </video>
-                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-comforttone-teaser.mp4" type="video/mp4"/>
-                                </video>
-                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-tokens-teaser.mp4" type="video/mp4"/>
-                                </video>
-                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-auburnite-teaser.mp4" type="video/mp4"/>
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <p>
-                        Designed for fast comprehension + high shareability, prioritizing clear hierarchy, eye-catching composition, and easy access to CTA in high-scroll platforms like Instagram.
-                    </p>
-                </article>
-
                 <article> <!-- Execution -->
-                    <p class="subtitle">Execution</p>
-                    <h3>Drumming up hype for MaxMic!</h3>
+                    <h2>Executing the MaxMic campaign!</h2>
                 </article>
 
                 <article class="generic-container"> <!-- Cryptic teaser + performer teasers -->
@@ -209,7 +162,7 @@ const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"
 
                             <figure>
                                 <div style="position: relative;">
-                                    <span class="figure-metric">Most conversion</span>
+                                    <span class="figure-metric">Most conversions</span>
                                     <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
                                         <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-teaser-compilation.mp4" type="video/mp4"/>
                                         <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-teaser-compilation.webm" type="video/webm"/>
@@ -228,7 +181,7 @@ const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"
                         <div class="columns">
                                 <figure>
                                     <div style="position: relative;">
-                                        <span class="figure-metric">Highest shared</span>
+                                        <span class="figure-metric">Most shared</span>
                                         <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
                                             <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-announcement.mp4" type="video/mp4"/>
                                             <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-announcement.webm" type="video/webm"/>
@@ -279,14 +232,36 @@ const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"
             </CaseStudySection>
 
             <CaseStudySection sectionName={sectionNames[2]} num={3}> <!-- Design Decisions -->
-                <article>
-                    <h2>A visual design system, but also not a "system"</h2>
+                <article class="extra-space"> <!-- MaxMic brand -->
+                    <h2>Defining the MaxMic brand</h2>
+                    
+                    <p class="subtitle">Creative Direction</p>
+                    <h3>Capturing energy, creativity, and spectacle!</h3>
+
+                    <div class="generic-container"> <!-- MaxMic Phamplet -->
+                        <div class="generic-container-margin-wrapper">
+                            <picture style="margin-bottom: 0;">
+                                <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-phamplet.webp">
+                                <img style="margin-bottom: 0;" loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-phamplet.png">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <p>
+                        The design team and I established a bold, high-contrast palette (purple + orange) to stand apart visually from peer organizations while extending the base Maximalist brand.
+                    </p>
+                </article>
+
+                <article class="extra-space"> <!-- Challenge -->
+                    <p class="subtitle">Challenge</p>
+                    <h3>A visual design system, but also not a "system"</h3>
                     <p>
                         Maximalism for us meant variation, imperfection, individuality—and not repeating oneself. Of course, this is something that doesn’t lend well to a traditional design system that hinges on making every asset reusable. 
                     </p>
                 </article>
 
-                <article>
+                <article> <!-- Design Decisions -->
                     <p class="subtitle">Design Decisions</p>
                     <h3>So how did we protect bespoke design choices while keeping everything unified?</h3>
                     <picture>
@@ -309,6 +284,27 @@ const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"
                         <p>
                             Limited design rules to intentionally leave room for designers to interpret freely within constraints.
                         </p>
+                    </div>
+                </article>
+
+                <article> <!-- Selected performer teasers -->
+                    <div class="generic-container">
+                        <div class="generic-container-margin-wrapper">
+                            <div class="columns">
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-musings-teaser.mp4" type="video/mp4"/>
+                                </video>
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-comforttone-teaser.mp4" type="video/mp4"/>
+                                </video>
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-tokens-teaser.mp4" type="video/mp4"/>
+                                </video>
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-auburnite-teaser.mp4" type="video/mp4"/>
+                                </video>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
@@ -342,7 +338,7 @@ const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"
                     </picture>
                     <hr>
                     <p>
-                        Our copywriter initially tested the concept through words alone, reaching out to individual students and org officers. But we quickly realized that differing expectations could cause confusion.
+                        Outreach initially tested the concept in early conversations, reaching out to individual students and student org officers to hear their thoughts. But we quickly realized that differing expectations could create unnecessary confusion.
                     </p>
 
                     <div class="columns">
@@ -360,7 +356,7 @@ const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"
                                 3/7
                             </h4>
                             <p class="subtitle">
-                                orgs were concerned about the extent of preparation required
+                                were concerned about the extent of preparation required
                             </p>
                         </div>
                     </div>
