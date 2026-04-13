@@ -369,6 +369,13 @@ summary {
     border: 1.25px solid var(--border-error);
 }
 
+.concern-point {
+    grid-template-columns: 2ch 1fr;
+    gap: 1.5rem;
+    background-color: var(--yellow-100);
+    border: 1.25px solid var(--yellow-400);
+}
+
 .gain-point {
     grid-template-columns: 1ch 1fr;
     gap: 1.5rem;
@@ -392,6 +399,10 @@ summary {
     color: var(--text-error);
 }
 
+.concern-point p, .concern-point li {
+    color: var(--yellow-700);
+}
+
 .gain-point p b {
     color: var(--text-success-bold);
 }
@@ -406,6 +417,14 @@ summary {
 
 .impact-point :nth-child(1) {
     margin-bottom: var(--space-xs);
+}
+
+.figure-metric {
+    position: absolute;
+    padding: 0.5rem 0.75rem;
+    background-color: var(--yellow-400);
+    border-radius: 0.6rem;
+    top: 0.75rem; left: 0.75rem;
 }
 
 /* ====================================================================== */

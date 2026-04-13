@@ -54,6 +54,7 @@
     --brown-1100: #261E17;
 
     --yellow-100: rgb(255 252 230);
+    --yellow-400: rgb(198, 172, 41);
     --yellow-700: rgb(109, 74, 9);
 
     /* Color Tokens - Teal Scale */
@@ -339,7 +340,7 @@ figcaption {
 }
 
 .subtitle {
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-xs);
 }
 
 .subtitle, figcaption {

@@ -40,7 +40,7 @@ const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"
 <BaseLayout title="MaxMic">
     <CaseStudyHero
         heroMediaUrl="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-hero"
-        caseStudyTitle="MaxMic: A concept-to-launch, cross-disciplinary event redefining creative community on campus"
+        caseStudyTitle="MaxMic: A concept-to-launch, cross-disciplinary activation redefining creative community on campus"
         logisticItems={[
             ["Brand Director"],
             ["Design (4)", "Marketing (1)", "Copywriting (1)"],
@@ -120,14 +120,14 @@ const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"
                 </article>
 
                 <article class="extra-space">
-                    <p class="subtitle"> Key Insight </p>
-                    <div class="insight">
-                        <p><b>
-                            However, discovery was still fragmented
-                        </b></p>
-                        <p>
-                            People were engaging deeply in their niche, but there were few opportunities to experience different forms of creativity outside of their circle.
-                        </p>
+                    <div class="insight pain-point">
+                        <span>❌</span>
+                        <div>
+                            <p><b>However, discovery was still fragmented</b></p>
+                            <p>
+                                People were engaging deeply in their niche, but there were few opportunities to experience different forms of creativity outside of their circle.
+                            </p>
+                        </div>
                     </div>
                 </article>
 
@@ -142,7 +142,7 @@ const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"
                 
             </CaseStudySection>
 
-            <CaseStudySection sectionName={sectionNames[1]} num={2}>
+            <CaseStudySection sectionName={sectionNames[1]} num={2}> <!-- Design -->
                 <article> <!-- MaxMic brand -->
                     <h2>Defining the MaxMic brand</h2>
                     
@@ -160,12 +160,12 @@ const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"
 
                     <hr>
                     <p>
-                        The design team and I established a bold, high-contrast palette (purple + orange) to stand apart visually from peer organizations.
+                        The design team and I established a bold, high-contrast palette (purple + orange) to stand apart visually from peer organizations while extending the base Maximalist brand.
                     </p>
                 </article>
 
-                <article class="extra-space">
-                    <div class="generic-container extra-space"> <!-- Selected performer teasers -->
+                <article class="extra-space"> <!-- Selected performer teasers -->
+                    <div class="generic-container">
                         <div class="generic-container-margin-wrapper">
                             <div class="columns">
                                 <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
@@ -189,7 +189,7 @@ const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"
                     </p>
                 </article>
 
-                <article>
+                <article> <!-- Execution -->
                     <p class="subtitle">Execution</p>
                     <h3>Drumming up hype for MaxMic!</h3>
                 </article>
@@ -197,52 +197,87 @@ const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"
                 <article class="generic-container"> <!-- Cryptic teaser + performer teasers -->
                     <div class="generic-container-margin-wrapper">
                         <div class="columns" style="margin-bottom: 0;">
-                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-cryptic-reveal.mp4" type="video/mp4"/>
-                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-cryptic-reveal.webm" type="video/webm"/>
-                            </video>
-                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-teaser-compilation.mp4" type="video/mp4"/>
-                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-teaser-compilation.webm" type="video/webm"/>
-                            </video>
+                            <figure>
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-cryptic-reveal.mp4" type="video/mp4"/>
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-cryptic-reveal.webm" type="video/webm"/>
+                                </video>
+                                <figcaption>
+                                    Cryptic teaser set released prior to announcement post to spark early intrigue.
+                                </figcaption>
+                            </figure>
+
+                            <figure>
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-teaser-compilation.mp4" type="video/mp4"/>
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-teaser-compilation.webm" type="video/webm"/>
+                                </video>
+                                <figcaption>
+                                    Teasers tagging each performer/org leading up to MaxMic.
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
                 </article>
 
                 <article class="generic-container"> <!-- All feed posts (announcement, org reveals, presentation workshop, bts) -->
+                    <span class="figure-metric">Highest shared post</span>
+                    
                     <div class="generic-container-margin-wrapper">
                         <div class="columns">
-                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-announcement.mp4" type="video/mp4"/>
-                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-announcement.webm" type="video/webm"/>
-                            </video>
+                            <div style="position: relative;">
+                                <figure>
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-announcement.mp4" type="video/mp4"/>
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-announcement.webm" type="video/webm"/>
+                                </video>
+                                <figcaption>
+                                    Announcement post, how it works, and how to participate.
+                                </figcaption>
+                            </figure>
+                            <div/>
 
-                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-org-reveal.mp4" type="video/mp4"/>
-                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-org-reveal.webm" type="video/webm"/>
-                            </video>
+                            <figure>
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-org-reveal.mp4" type="video/mp4"/>
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-org-reveal.webm" type="video/webm"/>
+                                </video>
+                                <figcaption>
+                                    Reveals partnering orgs, garnering substantial cross-traffic from reshares.
+                                </figcaption>
+                            </figure>
                         </div>
 
                         <div class="columns">
-                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-bts-feed.mp4" type="video/mp4"/>
-                                <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-bts-feed.webm" type="video/webm"/>
-                            </video>
+                            <figure>
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-bts-feed.mp4" type="video/mp4"/>
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-bts-feed.webm" type="video/webm"/>
+                                </video>
+                                <figcaption>
+                                    Rehearsal behind-the-scenes.
+                                </figcaption>
+                            </figure>
 
-                            <picture style="margin-bottom: 0;">
-                                <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-presenting101.webp">
-                                <img style="margin-bottom: 0;" loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-presenting101.png">
-                            </picture>
+                            <figure>
+                                <picture style="margin-bottom: 0;">
+                                    <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-presenting101.webp">
+                                    <img style="margin-bottom: 0;" loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-presenting101.png">
+                                </picture>
+                                <figcaption>
+                                    On-theme workshop to get people interested in storytelling and sharing to an audience.
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
                 </article>
             </CaseStudySection>
 
-            <CaseStudySection sectionName={sectionNames[2]} num={3}>
+            <CaseStudySection sectionName={sectionNames[2]} num={3}> <!-- Design Decisions -->
                 <article>
-                    <h2>A visual design system, but not really a "system"</h2>
+                    <h2>A visual design system, but also not a "system"</h2>
                     <p>
-                        Maximalism for us meant variation, imperfection, individuality—and not repeating oneself. Of course, this is something that doesn’t lend well to a traditional design system that hinges on uniform consistency and QA. 
+                        Maximalism for us meant variation, imperfection, individuality—and not repeating oneself. Of course, this is something that doesn’t lend well to a traditional design system that hinges on making every asset reusable. 
                     </p>
                 </article>
 
@@ -274,7 +309,7 @@ const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"
 
             </CaseStudySection>
 
-            <CaseStudySection sectionName={sectionNames[3]} num={4}>
+            <CaseStudySection sectionName={sectionNames[3]} num={4}> <!-- Strategy -->
                 <article class="extra-space">
                     <h2>Reimagining the open mic</h2>
 
@@ -293,7 +328,74 @@ const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"
                     </p>
                 </article>
 
+                <article> <!-- Campaign Strategy -->
+                    <p class="subtitle">Campaign Strategy</p>
+                    <h3>Overcoming preconceived notions to sell the concept</h3>
+                    <picture>
+                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/initial-confusion.webp">
+                        <img loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/initial-confusion.png">
+                    </picture>
+                    <hr>
+                    <p>
+                        Our copywriter initially tested the concept through words alone, reaching out to individual students and org officers. But we quickly realized that differing expectations could cause confusion.
+                    </p>
+
+                    <div class="columns">
+                        <div>
+                            <h4>
+                                5/7
+                            </h4>
+                            <p class="subtitle">
+                                assumed anyone could just go up on stage and perform
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4>
+                                3/7
+                            </h4>
+                            <p class="subtitle">
+                                orgs were concerned about the extent of preparation required
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
                 <article>
+                    <p>
+                        This brought up further concerns.
+                    </p>
+                    <div class="columns">
+                        <div class="insight concern-point">
+                            <span>⚠️</span>
+                            <p>
+                                What’s the expected vibe for the performances? Serious, casual, or in between?
+                            </p>
+                        </div>
+
+                        <div class="insight concern-point">
+                            <span>⚠️</span>
+                            <p>
+                                How does this event relate back to Maximalist brand in the first place?
+                            </p>  
+                        </div>
+                    </div>
+                </article>
+
+                <article class="extra-space">
+                    <h3>
+                        For this reason, our announcement post would be central to MaxMic's success.
+                    </h3>
+                    <p>
+                        Not just for engagement, but to set expectations and world-build what type of space students and orgs can expect to walk into. Here’s how the copywriter and I decided to address these points of confusion.
+                    </p>
+                    <picture>
+                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/announcement-post-copy.webp">
+                        <img loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/announcement-post-copy.png">
+                    </picture>
+                </article>
+
+                <article> <!-- Campaign Strategy -->
                     <p>Campaign Strategy</p>
                     <h3>Keeping MaxMic consistently on people’s radar</h3>
                     <picture>
@@ -307,7 +409,7 @@ const sectionNames = ["Context", "Design", "Decisions", "Strategy", "Reflection"
                 </article>
             </CaseStudySection>
 
-            <CaseStudySection sectionName={sectionNames[4]} num={5}>
+            <CaseStudySection sectionName={sectionNames[4]} num={5}> <!-- Reflection -->
                 <h2>Debut to the max!</h2>
                 <article class="extra-space">
                     <p class="subtitle">Impact</p>
