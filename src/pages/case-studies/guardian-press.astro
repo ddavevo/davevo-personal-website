@@ -1,0 +1,430 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CaseStudySection from "../../layouts/CaseStudySection.astro";
+import CaseStudyHero from "../../components/CaseStudyHero.astro";
+import TableOfContents from "../../components/TableOfContents.astro";
+import NextCaseStudy from "../../components/NextCaseStudy.astro";
+
+const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflection"];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preload" href="/styles/case-studies.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/case-studies.css"></noscript>
+
+    <script defer>
+        // ensure the DOM is ready before querying
+        document.addEventListener('DOMContentLoaded', () => {
+            const detailsElements = document.querySelectorAll('details');
+
+            detailsElements.forEach(details => {
+                details.addEventListener('toggle', () => {
+                    if (!details.open) { // closed state
+                        // scroll the summary (header) into view so users don't skip ahead
+                        const summary = details.querySelector('summary');
+                        if (summary) {
+                            summary.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        } else {
+                            details.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<BaseLayout title="The UCSD Guardian - PRESS">
+    <CaseStudyHero
+        heroMediaUrl="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-hero"
+        caseStudyTitle="The UCSD Guardian"
+        logisticItems={[
+            ["Design Lead"],
+            ["Executive Managers (2)", "Editorial (4)", "Marketing (2)", "Design (2)"],
+             ["Creative Direction", "Copywriting", "Campaign Strategy"],
+             ["4 weeks", "Mar. 2025 - Apr. 2025"]
+        ]}
+        ribbonOffset="translateY(-40%)"
+        ribbonImageUrl="https://media.dave-vo.com/file/dvfolio/about/snowflake-3"
+    />
+    
+    <main>
+        <TableOfContents sectionNames={sectionNames}/>
+
+        <div class="main-container">
+            <CaseStudySection sectionName={sectionNames[0]} num={1}> <!--Context-->
+
+                <article class="extra-space">
+                    <h2>PRESS: Protect our Right to Express Student Stories</h2>
+                    <hr>
+                    <p>
+                        I collaborated with editorial leadership, product managers, and cross-functional teams at The UCSD Guardian to launch a multi-channel campaign for the PRESS referendum, with the goal of acquiring votes from at least 20% of the student body and reframing student journalism as a critical resource that’s at risk.
+                    </p>
+                    <p>
+                        The campaign system I led helped:
+                    </p>
+
+                    <div class="insight gain-point">
+                        <span>✅</span>
+                        <p>
+                            2x voter turnout compared to previous voting periods
+                        </p>  
+                    </div>
+
+                    <div class="insight gain-point">
+                        <span>✅</span>
+                        <p>
+                            Increased awareness and engagement with our coverage, especially into the next year
+                        </p>  
+                    </div>
+                    <div class="insight gain-point">
+                        <span>✅</span>
+                        <p>
+                             Reinforced the paper as an essential voice for students and SD communities
+                        </p>  
+                    </div>
+                    
+                </article>
+
+                <article class="extra-space">
+                    <p class="subtitle"> Problem </p>
+                    <h3>
+                        The UCSD Guardian was at risk of losing institutional funding, putting its ability to print and operate in jeopardy.
+                    </h3>
+                    <p>
+                        But the bigger issue wasn’t just funding. It was buy-in. Even though The Guardian this year made major strides in breaking critical stories on campus, the students who actively engaged were not the majority. Coverage existed, but it lived in the background: disconnected from students’ day-to-day.
+                    </p>
+                </article>
+
+                <article>
+                    <p class="subtitle">Stakes</p>
+                    <h3>
+                        If the referendum failed, the result wasn’t just one newspaper at risk of shutting down.
+                    </h3>
+                    <hr>
+                    <p>
+                        It meant losing a central independent voice for student representation. And so this campaign was about preserving a shared source of truth for the student body.
+                    </p>
+                    <p>
+                        Without the Guardian:
+                    </p>
+                </article>
+
+                <article class="extra-space">
+                    <div class="insight pain-point">
+                        <span>❌</span>
+                        <div>
+                            <p>
+                                Students lose visibility into decisions that affect them
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="insight pain-point">
+                        <span>❌</span>
+                        <div>
+                            <p>
+                                Communities lose a platform to organize and share stories
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                
+            </CaseStudySection>
+
+            <CaseStudySection sectionName={sectionNames[1]} num={2}> <!-- End Product -->
+                <article> <!-- Execution -->
+                    <h2>HEADING</h2>
+                </article>
+
+                <article class="extra-space">
+                    <p class="subtitle">Solution</p>
+                    <h3>
+                        Turning awareness into a moment of action
+                    </h3>
+                    <p>
+                        The campaign reframed student journalism as something to lose, not something in the background. By making the referendum feel immediate and consequential, students were more compelled to decide.
+                    </p>
+                </article>
+
+                <article class="extra-space">
+                    <p class="subtitle">Solution</p>
+                    <h3>
+                        Designing for everywhere
+                    </h3>
+                    <p>
+                        Visibility was key and needed to reach beyond our usual channels. The campaign lived across social, print, web, flyers, large campus displays, and more to ensure students encountered the campaign repeatedly in different contexts.
+                    </p>
+                </article>
+
+                <article class="extra-space">
+                    <p class="subtitle">Design Decision</p>
+                    <h3>
+                        Making the message recognizable in seconds
+                    </h3>
+                    <p>
+                        Every asset was built around a clear, repeatable call-to-action: Vote on PRESS. The focus was prioritizing key info for passersby at a glance - what was happening and what to do next at a glance.
+                    </p>
+                </article>
+
+                <article>
+                    <p class="subtitle">Design Decision</p>
+                    <h3>
+                        Reintroducing who we were through distinct modes of engagement
+                    </h3>
+                    <p>
+                        We split the Guardian’s campaign content into two buckets: one for visibility and voting, and the other is for editorial programming focused on community, transparency, and pre-professional workshops.
+                    </p>
+
+                    <p>
+                        This separation let us drive immediate action without losing the bigger picture—repositioning the Guardian as both something to support now and something to be part of long-term.
+                    </p>
+                </article>
+            </CaseStudySection>
+
+            <CaseStudySection sectionName={sectionNames[2]} num={3}> <!-- Research -->
+                <article class="extra-space"> <!-- Research -->
+                    <h2>HEADING</h2>
+
+                    <p class="subtitle">Research</p>
+                    <h3>Where it all started</h3>
+                    <hr>
+                    <p>
+                        Voter turnout at UCSD has been historically low, one of the lowest of the UCs at just ~10% of the student body. In order to successfully pass our referendum, we needed twice as many people to turn out.
+                    </p>
+                </article>
+
+                <article class="extra-space">
+                    <h3>So why weren’t students turning out?</h3>
+                    <hr>
+                    <p>
+                        [TODO] An even simpler answer was that students simply didn’t have a reason to care.
+                    </p>
+                </article>
+
+                <article class="extra-space">
+                    <p class="subtitle">What worked in the past</p>
+                    <h3>
+                        U-Pass, 22,500 voters. Woah, what clicked this time around?
+                    </h3>
+                    <p>
+                        Breaking down the U-Pass referendum and similar initiatives, editorial and I found a few consistent patterns.
+                    </p>
+                </article>
+
+                <article>
+                    <p class="subtitle">Key Insights</p>
+                    <div class="columns">
+                        <h4>
+                            Messaging was simple, repeatable, and action-oriented (“Vote on U-Pass”). 
+                        </h4>
+
+                        <h4>
+                            Very clear why it directly affected students.
+                        </h4>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="columns">
+                        <h4>
+                            The call-to-action was reinforced from real people and sharing.
+                        </h4>
+
+                        <h4>
+                            Campaigns showed up across multiple touchpoints, not just one. 
+                        </h4>
+                    </div>
+                </article>
+            </CaseStudySection>
+
+            <CaseStudySection sectionName={sectionNames[3]} num={4}> <!--  Decisions -->
+                <article class="extra-space"> <!-- MaxMic brand -->
+                    <h2>Defining the MaxMic brand</h2>
+                    
+                    <p class="subtitle">Creative Direction</p>
+                    <h3>Capturing energy, creativity, and spectacle!</h3>
+
+                    <div class="generic-container"> <!-- MaxMic Phamplet -->
+                        <div class="generic-container-margin-wrapper">
+                            <picture style="margin-bottom: 0;">
+                                <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-phamplet.webp">
+                                <img style="margin-bottom: 0;" loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-phamplet.png">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <p>
+                        The design team and I established a bold, high-contrast palette (purple + orange) to stand apart visually from peer organizations while extending the base Maximalist brand.
+                    </p>
+                </article>
+
+                <article class="extra-space"> <!-- Challenge -->
+                    <p class="subtitle">Challenge</p>
+                    <h3>A visual design system, but also not a "system"</h3>
+                    <p>
+                        Maximalism for us meant variation, imperfection, individuality—and not repeating oneself. Of course, this is something that doesn’t lend well to a traditional design system that hinges on making every asset reusable. 
+                    </p>
+                </article>
+
+                <article> <!-- Design Decisions -->
+                    <p class="subtitle">Design Decisions</p>
+                    <h3>So how did we protect bespoke design choices while keeping everything unified?</h3>
+                    <picture>
+                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/teaser-content-structure.webp">
+                        <img loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/teaser-content-structure.png">
+                    </picture>
+                    <div class="insight">
+                        <p>
+                            We established a consistent layout structure (content order, hierarchy) for clarity.
+                        </p>
+                    </div>
+                </article>
+
+                <article>
+                    <picture>
+                        <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/anti-style-guide.webp">
+                        <img loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/anti-style-guide.png">
+                    </picture>
+                    <div class="insight">
+                        <p>
+                            Limited design rules to intentionally leave room for designers to interpret freely within constraints.
+                        </p>
+                    </div>
+                </article>
+
+                <article> <!-- Selected performer teasers -->
+                    <div class="generic-container">
+                        <div class="generic-container-margin-wrapper">
+                            <div class="columns">
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-musings-teaser.mp4" type="video/mp4"/>
+                                </video>
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-comforttone-teaser.mp4" type="video/mp4"/>
+                                </video>
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-tokens-teaser.mp4" type="video/mp4"/>
+                                </video>
+                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-auburnite-teaser.mp4" type="video/mp4"/>
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </CaseStudySection>
+
+            <CaseStudySection sectionName={sectionNames[4]} num={5}> <!-- Reflection -->
+                <h2>Debut to the max!</h2>
+                <article class="extra-space">
+                    <p class="subtitle">Impact</p>
+                    <div class="columns">
+                        <div>
+                            <h3>28K+</h3>
+                            <p>
+                                views on Instagram within 4 weeks
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3>150+</h3>
+                            <p>
+                                attendees at first MaxMic
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3>10+</h3>
+                            <p>
+                                partnerships with student organizations
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        MaxMic as a standalone event performed well, but it also had a sizable impact on the Maximalist brand itself. The momentum was able to carry into increased contributor interest to our zine issues, higher attendance to future events, as well as more invitations to table for other orgs.
+                    </p>
+                </article>
+
+                <article>
+                    <div class="reflection-unit" style="margin-bottom: var(--space-lg);">
+                        <span class="tag">If I had more time</span>
+                        <h3>
+                            Areas for improvement for future rollouts
+                        </h3>
+                    </div>
+                    <div class="columns">
+                        <div>
+                            <h4>
+                                Encourage UGC
+                            </h4>
+                            <p class="subtitle">
+                                Invite people to participate and build organic community prior to the event, prompting people to post something purple/orange, or share their talents in a maximalist spirit.
+                            </p>
+                        </div>
+                        <picture>
+                            <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/gentle-troubleshooting.webp"> -->
+                            <img loading="lazy" alt="User asks a question using cursor chat to help troubleshoot viability of their idea." data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/improvement-ugc.png">
+                        </picture>
+                    </div>
+                    <hr>
+
+                    <div class="columns">
+                        <div>
+                            <h4>
+                                Weave craftsmanship into worldbuilding
+                            </h4>
+                            <p class="subtitle">
+                                Spotlight performers and how they make time to hone their passion as students, positioning MaxMic as a space for everyday students who take their creativity seriously, and showing others they can do the same.
+                            </p>
+                        </div>
+                        <picture>
+                            <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/gentle-troubleshooting.webp"> -->
+                            <img loading="lazy" alt="User asks a question using cursor chat to help troubleshoot viability of their idea." data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/improvement-craftsmanship.png">
+                        </picture>
+                    </div>
+                    <hr>
+
+                    <div class="columns">
+                        <div>
+                            <h4>
+                                Broaden touchpoints
+                            </h4>
+                            <p class="subtitle">
+                               Next year, I would explore a multi-platform approach, in-person activations, and interactive content like a specialized landing page to engage wider and deeper.
+                            </p>
+                        </div>
+                        <picture>
+                            <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/gentle-troubleshooting.webp"> -->
+                            <img loading="lazy" alt="User asks a question using cursor chat to help troubleshoot viability of their idea." data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/improvement-multichannel.png">
+                        </picture>
+                    </div>
+                </article>
+
+                <article>
+                    <p class="subtitle">So what did I learn?</p>
+                    <div class="reflection-unit">
+                        <span class="tag">Learning</span>
+                        <h3>
+                            Telling a brand story
+                        </h3>
+                    </div>
+                    <p>
+                        I had a blast managing a social media campaign for the first time, where I learned how to weave brand design, social media best practices, and a mission together to get people invested around a cultural moment.
+                    </p>
+                </article>
+            </CaseStudySection>
+
+        </div>
+    </main>
+</BaseLayout>
+
+<script src="/javascript/case-study-links.js" defer></script>
+
+</html>
