@@ -63,6 +63,13 @@ blockquote h4, blockquote .fake-h4 {
     margin-bottom: 0;
 }
 
+blockquote p {
+    position: relative;
+    margin: auto auto;
+    padding: 2rem;
+    margin-bottom: 0;
+}
+
 details {
     position: relative;
     padding: 0.5rem 0 0 0;
