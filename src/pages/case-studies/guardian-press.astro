@@ -56,7 +56,6 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
 
         <div class="main-container">
             <CaseStudySection sectionName={sectionNames[0]} num={1}> <!--Context-->
-
                 <article class="extra-space">
                     <h2>PRESS: Protect our Right to Express Student Stories</h2>
                     <picture>
@@ -132,9 +131,20 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
 
                 <article class="extra-space"> <!-- Before campaign -->
                     <p class="subtitle">Before the campaign</p>
-                    <h4>
+                    <h3>
                         1000+ individuals & 30+ organizations signed in solidarity in the first 24 hours
-                    </h4>
+                    </h3>
+                    <div class="columns">
+                        <picture>
+                            <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/competitor-analysis-peer-orgs.webp"> -->
+                            <img loading="lazy" alt="TODO ALT DESCRIPTION" src="/images/petition-individuals.png">
+                        </picture>
+                        <picture>
+                            <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/competitor-analysis-peer-orgs.webp"> -->
+                            <img loading="lazy" alt="TODO ALT DESCRIPTION" src="/images/petition-orgs.png">
+                        </picture>
+                    </div>
+                    <hr>
                     <p>
                         In preparation for the campaign, The Guardian editorial board released a petition to gather community support and social proof in order to present to campus leadership. This early momentum validated student demand and established PRESS as a legitimate, campus-wide concern before outreach began.
                     </p>
@@ -167,7 +177,7 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                             </figure>
                         </div>
                     </div>
-                    <p class="subtitle" style="text-align: center;">TODO CAPTION</p>
+                    <p class="subtitle" style="text-align: center;">Snippets from PRESS rundown</p>
                 </article>
 
                 <!-- ============================================================= -->
@@ -182,7 +192,7 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                     </p>
                 </article>
 
-                <article class="generic-container">
+                <article class="generic-container"> <!-- PRESS Price Center -->
                     <div class="generic-container-margin-wrapper">
                         <div class="columns">
                             <figure>
@@ -200,10 +210,12 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                             </figure>
                         </div>
                     </div>
-                    <p class="subtitle" style="text-align: center;">TODO CAPTION</p>
+                    <p class="subtitle" style="text-align: center;">
+                        Campus displays running 24/7 at the student center
+                    </p>
                 </article>
 
-                <article class="generic-container">
+                <article class="generic-container"> <!-- Flyers -->
                     <div class="generic-container-margin-wrapper">
                         <div class="columns">
                             <div class="columns-vertical">
@@ -230,7 +242,7 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                             </figure>
                         </div>
                     </div>
-                    <p class="subtitle" style="text-align: center;">TODO CAPTION</p>
+                    <p class="subtitle" style="text-align: center;">Flyers across campus</p>
                 </article>
 
                 <article class="generic-container">
@@ -242,7 +254,7 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                                     <img loading="lazy" alt="TODO ALT DESCRIPTION" data-src="/images/website-landing-page.png">
                                 </picture>
                                 <figcaption>
-                                    TODO FIGCAPTION
+                                    Landing page during voting period
                                 </figcaption>
                             </figure>
 
@@ -252,7 +264,7 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                                     <img loading="lazy" alt="TODO ALT DESCRIPTION" data-src="/images/website-press-page.png">
                                 </picture>
                                 <figcaption>
-                                    TODO FIGCAPTION
+                                    Dedicated PRESS breakdowns
                                 </figcaption>
                             </figure>
                         </div>
@@ -267,29 +279,35 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                                     <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/playground/guardian-press-marquee.webp"> -->
                                     <img style="margin-bottom: 0;" loading="lazy" alt="TODO ALT DESCRIPTION" data-src="/images/professors-lecture-ready-slide.png">
                                 </picture>
+                                <figcaption>
+                                    Presentation-ready PRESS slides for professors
+                                </figcaption>
                             </figure>
 
                             <div class="columns">
-                                <figure>
-                                    <picture style="margin-bottom: 0;">
-                                        <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/playground/guardian-press-tv-min.webp"> -->
-                                        <img loading="lazy" alt="TODO ALT DESCRIPTION" data-src="/images/social-media-voting-opens.PNG">
-                                    </picture>
-                                </figure>
-                                
-                                <figure>
-                                    <picture style="margin-bottom: 0;">
-                                        <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/playground/guardian-press-tv-min.webp"> -->
-                                        <img loading="lazy" alt="TODO ALT DESCRIPTION" data-src="/images/social-media-org-endorsement.PNG">
-                                    </picture>
+                                <div>
+                                    <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                        <source data-src="/images/stories-countdown.mp4" type="video/mp4"/>
+                                        <!-- <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-bts-feed.webm" type="video/webm"/> -->
+                                    </video>
                                     <figcaption>
-                                        TODO FIGCAPTION
+                                        Voting countdown
                                     </figcaption>
-                                </figure>
+                                </div>
+                                
+                                <div>
+                                    <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                        <source data-src="/images/stories-org-endorsements.mp4" type="video/mp4"/>
+                                        <!-- <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-bts-feed.webm" type="video/webm"/> -->
+                                    </video>
+                                    <figcaption>
+                                        Org endorsements
+                                    </figcaption>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <p class="subtitle" style="text-align: center;">TODO CAPTION</p>
+                    
                 </article>
 
                 <article class="extra-space"> <!-- Design Decision #1 -->
@@ -318,47 +336,23 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                     <div class="generic-container-margin-wrapper">
                         <div class="columns">
                             <figure>
-                                <picture style="margin-bottom: 0;">
-                                    <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-presenting101.webp">  -->
-                                    <img style="margin-bottom: 0;" loading="lazy" alt="TODO ALT DESCRIPTION" data-src="/images/PRESS-feed-post-1.png">
-                                </picture>
-                                <figcaption>
-                                    TODO FIGCAPTION
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <picture style="margin-bottom: 0;">
-                                    <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-presenting101.webp"> -->
-                                    <img style="margin-bottom: 0;" loading="lazy" alt="TODO ALT DESCRIPTION" data-src="/images/workshop-writing-1.png">
-                                </picture>
-                                <figcaption>
-                                    TODO FIGCAPTION
-                                </figcaption>
-                            </figure>
-
-                            <!--
-
-                            <figure>
                                 <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-announcement.mp4" type="video/mp4"/>
-                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-announcement.webm" type="video/webm"/>
+                                    <source data-src="/images/press-feed-post.mp4" type="video/mp4"/>
+                                    <!-- <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-bts-feed.webm" type="video/webm"/> -->
                                 </video>
                                 <figcaption>
-                                    Announcement post, how it works, and how to participate.
+                                    A quick rundown of PRESS
                                 </figcaption>
                             </figure>
-
                             <figure>
                                 <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-org-reveal.mp4" type="video/mp4"/>
-                                    <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-org-reveal.webm" type="video/webm"/>
+                                    <source data-src="/images/editorial-programming-feed-post.mp4" type="video/mp4"/>
+                                    <!-- <source data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-bts-feed.webm" type="video/webm"/> -->
                                 </video>
                                 <figcaption>
-                                    Reveals partnering orgs, garnering substantial cross-traffic from reshares.
+                                    Editorial programming schedule
                                 </figcaption>
                             </figure>
-                            
-                            -->
                         </div>
                     </div>
                 </article>
@@ -422,32 +416,74 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                 <article>
                     <p class="subtitle">Key Insights</p>
                     <div class="columns">
-                        <h4>
-                            Messaging was simple, repeatable, and action-oriented (“Vote on U-Pass”). 
-                        </h4>
+                        <div>
+                            <h4>
+                                Messaging was simple, repeatable, and action-oriented 
+                            </h4>
+                            <div class="generic-container">
+                                <div class="generic-container-margin-wrapper">
+                                    <picture>
+                                        <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/competitor-analysis-peer-orgs.webp"> -->
+                                        <img loading="lazy" alt="TODO ALT DESCRIPTION" src="/images/key-insights-messaging.png">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
 
-                        <h4>
-                            Very clear why it directly affected students.
-                        </h4>
+                        <div>
+                            <h4>
+                                Clear talking points on why it directly affected students
+                            </h4>
+                            <div class="generic-container">
+                                <div class="generic-container-margin-wrapper">
+                                    <picture>
+                                        <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/competitor-analysis-peer-orgs.webp"> -->
+                                        <img loading="lazy" alt="TODO ALT DESCRIPTION" src="/images/key-insights-effects.png">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
                 <article>
                     <div class="columns">
-                        <h4>
-                            The call-to-action was reinforced from real people and sharing.
-                        </h4>
+                        <div>
+                            <h4>
+                                The call-to-action was reinforced from real people and sharing
+                            </h4>
+                            <div class="generic-container">
+                                <div class="generic-container-margin-wrapper">
+                                    <picture>
+                                        <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/competitor-analysis-peer-orgs.webp"> -->
+                                        <img loading="lazy" alt="TODO ALT DESCRIPTION" src="/images/key-insights-sharing.png">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
 
-                        <h4>
-                            Campaigns showed up across multiple touchpoints, not just one. 
-                        </h4>
+                        <div>
+                            <h4>
+                                Campaigns showed up across multiple touchpoints, not just one
+                            </h4>
+                            <div class="generic-container">
+                                <div class="generic-container-margin-wrapper">
+                                    <picture>
+                                        <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/competitor-analysis-peer-orgs.webp"> -->
+                                        <img loading="lazy" alt="TODO ALT DESCRIPTION" src="/images/key-insights-touchpoints.png">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </CaseStudySection>
 
             <CaseStudySection sectionName={sectionNames[3]} num={4}> <!--  Decisions -->
                 <article class="extra-space"> <!-- Copywriting-->
-                    <h2>TODO: Heading</h2>
+                    <h2>
+                        From message to campaign system
+                    </h2>
                     
                     <p class="subtitle">Copywriting</p>
                     <h3>
@@ -468,6 +504,7 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                         <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/competitor-analysis-peer-orgs.webp"> -->
                         <img loading="lazy" alt="TODO ALT DESCRIPTION" src="/images/copywriting-early-versions.png">
                     </picture>
+                    <hr>
                     <p>
                         In my early versions, the phrasing was either too abstract to ground viewers at a glance, or too long and didn’t roll off the tongue. They gestured at the cause, but failed to answer the basic questions: what is this, and why does it involve me?
                     </p>
@@ -657,21 +694,71 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
             </CaseStudySection>
 
             <CaseStudySection sectionName={sectionNames[4]} num={5}> <!-- Reflection -->
-                <h2>Debut to the max!</h2>
-                <article class="extra-space">
+                <h2>PRESS ON!</h2>
+                <article>
                     <p class="subtitle">Impact</p>
-
-                    <h3>8,259</h3>
-                    <p>
-                        students voted in 5 days, a 2x increase from average
-                    </p>
-
+                    <h3>
+                        8,259 students voted in 5 days, a 2x increase from average (~4,000)
+                    </h3>
                     <hr>
 
+                    <p>
+                        Beyond the referendum itself successfully passing, I wanted to share how PRESS directly had a positive impact on our journalistic throughput, both in terms of quality and reach.
+                    </p>
                 </article>
 
-                <article>
-                    <p class="subtitle">So what did I learn?</p>
+                <article class="extra-space">
+                    <div class="columns">
+                        <div> <!-- 27% coverage -->
+                            <h4>
+                                +27% increase in news coverage
+                            </h4>
+        
+                            <figure>
+                                <picture>
+                                    <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/competitor-analysis-peer-orgs.webp"> -->
+                                    <img loading="lazy" alt="TODO ALT DESCRIPTION" src="/images/impact-coverage.png">
+                                </picture>
+                                <figcaption>
+                                    Number of feed posts 2025-2026 vs 2024-2025
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div> <!-- 70% followers -->
+                            <h4>
+                                +70% more followers on digital platforms
+                            </h4>
+                            <figure>
+                                <picture>
+                                    <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/competitor-analysis-peer-orgs.webp"> -->
+                                    <img loading="lazy" alt="TODO ALT DESCRIPTION" src="/images/impact-followers.png">
+                                </picture>
+                                <figcaption>
+                                    6.5k → 11.2k on Instagram
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div> <!-- UCSD Guardian x USC Annenberg Media -->
+                            <h4>
+                                Deeper investigations & joint publications
+                            </h4>
+                            <figure>
+                                <picture>
+                                    <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/competitor-analysis-peer-orgs.webp"> -->
+                                    <img loading="lazy" alt="TODO ALT DESCRIPTION" src="/images/impact-ucsd-usc.png">
+                                </picture>
+                                <figcaption>
+                                    UCSD Guardian, USC Annenberg Media
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </article>
+
+                <p class="subtitle">So what did I learn?</p>
+                <article class="extra-space">
                     <div class="reflection-unit">
                         <span class="tag">What I’d do differently</span>
                         <h3>
@@ -679,11 +766,11 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                         </h3>
                     </div>
                     <p>
-                        The biggest insights came from post-launch feedback with a larger scale of people. Next time, I would look earlier at negative outcomes to address edge cases more effectively
+                        The biggest insights came from post-launch feedback with a larger scale of people. Next time, I would look earlier at negative outcomes to address edge cases more effectively/
                     </p>
                 </article>
 
-                <article>
+                <article class="extra-space">
                     <div class="reflection-unit">
                         <span class="tag">Learning</span>
                         <h3>
@@ -706,7 +793,7 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                         I’ve worked with editorial, design, and leadership on so much leading up to PRESS. With every conversation and sprint, I picked up strategies to guide conversations, support each other’s workflows, scope up/down, and so on.
                     </p>
                     <p>
-                        Even when timelines and priorities were changing rapidly, I felt prepared and in control of each project.
+                        Even when timelines and priorities changed rapidly, I felt prepared to tackle challenges and steer each project under the PRESS umbrella. Incredibly grateful for everyone I worked with, and can't wait for what’s next!
                     </p>
                 </article>
             </CaseStudySection>
