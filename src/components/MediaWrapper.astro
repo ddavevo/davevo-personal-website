@@ -1,0 +1,30 @@
+---
+
+---
+
+<style>
+    .generic-container {
+        background-image: var(--gradient-generic-container);
+        padding: 3rem 0 3rem 0;
+        margin-bottom: var(--space-xl);
+    }
+
+    .generic-container-margin-wrapper {
+        margin: 0 3rem 0 3rem;
+    }
+
+    @media screen and (max-width: 414px) {
+        .generic-container {
+            padding: 0;
+        }
+        .generic-container-margin-wrapper {
+            margin: 0;
+        }
+    }
+</style>
+
+<article class="generic-container">
+    <div class="generic-container-margin-wrapper">
+        <slot />
+    </div>
+</article>

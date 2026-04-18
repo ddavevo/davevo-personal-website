@@ -1,0 +1,50 @@
+---
+
+---
+
+<style>
+    .columns {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        gap: 1rem;
+
+        width: 100%;
+        margin-bottom: var(--space-xl);
+    }
+
+    .columns * {
+        object-fit: cover;
+        object-position: 0 0;
+    }
+
+    .columns img, .columns video, .columns figure {
+        margin-bottom: 0;
+    }
+
+    .columns p {
+        width: 95%;
+    }
+
+    @media screen and (max-width: 800px) {
+        .columns {
+            grid-auto-flow: row;    
+        }
+        .columns div {
+            margin-bottom: 1rem;
+        }
+        .columns p:not(.subtitle) {
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (max-width: 623px) {
+        .columns p {
+            width: 100%;
+        }
+    }
+</style>
+
+<div class="columns">
+    <slot />
+</div>

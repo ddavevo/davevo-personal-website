@@ -5,6 +5,9 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
 import TableOfContents from "../../components/TableOfContents.astro";
 import NextCaseStudy from "../../components/NextCaseStudy.astro";
 
+import Columns from "../../components/Columns.astro";
+import MediaWrapper from "../../components/MediaWrapper.astro";
+
 const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflection"];
 ---
 
@@ -163,9 +166,8 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                     </p>
                 </article>
 
-                <article class="generic-container">
-                    <div class="generic-container-margin-wrapper">
-                        <div class="columns">
+                <MediaWrapper>
+                        <Columns>
                             <figure>
                                 <picture style="margin-bottom: 0;">
                                     <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-presenting101.webp">  -->
@@ -178,10 +180,9 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                                     <img style="margin-bottom: 0;" loading="lazy" alt="TODO ALT DESCRIPTION" data-src="/images/PRESS-feed-post-3.png">
                                 </picture>
                             </figure>
-                        </div>
-                    </div>
+                        </Columns>
                     <p class="subtitle" style="text-align: center;">Snippets from PRESS rundown</p>
-                </article>
+                    </MediaWrapper>
 
                 <!-- ============================================================= -->
 
