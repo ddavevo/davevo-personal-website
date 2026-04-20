@@ -5,6 +5,10 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
 import TableOfContents from "../../components/TableOfContents.astro";
 import NextCaseStudy from "../../components/NextCaseStudy.astro";
 
+import Columns from "../../components/Columns.astro";
+import MediaWrapper from "../../components/MediaWrapper.astro";
+import Insight from "../../components/Insight.astro";
+
 const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflection"];
 ---
 
@@ -57,7 +61,7 @@ const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflec
         <div class="main-container">
             <CaseStudySection sectionName={sectionNames[0]} num={1}> <!--Context-->
 
-                <article class="extra-space">
+                <article class="extra-space"> <!-- Birth of MaxMic -->
                     <h2>The birth of <i>MaxMic</i></h2>
 
                     <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%" style="margin-bottom: var(--space-xl);">
@@ -72,25 +76,22 @@ const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflec
                         The work I did led to:
                     </p>
 
-                    <div class="insight gain-point">
-                        <span>✅</span>
+                    <Insight theme="gain">
                         <p>
                             Drove 28K+ views on social platforms over 4 weeks
                         </p>  
-                    </div>
+                    </Insight>
 
-                    <div class="insight gain-point">
-                        <span>✅</span>
+                    <Insight theme="gain">
                         <p>
                             Obtained 150+ attendees and 10+ student org partnerships
                         </p>  
-                    </div>
-                    <div class="insight gain-point">
-                        <span>✅</span>
+                    </Insight>
+                    <Insight theme="gain">
                         <p>
                             Widened interest in participation across future MaxMag activities
                         </p>  
-                    </div>
+                    </Insight>
                     
                 </article>
 
@@ -120,15 +121,14 @@ const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflec
                 </article>
 
                 <article class="extra-space">
-                    <div class="insight pain-point">
-                        <span>❌</span>
+                    <Insight theme="pain">
                         <div>
                             <p><b>However, discovery was still fragmented</b></p>
                             <p>
                                 People were engaging deeply in their niche, but there were few opportunities to experience different forms of creativity outside of their circle.
                             </p>
                         </div>
-                    </div>
+                    </Insight>
                 </article>
 
                 <article>
@@ -268,11 +268,11 @@ const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflec
                         <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/teaser-content-structure.webp">
                         <img loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/teaser-content-structure.png">
                     </picture>
-                    <div class="insight">
+                    <Insight>
                         <p>
                             We established a consistent layout structure (content order, hierarchy) for clarity.
                         </p>
-                    </div>
+                    </Insight>
                 </article>
 
                 <article>
@@ -280,11 +280,11 @@ const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflec
                         <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/anti-style-guide.webp">
                         <img loading="lazy" alt="Criticisms about creative AI tools" data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/anti-style-guide.png">
                     </picture>
-                    <div class="insight">
+                    <Insight>
                         <p>
                             Limited design rules to intentionally leave room for designers to interpret freely within constraints.
                         </p>
-                    </div>
+                    </Insight>
                 </article>
 
                 <article> <!-- Selected performer teasers -->
@@ -367,19 +367,17 @@ const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflec
                         This brought up further concerns.
                     </p>
                     <div class="columns">
-                        <div class="insight concern-point">
-                            <span>⚠️</span>
+                        <Insight theme="concern">
                             <p>
                                 What’s the expected vibe for the performances? Serious, casual, or in between?
                             </p>
-                        </div>
+                        </Insight>
 
-                        <div class="insight concern-point">
-                            <span>⚠️</span>
+                        <Insight theme="concern">
                             <p>
                                 How does this event relate back to Maximalist brand in the first place?
                             </p>  
-                        </div>
+                        </Insight>
                     </div>
                 </article>
 
@@ -442,7 +440,21 @@ const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflec
                     </p>
                 </article>
 
-                <article>
+                <article class="extra-space">
+                    <p class="subtitle">So what did I learn?</p>
+                    <hr>
+                    <div class="reflection-unit">
+                        <span class="tag">Learning</span>
+                        <h3>
+                            Telling a brand story
+                        </h3>
+                    </div>
+                    <p>
+                        I had a blast managing a social media campaign for the first time, where I learned how to weave brand design, social media best practices, and a mission together to get people invested around a cultural moment.
+                    </p>
+                </article>
+
+                <article class="extra-space">
                     <div class="reflection-unit" style="margin-bottom: var(--space-lg);">
                         <span class="tag">If I had more time</span>
                         <h3>
@@ -497,18 +509,7 @@ const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflec
                     </div>
                 </article>
 
-                <article>
-                    <p class="subtitle">So what did I learn?</p>
-                    <div class="reflection-unit">
-                        <span class="tag">Learning</span>
-                        <h3>
-                            Telling a brand story
-                        </h3>
-                    </div>
-                    <p>
-                        I had a blast managing a social media campaign for the first time, where I learned how to weave brand design, social media best practices, and a mission together to get people invested around a cultural moment.
-                    </p>
-                </article>
+                <NextCaseStudy title="UCSD Design Lab" url="/case-studies/designlab/" />
             </CaseStudySection>
 
         </div>
