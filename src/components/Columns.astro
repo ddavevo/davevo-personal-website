@@ -1,5 +1,5 @@
 ---
-
+const { class: className, ...rest } = Astro.props;
 ---
 
 <style>
@@ -45,6 +45,6 @@
     }
 </style>
 
-<div class="columns">
+<div class:list={["columns", className]} {...rest}>
     <slot />
 </div>

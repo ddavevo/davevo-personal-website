@@ -4,10 +4,10 @@ import CaseStudySection from "../../layouts/CaseStudySection.astro";
 import TableOfContents from "../../components/TableOfContents.astro";
 import NextCaseStudy from "../../components/NextCaseStudy.astro";
 
-const sectionNames = ["Solution", "Background", "Research", "Design", "Testing", "Reflection"];
-
 import Columns from "../../components/Columns.astro";
 import Insight from "../../components/Insight.astro";
+
+const sectionNames = ["Solution", "Background", "Research", "Design", "Testing", "Reflection"];
 
 ---
 
@@ -65,47 +65,47 @@ import Insight from "../../components/Insight.astro";
 
                 <article>
                     <p class="subtitle">Interface</p>
-                    <div class="columns">
+                    <Columns>
                         <div>
                             <h3>Customize the recovery experience</h3>
                             <p>The user can choose which aromatic benefits to receive, where to ease body tension, and how long they want to rest in order to suit their individual needs.</p>
                         </div>
                         <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/aromacovery-selection.gif" alt="playthrough-1"> 
-                    </div>
+                    </Columns>
                     <hr>
                 </article>
 
                 <article>
-                    <div class="columns">
+                    <Columns>
                         <div>
                             <h3>User control and freedom</h3>
                             <p>Per Nielsen's 3rd usability heuristic, we ensure the user always has control of their experience, whether they want to dim the screen or they aren't fully satisfied with the aroma.</p>
                         </div>
                         <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/aromacovery-resting.gif" alt="playthrough-2">
-                    </div>
+                    </Columns>
                     <hr>
                 </article>
 
                 <article>
-                    <div class="columns">
+                    <Columns>
                         <div>
                             <h3>Encourage users to tidy up after themselves</h3>
                             <p>After the time is up or the user leaves early, the interface prompts them to use the cleaning wipes to ensure the space is clean for the next person.</p>
                         </div>
                         <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/aromacovery-end.gif" alt="playthrough-3">
-                    </div>
+                    </Columns>
                     <hr>   
                 </article>
 
                 <article class="extra-space">
                     <p class="subtitle">Kiosk</p>
-                    <div class="columns">
+                    <Columns>
                         <div>
                             <h3>Rejuvenate, restore, resume</h3>
                             <p>With a more approachable physical setup, users can better ease into their pod session knowing the space is well maintained and suited for their needs.</p>
                         </div>
                         <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/testing-girl1.png" alt="final-kiosk">
-                    </div>
+                    </Columns>
                 </article>
 
                 <!-- OUTCOMES -->
@@ -239,14 +239,13 @@ import Insight from "../../components/Insight.astro";
 
                 <!-- INTERVIEW QUOTES -->
                 <article class="extra-space">
-                    <div class="columns">
-                    <div> <!--Percentage-->
-                        <h2 style="margin-bottom: 0.25rem;">62%</h2>
-                        <p>
-                            of participants pointed to a <b>lack of cleanliness</b> via sight, smell, and/or touch.
-                        </p>
-                    </div>
-                    <div> <!--Quotes-->
+                    <Columns>
+                        <div> <!--Percentage-->
+                            <h2 style="margin-bottom: 0.25rem;">62%</h2>
+                            <p>
+                                of participants pointed to a <b>lack of cleanliness</b> via sight, smell, and/or touch.
+                            </p>
+                        </div>
                         <div class="quote">
                             <p>
                                 “I think there should be a better cleaning system 
@@ -255,43 +254,38 @@ import Insight from "../../components/Insight.astro";
                                 oh, there's people that used it before.”
                             </p>
                         </div>
-                    </div>
-                    </div>
+                    </Columns>
 
-                    <div class="columns">
+                    <Columns>
                         <div> <!--Percentage-->
                             <h2 style="margin-bottom: 0.25rem;">62%</h2>
                             <p>
                                 of participants mentioned that the sleeping pods were <b>located too far away</b> from where they usually are to use regularly.
                             </p>
                         </div>
-                        <div>
-                            <div class="quote">
-                                <p>
-                                    “I honestly just forget that they're available to students a lot, it’s really far from all the major areas. I just wouldn't see why I'd walk 20 minutes to the sleeping pod and then take a 5 minute nap.”  
-                                </p>
-                            </div>
+                        <div class="quote">
+                            <p>
+                                “I honestly just forget that they're available to students a lot, it’s really far from all the major areas. I just wouldn't see why I'd walk 20 minutes to the sleeping pod and then take a 5 minute nap.”  
+                            </p>
                         </div>
-                    </div>
+                    </Columns>
 
-                    <div class="columns">
+                    <Columns>
                         <div> <!--Percentage-->
                             <h2 style="margin-bottom: 0.25rem;">54%</h2>
                             <p>
                                 of participants cited <b>privacy and awkwardness concerns</b> with sleeping in a public space.
                             </p>
                         </div>
-                        <div>
-                            <div class="quote">
-                                <p>
-                                    “I've seen people are a little afraid or awkward 
-                                    to go to the nap pods in RIMAC. I just think it's 
-                                    not really a good thing if people are afraid to 
-                                    sleep or feel awkward to sleep in a public space.”   
-                                </p>
-                            </div>
+                        <div class="quote">
+                            <p>
+                                “I've seen people are a little afraid or awkward 
+                                to go to the nap pods in RIMAC. I just think it's 
+                                not really a good thing if people are afraid to 
+                                sleep or feel awkward to sleep in a public space.”   
+                            </p>
                         </div>
-                    </div>
+                    </Columns>
                 </article>
 
                 <article class="extra-space">
@@ -306,7 +300,7 @@ import Insight from "../../components/Insight.astro";
 
                 <article>
                     <h2>How might we...</h2>
-                    <div class="columns hmw-wrap">
+                    <Columns class="hmw-wrap">
                         <figure>
                             <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/hmw-question1.png">
                             <figcaption>Encourage users to take care of the space so everyone can enjoy it?</figcaption>
@@ -321,11 +315,11 @@ import Insight from "../../components/Insight.astro";
                             <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/hmw-question3.png">
                             <figcaption> Make them easier to access for students across campus?</figcaption>
                         </figure>
-                    </div>
+                    </Columns>
                 </article>
                 <article>
                     <h2>Our proposed solution</h2>
-                    <div class="columns hmw-wrap">
+                    <Columns class="hmw-wrap">
                         <figure>
                             <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/hmw-solution1.png">
                             <figcaption>Prompt users to use a built-in cleaning set after their pod session</figcaption>
@@ -340,7 +334,7 @@ import Insight from "../../components/Insight.astro";
                             <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/hmw-solution3.png">
                             <figcaption>Make the sleeping pod more approachable and less awkward to use</figcaption>
                         </figure>
-                    </div>
+                    </Columns>
                 </article>
             </CaseStudySection>
 
@@ -577,7 +571,7 @@ import Insight from "../../components/Insight.astro";
             
             <CaseStudySection sectionName={sectionNames[6]} num={7}> <!--Reflection-->
                 <article>
-                    <div class="columns">
+                    <Columns>
                         <div>
                             <h2>The scent of opportunity</h2>
                             <p>
@@ -587,11 +581,10 @@ import Insight from "../../components/Insight.astro";
                                 More usability testing could be done with Aromacovery to improve user satisfaction and expand its use cases to a wider pool of needs, anywhere someone would need to <b>rejuvenate, restore, and resume</b>.
                             </p>
                         </div>
-        
                         <div class="aromacovery-team">
                             <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/showcase-team.png">
                         </div>
-                    </div>
+                    </Columns>
                 </article>
 
                 <article>
