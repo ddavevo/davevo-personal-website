@@ -7,6 +7,7 @@ import NextCaseStudy from "../../components/NextCaseStudy.astro";
 
 import Columns from "../../components/Columns.astro";
 import MediaWrapper from "../../components/MediaWrapper.astro";
+import Insight from "../../components/Insight.astro";
 
 const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflection"];
 ---
@@ -167,22 +168,18 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                 </article>
 
                 <MediaWrapper>
-                        <Columns>
-                            <figure>
-                                <picture style="margin-bottom: 0;">
-                                    <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-presenting101.webp">  -->
-                                    <img style="margin-bottom: 0;" loading="lazy" alt="TODO ALT DESCRIPTION" data-src="/images/PRESS-feed-post-1.png">
-                                </picture>
-                            </figure>
-                            <figure>
-                                <picture style="margin-bottom: 0;">
-                                    <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-presenting101.webp"> -->
-                                    <img style="margin-bottom: 0;" loading="lazy" alt="TODO ALT DESCRIPTION" data-src="/images/PRESS-feed-post-3.png">
-                                </picture>
-                            </figure>
-                        </Columns>
-                    <p class="subtitle" style="text-align: center;">Snippets from PRESS rundown</p>
-                    </MediaWrapper>
+                    <Columns>
+                        <picture style="margin-bottom: 0;">
+                            <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-presenting101.webp">  -->
+                            <img style="margin-bottom: 0;" loading="lazy" alt="TODO ALT DESCRIPTION" data-src="/images/PRESS-feed-post-1.png">
+                        </picture>
+                        <picture style="margin-bottom: 0;">
+                            <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/maxmic-presenting101.webp"> -->
+                            <img style="margin-bottom: 0;" loading="lazy" alt="TODO ALT DESCRIPTION" data-src="/images/PRESS-feed-post-3.png">
+                        </picture>
+                    </Columns>
+                    <figcaption>Snippets from PRESS rundown</figcaption>
+                </MediaWrapper>
 
                 <!-- ============================================================= -->
 

@@ -53,6 +53,7 @@ blockquote {
     margin: auto auto;
     background-image: linear-gradient(var(--teal-100), var(--surface-secondary));
     border-radius: 1rem;
+    margin-bottom: var(--space-xl);
 }
 
 blockquote h4, blockquote .fake-h4 {
@@ -340,6 +341,7 @@ summary {
 
 /* ====================================================================== */
 
+/*
 .insight {
     display: grid;
     grid-template-rows: min-content;
@@ -418,6 +420,7 @@ summary {
 .gain-point p, .gain-point li {
     color: var(--text-success);
 }
+*/
 
 .impact-point {
     margin-bottom: var(--space-3xl);

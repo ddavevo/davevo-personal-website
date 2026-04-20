@@ -1,0 +1,130 @@
+---
+const {
+    emojiProp,
+    theme,
+    ...rest
+} = Astro.props;
+
+const themeMappings = {
+  gain: { className: 'gain-point', emoji: '✅' },
+  pain: { className: 'pain-point', emoji: '❌' },
+  concern: { className: 'concern-point', emoji: '⚠️' },
+};
+
+const spanRequiredThemes = ['with-emoji', 'pain-point', 'concern-point', 'gain-point'];
+
+let effectiveTheme = '';
+let emoji = '';
+
+if (themeMappings[theme]) {
+  effectiveTheme = themeMappings[theme].className;
+  emoji = themeMappings[theme].emoji;
+}
+
+else if (emojiProp) {
+    effectiveTheme = 'with-emoji';
+    emoji = emojiProp;
+}
+
+const hasSpan = spanRequiredThemes.includes(effectiveTheme);
+const className = ['insight', effectiveTheme].filter(Boolean).join(' ');
+---
+
+<style is:global>
+    .insight {
+        display: grid;
+        grid-template-rows: min-content;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1.75rem;
+        border-radius: 0.6rem;
+        background-color: var(--surface-info);
+        border: var(--border-thin) solid var(--border-info);
+    }
+
+    .insight * {
+        margin-bottom: 0;
+    }
+
+    .insight p b {
+        color: var(--text-info-bold);
+    }
+
+    .insight p, .insight li {
+        color: var(--text-info);
+    }
+
+    /* ===================================================== */
+
+    .with-emoji {
+        grid-template-columns: 2ch 1fr;
+        gap: 1.5rem;
+    }
+
+    /* ===================================================== */
+
+    .pain-point {
+        grid-template-columns: 2ch 1fr;
+        gap: 1.5rem;
+        background-color: var(--surface-error);
+        border: 1.25px solid var(--border-error);
+    }
+
+    .pain-point p b {
+        color: var(--text-error-bold);
+    }
+
+    .pain-point p, .pain-point li {
+        color: var(--text-error);
+    }
+
+    /* ===================================================== */
+
+    .concern-point {
+        grid-template-columns: 2ch 1fr;
+        gap: 1.5rem;
+        background-color: var(--yellow-100);
+        border: 1.25px solid var(--yellow-400);
+    }
+
+    .concern-point p b {
+        color: var(--yellow-700);
+    }
+
+    .concern-point p, .concern-point li {
+        color: var(--yellow-700);
+    }
+
+    /* ===================================================== */
+
+    .gain-point {
+        grid-template-columns: 1ch 1fr;
+        gap: 1.5rem;
+        background-color: var(--surface-success);
+        border: 1.25px solid var(--border-success);
+    }
+
+    .gain-point p b {
+        color: var(--text-success-bold);
+    }
+
+    .gain-point p, .gain-point li {
+        color: var(--text-success);
+    }
+
+    /* ===================================================== */
+
+    .impact-point {
+        margin-bottom: var(--space-3xl);
+    }
+
+    .impact-point :nth-child(1) {
+        margin-bottom: var(--space-xs);
+    }
+</style>
+
+<div class={className} {...rest}>
+    {hasSpan && <span>{emoji}</span>}
+    <Fragment>
+        <slot/>
+    </Fragment>           
+</div>
