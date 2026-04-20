@@ -5,6 +5,9 @@ import CaseStudyHero from "../../components/CaseStudyHero.astro";
 import TableOfContents from "../../components/TableOfContents.astro";
 import NextCaseStudy from "../../components/NextCaseStudy.astro";
 
+import Columns from "../../components/Columns.astro";
+import Insight from "../../components/Insight.astro";
+
 const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflection"];
 ---
 
@@ -63,23 +66,21 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                         I worked with the salon owner to redesign the website with the aim of clarifying the booking experience and better showcasing the quality of services. The work I did helped:
                     </p>
 
-                    <div class="insight gain-point">
-                        <span>✅</span>
+                    <Insight theme="gain">
                         <p>
                             Led an end-to-end redesign across two core user journeys.
                         </p>  
-                    </div>
+                    </Insight>
 
-                    <div class="insight gain-point">
-                        <span>✅</span>
+                    <Insight theme="gain">
                         <p>
                             Reduced booking complexity by 55.6% + service discovery down to 2-3 scans avg.
                         </p>  
-                    </div>
+                    </Insight>
                 </article>
                 
                 <article>
-                    <div class="columns">
+                    <Columns>
                         <div>
                             <h3>Web-responsive</h3>
                             <p>
@@ -87,25 +88,25 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                             </p>
                         </div>
                         <img src="https://media.dave-vo.com/file/dvfolio/sns/deliverables-web-mobile.png" alt="The redesigned SNS Salon & Beauty Supply website is built for both desktop and mobile screens.">
-                    </div>
+                    </Columns>
                     <hr>
                 </article>
 
                 <article>
-                    <div class="columns">
-                    <div>
-                        <h3>Everything you need to know for your SNS Salon visit</h3>
-                        <p>
-                            With a fresh look and feel, users can better resonate with the salon's story and easily find key information about the offered services.
-                        </p>
-                    </div>
-                    <img src="https://media.dave-vo.com/file/dvfolio/sns/deliverables-landing.gif" alt="A looping video of the main site.">
-                    </div>
+                    <Columns>
+                        <div>
+                            <h3>Everything you need to know for your SNS Salon visit</h3>
+                            <p>
+                                With a fresh look and feel, users can better resonate with the salon's story and easily find key information about the offered services.
+                            </p>
+                        </div>
+                        <img src="https://media.dave-vo.com/file/dvfolio/sns/deliverables-landing.gif" alt="A looping video of the main site.">
+                    </Columns>
                     <hr>
                 </article>
 
                 <article class="extra-space">
-                    <div class="columns">
+                    <Columns>
                         <div>
                             <h3>Enjoy a streamlined booking experience</h3>
                             <p>
@@ -113,7 +114,7 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                             </p>
                         </div>
                         <img src="https://media.dave-vo.com/file/dvfolio/sns/deliverables-booking.gif" alt="A looping video of the booking flow.">
-                    </div>
+                    </Columns>
                 </article>
             </CaseStudySection>
 
@@ -149,8 +150,8 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
             </CaseStudySection>
 
             <CaseStudySection sectionName={sectionNames[2]} num={3}> <!-- Discovery -->
+                <h2>Auditing the original website</h2>
                 <article>
-                    <h2>Auditing the original website</h2>
                     <p>
                         After taking a closer look at their current website, we found that visual clutter and usability issues hindered the website's ability to communicate the salon brand and core specialties.
                     </p>
@@ -158,10 +159,10 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                 </article>
 
                 <!-- AUDIT -->
+                 <p class="subtitle">Problem</p>
+                <h3>The need for visual storytelling</h3>
                 <article>
-                    <p class="subtitle">Problem</p>
-                    <h3>The need for visual storytelling</h3>
-                    <div class="columns">
+                    <Columns>
                         <picture>
                             <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/website-audit-landing.webp">
                             <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-landing.png" alt="From the first impression, the landing page promotes deals before communicating the salon’s value to the viewer.">
@@ -170,13 +171,13 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                             <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/website-audit-bottom.webp">
                             <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-bottom.png" alt="Images of past work only makes an appearance at the bottom of the page.">
                         </picture>
-                    </div>
+                    </Columns>
                     <hr>
                 </article>
 
+                <h3>Usability issues make navigation hard</h3>
                 <article class="extra-space">
-                    <h3>Usability issues make navigation hard</h3>
-                    <div class="columns">
+                    <Columns>
                         <picture>
                             <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/website-audit-services.webp">
                             <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-services.png" alt="The readability suffers because the services are images instead of inline elements, especially across different screen sizes.">
@@ -185,50 +186,48 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                             <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/website-audit-dropdowns.webp">
                             <img src="https://media.dave-vo.com/file/dvfolio/sns/website-audit-dropdowns.png" alt="Too many drop-downs and variants overwhelms the users and makes it hard to distinguish between items.">
                         </picture>
-                    </div>
+                    </Columns>
                 </article>
                 <!-- ------ -->
 
+                <p class="subtitle">User Interviews</p>
+                <h3>Talking with salon-goers to polish our perspective</h3>
                 <article>
-                    <p class="subtitle">User Interviews</p>
-                    <h3>Talking with salon-goers to polish our perspective</h3>
                     <p>
                         The client’s perspective on loyalty set an initial direction, but conversations with salon-goers clarified how customers evaluate a salon when deciding to book.
                     </p>
 
-                    <div class="insight pain-point">
-                        <span>❌</span>
+                    <Insight theme="pain">
                         <div>
                             <p><b>Trust must be shown, not told</b></p>
                             <p>
                                 Customers expected to see real examples of hair and nail work easily. Several users said they would not book without browsing images, even if they trusted recommends.
                             </p>
                         </div>
-                    </div>
-                    <div class="insight pain-point">
-                        <span>❌</span>
+                    </Insight>
+                    <Insight theme="pain">
                         <div>
                             <p><b>Booking was complex and uncertain</b></p>
                             <p>
                                 The number of dropdowns and unclear service distinctions made users hesitant, especially on mobile. Even loyal customers avoided booking through the site.
                             </p>
                         </div>
-                    </div>
-                    <div class="insight pain-point">
-                        <span>❌</span>
+                    </Insight>
+                    <Insight theme="pain">
                         <div>
                             <p><b>Users weren’t sold on the salon yet</b></p>
                             <p>
                                 Customers also relied on online reviews to vet the salon’s quality—suggesting the website wasn’t doing enough to establish credibility.
                             </p>
                         </div>
-                    </div>
+                    </Insight>
                 </article>
             </CaseStudySection>
 
             <CaseStudySection sectionName={sectionNames[3]} num={4}> <!-- Design -->
+                
+                <h2>Prioritizing for customer conversion</h2>
                 <article>
-                    <h2>Prioritizing for customer conversion</h2>
                     <p>
                         Due to limited access to internal data, we prioritized qualitative signals and scoped the work to two critical user journeys. Secondary features were explored, but deprioritized to focus on clarity and confidence in the core flows.
                     </p>
@@ -236,7 +235,7 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
 
                 <article class="extra-space"> <!-- Prioritize -->
                     <span class="tag success">Prioritized</span>
-                    <div class="columns">
+                    <Columns>
                         <div>
                             <h3 class="fake-h4">Salon service exploration</h3>
                             <p>
@@ -249,11 +248,11 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                                 Reworking how services are presented to prevent drop-off is crucial.
                             </p>
                         </div>
-                    </div>
+                    </Columns>
                     <hr>
 
                     <span style="margin-top: 2.5ch;" class="tag negative">Not prioritized</span>
-                    <div class="columns">
+                    <Columns>
                         <div>
                             <h3 class="fake-h4">Live availability tracker</h3>
                             <p>
@@ -266,14 +265,14 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                                 Most issues users dealt with came before making an appointment.
                             </p>
                         </div>
-                    </div>
+                    </Columns>
                 </article>
 
                 <!---->
 
+                <p class="subtitle">Homepage</p>
+                <h3>Streamlined hero, stronger impression</h3>
                 <article class="extra-space"> <!-- Homepage-->
-                    <p class="subtitle">Homepage</p>
-                    <h3>Streamlined hero, stronger impression</h3>
                     <br>
                     <picture>
                         <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/hifi-before-after-landing.webp">
@@ -302,9 +301,10 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                     </details>
                 </article>
 
+
+                <p class="subtitle">Services</p>
+                <h3>A catalog made for easy vetting and decision-making</h3>
                 <article class="extra-space"> <!-- Services -->
-                    <p class="subtitle">Services</p>
-                    <h3>A catalog made for easy vetting and decision-making</h3>
                     <br>
 
                     <picture>
@@ -318,9 +318,10 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                     </picture>
                 </article>
 
+
+                <p class="subtitle">Iteration</p>
+                <h3>Structuring for faster discovery</h3>
                 <article class="extra-space">
-                    <p class="subtitle">Iteration</p>
-                    <h3>Structuring for faster discovery</h3>
                     <br>
 
                     <picture>
@@ -334,9 +335,10 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                     </p>
                 </article>
 
+
+                <p class="subtitle">Booking</p>
+                <h3>Reduced booking search complexity by 55.6%</h3>
                 <article class="extra-space"> <!-- Booking -->
-                    <p class="subtitle">Booking</p>
-                    <h3>Reduced booking search complexity by 55.6%</h3>
                     <br>
                     <picture>
                         <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/hifi-before-after-booking-fullpage.webp">
@@ -349,9 +351,10 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                     </p>
                 </article>
 
+
+                <p class="subtitle">Constraints</p>
+                <h3>Working within a 3rd party design system</h3>
                 <article> <!-- Constraints -->
-                    <p class="subtitle">Constraints</p>
-                    <h3>Working within a 3rd party design system</h3>
                     <p>
                         Because booking runs through Vagaro, we proposed changes that can realistically be implemented within that platform. Most of our components were built referencing existing Vagaro specs and official docs, which kept the designs realistic while still making the experience clearer and easier to navigate.
                     </p>
@@ -408,7 +411,7 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
 
                 <article> <!-- Design System -->
                     <p class="subtitle">Joint Design Systems</p>
-                    <div class="columns">
+                    <Columns>
                         <picture>
                             <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/design-system-sns.webp">
                             <img loading="lazy" alt="The SNS design system." data-src="https://media.dave-vo.com/file/dvfolio/sns/design-system-sns.png" class="lazyload">
@@ -417,7 +420,7 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                             <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/sns/design-system-vagaro.webp">
                             <img loading="lazy" alt="The Vagaro design system." data-src="https://media.dave-vo.com/file/dvfolio/sns/design-system-vagaro.png" class="lazyload">
                         </picture>
-                    </div>
+                    </Columns>
                 </article>
             </CaseStudySection>
 
@@ -432,12 +435,11 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                             Goal: Strengthen first impressions
                         </p>
 
-                        <div class="insight gain-point">
-                            <p> → </p>
+                        <Insight theme="gain">
                             <p>
                                 <b>Reclaimed ~70% of above-the-fold space</b> to showcase real client work, shifting from promoting deals to setting clearer expectations for the salon experience with visual proof of quality.
                             </p>
-                        </div>
+                        </Insight>
                     </div>
 
                     <div class="impact-point">
@@ -445,12 +447,11 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                             Goal: Make services easy to evaluate and book
                         </p>
 
-                        <div class="insight gain-point">
-                            <p> → </p>
+                        <Insight theme="gain">
                             <p>
                                 <b>Reduced booking complexity by 55.6%</b> and <b>avg. scans down to 2-3</b>, turning an overwhelming search process into a guided, scannable flow.
                             </p>
-                        </div>
+                        </Insight>
                     </div>
 
                     <div class="impact-point">
@@ -458,17 +459,16 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                             Goal: Turn the website into a primary trust signal 
                         </p>
 
-                        <div class="insight gain-point">
-                            <p> → </p>
+                        <Insight theme="gain">
                             <p>
                                 Helped users validate the salon directly through the site by adding staff specialties, structured services, and gallery previews, reducing reliance on Yelp or word-of-mouth to feel confident booking.
                             </p>
-                        </div>
+                        </Insight>
                     </div>
                     <hr>
                 </article>
 
-                <article>
+                <article class="extra-space">
                     <div class="reflection-unit">
                         <span class="tag">What I would have done differently</span>
                         <h3>
@@ -480,7 +480,7 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                     </p>
                 </article>
 
-                <article>
+                <article class="extra-space">
                     <div class="reflection-unit">
                         <span class="tag">If I had more time</span>
                         <h3>

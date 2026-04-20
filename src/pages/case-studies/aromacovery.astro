@@ -5,6 +5,10 @@ import TableOfContents from "../../components/TableOfContents.astro";
 import NextCaseStudy from "../../components/NextCaseStudy.astro";
 
 const sectionNames = ["Solution", "Background", "Research", "Design", "Testing", "Reflection"];
+
+import Columns from "../../components/Columns.astro";
+import Insight from "../../components/Insight.astro";
+
 ---
 
 <!DOCTYPE html>
@@ -108,13 +112,12 @@ const sectionNames = ["Solution", "Background", "Research", "Design", "Testing",
                 <article>
                     <p class="subtitle">Outcomes</p>
                     <h3>Major project wins</h3><br>
-                    <div class="insight gain-point">
-                        <span>✅</span>
+                    <Insight theme="gain">
                         <div>
                             <p><b>The average workflow duration sped up by 13%</b></p>
                             <p>From the first round of user testing, we identified key pain points in specific interactions. During the showcase, we ran user tests and discovered a significant improvement in the user flows.</p>
                         </div>
-                    </div>
+                    </Insight>
                     
                     <div style="display: flex; flex-direction: column; min-height: 0; gap: 2rem;">
                         <blockquote>
@@ -164,27 +167,24 @@ const sectionNames = ["Solution", "Background", "Research", "Design", "Testing",
                     <div class="two-columns-text-and-image">
                         <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/background-field-pic.jpg" alt="field pic">
                         <div>
-                            <div class="insight pain-point">
-                                <span>❌</span>
+                            <Insight theme="pain">
                                 <div>
                                     <p><b>Poor sleeping environment</b></p>
                                     <p>Noisy due to the nearby gym equipment and heavy foot traffic.</p>
                                 </div>
-                            </div>
-                            <div class="insight pain-point">
-                                <span>❌</span>
+                            </Insight>
+                            <Insight theme="pain">
                                 <div>
                                     <p><b>Lack of cleanliness</b></p>
                                     <p>The seats inside were visibly sweaty, odorous, and partially broken.</p>
                                 </div>
-                            </div>
-                            <div class="insight pain-point">
-                                <span>❌</span>
+                            </Insight>
+                            <Insight theme="pain">
                                 <div>
                                     <p><b>Limited usage</b></p>
                                     <p>Most students who sat inside used them briefly, either out of unfamiliarity or due to the environment making it hard to rest.</p>
                                 </div>
-                            </div>
+                            </Insight>
                         </div>
                     </div>
                  </article>
@@ -204,24 +204,22 @@ const sectionNames = ["Solution", "Background", "Research", "Design", "Testing",
                 </article>
 
                 <article>
-                    <div class="insight with-emoji">
-                        <span>💡</span>
+                    <Insight emojiProp="💡">
                         <div>
                             <p><b>Diffusion of responsibility</b></p>
                             <p>When people wait for someone else to act instead (e.g. a cleaning staff member), the experience becomes less satisfactory for everyone if nobody steps up.</p>
                         </div>
-                    </div>
+                    </Insight>
                     <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/research-diffusion.png" alt="diffusion">
                 </article>
 
                 <article class="extra-space">
-                    <div class="insight with-emoji">
-                        <span>💡</span>
+                    <Insight emojiProp="💡">
                         <div>
                             <p><b>Aromatherapy</b></p>
                             <p>There's an intersection between muscle repair, stress relief, and improved memory & attention through scent. In addition, aroma can be used to improve the perception of cleanliness.</p>
                         </div>
-                    </div>
+                    </Insight>
                     <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/research-aromatherapy.png" alt="aromamtherapy">
                 </article>
                 
@@ -361,34 +359,29 @@ const sectionNames = ["Solution", "Background", "Research", "Design", "Testing",
                     <div class="two-columns-text-and-image">
                         <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/analog-controls.png">
                         <div>
-                            <div class="insight pain-point">
-                                <span>❌</span>
+                            <Insight theme="pain">
                                 <div>
                                     <p><b>Navigating disparate controls</b></p>
                                     <p>Some actions couldn't be facilitated, requiring other types of interfaces. Too complicated.</p>
                                 </div>
-                            </div>
-                            <div class="insight pain-point">
-                                <span>❌</span>
+                            </Insight>
+                            <Insight theme="pain">
                                 <div>
                                     <p><b>Iteration becomes impractical</b></p>
                                     <p>Updating the interface with physical materials over and over again costs materials and time.</p>
                                 </div>
-                            </div>
+                            </Insight>
                         </div>
                     </div>
                 </article>
 
                 <article class="extra-space">
                     <p class="subtitle">So how did we rationalize this issue?</p>
-                    <div class="insight with-emoji" style="margin-top: 1rem;">
-                        <span>💡</span>
-                        <div>
-                            <p>
-                                As a result, it made more sense to prototype with a <b>tablet interface</b>, allowing quick changes in Figma and centralizing all controls.
-                            </p>
-                        </div>
-                    </div>
+                    <Insight emojiProp="💡" style="margin-top: 1rem;">
+                        <p>
+                            As a result, it made more sense to prototype with a <b>tablet interface</b>, allowing quick changes in Figma and centralizing all controls.
+                        </p>
+                    </Insight>
                 </article>
                 
                 <!-- USER FLOWS -->
@@ -412,29 +405,26 @@ const sectionNames = ["Solution", "Background", "Research", "Design", "Testing",
                 </article>
 
                 <article class="extra-space">
-                    <div class="insight pain-point">
-                        <span>❌</span>
+                    <Insight theme="pain">
                         <div>
                             <p><b>Too many steps</b></p>
                             <p>Users felt like the process was too complicated and pointed out how annoying it would be as a returning user, having to go through that process each time.</p>
                         </div>
-                    </div>
+                    </Insight>
 
-                    <div class="insight pain-point">
-                        <span>❌</span>
+                    <Insight theme="pain">
                         <div>
                             <p><b>Unclear signifiers</b></p>
                             <p>Certain icons and selections were not intuitive, like how some users were confused about how to increase/decrease the timer.</p>
                         </div>
-                    </div>
+                    </Insight>
 
-                    <div class="insight pain-point">
-                        <span>❌</span>
+                    <Insight theme="pain">
                         <div>
                             <p><b>Stressful imagery</b></p>
                             <p>The timer counting down should not be so prominent on the resting screen, as the participants associate it with deadlines, exactly what they’re trying to get away from!</p>
                         </div>
-                    </div>
+                    </Insight>
                 </article>
 
                 <!-- ITERATIONS -->
@@ -540,26 +530,24 @@ const sectionNames = ["Solution", "Background", "Research", "Design", "Testing",
                         <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/testing-athlete.jpg" alt="user testing 2">
                     </div>
                     
-                    <div class="insight gain-point" style="margin-top: 1.75rem;">
-                        <span>✅</span>
+                    <Insight theme="gain" style="margin-top: 1.75rem;">
                         <div>
                             <p><b>Easy and personalized</b></p>
                             <p>“The screens were simple and really easy to understand and there were a lot of settings so that was nice for customization.”</p>
                         </div>
-                    </div>
+                    </Insight>
                     
                     <div class="gallery">   
                         <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/testing-prof.png" alt="user testing 3">
                         <img src="https://media.dave-vo.com/file/dvfolio/aromacovery/testing-guy2.png" alt="user testing 1">
                     </div>
                     
-                    <div class="insight gain-point" style="margin-top: 1.75rem;">
-                        <span>✅</span>
+                    <Insight theme="gain" style="margin-top: 1.75rem;">
                         <div>
                             <p><b>Immersive</b></p>
                             <p>“I like that you actually have a diffuser. It’s so cool that I’m actually smelling the scents and experiencing it for real.”</p>
                         </div>
-                    </div>
+                    </Insight>
                     
                     <div class="gallery">
                         <img style="object-position: center;" src="https://media.dave-vo.com/file/dvfolio/aromacovery/testing-guy1.jpg" alt="user testing 4">
@@ -569,24 +557,22 @@ const sectionNames = ["Solution", "Background", "Research", "Design", "Testing",
 
                 <p class="subtitle">Future Iterations</p>
                 <h3>How Aromacovery could be developed further</h3><br>
-                <div class="insight with-emoji">
-                    <span>📈</span>
+                <Insight emojiProp="📈">
                     <div>
                         <p><b>Improve ergonomics</b></p>
                         <p>
                             “I wish the screen could be tilted towards me, it took a couple tries for the screen to know that I tapped the button.”
                         </p>
                     </div>
-                </div>
-                <div class="insight with-emoji">
-                    <span>📈</span>
+                </Insight>
+                <Insight emojiProp="📈">
                     <div>
                         <p><b>Enhance the emotional experience</b></p>
                         <p>
                             “For the rest stage, I would also suggest doing something more ambient and have it less focused on actions when they should be more subtle.”
                         </p>
                     </div>
-                </div>
+                </Insight>
             </CaseStudySection>
             
             <CaseStudySection sectionName={sectionNames[6]} num={7}> <!--Reflection-->
