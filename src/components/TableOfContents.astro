@@ -2,6 +2,54 @@
 const { sectionNames } = Astro.props;
 ---
 
+<style>
+    .table-of-contents {
+        position: sticky;
+        top: 8rem;
+        padding-bottom: calc(var(--space-5xl) + var(--space-xl) + 1.75rem);
+    }
+
+    .toc-header {
+        font-family: var(--font-bold); 
+        color: var(--text-heading-on-light);
+        margin-bottom: var(--space-2xs);
+    }
+
+    [id] { scroll-margin-top: 8rem; }
+
+    .table-of-contents ul {
+        padding-left: 0;
+    }
+
+    .table-of-contents li a { 
+        position: relative;
+        font-family: var(--font-bold);
+        font-size: clamp(0.9rem, 1vw, 1.05rem);
+        line-height: 240%;
+        color: var(--text-unemphasized); 
+        text-decoration: none;
+        transition: 0.25s ease; 
+    }
+
+    .table-of-contents li a:before {
+        position: absolute; 
+        content: "•";
+        margin-left: -1rem;
+        opacity: 0;
+    }
+
+    .table-of-contents li.active a,
+    .table-of-contents li a:hover { 
+        color: var(--Text-selected);
+    }
+
+    .table-of-contents li a:hover:before,
+    .table-of-contents li a:active:before,
+    .table-of-contents li.active a:before {
+        opacity: 1;
+    }
+</style>
+
 <div class="toc-container">
     <div class="table-of-contents">
         <p class="toc-header">

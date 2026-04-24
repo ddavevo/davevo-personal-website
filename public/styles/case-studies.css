@@ -186,6 +186,7 @@ summary {
 
 /* ============================================================== */
 
+/*
 .table-of-contents {
     position: sticky;
     top: 8rem;
@@ -231,6 +232,7 @@ summary {
 .table-of-contents li.active a:before {
     opacity: 1;
 }
+*/
 
 /* ================================================================= */
 
