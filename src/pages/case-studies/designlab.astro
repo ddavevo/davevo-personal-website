@@ -7,6 +7,7 @@ import NextCaseStudy from "../../components/NextCaseStudy.astro";
 
 import Columns from "../../components/Columns.astro";
 import Insight from "../../components/Insight.astro";
+import Tag from "../../components/Tag.astro";
 
 const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", "Reflection"];
 ---
@@ -17,6 +18,17 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
     <meta charset="UTF-8">
     <link rel="preload" href="/styles/case-studies.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/styles/case-studies.css"></noscript>
+
+    <style>
+        :root {
+            --no-ai-border: #4F7600;
+            --no-ai: #E8F5CD;
+            --co-led-border: #8C6711;
+            --co-led: #FFF5C9;
+            --ai-led-border: #A15500;
+            --ai-led: #FFE7CC;
+        }
+    </style>
 
     <script defer>
         // ensure the DOM is ready before querying
@@ -426,7 +438,7 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
                 <article> <!--No-AI-->
                     <Columns>
                         <div>
-                            <span class="tag no-ai">No-AI</span>
+                            <Tag text="No-AI" surfaceColor="var(--no-ai)" borderColor="var(--no-ai-border)" textColor="var(--no-ai-border)" />
                             <p>
                                 Users approach a problem/solution without LLM assistance, manually filling out the templates based only on their current knowledge.
                             </p>
@@ -442,7 +454,7 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
                 <article> <!--Co-Led-->
                     <Columns>
                         <div>
-                            <span class="tag co-led">Co-Led</span>
+                            <Tag surfaceColor="var(--co-led)" borderColor="var(--co-led-border)" textColor="var(--co-led-border)" text="Co-Led" />
                             <p>
                                 Users gain access to LLM generation features in specific parts of the templates, assisting with reflection or proposing alternative ideas.
                             </p>
@@ -458,7 +470,7 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
                 <article class="extra-space"> <!--AI-Led-->
                     <Columns>
                         <div>
-                            <span class="tag ai-led">AI-Led</span>
+                            <Tag surfaceColor="var(--ai-led)" borderColor="var(--ai-led-border)" textColor="var(--ai-led-border)" text="AI-Led" />
                             <p>
                                 Templates are already filled out by AI. Users don't have to initiate any writing, only reading and processing what was generated.
                             </p>
@@ -511,11 +523,6 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
                         But quantity wasn’t the whole story.
                     </i></p>
                 </article>
-
-                <p class="subtitle">Behavioral Differences</p>
-                <h3>
-                    While <span class="tag no-ai" style="margin: 0 0.25rem 0.1rem 0.25rem;">No-AI</span> participants developed more ownership from revisiting 2.4x as often,
-                </h3>
 
                 <!--
 
@@ -577,6 +584,10 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
 
                 -->
 
+                <p class="subtitle">Behavioral Differences</p>
+                <h3>
+                    While <Tag text="No-AI" margin="0 0.25rem 0.1rem 0.25rem;" surfaceColor="var(--no-ai)" borderColor="var(--no-ai-border)" textColor="var(--no-ai-border)" /> participants developed more ownership from revisiting 2.4x as often,
+                </h3>
                 <article class="extra-space"> <!--No-AI-->
                     <picture>
                         <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/no-ai-takeaway.webp">
@@ -589,7 +600,7 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
                 </article>
             
                 <h3>
-                    While <span class="tag ai-led" style="margin: 0 0.25rem 0.1rem 0.25rem;">AI-Led</span> participants had faster exposure to more perspectives, they spent 3x longer scoping their idea's direction
+                    While <Tag text="AI-Led" margin="0 0.25rem 0.1rem 0.25rem;" surfaceColor="var(--ai-led)" borderColor="var(--ai-led-border)" textColor="var(--ai-led-border)" /> participants had faster exposure to more perspectives, they spent 3x longer scoping their idea's direction
                 </h3>
                 <article class="extra-space"> <!--AI-Led-->
                     <picture>
@@ -607,7 +618,7 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
                 </article>
 
                 <h3>
-                    <span class="tag co-led" style="margin: 0 0.25rem 0.1rem 0.25rem;">Co-Led</span> participants struck more of a happy medium and iterated 20% faster, but...
+                    <Tag text="Co-Led" margin="0 0.25rem 0.25rem 0.25rem;" surfaceColor="var(--co-led)" borderColor="var(--co-led-border)" textColor="var(--co-led-border)" /> participants struck more of a happy medium and iterated 20% faster, but...
                 </h3>
                 <article class="extra-space"> <!--Co-Led-->
                     <picture>
@@ -739,7 +750,7 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
 
                 <article class="extra-space">
                     <div class="reflection-unit">
-                        <span class="tag">Learning</span>
+                        <Tag text="Learning" />
                         <h3>
                             Humanizing our key findings
                         </h3>
@@ -751,7 +762,7 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
 
                 <article class="extra-space">
                     <div class="reflection-unit">
-                        <span class="tag">Challenge</span>
+                        <Tag text="Challenge" />
                         <h3>
                             Doing academic research for the first time
                         </h3>
@@ -763,7 +774,7 @@ const sectionNames = ["Solution", "Background", "Design", "Methods", "Results", 
 
                 <article class="extra-space">
                     <div class="reflection-unit">
-                        <span class="tag">What I would have done differently</span>
+                        <Tag text="What I would have done differently" />
                         <h3>
                             Starting with a storytelling perspective
                         </h3>

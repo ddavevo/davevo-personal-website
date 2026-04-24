@@ -1,12 +1,3 @@
-:root {
-    --no-ai-border: #4F7600;
-    --no-ai: #E8F5CD;
-    --co-led-border: #8C6711;
-    --co-led: #FFF5C9;
-    --ai-led-border: #A15500;
-    --ai-led: #FFE7CC;
-}
-
 main {
     max-width: var(--width-max);
     position: relative;
@@ -437,10 +428,6 @@ summary {
     margin-bottom: var(--space-3xl);
 }
 
-.impact-point :nth-child(1) {
-    margin-bottom: var(--space-xs);
-}
-
 .figure-metric {
     position: absolute;
     padding: 0.25rem 0.75rem;
@@ -493,6 +480,7 @@ summary {
 
 /* ====================================================================== */
 
+/*
 .tag {
     display: inline-block;
     width: fit-content;
@@ -503,7 +491,7 @@ summary {
     margin-bottom: 0.75rem;
 }
 
-.tags li, .tag-inline {
+.tags li {
     font-family: var(--font-body);
     display: inline;
     list-style-type: none;
@@ -518,6 +506,7 @@ summary {
     margin-right: .25rem;
     line-height: 2.5rem;
 }
+*/
 
 .reflection-unit {
     display: flex;
