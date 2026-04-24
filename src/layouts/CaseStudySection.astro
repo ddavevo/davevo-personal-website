@@ -3,7 +3,7 @@ import Tag from "../components/Tag.astro";
 const { sectionName, num } = Astro.props;
 ---
 
-<section id={`${sectionName}`}>
+<section id={`${sectionName.split(" ").join("")}`}>
     <Tag text={`0${num} - ${sectionName}`} surfaceColor="var(--teal-100)" borderColor="var(--teal-500)" textColor="var(--teal-500)" />
     <slot />
 </section>

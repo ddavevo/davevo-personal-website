@@ -71,7 +71,7 @@ const { sectionNames } = Astro.props;
         <ul>
             {sectionNames.map((sectionName) => (
                 <li>
-                <a href={`#${sectionName}`}>{sectionName}</a>
+                <a href={`#${sectionName.split(" ").join("")}`}>{sectionName}</a>
                 </li>
             ))}
         </ul>

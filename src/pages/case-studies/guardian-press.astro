@@ -264,40 +264,40 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                     </Columns>
                 </MediaWrapper>
 
-                <MediaWrapper> <!-- Presentation + social media -->
-                    <div class="columns-vertical">
-                        <figure>
-                            <picture>
-                                <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/playground/guardian-press-marquee.webp"> -->
-                                <img style="margin-bottom: 0;" loading="lazy" alt="TODO ALT DESCRIPTION" data-src="/images/professors-lecture-ready-slide.png">
-                            </picture>
-                            <figcaption>
-                                Presentation-ready PRESS slides for professors
-                            </figcaption>
-                        </figure>
+                <MediaWrapper> <!-- Presentation -->
+                    <figure>
+                        <picture>
+                            <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/playground/guardian-press-marquee.webp"> -->
+                            <img style="margin-bottom: 0;" loading="lazy" alt="TODO ALT DESCRIPTION" data-src="/images/professors-lecture-ready-slide.png">
+                        </picture>
+                        <figcaption>
+                            Presentation-ready PRESS slides for professors
+                        </figcaption>
+                    </figure>
+                </MediaWrapper>
 
-                        <Columns>
-                            <div>
-                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                    <source data-src="https://media.dave-vo.com/file/dvfolio/guardian/press/stories-countdown.mp4" type="video/mp4"/>
-                                    <source data-src="https://media.dave-vo.com/file/dvfolio/guardian/press/stories-countdown.webm" type="video/webm"/>
-                                </video>
-                                <figcaption>
-                                    Voting countdown
-                                </figcaption>
-                            </div>
-                            
-                            <div>
-                                <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
-                                    <source data-src="https://media.dave-vo.com/file/dvfolio/guardian/press/stories-org-endorsements.mp4" type="video/mp4"/>
-                                    <source data-src="https://media.dave-vo.com/file/dvfolio/guardian/press/stories-org-endorsements.webm" type="video/webm"/>
-                                </video>
-                                <figcaption>
-                                    Org endorsements
-                                </figcaption>
-                            </div>
-                        </Columns>
-                    </div>
+                <MediaWrapper> <!-- Social media -->
+                    <Columns>
+                        <div>
+                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                <source data-src="https://media.dave-vo.com/file/dvfolio/guardian/press/stories-countdown.mp4" type="video/mp4"/>
+                                <source data-src="https://media.dave-vo.com/file/dvfolio/guardian/press/stories-countdown.webm" type="video/webm"/>
+                            </video>
+                            <figcaption>
+                                Voting countdown
+                            </figcaption>
+                        </div>
+                        
+                        <div>
+                            <video autoplay muted loop playsinline webkit-playsinline preload="none" width="100%">
+                                <source data-src="https://media.dave-vo.com/file/dvfolio/guardian/press/stories-org-endorsements.mp4" type="video/mp4"/>
+                                <source data-src="https://media.dave-vo.com/file/dvfolio/guardian/press/stories-org-endorsements.webm" type="video/webm"/>
+                            </video>
+                            <figcaption>
+                                Org endorsements
+                            </figcaption>
+                        </div>
+                    </Columns>
                 </MediaWrapper>
 
                 <article class="extra-space"> <!-- Design Decision #1 -->
@@ -572,7 +572,7 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                 </article>
 
                 <article class="extra-space"> <!-- Prioritized/Not prioritized -->
-                    <span class="tag success">Prioritized</span>
+                    <Tag text="Prioritized" surfaceColor="var(--surface-success)" borderColor="var(--border-success)" textColor="var(--text-success)" />
                     <Columns>
                         <div>
                             <h4>
@@ -624,7 +624,7 @@ const sectionNames = ["Context", "End Product", "Research", "Decisions", "Reflec
                     </Columns>
                     <hr>
 
-                    <span class="tag negative">Not prioritized</span>
+                    <Tag text="Not prioritized" surfaceColor="var(--surface-error)" borderColor="var(--border-error)" textColor="var(--text-error)" />
                     <Columns>
                         <div>
                             <h4>
