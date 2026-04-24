@@ -7,6 +7,7 @@ import NextCaseStudy from "../../components/NextCaseStudy.astro";
 
 import Columns from "../../components/Columns.astro";
 import Insight from "../../components/Insight.astro";
+import Tag from "../../components/Tag.astro";
 
 const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflection"];
 ---
@@ -234,7 +235,7 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                 </article>
 
                 <article class="extra-space"> <!-- Prioritize -->
-                    <span class="tag success">Prioritized</span>
+                    <Tag text="Prioritized" surfaceColor="var(--surface-success)" borderColor="var(--border-success)" textColor="var(--text-success)"/>
                     <Columns>
                         <div>
                             <h3 class="fake-h4">Salon service exploration</h3>
@@ -251,7 +252,7 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
                     </Columns>
                     <hr>
 
-                    <span style="margin-top: 2.5ch;" class="tag negative">Not prioritized</span>
+                    <Tag text="Not prioritized" surfaceColor="var(--surface-error)" borderColor="var(--border-error)" textColor="var(--text-error)" />
                     <Columns>
                         <div>
                             <h3 class="fake-h4">Live availability tracker</h3>
@@ -470,7 +471,7 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
 
                 <article class="extra-space">
                     <div class="reflection-unit">
-                        <span class="tag">What I would have done differently</span>
+                        <Tag text="What I would have done differently" />
                         <h3>
                             Defining success earlier
                         </h3>
@@ -482,7 +483,7 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
 
                 <article class="extra-space">
                     <div class="reflection-unit">
-                        <span class="tag">If I had more time</span>
+                        <Tag text="If I had more time" />
                         <h3>
                             Explore my client’s assumptions further
                         </h3>
@@ -494,7 +495,7 @@ const sectionNames = ["Solution", "Background", "Discovery", "Design", "Reflecti
 
                 <article class="extra-space">
                     <div class="reflection-unit">
-                        <span class="tag">Learning</span>
+                        <Tag text="Learning" />
                         <h3>
                             Owning the design despite uncertainty
                         </h3>

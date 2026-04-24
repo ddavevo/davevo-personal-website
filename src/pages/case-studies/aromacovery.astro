@@ -17,6 +17,82 @@ const sectionNames = ["Solution", "Background", "Research", "Design", "Testing",
     <meta charset="UTF-8">
     <link rel="preload" href="/styles/case-studies.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/styles/case-studies.css"></noscript>
+
+    <style>
+        #case-study-title { /* 910px - 3 lines | 657px - 4 lines | 512px - 5 lines | 442px - 6 lines*/
+            margin: 0 auto;
+            padding: 2.4rem;
+            max-width: var(--width-max);
+            font-size-adjust: from-font;
+            color: var(--text-heading-on-dark);
+            text-align: center;
+        }
+
+        .hero {
+            width: 100%;
+            background-image: linear-gradient(to bottom, var(--teal-700), var(--teal-900));
+            color: var(--text-heading-on-dark);
+            padding-top: 6rem;
+            min-height: calc(6rem + 300px + 7.5rem + (1.2em * 6) + 4.8rem); 
+        }
+
+        .hero:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .hero .lottie-anim, .hero picture, .hero video {
+            display: block;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .logistics {
+            display: flex;
+            justify-content: space-around; gap: 1rem 0;
+            padding: 0 2.4rem 2.4rem;
+            max-width: var(--width-max); margin: 0 auto;
+            min-height: 8.75rem;
+        }
+
+        .hero .subtitle {
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p, .hero b {
+            color: var(--text-body-bold-on-dark);
+        }
+
+        .hero-ribbon {
+            position: relative;
+            width: 100%;
+            height: 0.8rem;
+            background-image: var(--gradient-case-study);
+        }
+
+        .hero-ribbon img {
+            position: absolute;
+            width: 80px;
+            height: 74px;
+            right: 8%;
+            transform: translateY(-50%);
+        }
+
+        @media screen and (max-width: 623px) {
+            #case-study-title {
+                text-align: left;
+            }
+
+            .logistics {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                min-height: 15rem;
+            }
+        }
+    </style>
 </head>
 
 <BaseLayout title="Aromacovery">
@@ -510,7 +586,7 @@ const sectionNames = ["Solution", "Background", "Research", "Design", "Testing",
             </CaseStudySection>
             -->
 
-            <CaseStudySection sectionName={sectionNames[5]} num={6}> <!--Usability Testing-->
+            <CaseStudySection sectionName={sectionNames[4]} num={5}> <!--Usability Testing-->
                 <article>
                     <h2>Testing the Aromacovery experience</h2>
                     <p>
@@ -569,7 +645,7 @@ const sectionNames = ["Solution", "Background", "Research", "Design", "Testing",
                 </Insight>
             </CaseStudySection>
             
-            <CaseStudySection sectionName={sectionNames[6]} num={7}> <!--Reflection-->
+            <CaseStudySection sectionName={sectionNames[5]} num={6}> <!--Reflection-->
                 <article>
                     <Columns>
                         <div>

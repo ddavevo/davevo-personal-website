@@ -8,6 +8,7 @@ import NextCaseStudy from "../../components/NextCaseStudy.astro";
 import Columns from "../../components/Columns.astro";
 import MediaWrapper from "../../components/MediaWrapper.astro";
 import Insight from "../../components/Insight.astro";
+import Tag from "../../components/Tag.astro";
 
 const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflection"];
 ---
@@ -405,7 +406,7 @@ const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflec
                 <h2>Debut to the max!</h2>
                 <article class="extra-space">
                     <p class="subtitle">Impact</p>
-                    <div class="columns">
+                    <Columns>
                         <div>
                             <h3>28K+</h3>
                             <p>
@@ -426,7 +427,7 @@ const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflec
                                 partnerships with student organizations
                             </p>
                         </div>
-                    </div>
+                    </Columns>
                     <hr>
                     <p>
                         MaxMic as a standalone event performed well, but it also had a sizable impact on the Maximalist brand itself. The momentum was able to carry into increased contributor interest to our zine issues, higher attendance to future events, as well as more invitations to table for other orgs.
@@ -437,7 +438,7 @@ const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflec
                     <p class="subtitle">So what did I learn?</p>
                     <hr>
                     <div class="reflection-unit">
-                        <span class="tag">Learning</span>
+                        <Tag text="Learning" />
                         <h3>
                             Telling a brand story
                         </h3>
@@ -449,12 +450,12 @@ const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflec
 
                 <article class="extra-space">
                     <div class="reflection-unit" style="margin-bottom: var(--space-lg);">
-                        <span class="tag">If I had more time</span>
+                        <Tag text="If I had more time" />
                         <h3>
                             Areas for improvement for future rollouts
                         </h3>
                     </div>
-                    <div class="columns">
+                    <Columns>
                         <div>
                             <h4>
                                 Encourage UGC
@@ -467,10 +468,10 @@ const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflec
                             <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/gentle-troubleshooting.webp"> -->
                             <img loading="lazy" alt="User asks a question using cursor chat to help troubleshoot viability of their idea." data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/improvement-ugc.png">
                         </picture>
-                    </div>
+                    </Columns>
                     <hr>
 
-                    <div class="columns">
+                    <Columns>
                         <div>
                             <h4>
                                 Weave craftsmanship into worldbuilding
@@ -483,10 +484,10 @@ const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflec
                             <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/gentle-troubleshooting.webp"> -->
                             <img loading="lazy" alt="User asks a question using cursor chat to help troubleshoot viability of their idea." data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/improvement-craftsmanship.png">
                         </picture>
-                    </div>
+                    </Columns>
                     <hr>
 
-                    <div class="columns">
+                    <Columns>
                         <div>
                             <h4>
                                 Broaden touchpoints
@@ -499,7 +500,7 @@ const sectionNames = ["Context", "End Product", "Decisions", "Strategy", "Reflec
                             <!-- <source type="image/webp" loading="lazy" data-srcset="https://media.dave-vo.com/file/dvfolio/designlab/gentle-troubleshooting.webp"> -->
                             <img loading="lazy" alt="User asks a question using cursor chat to help troubleshoot viability of their idea." data-src="https://media.dave-vo.com/file/dvfolio/maximalist-magazine/improvement-multichannel.png">
                         </picture>
-                    </div>
+                    </Columns>
                 </article>
 
                 <NextCaseStudy title="UCSD Design Lab" url="/case-studies/designlab/" />
