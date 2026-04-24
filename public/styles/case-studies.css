@@ -110,7 +110,8 @@ summary {
 
 /* ====================================================================== */
 
-#case-study-title { /* 910px - 3 lines | 657px - 4 lines | 512px - 5 lines | 442px - 6 lines*/
+/*
+#case-study-title {
     margin: 0 auto;
     padding: 2.4rem;
     max-width: var(--width-max);
@@ -171,6 +172,7 @@ summary {
     right: 8%;
     transform: translateY(-50%);
 }
+*/
 
 /* ============================================================== */
 
@@ -698,11 +700,13 @@ summary {
 
 /* =========================================================== */
 
+/*
 @media screen and (min-width: 1440px) {
     .toc-container {
         padding-left: 0;
     }
 }
+*/
 
 @media screen and (max-width: 1100px) {
     .two-columns-text-and-image {
@@ -739,6 +743,7 @@ summary {
 }
 
 @media screen and (max-width: 623px) {
+    /*
     #case-study-title {
         text-align: left;
     }
@@ -753,6 +758,7 @@ summary {
         visibility: hidden;
         display: none;
     }
+    */
 
     main {
         grid-template-columns: 1fr;

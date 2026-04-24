@@ -48,6 +48,19 @@ const { sectionNames } = Astro.props;
     .table-of-contents li.active a:before {
         opacity: 1;
     }
+
+    @media screen and (min-width: 1440px) {
+        .toc-container {
+            padding-left: 0;
+        }
+    }
+
+    @media screen and (max-width: 623px) {
+        .table-of-contents {
+            visibility: hidden;
+            display: none;
+        }
+    }
 </style>
 
 <div class="toc-container">
