@@ -2,8 +2,20 @@
 const { sectionName, num } = Astro.props;
 ---
 
+<style>
+    .toc-badge {
+        display: inline-block;
+        font-family: var(--font-body);
+        color: var(--teal-500);
+        border: var(--border-thin) solid var(--teal-500);
+        background-color: var(--teal-100);
+        padding: .25rem 0.75rem;
+        border-radius: 100px;  
+        margin-bottom: 0.75rem; 
+    }
+</style>
+
 <section id={`${sectionName}`}>
-    <div class="toc-spacer"></div>
     <span class="toc-badge">
         0{num} - {sectionName}
     </span>
